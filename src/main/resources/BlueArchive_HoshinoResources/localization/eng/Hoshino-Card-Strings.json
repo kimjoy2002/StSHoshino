@@ -123,7 +123,7 @@
   "BlueArchive_Hoshino:Jackpot": {
     "NAME": "Jackpot",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Draw 1 card. NL bluearchive_hoshino:Countdown(7): Increases damage by !M!",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL Draw 1 card.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL Draw 1 card. NL ",
     "EXTENDED_DESCRIPTION": [
       "bluearchive_hoshino:Countdown(",
       "): Increases damage by !M!."
@@ -199,8 +199,8 @@
   },
   "BlueArchive_Hoshino:RefillAmmo": {
     "NAME": "Refill Ammo",
-    "DESCRIPTION": "Shuffle all Exhausted *ammo *box cards into your draw Pile. then draw that many cards. They costs 0 until played. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Shuffle all Exhausted *ammo *box cards into your draw Pile. then draw that many cards. They costs 0 until played."
+    "DESCRIPTION": "Shuffle all Exhausted *Ammo *box cards into your draw Pile. then draw that many cards. They costs 0 until played. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Shuffle all Exhausted *Ammo *box cards into your draw Pile. then draw that many cards. They costs 0 until played."
   },
   "BlueArchive_Hoshino:SwimsuitForm": {
     "NAME": "Swimsuit Form",
@@ -273,7 +273,7 @@
   },
   "BlueArchive_Hoshino:IncendiaryShot": {
     "NAME": "Incendiary Ammo Box",
-    "DESCRIPTION": "bluearchive_hoshino:Reload. NL Deal !M! damage to all enemies each time the bluearchive_hoshino:ammo is used until bluearchive_hoshino:Reloaded. NL Exhaust."
+    "DESCRIPTION": "bluearchive_hoshino:Reload. NL Deal !M! damage to all enemies each time the bluearchive_hoshino:Ammo is used until bluearchive_hoshino:Reloaded. NL Exhaust."
   },
   "BlueArchive_Hoshino:FragShot": {
     "NAME": "Frag Ammo Box",
