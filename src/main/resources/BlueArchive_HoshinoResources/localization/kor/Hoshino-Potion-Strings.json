@@ -1,0 +1,10 @@
+{
+"BlueArchive_Hoshino:SkilledPotion": {
+        "NAME": "숙련 포션",
+        "DESCRIPTIONS": ["#y숙련을 #b", " 얻습니다."]
+},
+"BlueArchive_Hoshino:BulletPotion": {
+        "NAME": "탄약 포션",
+        "DESCRIPTIONS": ["#y탄약 슬롯을 #b", " 개 얻습니다."]
+}
+}

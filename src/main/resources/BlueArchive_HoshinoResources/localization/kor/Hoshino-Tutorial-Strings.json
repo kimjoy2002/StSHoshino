@@ -1,0 +1,11 @@
+{
+  "BlueArchive_Hoshino:ReloadButtonUITip": {
+    "TEXT": [
+       "[E] 를 1 소모하여 빈 탄창을 전부 회복합니다."
+    ],
+    "LABEL": [
+       "장전",
+       "장전"
+    ]
+  }
+}

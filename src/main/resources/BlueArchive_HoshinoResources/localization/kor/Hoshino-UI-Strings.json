@@ -1,0 +1,65 @@
+{
+  "BlueArchive_Hoshino:ReloadButtonUI": {
+    "TEXT": [
+      "장전",
+      "장전"
+    ]
+  },
+  "BlueArchive_Hoshino:BulletToolTips": {
+    "TEXT": [
+      "탄약",
+      "현재 보유하고 있는 탄약입니다. 일부 카드는 탄약을 소모해야 사용이 가능합니다.",
+      "#r탄창이 비었어."
+    ]
+  },
+  "BlueArchive_Hoshino:MindConcentrationAction": {
+    "TEXT": [
+      "뽑을 카드 더미로 되돌릴 카드를 모두 선택하십시오 (정신 집중)",
+      "되돌리기"
+    ]
+  },
+  "BlueArchive_Hoshino:BuringTheBridgeAction": {
+    "TEXT": [
+      "뽑을 카드 더미로 되돌릴 카드를 모두 선택하십시오 (배수의 진)",
+      "되돌리기"
+    ]
+  },
+  "BlueArchive_Hoshino:BDNoteAction": {
+    "TEXT": [
+      "손으로 가져올 카운트다운 카드를 선택하십시오"
+    ]
+  },
+  "BlueArchive_Hoshino:AmmoBoxAction": {
+    "TEXT": [
+      "손으로 가져올 탄약 박스 카드를 선택하십시오"
+    ]
+  },
+  "BlueArchive_Hoshino:SwimsuitFormAction": {
+    "TEXT": [
+      "손으로 가져올 카드를 선택하십시오"
+    ]
+  },
+  "BlueArchive_Hoshino:RefillAmmoAction": {
+    "TEXT": [
+      ""
+    ]
+  },
+  "BlueArchive_Hoshino:TotemPoleText": {
+    "TEXT": [
+      " NL bluearchive_hoshino:카운트다운(",
+      "): 즉시 소멸하고 카드를 1장 뽑습니다."
+    ]
+  },
+  "BlueArchive_Hoshino:PerfectPlanAction": {
+    "TEXT": [
+      "뽑을 더미에 남길 카드를 선택하십시오 (완벽한 계획)",
+      "남기기"
+    ]
+  },
+  "BlueArchive_Hoshino:BulletExhaustAction": {
+    "TEXT": [
+      "소멸 시킬 탄약 카드를 선택하십시오.",
+      "선택"
+    ]
+  }
+}

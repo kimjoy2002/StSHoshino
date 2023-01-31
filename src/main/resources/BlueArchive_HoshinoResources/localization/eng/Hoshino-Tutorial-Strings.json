@@ -1,0 +1,11 @@
+{
+  "BlueArchive_Hoshino:ReloadButtonUITip": {
+    "TEXT": [
+      "Consumes [E] to restore all empty ammo slot."
+    ],
+    "LABEL": [
+      "reload",
+      "reload"
+    ]
+  }
+}

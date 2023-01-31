@@ -1,0 +1,148 @@
+{
+  "BlueArchive_Hoshino:HoshinoBaseRelic": {
+    "NAME": "Foreclosure Task Force President",
+    "FLAVOR": "This is my responsibility as the head of the Abydos Countermeasures Committee.",
+    "DESCRIPTIONS": [
+      "at start of battle, Gain #b",
+      " #ybluearchive_hoshino:Expert."
+    ]
+  },
+  "BlueArchive_Hoshino:HoshinoBaseRelicPlus": {
+    "NAME": "Foreclosure Task Force President+",
+    "FLAVOR": "This is my responsibility as the head of the Abydos Countermeasures Committee.",
+    "DESCRIPTIONS": [
+      "Replaced with the #rForeclosure #rTask #rForce #rPresident. At the start of the battle, Gain #b",
+      " #ybluearchive_hoshino:Expert. Also gain #b",
+      " #ybluearchive_hoshino:Shield when #ybluearchive_hoshino:Reloaded."
+    ]
+  },
+  "BlueArchive_Hoshino:IOURelic": {
+    "NAME": "IOU",
+    "FLAVOR": "\"Note) 3% interest is added for each floor of the spire.\" - In very small print at the bottom of the IOU",
+    "DESCRIPTIONS": [
+      "Increases Shop's cost by 20% until paid off. NL Right-click to pay #b",
+      " Gold and pay it back immediately."
+    ]
+  },
+  "BlueArchive_Hoshino:ShirokoRelic": {
+    "NAME": "Mask",
+    "FLAVOR": "A must for a bank robbery.",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " Gold when battle ended."
+    ]
+  },
+  "BlueArchive_Hoshino:SerikaRelic": {
+    "NAME": "Germanium Granite Bracelet",
+    "FLAVOR": "\"Take care of your health with negative ions from natural germanium. With electromagnetic wave blocking sticker!\"",
+    "DESCRIPTIONS": [
+      "Has a random good effect at the start of combat.",
+      ""
+    ]
+  },
+  "BlueArchive_Hoshino:NonomiRelic": {
+    "NAME": "Idol Costume",
+    "FLAVOR": "The tag says mischievous straight.",
+    "DESCRIPTIONS": [
+      "At the start of combat, add a other color card until your hand is full."
+    ]
+  },
+  "BlueArchive_Hoshino:EyeOfHorusRelic": {
+    "NAME": "Eye of Horus",
+    "FLAVOR": "A shotgun with a simple design, favored by Hoshino.",
+    "DESCRIPTIONS": [
+      "When you first #ybluearchive_hoshino:Reload each turn, Your Attack that use #ybluearchive_hoshino:Ammo deal #b",
+      " additional damage until #ybluearchive_hoshino:Reloaded."
+    ]
+  },
+  "BlueArchive_Hoshino:WhaleTubeRelic": {
+    "NAME": "Whale Tube",
+    "FLAVOR": "It gets hot even when you're still.",
+    "DESCRIPTIONS": [
+      "Whenever a card is returned to the draw pile with a card effect, Gain #b",
+      " #yBlock."
+    ]
+  },
+  "BlueArchive_Hoshino:AmmoBoxRelic": {
+    "NAME": "ammo box",
+    "FLAVOR": "It's a school essential.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, add 1 random #yammo #ybox card into your hand. Its cost becomes 0."
+    ]
+  },
+  "BlueArchive_Hoshino:DoubleBarrelShotgunRelic": {
+    "NAME": "Double Barrel Shotgun",
+    "FLAVOR": "Two Birds in One Shot!",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of each turn. At the start of combat, Lose #b",
+      " #ybluearchive_hoshino:Ammo Slot."
+    ]
+  },
+  "BlueArchive_Hoshino:GoldCardRelic": {
+    "NAME": "Gold Card",
+    "FLAVOR": "You can use everything except to pay off your debt.",
+    "DESCRIPTIONS": [
+      "The next item you buy from the shop will be free once."
+    ]
+  },
+  "BlueArchive_Hoshino:FireSupportDroneRelic": {
+    "NAME": "Fire Support Drone",
+    "FLAVOR": "Shiroko's favorite drone.",
+    "DESCRIPTIONS": [
+      "At the end of the turn, deal #b",
+      " damage to the enemy with the lowest HP."
+    ]
+  },
+  "BlueArchive_Hoshino:SupporterExpressRelic": {
+    "NAME": "Supporter Express",
+    "FLAVOR": "Ayane's support drone.",
+    "DESCRIPTIONS": [
+      "the first time you take damage in each battle. Heal #b",
+      " HP."
+    ]
+  },
+  "BlueArchive_Hoshino:IronHorusRelic": {
+    "NAME": "Iron Horus",
+    "FLAVOR": "This is Hoshino's favorite shield. It can be folded and stored.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, Gain #b",
+      " #yBlock and #ybluearchive_hoshino:Shield."
+    ]
+  },
+  "BlueArchive_Hoshino:ShellBeltRelic": {
+    "NAME": "Shell Belt",
+    "FLAVOR": "A belt that holds extra ammo.",
+    "DESCRIPTIONS": [
+      "Upon pick up, Choose a card that use #ybluearchive_hoshino:Ammo. Whenever you #ybluearchive_hoshino:Reload, add that card from the draw pile to your hand.",
+      "Whenever you #ybluearchive_hoshino:Reload, add ",
+      " card from the draw pile to your hand.",
+      "",
+      " : Select a card to bring when Reload."
+    ]
+  },
+  "BlueArchive_Hoshino:TacticalSatchelBagRelic": {
+    "NAME": "Tactical Satchel Bag",
+    "FLAVOR": "It's an expensive bag.",
+    "DESCRIPTIONS": [
+      "For every #b",
+      " #ybluearchive_hoshino:Ammo used, Gain #b",
+      " #ybluearchive_hoshino:Expert."
+    ]
+  },
+  "BlueArchive_Hoshino:AutoReloaderRelic": {
+    "NAME": "Autoloader",
+    "FLAVOR": "It's easy.",
+    "DESCRIPTIONS": [
+      "#ybluearchive_hoshino:Reload costs 0 on first turn."
+    ]
+  },
+  "BlueArchive_Hoshino:TotemPoleRelic": {
+    "NAME": "Totem Pole",
+    "FLAVOR": "Have you done a lot of Decagrammaton?",
+    "DESCRIPTIONS": [
+      "All #yStatus and #yCurse cards gain \" #ybluearchive_hoshino:Countdown(2) : Instantly #yExhaust and draw 1 card. \"."
+    ]
+  }
+}
+
+

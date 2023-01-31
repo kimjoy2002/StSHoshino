@@ -1,0 +1,67 @@
+{
+  "BlueArchive_Hoshino:ReloadButtonUI": {
+    "TEXT": [
+      "Reload",
+      "Reload"
+    ]
+  },
+  "BlueArchive_Hoshino:BulletToolTips": {
+    "TEXT": [
+      "Ammo",
+      "This is the current ammo. Some cards require the ammo to be used.",
+      "The #r ammo is empty."
+    ]
+  },
+  "BlueArchive_Hoshino:MindConcentrationAction": {
+    "TEXT": [
+      "Choose all the cards you want to return to the draw pile (focus)",
+      "Choose"
+    ]
+  },
+  "BlueArchive_Hoshino:BuringTheBridgeAction": {
+    "TEXT": [
+      "Choose all the cards you want to return to the draw pile (the multiplier's gin)",
+      "Choose"
+    ]
+  },
+  "BlueArchive_Hoshino:BDNoteAction": {
+    "TEXT": [
+      "Choose a countdown card to bring into your hand"
+    ]
+  },
+  "BlueArchive_Hoshino:AmmoBoxAction": {
+    "TEXT": [
+      "Choose an ammo box card to bring into your hand"
+    ]
+  },
+  "BlueArchive_Hoshino:SwimsuitFormAction": {
+    "TEXT": [
+      "Select a card to bring into your hand"
+    ]
+  },
+  "BlueArchive_Hoshino:RefillAmmoAction": {
+    "TEXT": [
+      ""
+    ]
+  },
+  "BlueArchive_Hoshino:TotemPoleText": {
+    "TEXT": [
+      " NL bluearchive_hoshino:Countdown(",
+      "): Instantly Exhaust and draw 1 card."
+    ]
+  },
+  "BlueArchive_Hoshino:PerfectPlanAction": {
+    "TEXT": [
+      "Choose which cards to keep on the draw pile (the perfect plan)",
+      "Choose"
+    ]
+  },
+  "BlueArchive_Hoshino:BulletExhaustAction": {
+    "TEXT": [
+      "Select the ammo card to be exhausted.",
+      "Select"
+    ]
+  }
+}
+
+

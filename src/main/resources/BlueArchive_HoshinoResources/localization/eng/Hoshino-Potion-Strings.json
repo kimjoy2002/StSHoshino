@@ -1,0 +1,10 @@
+{
+        "BlueArchive_Hoshino:SkilledPotion": {
+                "NAME": "Skilled Potion",
+                "DESCRIPTIONS": ["Gain #b", " #yExpert"]
+        },
+        "BlueArchive_Hoshino:BulletPotion": {
+                "NAME": "Ammo Potion",
+                "DESCRIPTIONS": ["Gain #b", " #yAmmo slots."]
+        }
+}

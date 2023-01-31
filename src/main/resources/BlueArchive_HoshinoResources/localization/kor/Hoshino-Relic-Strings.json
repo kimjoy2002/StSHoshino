@@ -1,0 +1,146 @@
+{
+  "BlueArchive_Hoshino:HoshinoBaseRelic": {
+    "NAME": "대책위원회의 부장",
+    "FLAVOR": "아비도스 대책위원회 부장으로서의 책임감입니다.",
+    "DESCRIPTIONS": [
+      "전투 시작시 #ybluearchive_hoshino:숙련을 #b",
+      " 얻습니다."
+    ]
+  },
+  "BlueArchive_Hoshino:HoshinoBaseRelicPlus": {
+    "NAME": "대책위원회의 부장+",
+    "FLAVOR": "아비도스 대책위원회 부장으로서의 책임감입니다.",
+    "DESCRIPTIONS": [
+      "#r대책위원회의 #r부장 과 교체됩니다. 전투 시작시 #ybluearchive_hoshino:숙련을 #b",
+      " 만큼 얻습니다. #ybluearchive_hoshino:장전시 추가로 #ybluearchive_hoshino:방패를 #b",
+      " 얻습니다."
+    ]
+  },
+  "BlueArchive_Hoshino:IOURelic": {
+    "NAME": "차용증",
+    "FLAVOR": "\"주의) 첨탑 1층마다 이자가 3% 부가됩니다.\" - 차용증 하단에 아주 작은 글씨로",
+    "DESCRIPTIONS": [
+      "갚기 전까지 상점의 비용이 20% 증가합니다. NL 우클릭하면 골드 #b",
+      " 를 즉시 갚을 수 있습니다."
+    ]
+  },
+  "BlueArchive_Hoshino:ShirokoRelic": {
+    "NAME": "복면",
+    "FLAVOR": "은행 강도를 위한 필수품입니다.",
+    "DESCRIPTIONS": [
+      "전투 보상으로 골드를 #b",
+      " 씩 더 얻습니다."
+    ]
+  },
+  "BlueArchive_Hoshino:SerikaRelic": {
+    "NAME": "게르마늄 맥반석 팔찌",
+    "FLAVOR": "\"천연 게르마늄에서 나오는 음이온으로 건강을 챙기세요. 전자파 차단 스티커 첨부!\"",
+    "DESCRIPTIONS": [
+      "전투 시작시 무작위로 좋은 효과를 얻습니다.",
+      ""
+    ]
+  },
+  "BlueArchive_Hoshino:NonomiRelic": {
+    "NAME": "아이돌 복장",
+    "FLAVOR": "태그에 장난스러운 스트레이트라고 써있습니다.",
+    "DESCRIPTIONS": [
+      "전투 시작시 손이 가득 찰 때까지 무작위 다른 직업 카드를 가져옵니다."
+    ]
+  },
+  "BlueArchive_Hoshino:EyeOfHorusRelic": {
+    "NAME": "호루스의 눈",
+    "FLAVOR": "호시노가 애용하는 심플한 디자인의 산탄총.",
+    "DESCRIPTIONS": [
+      "턴마다 처음 #ybluearchive_hoshino:장전을 하면 다음 #ybluearchive_hoshino:장전할때 까지 #ybluearchive_hoshino:탄약을 소모한 공격에 #b",
+      " 피해를 추가합니다."
+    ]
+  },
+  "BlueArchive_Hoshino:WhaleTubeRelic": {
+    "NAME": "고래 튜브",
+    "FLAVOR": "가만히 있어도 더워집니다.",
+    "DESCRIPTIONS": [
+      "카드가 카드 효과로 뽑을 더미에 되돌아갈때마다 #y방어도를 #b",
+      " 얻습니다."
+    ]
+  },
+  "BlueArchive_Hoshino:AmmoBoxRelic": {
+    "NAME": "탄약 상자",
+    "FLAVOR": "학교 필수 기물입니다.",
+    "DESCRIPTIONS": [
+      "첫 턴에 무작위 #y탄약 #y상자 카드를 1장 얻습니다. 그 카드의 비용이 0 이 됩니다."
+    ]
+  },
+  "BlueArchive_Hoshino:DoubleBarrelShotgunRelic": {
+    "NAME": "더블 배럴 샷건",
+    "FLAVOR": "한 방에 두발!",
+    "DESCRIPTIONS": [
+      "매 턴 시작 시 [E] 를 1 추가로 얻습니다. 전투 시작시 #y최대 #ybluearchive_hoshino:탄약이 #b",
+      " 감소합니다."
+    ]
+  },
+  "BlueArchive_Hoshino:GoldCardRelic": {
+    "NAME": "골드 카드",
+    "FLAVOR": "빚을 갚는데 빼고는 다 쓸 수 있습니다.",
+    "DESCRIPTIONS": [
+      "다음에 사는 상점의 물품이 한 번 무료가 됩니다."
+    ]
+  },
+  "BlueArchive_Hoshino:FireSupportDroneRelic": {
+    "NAME": "화력 지원 드론",
+    "FLAVOR": "시로코가 애용하는 드론입니다.",
+    "DESCRIPTIONS": [
+      "내 턴이 끝날때 가장 체력이 적은 적에게 피해를 #b",
+      " 줍니다."
+    ]
+  },
+  "BlueArchive_Hoshino:SupporterExpressRelic": {
+    "NAME": "특급송달 전투지원품",
+    "FLAVOR": "아야네의 지원용 드론입니다.",
+    "DESCRIPTIONS": [
+      "매 전투에서 처음 피해를 입을 때 체력을 #b",
+      " 회복합니다."
+    ]
+  },
+  "BlueArchive_Hoshino:IronHorusRelic": {
+    "NAME": "아이언 호루스",
+    "FLAVOR": "호시노가 애용하는 방패입니다. 접어서 보관이 가능합니다.",
+    "DESCRIPTIONS": [
+      "전투 시작시 #y방어도와 #ybluearchive_hoshino:방패를 #b",
+      " 얻습니다."
+    ]
+  },
+  "BlueArchive_Hoshino:ShellBeltRelic": {
+    "NAME": "쉘 벨트",
+    "FLAVOR": "탄약을 추가로 보관하는 벨트입니다.",
+    "DESCRIPTIONS": [
+      "획득시 #ybluearchive_hoshino:탄약을 소모하는 카드 1장을 선택합니다. #ybluearchive_hoshino:장전을 할때마다 뽑을 카드 더미에 있는 그 카드를 손으로 가져옵니다.",
+      "#ybluearchive_hoshino:장전을 할때마다 뽑을 카드 더미에 있는 ",
+      " 카드를 손으로 가져옵니다.",
+      "",
+      " : 장전시 가져올 카드를 선택합니다."
+    ]
+  },
+  "BlueArchive_Hoshino:TacticalSatchelBagRelic": {
+    "NAME": "전술 란도셀",
+    "FLAVOR": "고가의 가방입니다.",
+    "DESCRIPTIONS": [
+      "#ybluearchive_hoshino:탄약을 #b",
+      " 개 소모할때마다 #ybluearchive_hoshino:숙련을 #b",
+      " 얻습니다."
+    ]
+  },
+  "BlueArchive_Hoshino:AutoReloaderRelic": {
+    "NAME": "자동 장전 장치",
+    "FLAVOR": "간편합니다.",
+    "DESCRIPTIONS": [
+      "전투 시작 후 첫 턴의 #ybluearchive_hoshino:장전은 비용이 0이 됩니다."
+    ]
+  },
+  "BlueArchive_Hoshino:TotemPoleRelic": {
+    "NAME": "토템폴",
+    "FLAVOR": "데카그라마톤은 많이 도셨나요?",
+    "DESCRIPTIONS": [
+      "모든 #y상태이상과 #y저주 카드가 \" #ybluearchive_hoshino:카운트다운(2) : 즉시 소멸하고 카드를 1장 뽑습니다. \" 를 얻습니다."
+    ]
+  }
+}

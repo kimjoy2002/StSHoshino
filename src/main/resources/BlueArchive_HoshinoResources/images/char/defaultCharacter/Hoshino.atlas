@@ -1,0 +1,202 @@
+
+Hoshino.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+halo
+  rotate: false
+  xy: 355, 86
+  size: 85, 53
+  orig: 85, 53
+  offset: 0, 0
+  index: -1
+head_swimsuit
+  rotate: false
+  xy: 1, 1
+  size: 150, 300
+  orig: 150, 300
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 153, 1
+  size: 109, 227
+  orig: 109, 227
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 315, 152
+  size: 75, 83
+  orig: 75, 83
+  offset: 0, 0
+  index: -1
+body_swimsuit
+  rotate: false
+  xy: 363, 1
+  size: 75, 83
+  orig: 75, 83
+  offset: 0, 0
+  index: -1
+left_arm
+  rotate: false
+  xy: 497, 60
+  size: 43, 41
+  orig: 43, 41
+  offset: 0, 0
+  index: -1
+left_arm_swimsuit
+  rotate: false
+  xy: 494, 139
+  size: 43, 41
+  orig: 43, 41
+  offset: 0, 0
+  index: -1
+right_arm_swimsuit
+  rotate: false
+  xy: 451, 277
+  size: 49, 41
+  orig: 49, 41
+  offset: 0, 0
+  index: -1
+right_arm
+  rotate: false
+  xy: 479, 206
+  size: 49, 41
+  orig: 49, 41
+  offset: 0, 0
+  index: -1
+left_leg
+  rotate: false
+  xy: 418, 362
+  size: 41, 65
+  orig: 41, 65
+  offset: 0, 0
+  index: -1
+left_leg_swimsuit
+  rotate: false
+  xy: 451, 429
+  size: 41, 65
+  orig: 41, 65
+  offset: 0, 0
+  index: -1
+right_leg_swimsuit
+  rotate: false
+  xy: 365, 431
+  size: 51, 65
+  orig: 51, 65
+  offset: 0, 0
+  index: -1
+right_leg
+  rotate: false
+  xy: 365, 364
+  size: 51, 65
+  orig: 51, 65
+  offset: 0, 0
+  index: -1
+skirt
+  rotate: false
+  xy: 264, 383
+  size: 99, 99
+  orig: 99, 99
+  offset: 0, 0
+  index: -1
+skirt_swimsuit
+  rotate: false
+  xy: 158, 383
+  size: 99, 99
+  orig: 99, 99
+  offset: 0, 0
+  index: -1
+left_foot_swimsuit
+  rotate: false
+  xy: 392, 141
+  size: 53, 77
+  orig: 53, 77
+  offset: 0, 0
+  index: -1
+left_foot
+  rotate: false
+  xy: 442, 60
+  size: 53, 77
+  orig: 53, 77
+  offset: 0, 0
+  index: -1
+shotgun
+  rotate: false
+  xy: 158, 230
+  size: 155, 151
+  orig: 155, 151
+  offset: 0, 0
+  index: -1
+left_hand
+  rotate: false
+  xy: 315, 305
+  size: 73, 57
+  orig: 73, 57
+  offset: 0, 0
+  index: -1
+left_hand_swimsuit
+  rotate: false
+  xy: 440, 1
+  size: 73, 57
+  orig: 73, 57
+  offset: 0, 0
+  index: -1
+right_foot
+  rotate: false
+  xy: 264, 152
+  size: 45, 65
+  orig: 45, 65
+  offset: 0, 0
+  index: -1
+right_foot_swimsuit
+  rotate: false
+  xy: 447, 139
+  size: 45, 65
+  orig: 45, 65
+  offset: 0, 0
+  index: -1
+right_hand
+  rotate: false
+  xy: 418, 220
+  size: 59, 55
+  orig: 59, 55
+  offset: 0, 0
+  index: -1
+right_hand_swimsuit
+  rotate: false
+  xy: 390, 305
+  size: 59, 55
+  orig: 59, 55
+  offset: 0, 0
+  index: -1
+shield
+  rotate: false
+  xy: 1, 303
+  size: 155, 200
+  orig: 155, 200
+  offset: 0, 0
+  index: -1
+shield1
+  rotate: false
+  xy: 264, 76
+  size: 89, 74
+  orig: 89, 74
+  offset: 0, 0
+  index: -1
+shield2
+  rotate: false
+  xy: 315, 237
+  size: 94, 66
+  orig: 94, 66
+  offset: 0, 0
+  index: -1
+shield3
+  rotate: false
+  xy: 264, 1
+  size: 97, 73
+  orig: 97, 73
+  offset: 0, 0
+  index: -1

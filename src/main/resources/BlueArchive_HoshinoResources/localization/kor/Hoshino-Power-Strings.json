@@ -1,0 +1,170 @@
+{
+  "BlueArchive_Hoshino:TacticalReloadPower": {
+    "NAME": "전술 장전",
+    "DESCRIPTIONS": [
+      "#y장전 을 할 경우 적 전체에게 피해를 #b",
+      " 줍니다.",
+      " 줍니다."
+    ]
+  },
+  "BlueArchive_Hoshino:ShieldPower": {
+    "NAME": "방패",
+    "DESCRIPTIONS": [
+      "턴 시작 시 #y방패 수치만큼의 #y방어도는 사라지지 않습니다. #y방패 수치는 현재 #y방어도보다 높을 수 없습니다."
+    ]
+  },
+  "BlueArchive_Hoshino:SupressionVeteranPower": {
+    "NAME": "진압 숙련",
+    "DESCRIPTIONS": [
+      "#y탄약 을 소모할 경우 #y방어도 를 #b",
+      " 얻습니다.",
+      " 얻습니다."
+    ]
+  },
+  "BlueArchive_Hoshino:HoshinoEvolutionPower": {
+    "NAME": "조급함",
+    "DESCRIPTIONS": [
+      "#y집중 카드를 뽑을 경우 해당 카드의 #y집중 수치를 1 증가시키고 카드를 #b",
+      " 뽑습니다.",
+      " 뽑습니다."
+    ]
+  },
+  "BlueArchive_Hoshino:ReloadLosePower": {
+  "NAME": "장전시 힘 감소",
+  "DESCRIPTIONS": [
+    "#y장전 시 #y힘 을 #b",
+    " 잃습니다.",
+    " 잃습니다."
+  ]
+  },
+  "BlueArchive_Hoshino:AnAceInTheHolePower": {
+    "NAME": "비장의 수",
+    "DESCRIPTIONS": [
+      "카드를 사용할 때마다 체력 #b",
+      " 잃습니다.",
+      " 잃습니다."
+    ]
+  },
+  "BlueArchive_Hoshino:RefillAmmoPower": {
+    "NAME": "추억",
+    "DESCRIPTIONS": [
+      "덱을 섞을때마다 #y힘과 #y민첩을  #b",
+      " 얻습니다.",
+      " 얻습니다."
+    ]
+  },
+  "BlueArchive_Hoshino:SwimsuitFormPower": {
+    "NAME": "해변의 형상",
+    "DESCRIPTIONS": [
+        "내 턴 시작 시 뽑을 카드 더미에서 카드를 #b",
+      " 선택해 가져옵니다. 이번 턴 동안 그 카드의 비용이 0이 됩니다.",
+      " 선택해 가져옵니다. 이번 턴 동안 그 카드의 비용이 0이 됩니다."
+    ]
+  },
+  "BlueArchive_Hoshino:BulletVigor": {
+    "NAME": "피해증가 탄약",
+    "DESCRIPTIONS": [
+      "#y탄약을 사용하는 카드의 피해를 #b",
+      " 증가시킵니다. #y장전시 사라집니다."
+    ]
+  },
+  "BlueArchive_Hoshino:BulletVune": {
+    "NAME": "파쇄탄 탄약",
+    "DESCRIPTIONS": [
+      "#y탄약을 사용하는 카드가 #y취약도 #b",
+      " 부여합니다. #y장전시 사라집니다."
+    ]
+  },
+  "BlueArchive_Hoshino:BulletIgni": {
+    "NAME": "소이탄 탄약",
+    "DESCRIPTIONS": [
+      "#y탄약을 사용시 적 전체에게 피해를 #b",
+      " 줍니다. #y장전시 사라집니다."
+    ]
+  },
+  "BlueArchive_Hoshino:FreeReloadPower": {
+  "NAME": "무료 장전",
+  "DESCRIPTIONS": [
+    "#y장전을 사용하는 비용이 다음 #b",
+    " 번 0이 됩니다.",
+    " 번 0이 됩니다."
+  ]
+},
+  "BlueArchive_Hoshino:RoundManualChamberingPower": {
+    "NAME": "초탄 장전",
+    "DESCRIPTIONS": [
+      "매 턴마다 처음 사용하는 #y장전은 비용이 0이 됩니다.",
+      "매 턴마다 #b",
+      " 번 사용하는 #y장전은 비용이 0이 됩니다."
+    ]
+  },
+  "BlueArchive_Hoshino:BountyPower": {
+    "NAME": "현상금",
+    "DESCRIPTIONS": [
+      "이 몬스터를 죽이면 골드를 #b",
+      " 얻습니다. 인공물을 무시합니다.",
+      " 얻습니다. 인공물을 무시합니다."
+    ]
+  },
+  "BlueArchive_Hoshino:HorusOfEyePower": {
+    "NAME": "호루스의 눈",
+    "DESCRIPTIONS": [
+      "매 턴 시작시 손에 있는 카드 모두의 #y카운트다운을 #b",
+      " 감소시킵니다.",
+      " 감소시킵니다."
+    ]
+  },
+  "BlueArchive_Hoshino:HorusOfEyePower2": {
+    "NAME": "호루스의 눈",
+    "DESCRIPTIONS": [
+      "#y카운트다운이 감소될때마다 무작위 적에게 데미지를 #b",
+      " 줍니다."
+    ]
+  },
+  "BlueArchive_Hoshino:GoldWhalePower": {
+    "NAME": "황금 고래",
+    "DESCRIPTIONS": [
+      "전투 종료시 각각 #b",
+      " 개의 유물과 25% 확률로 저주를 얻습니다.",
+      " 개의 유물과 25% 확률로 저주를 얻습니다."
+    ]
+  },
+  "BlueArchive_Hoshino:SprintPower": {
+    "NAME": "단거리 질주",
+    "DESCRIPTIONS": [
+      "턴마다 카드를 #b",
+      " 장 더 뽑고, 더는 카드를 뽑을 수 없습니다.",
+      " 장 더 뽑고, 더는 카드를 뽑을 수 없습니다."
+    ]
+  },
+  "BlueArchive_Hoshino:BlackMarketPower": {
+    "NAME": "블랙마켓",
+    "DESCRIPTIONS": [
+      "#y장전할 경우 #y탄약을 소모하는 무작위 카드 #b",
+      " 장을 손으로 가져옵니다.",
+      " 장을 손으로 가져옵니다."
+    ]
+  },
+  "BlueArchive_Hoshino:PlaceboPower": {
+    "NAME": "플라시보",
+    "DESCRIPTIONS": [
+      "아무 효과도 없지만 기분은 좋습니다!"
+    ]
+  },
+  "BlueArchive_Hoshino:SkilledPower": {
+    "NAME": "숙련",
+    "DESCRIPTIONS": [
+      "#y장전시 #y방어도를 #b",
+      " 얻습니다.",
+      " 얻습니다."
+    ]
+  },
+  "BlueArchive_Hoshino:FixShieldPower": {
+    "NAME": "방패 고정",
+    "DESCRIPTIONS": [
+      "턴 시작시 #y방패가 있다면 방어도를 #b",
+      " 얻습니다.",
+      " 얻습니다."
+    ]
+  }
+}
