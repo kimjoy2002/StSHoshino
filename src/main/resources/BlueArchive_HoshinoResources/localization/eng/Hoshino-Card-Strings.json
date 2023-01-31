@@ -277,7 +277,7 @@
   },
   "BlueArchive_Hoshino:FragShot": {
     "NAME": "Frag Ammo Box",
-    "DESCRIPTION": "bluearchive_hoshino:Reload. NL Attacks that use bluearchive_hoshino:Ammo also Apply !M! Vulnerability until bluearchive_hoshino:Reload. NL Exhaust."
+    "DESCRIPTION": "bluearchive_hoshino:Reload. NL Attacks that use bluearchive_hoshino:Ammo also Apply !M! Vulnerable until bluearchive_hoshino:Reload. NL Exhaust."
   },
   "BlueArchive_Hoshino:SlugShot": {
     "NAME": "Slug Ammo Box",
