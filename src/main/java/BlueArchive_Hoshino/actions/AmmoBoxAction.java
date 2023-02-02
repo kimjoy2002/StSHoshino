@@ -80,7 +80,7 @@ public class AmmoBoxAction extends AbstractGameAction {
                     derp = (AbstractCard)c.next();
                     this.p.hand.addToHand(derp);
                     if(upgrade)
-                        derp.setCostForTurn(-9);
+                        derp.setCostForTurn(derp.costForTurn - 1);
 
                     this.p.exhaustPile.removeCard(derp);
                 }

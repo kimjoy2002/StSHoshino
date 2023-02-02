@@ -162,7 +162,7 @@
   "BlueArchive_Hoshino:FixShieldPower": {
     "NAME": "Fix Shield",
     "DESCRIPTIONS": [
-      "If you have a #yShield at the start of your turn, Gain #b",
+      "If you have a #yShield at the end of your turn, Gain #b",
       "Block.",
       "Block."
     ]

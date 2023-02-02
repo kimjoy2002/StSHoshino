@@ -2,10 +2,10 @@
   "BlueArchive_Hoshino:KaiserCorporationEvent": {
     "NAME": "Suspicious Deal",
     "DESCRIPTIONS": [
-      "As I was walking along the road, a ~huge~ ~sized~ ~robot~ started talking to me. NL \"How about buying a powerful #yweapon? You can't be without a weapon in this harsh world.\" NL A robot that calls itself a PMC director is asking an exorbitant price. NL\"Of course, I'm not asking you to pay all at once. All you have to do is just @sign me@ .\" NL Then you are handed a very #ysuspicious #ypaper...",
+      "As I was walking along the road, a ~huge~ ~sized~ ~robot~ started talking to me. NL \"How about buying a powerful #yweapon? You can't be without a weapon in this harsh world.\" NL A robot that calls itself a PMC director is asking an exorbitant price. NL \"Of course, I'm not asking you to pay all at once. All you have to do is just @sign@ @me@ .\" NL Then you are handed a very #ysuspicious #ypaper...",
       "\"what? Are you going to give me the money right away?\" NL After a moment of embarrassment, he gives you a choice of #yweapon for a fee.",
       "\"Good! This concludes the contract. Pick one #yweapon you want!\" NL Although you feel like he's laughing, the robot can't be laughing.",
-      "There's no need to sign suspicious papers. NL\"under! yeah, don't regret it\" NL He turns his back and leaves.",
+      "There's no need to sign suspicious papers. NL \"under! yeah, don't regret it\" NL He turns his back and leaves.",
       "I'm short of money."
     ],
     "OPTIONS": [

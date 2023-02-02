@@ -162,7 +162,7 @@
   "BlueArchive_Hoshino:FixShieldPower": {
     "NAME": "방패 고정",
     "DESCRIPTIONS": [
-      "턴 시작시 #y방패가 있다면 방어도를 #b",
+      "턴 종료시 #y방패가 있다면 방어도를 #b",
       " 얻습니다.",
       " 얻습니다."
     ]
