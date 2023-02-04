@@ -60,7 +60,6 @@ public class SnapShot extends CustomCard  implements ShotCard {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
 
         baseDamage = DAMAGE;
-        isMultiDamage = true;
     }
 
 

@@ -58,6 +58,7 @@ public class Jackpot extends CustomCard implements DrowsyCard {
         magicNumber = baseMagicNumber = AMOUNT;
         misc = DROWSY;
         baseDraw = 1;
+        isMultiDamage = true;
     }
 
     @Override

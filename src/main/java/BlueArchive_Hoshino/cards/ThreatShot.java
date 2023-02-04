@@ -64,6 +64,7 @@ public class ThreatShot extends CustomCard implements ShotCard {
 
         baseDamage = DAMAGE;
         magicNumber = baseMagicNumber = AMOUNT;
+        isMultiDamage = true;
     }
 
     @Override

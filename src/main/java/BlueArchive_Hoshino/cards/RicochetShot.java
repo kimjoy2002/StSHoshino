@@ -61,7 +61,6 @@ public class RicochetShot extends CustomCard implements ShotCard {
         // Just type this.base and let intelliJ auto complete for you, or, go read up AbstractCard
 
         baseDamage = DAMAGE;
-        isMultiDamage = true;
     }
 
     // Actions the card should do.
