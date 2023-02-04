@@ -36,10 +36,10 @@ public class SlugShot extends AbstractDynamicCard implements BulletCard {
     public static final CardColor COLOR = Hoshino.Enums.COLOR_PINK;
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    private static final int COST = 2;
+    private static final int COST = 1;
 
-    private int AMOUNT = 20;
-    private static final int UPGRADE_PLUS_AMOUNT = 6;
+    private int AMOUNT = 12;
+    private static final int UPGRADE_PLUS_AMOUNT = 4;
 
     public SlugShot() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
