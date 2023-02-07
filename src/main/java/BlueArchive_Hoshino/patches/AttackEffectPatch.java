@@ -23,11 +23,11 @@ public class AttackEffectPatch {
         @SpirePrefixPatch
         public static SpireReturn Prefix(FlashAtkImgEffect e, AbstractGameAction.AttackEffect effect) {
             if (effect == EnumPatch.HOSHINO_SHOTGUN) {
-                CardCrawlGame.sound.playV("BlueArchive_Hoshino:Fire", 0.75F);
+                CardCrawlGame.sound.playV("BlueArchive_Hoshino:Fire", 0.35F);
             } else if (effect == EnumPatch.HOSHINO_SHOTGUN_LIGHT) {
-                CardCrawlGame.sound.playV("BlueArchive_Hoshino:FireLight", 0.75F);
+                CardCrawlGame.sound.playV("BlueArchive_Hoshino:FireLight", 0.35F);
             } else if (effect == EnumPatch.HOSHINO_SHOTGUN_HEAVY) {
-                CardCrawlGame.sound.playV("BlueArchive_Hoshino:FireHeavy", 0.75F);
+                CardCrawlGame.sound.playV("BlueArchive_Hoshino:FireHeavy", 0.35F);
             } else {
                 return SpireReturn.Continue();
             }

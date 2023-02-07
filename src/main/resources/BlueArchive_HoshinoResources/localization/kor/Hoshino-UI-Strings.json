@@ -61,5 +61,23 @@
       "소멸 시킬 탄약 카드를 선택하십시오.",
       "선택"
     ]
+  },
+  "BlueArchive_Hoshino:RetryAction": {
+    "TEXT": [
+      "뽑을 카드 더미로 되돌릴 카드를 산택하십시오. (재시도)",
+      "선택"
+    ]
+  },
+  "BlueArchive_Hoshino:FixedSkillAction": {
+    "TEXT": [
+      "다음 턴부터 차례대로 가져올 카드를 선택하십시오. (손패 고정)",
+      "선택"
+    ]
+  },
+  "BlueArchive_Hoshino:FixedSkillGetAction": {
+    "TEXT": [
+      "손으로 가져올 카드를 선택하십시오. (손패 고정)",
+      "선택"
+    ]
   }
 }

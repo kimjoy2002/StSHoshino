@@ -48,7 +48,7 @@ public class DoorBreaching extends CustomCard implements DrowsyCard {
 
     private static final int COST = 2;
     private static final int DAMAGE = 16;
-    private static final int UPGRADE_PLUS_DMG = 3;
+    private static final int UPGRADE_PLUS_DMG = 5;
     private static final int DROWSY = 2;
     private static final int AMOUNT = 3;
 

@@ -61,6 +61,24 @@
       "Select the ammo card to be exhausted.",
       "Select"
     ]
+  },
+  "BlueArchive_Hoshino:RetryAction": {
+    "TEXT": [
+      "Choose a card to return to the your draw pile. (Retry)",
+      "Choose"
+    ]
+  },
+  "BlueArchive_Hoshino:FixedSkillAction": {
+    "TEXT": [
+      "Choose a card to take from the next turn. (Fixed Skill)",
+      "Choose"
+    ]
+  },
+  "BlueArchive_Hoshino:FixedSkillGetAction": {
+    "TEXT": [
+      "Choose a card to bring into your hand. (Fixed Skill)",
+      "Choose"
+    ]
   }
 }
 

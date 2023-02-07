@@ -125,8 +125,8 @@
     "NAME": "Golden Whale",
     "DESCRIPTIONS": [
       "the end of battle, Gain #b",
-      " relic and 25% chance to gain #yCurse.",
-      " relics and 25% chance to gain #yCurses."
+      " relic and 33% chance to gain #yCurse.",
+      " relics and 33% chance to gain #yCurses."
     ]
   },
   "BlueArchive_Hoshino:SprintPower": {
@@ -165,6 +165,12 @@
       "If you have a #yShield at the end of your turn, Gain #b",
       "Block.",
       "Block."
+    ]
+  },
+  "BlueArchive_Hoshino:FixedSkillPower": {
+    "NAME": "Fixed Skill",
+    "DESCRIPTIONS": [
+      "At the start of your turn, Choose and take one of the following cards: "
     ]
   }
 }

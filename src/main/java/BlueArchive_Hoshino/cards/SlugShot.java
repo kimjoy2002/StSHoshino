@@ -39,7 +39,7 @@ public class SlugShot extends AbstractDynamicCard implements BulletCard {
     private static final int COST = 1;
 
     private int AMOUNT = 12;
-    private static final int UPGRADE_PLUS_AMOUNT = 4;
+    private static final int UPGRADE_PLUS_AMOUNT = 5;
 
     public SlugShot() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);

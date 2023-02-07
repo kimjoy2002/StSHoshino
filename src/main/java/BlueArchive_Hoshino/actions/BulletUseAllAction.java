@@ -14,7 +14,7 @@ public class BulletUseAllAction extends AbstractGameAction {
     }
 
     public void update() {
-        BulletSubscriber.setBullet(0);
+        BulletSubscriber.setBullet(0, false);
         this.isDone = true;
     }
 }

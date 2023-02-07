@@ -22,6 +22,7 @@ public class GameActionManagerPatch {
         public static void Insert(GameActionManager __instance) {
 
             ShuffleCard.totalShuffledThisTurn.set(0);
+            BulletSubscriber.reloadedThisTurn.set(0);
         }
         private static class Locator extends SpireInsertLocator {
             public int[] Locate(CtBehavior ctMethodToPatch) throws Exception {
@@ -39,6 +40,7 @@ public class GameActionManagerPatch {
         public static void Postfix(GameActionManager __instance)
         {
             ShuffleCard.totalShuffledThisTurn.set(0);
+            BulletSubscriber.reloadedThisTurn.set(0);
             BulletSubscriber.reloadedThisCombat = 0;
             FreeReloadPower.freeReload = false;
         }

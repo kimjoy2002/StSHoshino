@@ -378,5 +378,25 @@
   "BlueArchive_Hoshino:Technique": {
   "NAME": "Technique",
   "DESCRIPTION": "Gain !M! bluearchive_hoshino:Expert."
-}
+  },
+  "BlueArchive_Hoshino:SurpriseAttack": {
+    "NAME": "Surprise Attack",
+    "DESCRIPTION": "Use 1 bluearchive_hoshino:Ammo. NL Deal !D! damage. NL Costs 1 more [E] for each bluearchive_hoshino:Reload this turn."
+  },
+  "BlueArchive_Hoshino:RushStandby": {
+    "NAME": "Rush Standby",
+    "DESCRIPTION": "Gain !B! Block. NL bluearchive_hoshino:Reload !M! Times."
+  },
+  "BlueArchive_Hoshino:TriggerHappy": {
+    "NAME": "Trigger Happy",
+    "DESCRIPTION": "Use 1 bluearchive_hoshino:Ammo. NL Deal !D! damage. NL Put all Trigger Happy cards from your draw pile into your hand. Increase the damage of ALL Trigger Happy cards by !M! this turn."
+  },
+  "BlueArchive_Hoshino:Retry": {
+    "NAME": "Retry",
+    "DESCRIPTION": "Put !M! cards from your discard pile into your draw pile and Shuffle. Gain !B! Block for each bluearchive_hoshino:Countdown cards."
+  },
+  "BlueArchive_Hoshino:FixedSkill": {
+    "NAME": "Fixed Skill",
+    "DESCRIPTION": "Innate. NL Choose !M! cards from your draw pile and keep them. At the start of your turn, Choose one of the kept cards and take it."
+  }
 }

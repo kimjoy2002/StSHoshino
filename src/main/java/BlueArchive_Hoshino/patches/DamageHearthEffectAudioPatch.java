@@ -16,7 +16,7 @@ public class DamageHearthEffectAudioPatch {
 
     public static SpireReturn<Void> Prefix(DamageHeartEffect __instance) {
         if (AbstractDungeon.player.chosenClass == Hoshino.Enums.HOSHINO) {
-            CardCrawlGame.sound.playV("BlueArchive_Hoshino:Fire", 0.75F);
+            CardCrawlGame.sound.playV("BlueArchive_Hoshino:Fire", 0.35F);
             return SpireReturn.Return();
         } else {
             return SpireReturn.Continue();

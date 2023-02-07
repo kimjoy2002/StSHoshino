@@ -33,7 +33,7 @@ public interface DrowsyCard {
             ((DrowsyCard)card).makeDescrption();
         } else if(isCurseDrowsyCard(card)) {
             if(prev_drowsy != 0 && card.misc == 0) {
-                AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, 1));
+                AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, 2));
                 AbstractDungeon.player.hand.moveToExhaustPile(card);
                 CardCrawlGame.dungeon.checkForPactAchievement();
             }

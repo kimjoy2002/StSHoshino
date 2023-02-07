@@ -1,21 +1,21 @@
 package BlueArchive_Hoshino.cards;
 
 import BlueArchive_Hoshino.DefaultMod;
+import BlueArchive_Hoshino.actions.PerfectPlanAction;
 import BlueArchive_Hoshino.actions.ReloadAction;
+import BlueArchive_Hoshino.actions.RetryAction;
 import BlueArchive_Hoshino.characters.Hoshino;
-import BlueArchive_Hoshino.powers.BulletIgniPower;
-import BlueArchive_Hoshino.powers.BulletVigorPower;
-import BlueArchive_Hoshino.powers.ReloadLosePower;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.ShuffleAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import static BlueArchive_Hoshino.DefaultMod.makeCardPath;
 
-public class IncendiaryShot extends AbstractDynamicCard implements BulletCard {
+public class Retry extends AbstractDynamicCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
@@ -25,8 +25,8 @@ public class IncendiaryShot extends AbstractDynamicCard implements BulletCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = DefaultMod.makeID(IncendiaryShot.class.getSimpleName());
-    public static final String IMG = makeCardPath("IncendiaryShot.png");
+    public static final String ID = DefaultMod.makeID(Retry.class.getSimpleName());
+    public static final String IMG = makeCardPath("Retry.png");
 
     // /TEXT DECLARATION/
 
@@ -40,21 +40,25 @@ public class IncendiaryShot extends AbstractDynamicCard implements BulletCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     private static final int COST = 1;
+    private static final int BLOCK = 5;
 
-    private int AMOUNT = 5;
+    private int AMOUNT = 3;
     private static final int UPGRADE_PLUS_AMOUNT = 2;
 
-    public IncendiaryShot() {
+    // /STAT DECLARATION/
+
+
+    public Retry() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        baseBlock = BLOCK;
         magicNumber = baseMagicNumber = AMOUNT;
-        exhaust = true;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new ReloadAction());
-        this.addToBot(new ApplyPowerAction(p, p, new BulletIgniPower(p, this.magicNumber), this.magicNumber));
+        this.addToBot(new RetryAction(this.magicNumber, block));
+        this.addToBot(new ShuffleAction(AbstractDungeon.player.drawPile, true));
     }
 
     //Upgraded stats.

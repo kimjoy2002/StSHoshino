@@ -1,6 +1,8 @@
 package BlueArchive_Hoshino.subscriber;
 
 import BlueArchive_Hoshino.cards.BlackMarket;
+import BlueArchive_Hoshino.cards.ShotCard;
+import BlueArchive_Hoshino.cards.ShuffleCard;
 import BlueArchive_Hoshino.characters.Hoshino;
 import BlueArchive_Hoshino.powers.BulletVigorPower;
 import BlueArchive_Hoshino.powers.ShieldPower;
@@ -24,6 +26,7 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class BulletSubscriber implements PostDrawSubscriber, OnStartBattleSubscriber, PostEnergyRechargeSubscriber, OnCardUseSubscriber, PostBattleSubscriber, CustomSavable<Integer>, PreStartGameSubscriber, PostDeathSubscriber, PostCreateStartingRelicsSubscriber {
     private static int bullet = 4;
@@ -31,6 +34,7 @@ public class BulletSubscriber implements PostDrawSubscriber, OnStartBattleSubscr
     private static int maxBulletLimit = 10;
     private static int defaultBullet = 4;
     public static int reloadedThisCombat = 0;
+    public static AtomicInteger reloadedThisTurn = new AtomicInteger();
 
     public BulletSubscriber() {
     }
@@ -56,7 +60,7 @@ public class BulletSubscriber implements PostDrawSubscriber, OnStartBattleSubscr
     }
     public static boolean reload(int number) {
         if((number == -1 && getMaxBullet() > getBullet()) || number >= 0) {
-            setBullet(number>0?number:getMaxBullet());
+            setBullet(number>0?number:getMaxBullet(), true);
             int blockAmt = 0;
             int shieldAmt = 0;
 
@@ -65,6 +69,14 @@ public class BulletSubscriber implements PostDrawSubscriber, OnStartBattleSubscr
                 AbstractRelic relic_ = AbstractDungeon.player.relics.get(i);
                 if (relic_ instanceof ReloadRelic) {
                     ((ReloadRelic) relic_).onReload();
+                }
+            }
+            Iterator var1 = AbstractDungeon.player.hand.group.iterator();
+
+            while(var1.hasNext()) {
+                AbstractCard c = (AbstractCard)var1.next();
+                if (c instanceof ShotCard) {
+                    ((ShotCard) c).onReload();
                 }
             }
 
@@ -140,6 +152,7 @@ public class BulletSubscriber implements PostDrawSubscriber, OnStartBattleSubscr
                 }
             }
             BulletSubscriber.reloadedThisCombat++;
+            BulletSubscriber.reloadedThisTurn.incrementAndGet();
             return true;
         }
         return false;
@@ -147,20 +160,20 @@ public class BulletSubscriber implements PostDrawSubscriber, OnStartBattleSubscr
 
     public static void addBullet(int amount) {
         if (amount >= 0) {
-            setBullet(bullet + amount);
+            setBullet(bullet + amount, false);
         }
     }
 
     public static void removeBullet(int amount) {
         if (amount >= 0) {
-            setBullet(Math.max(bullet - amount, 0));
+            setBullet(Math.max(bullet - amount, 0), false);
         }
     }
 
-    public static void setBullet(int value) {
+    public static void setBullet(int value, boolean noeffect) {
         int afterBullet = Math.max(Math.min(value, maxBullet), 0);
 
-        if(afterBullet < bullet) {
+        if(!noeffect && afterBullet < bullet) {
             if(AbstractDungeon.player.hasPower("BlueArchive_Hoshino:SupressionVeteranPower")) {
                 AbstractPower svPower = AbstractDungeon.player.getPower("BlueArchive_Hoshino:SupressionVeteranPower");
                 AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, svPower.amount * (bullet - afterBullet)));
@@ -222,7 +235,7 @@ public class BulletSubscriber implements PostDrawSubscriber, OnStartBattleSubscr
     }
 
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
-        setBullet(defaultBullet);
+        setBullet(defaultBullet, true);
         System.out.println("Current bullet: " + bullet);
     }
 
