@@ -6,7 +6,9 @@ import basemod.abstracts.CustomPotion;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.helpers.PowerTip;
+import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
@@ -55,10 +57,10 @@ public class BulletPotion extends CustomPotion  {
         return 3;
     }
 
-    public void upgradePotion()
-    {
-        potency += 1;
-        tips.clear();
+    public void initializeData() {
+        this.potency = this.getPotency();
+        description = DESCRIPTIONS[0] + potency + DESCRIPTIONS[1];
+        this.tips.clear();
         tips.add(new PowerTip(name, description));
     }
 }

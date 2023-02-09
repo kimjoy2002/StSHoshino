@@ -55,10 +55,10 @@ public class SkilledPotion  extends CustomPotion  {
         return 3;
     }
 
-    public void upgradePotion()
-    {
-        potency += 1;
-        tips.clear();
+    public void initializeData() {
+        this.potency = this.getPotency();
+        description = DESCRIPTIONS[0] + potency + DESCRIPTIONS[1];
+        this.tips.clear();
         tips.add(new PowerTip(name, description));
     }
 }

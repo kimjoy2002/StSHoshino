@@ -20,7 +20,8 @@
   {
     "PROPER_NAME": "Ammo",
     "NAMES": [
-      "ammo"
+      "ammo",
+      "ammo:"
     ],
     "DESCRIPTION": "Some cards require Ammo. Empty Ammo Slot can be refilled by reloading."
   },
@@ -63,6 +64,14 @@
       "expert"
     ],
     "DESCRIPTION": "Gain Block equal to the value when reloading."
+  },
+  {
+    "PROPER_NAME": "Out Of Ammo",
+    "NAMES": [
+      "outofammo",
+      "out"
+    ],
+    "DESCRIPTION": "Activates when all Ammo is empty."
   }
 ]
 

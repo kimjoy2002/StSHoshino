@@ -27,7 +27,7 @@ public class GoldCardPatch {
                 if (!relic.usedUp) {
                     relic.flash();
                     card_.price = 0;
-                    relic.usedUp();
+                    relic.setCounter(-2);
                     relic.stopPulse();
                 }
             }
@@ -45,7 +45,7 @@ public class GoldCardPatch {
                 if (!relic.usedUp) {
                     relic.flash();
                     __instance.price = 0;
-                    relic.usedUp();
+                    relic.setCounter(-2);
                     relic.stopPulse();
                 }
             }
@@ -63,7 +63,7 @@ public class GoldCardPatch {
                 if (!relic.usedUp) {
                     relic.flash();
                     __instance.price = 0;
-                    relic.usedUp();
+                    relic.setCounter(-2);
                     relic.stopPulse();
                 }
             }
@@ -115,7 +115,7 @@ public class GoldCardPatch {
                 if (!relic.usedUp) {
                     relic.flash();
                     ShopScreen.actualPurgeCost = 0;
-                    relic.usedUp();
+                    relic.setCounter(-2);
                     relic.stopPulse();
                 }
             }

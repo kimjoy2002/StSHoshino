@@ -6,6 +6,8 @@ import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.relics.MawBank;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.ShopRoom;
 
@@ -44,12 +46,6 @@ public class GoldCardRelic extends CustomRelic {
         }
     }
 
-    public void onSpendGold() {
-        if (!this.usedUp) {
-            this.flash();
-            this.setCounter(-2);
-        }
-    }
 
     public void setCounter(int setCounter) {
         this.counter = setCounter;
@@ -64,5 +60,7 @@ public class GoldCardRelic extends CustomRelic {
         return (Settings.isEndless || AbstractDungeon.floorNum <= 48) && !(AbstractDungeon.getCurrRoom() instanceof ShopRoom);
     }
 
-
+    public AbstractRelic makeCopy() {
+        return new GoldCardRelic();
+    }
 }

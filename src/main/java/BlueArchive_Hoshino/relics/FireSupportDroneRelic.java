@@ -1,6 +1,7 @@
 package BlueArchive_Hoshino.relics;
 
 import BlueArchive_Hoshino.DefaultMod;
+import BlueArchive_Hoshino.actions.ShirokoRelicAction;
 import BlueArchive_Hoshino.util.TextureLoader;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
@@ -41,20 +42,9 @@ public class FireSupportDroneRelic extends CustomRelic {
 
     public void onPlayerEndTurn() {
         this.flash();
-        Iterator var3 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
 
-        AbstractMonster mo = null;
-        while(var3.hasNext()) {
-            AbstractMonster temp = (AbstractMonster)var3.next();
-            if((mo == null || mo.currentHealth > temp.currentHealth) && !temp.isDead && !temp.halfDead ) {
-                mo = temp;
-            }
-        }
-        if(mo != null) {
-            AbstractDungeon.actionManager.addToBottom(
-                    new DamageAction(mo, new DamageInfo(AbstractDungeon.player, DAMAGE, DamageInfo.DamageType.THORNS),
-                            AbstractGameAction.AttackEffect.FIRE));
-        }
+        AbstractDungeon.actionManager.addToTop(
+                new ShirokoRelicAction(DAMAGE));
     }
 
 }

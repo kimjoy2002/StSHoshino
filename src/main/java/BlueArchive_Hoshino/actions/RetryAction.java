@@ -29,12 +29,29 @@ public class RetryAction extends AbstractGameAction {
 
     public void update() {
         if (this.duration == Settings.ACTION_DUR_MED) {
-            CardGroup tmp = this.p.discardPile;
+            CardGroup discardPiles = this.p.discardPile;
 
-            if (tmp.size() <= amount) {
+            if (discardPiles.size() <= amount) {
+                Iterator discardPileIter = this.p.discardPile.group.iterator();
+                CardGroup tmp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+
+                while(discardPileIter.hasNext()) {
+                    AbstractCard c = (AbstractCard)discardPileIter.next();
+                    tmp.addToRandomSpot(c);
+                }
+
+                Iterator discards = tmp.group.iterator();
+                while(discards.hasNext()) {
+                    AbstractCard c = (AbstractCard)discards.next();
+                    AbstractDungeon.player.discardPile.moveToDeck(c, true);
+                    if(c instanceof DrowsyCard) {
+                        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, block));
+                    }
+                }
+
                 this.isDone = true;
             } else {
-                AbstractDungeon.gridSelectScreen.open(tmp, amount, TEXT[0],false, false, false, false);
+                AbstractDungeon.gridSelectScreen.open(discardPiles, amount, true , TEXT[0]);
                 this.tickDuration();
             }
         } else {
