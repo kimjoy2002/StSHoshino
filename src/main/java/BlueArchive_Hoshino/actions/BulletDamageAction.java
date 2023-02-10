@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
@@ -57,6 +58,7 @@ public class BulletDamageAction extends DamageAction {
                 }
                 BulletSubscriber.removeBullet(1);
                 c.applyPowers();
+                c.calculateCardDamage((AbstractMonster)this.target);
                 this.target.damage(new DamageInfo(AbstractDungeon.player, c.damage, c.damageTypeForTurn));
                 if(AbstractDungeon.player.hasPower("BlueArchive_Hoshino:BulletVune")) {
                     AbstractPower igPower = AbstractDungeon.player.getPower("BlueArchive_Hoshino:BulletVune");

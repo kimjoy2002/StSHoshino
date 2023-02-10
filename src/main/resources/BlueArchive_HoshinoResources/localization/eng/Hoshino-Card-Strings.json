@@ -35,11 +35,11 @@
   },
   "BlueArchive_Hoshino:TacticalSuppressionAttack": {
     "NAME": "Tactical Suppression",
-    "DESCRIPTION": "Use 5 bluearchive_hoshino:Ammo. NL Each deals !D! damage NL to ALL enemies. NL bluearchive_hoshino:Countdown(4): bluearchive_hoshino:Stun them. Exhausts.",
-    "UPGRADE_DESCRIPTION": "Use 5 bluearchive_hoshino:Ammo. NL Each deals !D! damage NL to ALL enemies. NL ",
+    "DESCRIPTION": "Use 5 bluearchive_hoshino:Ammo. NL Each deals !D! damage NL to ALL enemies. NL Exhausts. NL bluearchive_hoshino:Countdown(4): bluearchive_hoshino:Stun them.",
+    "UPGRADE_DESCRIPTION": "Use 5 bluearchive_hoshino:Ammo. NL Each deals !D! damage NL to ALL enemies. NL Exhausts. NL ",
     "EXTENDED_DESCRIPTION": [
       "bluearchive_hoshino:Countdown(",
-      "): bluearchive_hoshino:Stun them. Exhausts."
+      "): bluearchive_hoshino:Stun them."
     ]
   },
   "BlueArchive_Hoshino:QuickShotAttack": {

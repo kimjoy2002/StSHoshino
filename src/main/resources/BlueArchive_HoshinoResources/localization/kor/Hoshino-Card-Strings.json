@@ -35,11 +35,11 @@
   },
   "BlueArchive_Hoshino:TacticalSuppressionAttack": {
     "NAME": "전술 진압",
-    "DESCRIPTION": "bluearchive_hoshino:탄약을 5개까지 소모하고 하나당 적 전체에 피해를 !D! 줍니다. NL bluearchive_hoshino:카운트다운(4): 추가로 적 전체를 bluearchive_hoshino:기절 시킵니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "bluearchive_hoshino:탄약을 5개까지 소모하고 하나당 적 전체에 피해를 !D! 줍니다. NL ",
+    "DESCRIPTION": "bluearchive_hoshino:탄약을 5개까지 소모하고 하나당 적 전체에 피해를 !D! 줍니다. NL 소멸. NL bluearchive_hoshino:카운트다운(4): 추가로 적 전체를 bluearchive_hoshino:기절 시킵니다.",
+    "UPGRADE_DESCRIPTION": "bluearchive_hoshino:탄약을 5개까지 소모하고 하나당 적 전체에 피해를 !D! 줍니다. NL 소멸. NL ",
     "EXTENDED_DESCRIPTION": [
       "bluearchive_hoshino:카운트다운(",
-      "): 추가로 적 전체를 bluearchive_hoshino:기절 시킵니다. NL 소멸."
+      "): 추가로 적 전체를 bluearchive_hoshino:기절 시킵니다."
     ]
   },
   "BlueArchive_Hoshino:QuickShotAttack": {
