@@ -1,0 +1,148 @@
+{
+  "BlueArchive_Hoshino:HoshinoBaseRelic": {
+    "NAME": "对策委员会长",
+    "FLAVOR": "这是我身为阿拜多斯对策委员会长的职责。",
+    "DESCRIPTIONS": [
+      "战斗开始时，获得 #b ",
+      " 层 #y行家 。"
+    ]
+  },
+  "BlueArchive_Hoshino:HoshinoBaseRelicPlus": {
+    "NAME": "对策委员会长+",
+    "FLAVOR": "这是我身为阿拜多斯对策委员会长的职责。",
+    "DESCRIPTIONS": [
+      "替换 #r对策委员会长 。战斗开始时，获得 #b",
+      " 层 #y行家 。 #y装填 时，获得 #b",
+      " 层 #y盾牌 。"
+    ]
+  },
+  "BlueArchive_Hoshino:IOURelic": {
+    "NAME": "欠条",
+    "FLAVOR": "\"注) 尖塔内每层收取3%的利息。\" — 欠条的最下方有一行非常小的字。",
+    "DESCRIPTIONS": [
+      "还清前，商店价格提高20%。 NL 右键支付 #b",
+      " 金币 立即还清。"
+    ]
+  },
+  "BlueArchive_Hoshino:ShirokoRelic": {
+    "NAME": "面具",
+    "FLAVOR": "抢银行必备。",
+    "DESCRIPTIONS": [
+      "战斗结束时获得 #b",
+      " 金币。"
+    ]
+  },
+  "BlueArchive_Hoshino:SerikaRelic": {
+    "NAME": "含锗花岗岩手链",
+    "FLAVOR": "\"小心天然锗释放的负离子，记得贴上电磁波防护标签！\"",
+    "DESCRIPTIONS": [
+      "战斗开始时，获得随机正面效果。",
+      ""
+    ]
+  },
+  "BlueArchive_Hoshino:NonomiRelic": {
+    "NAME": "偶像服",
+    "FLAVOR": "标签上写着\"Mischievous Straight\"。",
+    "DESCRIPTIONS": [
+      "战斗开始时，手牌随机加入其他颜色的牌直到上限。"
+    ]
+  },
+  "BlueArchive_Hoshino:EyeOfHorusRelic": {
+    "NAME": "荷鲁斯之眼",
+    "FLAVOR": "一把设计简单的霰弹枪，由星野保管着。",
+    "DESCRIPTIONS": [
+      "每回合首次 #y装填 时，使用 #y弹药 的攻击牌伤害额外提升 #b",
+      " 点，直到下次 #y装填 。"
+    ]
+  },
+  "BlueArchive_Hoshino:WhaleTubeRelic": {
+    "NAME": "鲸管",
+    "FLAVOR": "就算一动不动也会很热。",
+    "DESCRIPTIONS": [
+      "每当有一张牌因为卡牌效果返回抽牌堆，获得 #b",
+      " 点 #y格挡 。"
+    ]
+  },
+  "BlueArchive_Hoshino:AmmoBoxRelic": {
+    "NAME": "弹药箱",
+    "FLAVOR": "上学必备品。",
+    "DESCRIPTIONS": [
+      "战斗开始时，将一张随机 #y弹药箱 牌加入手牌，它的耗能为0。"
+    ]
+  },
+  "BlueArchive_Hoshino:DoubleBarrelShotgunRelic": {
+    "NAME": "双管霰弹枪",
+    "FLAVOR": "一石二鸟!",
+    "DESCRIPTIONS": [
+      "回合开始时获得 [E] 。战斗开始时，失去 #b",
+      " 个 #y弹药槽 。"
+    ]
+  },
+  "BlueArchive_Hoshino:GoldCardRelic": {
+    "NAME": "金卡",
+    "FLAVOR": "你可以用其他任何东西还清债务。",
+    "DESCRIPTIONS": [
+      "在下个商店可以免费消费一次。"
+    ]
+  },
+  "BlueArchive_Hoshino:FireSupportDroneRelic": {
+    "NAME": "火力支援无人机",
+    "FLAVOR": "白子心爱的无人机。",
+    "DESCRIPTIONS": [
+      "回合结束时，对生命值最低的敌人造成 #b",
+      " 点伤害。"
+    ]
+  },
+  "BlueArchive_Hoshino:SupporterExpressRelic": {
+    "NAME": "急速补给",
+    "FLAVOR": "绫音的支援无人机。",
+    "DESCRIPTIONS": [
+      "每场战斗首次受到伤害时，回复 #b",
+      " 点生命。"
+    ]
+  },
+  "BlueArchive_Hoshino:IronHorusRelic": {
+    "NAME": "钢铁荷鲁斯",
+    "FLAVOR": "星野最爱的盾牌，可以折叠保管。",
+    "DESCRIPTIONS": [
+      "战斗开始时，获得 #b",
+      " 点 #y格挡 和 #y盾牌 。"
+    ]
+  },
+  "BlueArchive_Hoshino:ShellBeltRelic": {
+    "NAME": "弹药带",
+    "FLAVOR": "一条可以装填额外弹药的腰带",
+    "DESCRIPTIONS": [
+      "拾起时，选择一张使用 #y弹药 的牌，每当 #y装填 时，将这张牌从抽牌堆加入手牌。",
+      "每当 #y装填 时，将 ",
+      " 从抽牌堆加入手牌。",
+      "",
+      " : 选择一张牌"
+    ]
+  },
+  "BlueArchive_Hoshino:TacticalSatchelBagRelic": {
+    "NAME": "战术背包",
+    "FLAVOR": "一个贵重的背包。",
+    "DESCRIPTIONS": [
+      "每消耗 #b",
+      " 发 #y弹药 ，获得 #b",
+      " 层 #y行家 。"
+    ]
+  },
+  "BlueArchive_Hoshino:AutoReloaderRelic": {
+    "NAME": "自动装填器",
+    "FLAVOR": "简简单单。",
+    "DESCRIPTIONS": [
+      "每场战斗第一个回合 #y装填 的耗能变为0。"
+    ]
+  },
+  "BlueArchive_Hoshino:TotemPoleRelic": {
+    "NAME": "图腾支柱",
+    "FLAVOR": "你已经完成了这么多十字神名?",
+    "DESCRIPTIONS": [
+      "所有 #y状态 和 #y诅咒 牌获得\" #y计数(2) : #y消耗 并抽1张牌。\"。"
+    ]
+  }
+}
+
+

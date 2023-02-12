@@ -1,0 +1,402 @@
+{
+  "BlueArchive_Hoshino:HoshinoStrike": {
+    "NAME": "打击",
+    "DESCRIPTION": "消耗1 bluearchive_hoshino:弹药 。 NL 造成 !D! 点伤害。"
+  },
+  "BlueArchive_Hoshino:HoshinoDefend": {
+    "NAME": "防御",
+    "DESCRIPTION": "获得 !B! 点 格挡 。"
+  },
+  "BlueArchive_Hoshino:QuickReloadSkill": {
+    "NAME": "快速装填",
+    "DESCRIPTION": "如果你有空的 bluearchive_hoshino:弹药 槽, bluearchive_hoshino:装填 。 NL 抽1张牌。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL 如果你有空的 bluearchive_hoshino:弹药 槽， bluearchive_hoshino:装填 。 NL 抽1张牌。"
+  },
+  "BlueArchive_Hoshino:TacticalShieldSkill": {
+    "NAME": "战术盾牌",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 层 bluearchive_hoshino:盾牌 。"
+  },
+  "BlueArchive_Hoshino:FullBarrelFire": {
+    "NAME": "全弹发射",
+    "DESCRIPTION": "消耗所有 bluearchive_hoshino:弹药 。 NL 每发 bluearchive_hoshino:弹药 造成 !D! 点伤害。"
+  },
+  "BlueArchive_Hoshino:TacticalReload": {
+    "NAME": "战术装填",
+    "DESCRIPTION": "每当你 bluearchive_hoshino:装填 时，对所有敌人造成 !M! 点伤害。"
+  },
+  "BlueArchive_Hoshino:LockAndLoad": {
+    "NAME": "上膛",
+    "DESCRIPTION": "获得 !M! 个空 bluearchive_hoshino:弹药 槽。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 获得 !M! 个空 bluearchive_hoshino:弹药 槽。"
+  },
+  "BlueArchive_Hoshino:DoubleShotAttack": {
+    "NAME": "二连射击",
+    "DESCRIPTION": "最多消耗2 bluearchive_hoshino:弹药 。每发 bluearchive_hoshino:弹药 造成 !D! 点伤害。"
+  },
+  "BlueArchive_Hoshino:TacticalSuppressionAttack": {
+    "NAME": "战术镇压",
+    "DESCRIPTION": "最多消耗5 bluearchive_hoshino:弹药 。 每发 bluearchive_hoshino:弹药 对所有敌人造成 !D! 点伤害。 NL bluearchive_hoshino:计数 (4) :  bluearchive_hoshino:击晕 敌人。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "最多消耗5 bluearchive_hoshino:弹药 。 每发 bluearchive_hoshino:弹药 对所有敌人造成 !D! 点伤害。 NL ",
+    "EXTENDED_DESCRIPTION": [
+      " bluearchive_hoshino:计数 (",
+      "): bluearchive_hoshino:击晕 敌人。 NL 消耗 。"
+    ]
+  },
+  "BlueArchive_Hoshino:QuickShotAttack": {
+    "NAME": "速射",
+    "DESCRIPTION": "消耗1 bluearchive_hoshino:弹药 。 NL 造成 !D! 点伤害。 NL 将这张牌放入抽牌堆顶部。"
+  },
+  "BlueArchive_Hoshino:ShieldAttack": {
+    "NAME": "盾击",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 层 bluearchive_hoshino:盾牌 。 NL 造成 bluearchive_hoshino:盾牌 层数的伤害。",
+    "UPGRADE_DESCRIPTION": " NL ( 造成 !D! 点伤害 )"
+  },
+  "BlueArchive_Hoshino:IronWallSkill": {
+    "NAME": "铁壁",
+    "DESCRIPTION": "移除 脆弱 。 NL 获得 !B! 点 格挡 。 NL 获得 !M! 层 bluearchive_hoshino:盾牌 。"
+  },
+  "BlueArchive_Hoshino:SupressionVeteran": {
+    "NAME": "镇压精通",
+    "DESCRIPTION": "每当消耗 bluearchive_hoshino:弹药 时。获得 !M! 点 格挡 。"
+  },
+  "BlueArchive_Hoshino:FirstShot": {
+    "NAME": "首发",
+    "DESCRIPTION": "消耗1 bluearchive_hoshino:弹药 。 NL 造成 !D! 点伤害。 NL bluearchive_hoshino:计数 (2) : 这张牌的耗能提高1点。",
+    "UPGRADE_DESCRIPTION": "消耗1 bluearchive_hoshino:弹药 。 NL 造成 !D! 点伤害。 NL bluearchive_hoshino:计数 (3) : 这张牌的耗能提高1点。",
+    "EXTENDED_DESCRIPTION": [
+      "消耗1 bluearchive_hoshino:弹药 。 NL 造成 !D! 点伤害。 NL ",
+      " bluearchive_hoshino:计数 (",
+      "): 这张牌的耗能提高1点。"
+    ]
+  },
+  "BlueArchive_Hoshino:OperationTime": {
+    "NAME": "表演时刻",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 将一张牌放到抽牌堆顶部。"
+  },
+  "BlueArchive_Hoshino:BDNote": {
+    "NAME": "蓝光碟片",
+    "DESCRIPTION": "从抽牌堆中选择一张 bluearchive_hoshino:计数 牌加入手牌。 NL 将其计数值提高或降低1点。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      "抽牌堆中 NL 没有计数牌。"
+    ]
+  },
+  "BlueArchive_Hoshino:MissShot": {
+    "NAME": "打歪",
+    "DESCRIPTION": "消耗所有 bluearchive_hoshino:弹药 。 NL 造成 !D! 点伤害。"
+  },
+  "BlueArchive_Hoshino:WeakPointShot": {
+    "NAME": "弱点射击",
+    "DESCRIPTION": "消耗1 bluearchive_hoshino:弹药 。 NL 造成 !D! 点伤害。 NL 施加剩余 bluearchive_hoshino:弹药 层数的 易伤 。"
+  },
+  "BlueArchive_Hoshino:Preparation": {
+    "NAME": "预备",
+    "DESCRIPTION": "将一张弃牌堆的牌放到抽牌堆顶部。 NL bluearchive_hoshino:计数 (3) : 获得 [E] 。 NL bluearchive_hoshino:计数 (4) : 获得 [E] 。",
+    "UPGRADE_DESCRIPTION": "将一张弃牌堆的牌放到抽牌堆顶部。 NL bluearchive_hoshino:计数 (2) : 获得 [E] 。 NL bluearchive_hoshino:计数 (3) : 获得 [E] 。",
+    "EXTENDED_DESCRIPTION": [
+      "将一张弃牌堆的牌放到抽牌堆顶部。 NL ",
+      " bluearchive_hoshino:计数 (",
+      "): 获得 [E] 。 NL bluearchive_hoshino:计数 (",
+      "): 获得 [E] 。"
+    ]
+  },
+  "BlueArchive_Hoshino:Contract": {
+    "NAME": "杀手契约",
+    "DESCRIPTION": "失去 1 bluearchive_hoshino:弹药 槽 。 NL 获得 !M! 点 力量 。 NL 获得 !M! 层 bluearchive_hoshino:行家 。"
+  },
+  "BlueArchive_Hoshino:CoverLoad": {
+    "NAME": "掩护装填",
+    "DESCRIPTION": "每有一个空 bluearchive_hoshino:弹药 槽，获得 !B! 点 格挡 。 NL bluearchive_hoshino:装填 。"
+  },
+  "BlueArchive_Hoshino:UnplannedGamble": {
+    "NAME": "不计算下注",
+    "DESCRIPTION": "将任意数量的手牌洗入抽牌堆，然后抽相应数量的牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "将任意数量的手牌洗入抽牌堆，然后抽相应数量的牌。"
+  },
+  "BlueArchive_Hoshino:AnAceInTheHole": {
+    "NAME": "杀手锏",
+    "DESCRIPTION": "抽牌直到手牌上限。 NL 本回合每打出一张牌，失去 !M! 点生命。"
+  },
+  "BlueArchive_Hoshino:ButtstockAttack": {
+    "NAME": "枪托打击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL bluearchive_hoshino:空仓 时，施加 !M! 层 虚弱 。"
+  },
+  "BlueArchive_Hoshino:Jackpot": {
+    "NAME": "大满贯",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 抽1张牌。 NL bluearchive_hoshino:计数 (7) : 伤害提高 !M! 点。",
+    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 抽1张牌。 NL ",
+    "EXTENDED_DESCRIPTION": [
+      " bluearchive_hoshino:计数 (",
+      "): 伤害提高 !M! 点。"
+    ]
+  },
+  "BlueArchive_Hoshino:ForwardDefense": {
+    "NAME": "前卫防御",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL bluearchive_hoshino:计数 (3) : 获得 !M! 层 易伤 。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL ",
+    "EXTENDED_DESCRIPTION": [
+      " bluearchive_hoshino:计数 (",
+      "): 获得 !M! 层 易伤 。"
+    ]
+  },
+  "BlueArchive_Hoshino:Memorial": {
+    "NAME": "纪念品",
+    "DESCRIPTION": "每次将抽牌堆洗牌时，获得 !M! 点 力量 和 敏捷 。"
+  },
+  "BlueArchive_Hoshino:EmergencyFieldAidSkill": {
+    "NAME": "战地急救",
+    "DESCRIPTION": " 虚无 。 NL 只能在生命值低于一半时使用。 NL 回复 !M! 点生命。 NL 消耗 。"
+  },
+  "BlueArchive_Hoshino:ShieldRebound": {
+    "NAME": "偏折子弹",
+    "DESCRIPTION": "获得 !B! 点 格挡 。将本回合下一张打出的牌放到抽牌堆顶部。"
+  },
+  "BlueArchive_Hoshino:ThreatShot": {
+    "NAME": "鸣枪威吓",
+    "DESCRIPTION": "消耗1 bluearchive_hoshino:弹药 。 NL 对所有敌人造成 !D! 点伤害。 NL 所有敌人本回合失去 !M! 点 力量 。"
+  },
+  "BlueArchive_Hoshino:ChooseRepose":  {
+    "NAME": "舒缓",
+    "DESCRIPTION": "降低 bluearchive_hoshino:计数 值1点。"
+  },
+  "BlueArchive_Hoshino:ChooseNervous":  {
+    "NAME": "紧张",
+    "DESCRIPTION": "提高 bluearchive_hoshino:计数 值1点。"
+  },
+  "BlueArchive_Hoshino:LastResort":  {
+    "NAME": "秘密武器",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌 。 NL bluearchive_hoshino:空仓 时，获得 [E] 。"
+  },
+  "BlueArchive_Hoshino:BiteTheBullet":  {
+    "NAME": "咬紧牙关",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 选择提高或降低所有手牌的 bluearchive_hoshino:计数 值1点。"
+  },
+  "BlueArchive_Hoshino:MakeStrategy":  {
+    "NAME": "战术行动",
+    "DESCRIPTION": "本场战斗中，所有手牌的伤害和格挡数值提升 !M! 点。"
+  },
+  "BlueArchive_Hoshino:RicochetShot": {
+    "NAME": "跳弹射击",
+    "DESCRIPTION": "最多消耗3 bluearchive_hoshino:弹药 。每发 bluearchive_hoshino:弹药 造成 !D! 点伤害。"
+  },
+  "BlueArchive_Hoshino:RetractableShield":  {
+    "NAME": "可伸缩盾牌",
+    "DESCRIPTION": "选择一项: NL 获得等同于 格挡 值层数的 bluearchive_hoshino:盾牌 ， NL 或获得 等同于 bluearchive_hoshino:盾牌 层数点的 格挡 。",
+    "UPGRADE_DESCRIPTION": " 保留 。选择一项: NL 获得等同于 格挡 值层数的 bluearchive_hoshino:盾牌 ， NL 或获得 等同于 bluearchive_hoshino:盾牌 层数点的 格挡 。"
+  },
+  "BlueArchive_Hoshino:ChooseShieldUP":  {
+    "NAME": "扩展盾牌",
+    "DESCRIPTION": "获得等同于 格挡 值层数的 bluearchive_hoshino:盾牌 。",
+    "EXTENDED_DESCRIPTION": [
+      "获得 !M! 层 bluearchive_hoshino:盾牌 。"
+    ]
+  },
+  "BlueArchive_Hoshino:ChooseShieldDown":  {
+    "NAME": "折叠盾牌",
+    "DESCRIPTION": "获得 等同于 bluearchive_hoshino:盾牌 层数点的 格挡 。",
+    "EXTENDED_DESCRIPTION": [
+      "获得 !B! 点 格挡 。"
+    ]
+  },
+  "BlueArchive_Hoshino:RefillAmmo": {
+    "NAME": "重装弹药",
+    "DESCRIPTION": "将所有已消耗的 *弹药箱 牌洗入抽牌堆，然后抽相应数量的牌。他们在打出前耗能为0。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "将所有已消耗的 *弹药箱 牌洗入抽牌堆，然后抽相应数量的牌。他们在打出前耗能为0。"
+  },
+  "BlueArchive_Hoshino:SwimsuitForm": {
+    "NAME": "泳装形态",
+    "DESCRIPTION": " 虚无 。 NL 回合开始时，选择一张抽牌堆的牌加入手牌，本回合耗能为0。",
+    "UPGRADE_DESCRIPTION": "回合开始时，选择一张抽牌堆的牌加入手牌，本回合耗能为0。"
+  },
+  "BlueArchive_Hoshino:ChargingShot": {
+    "NAME": "充能射击",
+    "DESCRIPTION": "消耗1 bluearchive_hoshino:弹药 。 NL 造成 !D! 点伤害。 NL bluearchive_hoshino:计数 (3) : 这张牌的耗能变为0。",
+    "EXTENDED_DESCRIPTION": [
+      "消耗1 bluearchive_hoshino:弹药 。 NL 造成 !D! 点伤害。 NL ",
+      " bluearchive_hoshino:计数 (",
+      "): 这张牌的耗能变为0。"
+    ]
+  },
+  "BlueArchive_Hoshino:RampageShot": {
+    "NAME": "暴走射击",
+    "DESCRIPTION": "消耗1 bluearchive_hoshino:弹药 。 NL 造成 !D! 点伤害。 NL *无限 bluearchive_hoshino:计数 (1) : NL 本场战斗这张牌的伤害提高 !M! 点。",
+    "UPGRADE_DESCRIPTION": "消耗1 bluearchive_hoshino:弹药 。 NL 造成 !D! 点伤害。 NL ",
+    "EXTENDED_DESCRIPTION": [
+      " *无限 bluearchive_hoshino:计数 ( ",
+      "): NL 本场战斗这张牌的伤害提高 !M! 点。"
+    ]
+  },
+  "BlueArchive_Hoshino:OneLastShot": {
+    "NAME": "最后一枪",
+    "DESCRIPTION": "消耗1 bluearchive_hoshino:弹药 。 NL 造成 !D! 点伤害。 NL 如果这是最后一发 bluearchive_hoshino:弹药 ，造成双倍伤害。"
+  },
+  "BlueArchive_Hoshino:RoundManualChambering": {
+    "NAME": "首轮装填",
+    "DESCRIPTION": "每回合首次 bluearchive_hoshino:装填 耗能为0。"
+  },
+  "BlueArchive_Hoshino:AquaticSupport": {
+    "NAME": "水上支援",
+    "DESCRIPTION": "获得 !M! 点 力量 ， NL 抽2张牌。 NL 如果这张牌因为卡牌的效果回到抽牌堆，它在打出前耗能变为0。"
+  },
+  "BlueArchive_Hoshino:NoWasteReload": {
+    "NAME": "完美装填",
+    "DESCRIPTION": " bluearchive_hoshino:空仓 时，获得 [E] [E] 。 NL 如果你有空的 bluearchive_hoshino:弹药 槽， bluearchive_hoshino:装填 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL bluearchive_hoshino:空仓 时，获得 [E] [E] 。 NL 如果你有空的 bluearchive_hoshino:弹药 槽， bluearchive_hoshino:装填 。 NL 消耗 。"
+  },
+  "BlueArchive_Hoshino:HorusOfEye": {
+    "NAME": "荷鲁斯之眼",
+    "DESCRIPTION": "每当有卡牌 bluearchive_hoshino:计数 下降时， NL 对随机敌人造成 !M! 点伤害。"
+  },
+  "BlueArchive_Hoshino:RaiseShield": {
+    "NAME": "举盾",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 本回合每洗过一次抽牌堆，这张牌的耗能就降低1点。"
+  },
+  "BlueArchive_Hoshino:DoorBreaching": {
+    "NAME": "破门而入",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL bluearchive_hoshino:计数 (2) : 施加 !M! 层 虚弱 并将这张牌的 bluearchive_hoshino:计数 值提高2点。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL ",
+    "EXTENDED_DESCRIPTION": [
+      " bluearchive_hoshino:计数 (",
+      "): 施加 !M! 层 虚弱 并将这张牌的 bluearchive_hoshino:计数 值提高2点。"
+    ]
+  },
+  "BlueArchive_Hoshino:Mystery": {
+    "NAME": "神秘之力",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 获得 !M! 层 bluearchive_hoshino:盾牌 。 NL 消耗 。"
+  },
+  "BlueArchive_Hoshino:BankRobbery": {
+    "NAME": "抢银行",
+    "DESCRIPTION": " 虚无 。 NL 对所有敌人施加 !M! 层 悬赏 。 NL 对所有敌人施加2层 易伤 。 NL 消耗 。"
+  },
+  "BlueArchive_Hoshino:HitAndRun": {
+    "NAME": "游击",
+    "DESCRIPTION": "消耗1 bluearchive_hoshino:弹药 。 NL 造成 !D! 点伤害。 NL 本回合下次 bluearchive_hoshino:装填 耗能为0。"
+  },
+  "BlueArchive_Hoshino:IncendiaryShot": {
+    "NAME": "火焰弹药箱",
+    "DESCRIPTION": " bluearchive_hoshino:装填 。 NL 下次装填前，每发弹药会对所有敌人造成 !M! 点伤害。 NL 消耗 。"
+  },
+  "BlueArchive_Hoshino:FragShot": {
+    "NAME": "破片弹药箱",
+    "DESCRIPTION": " bluearchive_hoshino:装填 。 NL 下次装填前，消耗 bluearchive_hoshino:弹药 的攻击会施加 !M! 层 易伤 。 NL 消耗 。"
+  },
+  "BlueArchive_Hoshino:SlugShot": {
+    "NAME": "合金弹药箱",
+    "DESCRIPTION": "只 bluearchive_hoshino:装填 一发子弹。 NL 下次装填前，消耗 bluearchive_hoshino:弹药 的攻击牌额外造成 !M! 点伤害。 NL 消耗 。"
+  },
+  "BlueArchive_Hoshino:MilitarySupplies": {
+    "NAME": "军用补给",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 将一张已消耗的 *弹药箱 牌放回手中。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 将一张已消耗的 *弹药箱 牌放回手中，本回合其耗能降低1点。"
+  },
+  "BlueArchive_Hoshino:BlindShot": {
+    "NAME": "胡乱射击",
+    "DESCRIPTION": "消耗1 bluearchive_hoshino:弹药 。 NL 对随机敌人造成 !D! 点伤害 !M! 次。"
+  },
+  "BlueArchive_Hoshino:Lubricating": {
+    "NAME": "润滑",
+    "DESCRIPTION": "随机消耗一张使用 bluearchive_hoshino:弹药 的手牌。 NL 将 !M! 张牌从弃牌堆加入手牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "消耗一张使用 bluearchive_hoshino:弹药 的手牌。 NL 将 !M! 张牌从弃牌堆加入手牌。 NL 消耗 。"
+  },
+  "BlueArchive_Hoshino:WideShot": {
+    "NAME": "广阔射击",
+    "DESCRIPTION": "消耗1 bluearchive_hoshino:弹药 。 NL 对所有敌人造成 !D! 点伤害。 NL 随机将一张手牌放到抽牌堆顶部。"
+  },
+  "BlueArchive_Hoshino:SnapShot": {
+    "NAME": "自动射击",
+    "DESCRIPTION": "消耗X bluearchive_hoshino:弹药 。 NL 造成 !D! 点伤害 X 次。 NL 每当 bluearchive_hoshino:弹药 耗尽时会自动 bluearchive_hoshino:装填 。"
+  },
+  "BlueArchive_Hoshino:DeepSleep": {
+    "NAME": "深度睡眠",
+    "DESCRIPTION": "重复X次: NL 随机一张手牌的耗能在本场战斗中降低1点。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "重复X+1次: NL 随机一张手牌的耗能在本场战斗中降低1点。 NL 消耗 。"
+  },
+  "BlueArchive_Hoshino:Revenge": {
+    "NAME": "完美计划",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 从抽牌堆选择 !M! 张牌，丢弃其他牌。 NL 然后将抽牌堆洗牌。"
+  },
+  "BlueArchive_Hoshino:GoldWhale": {
+    "NAME": "黄金鲸鱼",
+    "DESCRIPTION": "战斗结束时，获得一个随机遗物。33%几率获得一张随机 诅咒 。"
+  },
+  "BlueArchive_Hoshino:RecoveryShell": {
+    "NAME": "拾捡弹壳",
+    "DESCRIPTION": "消耗1 bluearchive_hoshino:弹药 。 NL 造成 !D! 点伤害。 NL 再最多消耗 !M! bluearchive_hoshino:弹药 ，每消耗1发，抽一张牌。"
+  },
+  "BlueArchive_Hoshino:ShellStrike": {
+    "NAME": "弹壳打击",
+    "DESCRIPTION": "造成本场战斗装填次数 !M! 倍的伤害。",
+    "UPGRADE_DESCRIPTION": " NL ( 造成 !D! 点伤害 )"
+  },
+  "BlueArchive_Hoshino:Sprint": {
+    "NAME": "弹跳起步",
+    "DESCRIPTION": "每回合多抽 !M! 张牌， NL 回合内不能再抽牌。"
+  },
+  "BlueArchive_Hoshino:BlackMarket": {
+    "NAME": "黑市",
+    "DESCRIPTION": "每当 bluearchive_hoshino:装填 时，随机将一张使用弹药的牌加入手牌。"
+  },
+  "BlueArchive_Hoshino:Disguise": {
+    "NAME": "伪装",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 将这张牌与抽牌堆中一张随机 bluearchive_hoshino:计数 牌交换位置。 NL bluearchive_hoshino:计数 (4) : 获得的 格挡 提升 !M! 点。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 将这张牌与抽牌堆中一张随机 bluearchive_hoshino:计数 牌交换位置。 NL ",
+    "EXTENDED_DESCRIPTION": [
+      " bluearchive_hoshino:计数 (",
+      "): 获得的 格挡 提升 !M! 点。"
+    ]},
+  "BlueArchive_Hoshino:Patience": {
+    "NAME": "耐心",
+    "DESCRIPTION": " 不能被打出 。 NL 每当这张牌加入手牌，获得 !B! 点 格挡 。 NL bluearchive_hoshino:计数 (5) : 消耗这张牌并获得 !M! 点 敏捷 。",
+    "UPGRADE_DESCRIPTION": " 不能被打出 。 NL 每当这张牌加入手牌，获得 !B! 点 格挡 。 NL ",
+    "EXTENDED_DESCRIPTION": [
+      " bluearchive_hoshino:计数 (",
+      "): 消耗这张牌并获得 !M! 点 敏捷 。",
+      "这张牌不能被打出。"
+    ]},
+  "BlueArchive_Hoshino:Determination": {
+    "NAME": "决心",
+    "DESCRIPTION": " 不能被打出 。 NL 每当这张牌加入手牌，抽1张牌。 NL bluearchive_hoshino:计数 (5) : 消耗这张牌并获得 !M! 点 力量 。",
+    "UPGRADE_DESCRIPTION": " 不能被打出 。 NL 每当这张牌加入手牌，抽2张牌。 NL bluearchive_hoshino:计数 (5) : 消耗这张牌并获得 !M! 点 力量 。",
+    "EXTENDED_DESCRIPTION": [
+      " 不能被打出 。 NL 每当这张牌加入手牌，抽1张牌。 NL ",
+      " 不能被打出 。 NL 每当这张牌加入手牌，抽2张牌。 NL ",
+      " bluearchive_hoshino:计数 (",
+      "): 消耗这张牌并获得 !M! 点 力量 。",
+      "这张牌不能被打出。"
+    ]},
+  "BlueArchive_Hoshino:BurningTheBridge": {
+    "NAME": "破釜沉舟",
+    "DESCRIPTION": "选择任意张手牌以随机顺序放回抽牌堆顶部， NL 每放回一张获得 !B! 点 格挡 。"
+  },
+  "BlueArchive_Hoshino:LeaveItToMe": {
+    "NAME": "交给我吧!",
+    "DESCRIPTION": "消耗1 bluearchive_hoshino:弹药 。 NL 造成 !D! 点伤害， NL 获得 !B! 点 格挡 。 NL ( 每经过一层，格挡值提高 !M! 点。打出后重置。) NL 消耗 。"
+  },
+  "BlueArchive_Hoshino:FixShield": {
+    "NAME": "修复盾牌",
+    "DESCRIPTION": "回合结束时，如果你有 bluearchive_hoshino:盾牌 , 获得 !M! 点 格挡 。"
+  },
+  "BlueArchive_Hoshino:Technique": {
+  "NAME": "技术",
+  "DESCRIPTION": "获得 !M! 层 bluearchive_hoshino:行家 。"
+  },
+  "BlueArchive_Hoshino:SurpriseAttack": {
+    "NAME": "突然袭击",
+    "DESCRIPTION": "消耗1 bluearchive_hoshino:弹药 。 NL 造成 !D! 点伤害。 NL 本回合每装填一次，耗能增加 [E] 。"
+  },
+  "BlueArchive_Hoshino:RushStandby": {
+    "NAME": "冲锋预备",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL bluearchive_hoshino:装填 !M! 次。"
+  },
+  "BlueArchive_Hoshino:TriggerHappy": {
+    "NAME": "开枪作乐",
+    "DESCRIPTION": "消耗1 bluearchive_hoshino:弹药 。 NL 造成 !D! 点伤害。 NL 将抽牌堆中所有开枪作乐加入手牌，本回合所有开枪作乐的伤害提高 !M! 点。"
+  },
+  "BlueArchive_Hoshino:Retry": {
+    "NAME": "重试",
+    "DESCRIPTION": "将 !M! 张牌从弃牌堆放入抽牌堆并洗牌。每有一张 bluearchive_hoshino:计数 牌，获得 !B! 点 格挡 。"
+  },
+  "BlueArchive_Hoshino:FixedSkill": {
+    "NAME": "固有技能",
+    "DESCRIPTION": " 固有 。 NL 从抽牌堆中选择 !M! 张牌并放在一边。回合开始时选择拿取其中一张。"
+  }
+}

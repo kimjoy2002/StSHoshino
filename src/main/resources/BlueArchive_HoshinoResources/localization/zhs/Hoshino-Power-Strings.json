@@ -1,0 +1,178 @@
+{
+  "BlueArchive_Hoshino:TacticalReloadPower": {
+    "NAME": "战术装填",
+    "DESCRIPTIONS": [
+      "每当 #y装填 时，对所有敌人造成 #b",
+      " 点伤害。",
+      " 点伤害。"
+    ]
+  },
+  "BlueArchive_Hoshino:ShieldPower": {
+    "NAME": "Shield",
+    "DESCRIPTIONS": [
+      "回合开始时，保留 #y盾牌 层数的 #y格挡 。 #y盾牌 层数不会高于当前 #y格挡 值。"
+    ]
+  },
+  "BlueArchive_Hoshino:SupressionVeteranPower": {
+    "NAME": "镇压精通",
+    "DESCRIPTIONS": [
+      "每当消耗 #y弹药 时，获得 #b",
+      " 点 #y格挡 。",
+      " 点 #y格挡 。"
+    ]
+  },
+  "BlueArchive_Hoshino:HoshinoEvolutionPower": {
+    "NAME": "急躁",
+    "DESCRIPTIONS": [
+      "If you draw a #ycountdown card, increase the card's #yconcentration by 1 and #b",
+      "Pull it out.",
+      "Pull it out."
+    ]
+  },
+  "BlueArchive_Hoshino:ReloadLosePower": {
+    "NAME": "Reduced Power Reloaded",
+    "DESCRIPTIONS": [
+      "每当 #y装填 时， 失去 #b",
+      " 点 #y力量 。",
+      " 点 #y力量 。"
+    ]
+  },
+  "BlueArchive_Hoshino:AnAceInTheHolePower": {
+    "NAME": "杀手锏",
+    "DESCRIPTIONS": [
+      "每打出一张牌，失去 #b",
+      " 生命",
+      " 生命"
+    ]
+  },
+  "BlueArchive_Hoshino:RefillAmmoPower": {
+    "NAME": "纪念品",
+    "DESCRIPTIONS": [
+      "每当你将抽牌堆洗牌，获得 #b",
+      " 点 #y力量 和 #y敏捷 。",
+      " 点 #y力量 和 #y敏捷 。"
+    ]
+  },
+  "BlueArchive_Hoshino:SwimsuitFormPower": {
+    "NAME": "泳装形态",
+    "DESCRIPTIONS": [
+      "回合开始时，选择 #b",
+      " 张牌从抽牌堆加入手牌。它在打出前耗能为0。",
+      " 张牌从抽牌堆加入手牌。它们在打出前耗能为0。"
+    ]
+  },
+  "BlueArchive_Hoshino:BulletVigor": {
+    "NAME": "弹药伤害提升",
+    "DESCRIPTIONS": [
+      "使用 #y弹药 的牌伤害值提高 #b",
+      " 点。 #y装填 时移除。"
+    ]
+  },
+  "BlueArchive_Hoshino:BulletVune": {
+    "NAME": "破片弹药",
+    "DESCRIPTIONS": [
+      "使用 #y弹药 的牌会施加 #b",
+      " 层 #y易伤 。 #y装填 时移除。"
+    ]
+  },
+  "BlueArchive_Hoshino:BulletIgni": {
+    "NAME": "火焰弹药",
+    "DESCRIPTIONS": [
+      "每消耗一发 #y弹药 ，对所有敌人造成 #b",
+      " 点伤害。 #y装填 时移除。"
+    ]
+  },
+  "BlueArchive_Hoshino:FreeReloadPower": {
+    "NAME": "免费装填",
+    "DESCRIPTIONS": [
+      "接下来 #b",
+      " 次 #y装填 的耗能变为0。",
+      " 次 #y装填 的耗能变为0。"
+    ]
+  },
+  "BlueArchive_Hoshino:RoundManualChamberingPower": {
+    "NAME": "首轮装填",
+    "DESCRIPTIONS": [
+      "每回合首次 #y装填 的耗能变为0。",
+      "每回合前 #b",
+      " 次 #y装填 的耗能变为0。"
+    ]
+  },
+  "BlueArchive_Hoshino:BountyPower": {
+    "NAME": "赏金",
+    "DESCRIPTIONS": [
+      "如果你杀死这个怪物，获得 #b",
+      " 金币。 无视人工制品。",
+      " 金币。 无视人工制品。"
+    ]
+  },
+  "BlueArchive_Hoshino:HorusOfEyePower": {
+    "NAME": "荷鲁斯之眼",
+    "DESCRIPTIONS": [
+      "the #yCountdown of all cards in hand at the start of each turn #b",
+      "Reduce it.",
+      "Reduce it."
+    ]
+  },
+  "BlueArchive_Hoshino:HorusOfEyePower2": {
+    "NAME": "荷鲁斯之眼",
+    "DESCRIPTIONS": [
+      "每当有 #y计数 下降，对随机敌人造成 #b",
+      " 点伤害。"
+    ]
+  },
+  "BlueArchive_Hoshino:GoldWhalePower": {
+    "NAME": "金鲸",
+    "DESCRIPTIONS": [
+      "战斗结束时，获得 #b",
+      " 个遗物并有33%概率获得 #y诅咒 。",
+      " 个遗物并有33%概率获得 #y诅咒 。"
+    ]
+  },
+  "BlueArchive_Hoshino:SprintPower": {
+    "NAME": "弹跳起步",
+    "DESCRIPTIONS": [
+      "每回合多抽 #b",
+      " 张牌，回合内不能再抽牌。",
+      " 张牌，回合内不能再抽牌。"
+    ]
+  },
+  "BlueArchive_Hoshino:BlackMarketPower": {
+    "NAME": "黑市",
+    "DESCRIPTIONS": [
+      "每当 #y装填 时，将 #b",
+      " 张使用 #y弹药 的随机牌加入手牌。",
+      " 张使用 #y弹药 的随机牌加入手牌。"
+    ]
+  },
+  "BlueArchive_Hoshino:PlaceboPower": {
+    "NAME": "Placebo",
+    "DESCRIPTIONS": [
+      "It doesn't do anything, but it feels good!"
+    ]
+  },
+  "BlueArchive_Hoshino:ExpertPower": {
+    "NAME": "行家",
+    "DESCRIPTIONS": [
+      " #y装填 时，获得 #b",
+      " 点 #y格挡 。",
+      " 点 #y格挡 。"
+    ]
+  },
+  "BlueArchive_Hoshino:FixShieldPower": {
+    "NAME": "修复护盾",
+    "DESCRIPTIONS": [
+      "回合结束时，如果你有 #y盾牌 ，获得 #b",
+      "点 #y格挡 。",
+      "点 #y格挡 。"
+    ]
+  },
+  "BlueArchive_Hoshino:FixedSkillPower": {
+    "NAME": "固有技能",
+    "DESCRIPTIONS": [
+      "回合开始时，从以下卡牌中选择拿取一张: "
+    ]
+  }
+}
+
+

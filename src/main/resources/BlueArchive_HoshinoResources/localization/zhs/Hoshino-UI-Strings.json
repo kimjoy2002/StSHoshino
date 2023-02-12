@@ -1,0 +1,85 @@
+{
+  "BlueArchive_Hoshino:ReloadButtonUI": {
+    "TEXT": [
+      "装填",
+      "装填"
+    ]
+  },
+  "BlueArchive_Hoshino:BulletToolTips": {
+    "TEXT": [
+      "弹药",
+      "这是当前弹药量，一些牌需要消耗弹药。",
+      "这个 #r弹药 槽是空的。"
+    ]
+  },
+  "BlueArchive_Hoshino:MindConcentrationAction": {
+    "TEXT": [
+      "选择任意张手牌放回抽牌堆",
+      "选择"
+    ]
+  },
+  "BlueArchive_Hoshino:BuringTheBridgeAction": {
+    "TEXT": [
+      "选择任意张手牌放回抽牌堆",
+      "选择"
+    ]
+  },
+  "BlueArchive_Hoshino:BDNoteAction": {
+    "TEXT": [
+      "选择一张计数牌加入手牌"
+    ]
+  },
+  "BlueArchive_Hoshino:AmmoBoxAction": {
+    "TEXT": [
+      "选择一张弹药箱牌加入手牌"
+    ]
+  },
+  "BlueArchive_Hoshino:SwimsuitFormAction": {
+    "TEXT": [
+      "选择一张牌加入手牌"
+    ]
+  },
+  "BlueArchive_Hoshino:RefillAmmoAction": {
+    "TEXT": [
+      ""
+    ]
+  },
+  "BlueArchive_Hoshino:TotemPoleText": {
+    "TEXT": [
+      " NL 计数( ",
+      "): 消耗并抽1张牌。"
+    ]
+  },
+  "BlueArchive_Hoshino:PerfectPlanAction": {
+    "TEXT": [
+      "选择要保留的牌",
+      "选择"
+    ]
+  },
+  "BlueArchive_Hoshino:BulletExhaustAction": {
+    "TEXT": [
+      "选择要消耗的弹药箱牌",
+      "选择"
+    ]
+  },
+  "BlueArchive_Hoshino:RetryAction": {
+    "TEXT": [
+      "选择一张牌放回抽牌堆",
+      "选择"
+    ]
+  },
+  "BlueArchive_Hoshino:FixedSkillAction": {
+    "TEXT": [
+      "选择要记录的牌",
+      "选择"
+    ]
+  },
+  "BlueArchive_Hoshino:FixedSkillGetAction": {
+    "TEXT": [
+      "选择拿取一张牌",
+      "选择"
+    ]
+  }
+}
+
+
