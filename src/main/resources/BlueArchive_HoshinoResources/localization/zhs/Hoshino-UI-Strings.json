@@ -46,8 +46,8 @@
   },
   "BlueArchive_Hoshino:TotemPoleText": {
     "TEXT": [
-      " NL 计数( ",
-      "): 消耗并抽1张牌。"
+      " NL bluearchive_hoshino:计数 ( ",
+      "): 消耗并抽2张牌。"
     ]
   },
   "BlueArchive_Hoshino:PerfectPlanAction": {
