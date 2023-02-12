@@ -4,7 +4,7 @@
     "FLAVOR": "这是我身为阿拜多斯对策委员会长的职责。",
     "DESCRIPTIONS": [
       "战斗开始时，获得 #b ",
-      " 层 #y行家 。"
+      " 层 #ybluearchive_hoshino:行家 。"
     ]
   },
   "BlueArchive_Hoshino:HoshinoBaseRelicPlus": {
@@ -12,8 +12,8 @@
     "FLAVOR": "这是我身为阿拜多斯对策委员会长的职责。",
     "DESCRIPTIONS": [
       "替换 #r对策委员会长 。战斗开始时，获得 #b",
-      " 层 #y行家 。 #y装填 时，获得 #b",
-      " 层 #y盾牌 。"
+      " 层 #ybluearchive_hoshino:行家 。 #ybluearchive_hoshino:装填 时，获得 #b",
+      " 层 #ybluearchive_hoshino:盾牌 。"
     ]
   },
   "BlueArchive_Hoshino:IOURelic": {
