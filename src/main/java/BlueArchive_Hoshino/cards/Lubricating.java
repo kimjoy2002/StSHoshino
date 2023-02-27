@@ -57,7 +57,7 @@ public class Lubricating extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new BulletExhaustAction(upgraded?false:true));
+        this.addToBot(new ExhaustAction(1, !upgraded, false, false));
 
         Iterator var2 = AbstractDungeon.player.hand.group.iterator();
 

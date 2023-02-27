@@ -3,6 +3,7 @@ package BlueArchive_Hoshino.cards;
 import BlueArchive_Hoshino.DefaultMod;
 import BlueArchive_Hoshino.characters.Hoshino;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -37,11 +38,13 @@ public class EmergencyFieldAidSkill extends AbstractDynamicCard {
     private static final int COST = 2;
 
     private int AMOUNT = 15;
+    private static final int UPGRADE_PLUS_AMOUNT = 5;
 
 
     public EmergencyFieldAidSkill() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         magicNumber = baseMagicNumber = AMOUNT;
+        baseBlock = AMOUNT;
         exhaust = true;
         isEthereal = true;
         this.tags.add(CardTags.HEALING);
@@ -50,7 +53,11 @@ public class EmergencyFieldAidSkill extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new HealAction(p, p, this.magicNumber));
+        if(AbstractDungeon.player.currentHealth * 2 <= AbstractDungeon.player.maxHealth) {
+            this.addToBot(new HealAction(p, p, this.magicNumber));
+        } else {
+            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
+        }
     }
 
     //Upgraded stats.
@@ -58,13 +65,16 @@ public class EmergencyFieldAidSkill extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            this.upgradeBaseCost(1);
+            upgradeBlock(UPGRADE_PLUS_AMOUNT);
+            upgradeMagicNumber(UPGRADE_PLUS_AMOUNT);
             initializeDescription();
         }
     }
-    
-    public boolean cardPlayable(AbstractMonster m) {
-        boolean playable = super.cardPlayable(m);
-        return playable && AbstractDungeon.player.currentHealth * 2 <= AbstractDungeon.player.maxHealth;
+
+    public void triggerOnGlowCheck() {
+        this.glowColor = AbstractDynamicCard.BLUE_BORDER_GLOW_COLOR.cpy();
+        if (AbstractDungeon.player.currentHealth * 2 <= AbstractDungeon.player.maxHealth) {
+            this.glowColor = AbstractDynamicCard.GOLD_BORDER_GLOW_COLOR.cpy();
+        }
     }
 }

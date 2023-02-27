@@ -38,7 +38,7 @@ public class RushStandby extends AbstractDynamicCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     private static final int COST = 1;
-    private static final int BLOCK = 2;
+    private static final int BLOCK = 1;
 
     private int AMOUNT = 2;
     private static final int UPGRADE_PLUS_AMOUNT = 1;

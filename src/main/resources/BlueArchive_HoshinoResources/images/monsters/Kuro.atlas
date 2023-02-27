@@ -1,0 +1,62 @@
+
+Kuro.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+kuro_right_leg
+  rotate: false
+  xy: 305, 153
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1
+kuro_left_leg
+  rotate: false
+  xy: 305, 1
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1
+kuro_hair
+  rotate: false
+  xy: 1, 153
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1
+kuro_right_arm
+  rotate: false
+  xy: 153, 153
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1
+kuro_left_arm
+  rotate: false
+  xy: 153, 1
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1
+kuro_body
+  rotate: false
+  xy: 1, 305
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1
+kuro_head
+  rotate: false
+  xy: 1, 1
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1
+kuro_staff
+  rotate: false
+  xy: 153, 305
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1

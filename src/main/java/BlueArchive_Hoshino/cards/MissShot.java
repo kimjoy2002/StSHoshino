@@ -52,7 +52,7 @@ public class MissShot extends CustomCard implements ShotCard {
     public static final CardColor COLOR = Hoshino.Enums.COLOR_PINK;
 
     private static final int COST = 1;
-    private static final int DAMAGE = 10;
+    private static final int DAMAGE = 11;
     private static final int UPGRADE_PLUS_DMG = 4;
 
     public MissShot() {

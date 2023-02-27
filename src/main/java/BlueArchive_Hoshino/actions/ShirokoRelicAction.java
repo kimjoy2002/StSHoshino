@@ -22,7 +22,7 @@ public class ShirokoRelicAction extends AbstractGameAction {
         AbstractMonster mo = null;
         while(var3.hasNext()) {
             AbstractMonster temp = (AbstractMonster)var3.next();
-            if((mo == null || mo.currentHealth > temp.currentHealth) && !temp.isDead && !temp.halfDead ) {
+            if((mo == null || mo.currentHealth > temp.currentHealth) && temp.currentHealth > 0 && !temp.isDead && !temp.isDying && !temp.halfDead ) {
                 mo = temp;
             }
         }

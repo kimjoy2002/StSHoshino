@@ -50,7 +50,7 @@ public class QuickReloadSkill extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new ReloadAction(false, false));
+        this.addToBot(new ReloadAction(true, false));
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
     }
 

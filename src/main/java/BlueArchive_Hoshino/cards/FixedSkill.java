@@ -32,7 +32,7 @@ public class FixedSkill extends AbstractDynamicCard {
 
     // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.POWER;
     public static final CardColor COLOR = Hoshino.Enums.COLOR_PINK;
@@ -40,7 +40,7 @@ public class FixedSkill extends AbstractDynamicCard {
     private static final int COST = 1;
     private static final int MAGIC = 3;
 
-    private static final int UPGRADE_PLUS_AMOUNT = 1;
+    private static final int UPGRADE_PLUS_AMOUNT = 2;
     // /STAT DECLARATION/
 
     public FixedSkill() {

@@ -4,6 +4,7 @@ import BlueArchive_Hoshino.DefaultMod;
 import BlueArchive_Hoshino.characters.Hoshino;
 import BlueArchive_Hoshino.powers.RefillAmmoPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.ShuffleAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -31,14 +32,13 @@ public class Memorial extends AbstractDynamicCard {
 
     // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.RARE;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.POWER;
     public static final CardColor COLOR = Hoshino.Enums.COLOR_PINK;
 
-    private static final int COST = 2;
+    private static final int COST = 1;
     private static final int MAGIC = 1;
-    private static final int UPGRADE_PLUS_MAGIC = 1;
 
     // /STAT DECLARATION/
 
@@ -52,6 +52,9 @@ public class Memorial extends AbstractDynamicCard {
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
                 new RefillAmmoPower(p, p, magicNumber), magicNumber));
+        if (upgraded) {
+            AbstractDungeon.actionManager.addToBottom(new ShuffleAction(AbstractDungeon.player.drawPile, true));
+        }
     }
 
     //Upgraded stats.
@@ -59,7 +62,8 @@ public class Memorial extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            this.upgradeMagicNumber(UPGRADE_PLUS_MAGIC);
+            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 }

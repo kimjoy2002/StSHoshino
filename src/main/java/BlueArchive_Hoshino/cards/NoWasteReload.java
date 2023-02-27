@@ -60,7 +60,7 @@ public class NoWasteReload extends AbstractDynamicCard {
         if(BulletSubscriber.getBullet() == 0) {
             this.addToBot(new GainEnergyAction(this.magicNumber));
         }
-        this.addToBot(new ReloadAction(false, false));
+        this.addToBot(new ReloadAction(true, false));
     }
 
     //Upgraded stats.

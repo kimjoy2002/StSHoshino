@@ -1,0 +1,153 @@
+{
+  "BlueArchive_Hoshino:Binah": {
+    "NAME": "비나",
+    "MOVES": [
+      "아칠루트의 빛",
+      "공의의 불꽃",
+      "정화의 폭풍",
+      "짙은 모래폭풍"
+    ],
+    "DIALOG": [
+      ""
+    ]
+  },
+  "BlueArchive_Hoshino:Hod": {
+    "NAME": "호드",
+    "MOVES": [
+      "파괴-TypeⅠ",
+      "파괴-TypeⅡ",
+      "침식 타워 생성",
+      "과부하 에너지 방출",
+      "영광의 빛"
+    ],
+    "DIALOG": [
+      ""
+    ]
+  },
+  "BlueArchive_Hoshino:Siro": {
+    "NAME": "시로",
+    "MOVES": [
+      "콰콰콰콰쾅쾅콰앙!!",
+      "굴려굴려굴려굴려!!"
+    ],
+    "DIALOG": [
+      ""
+    ]
+  },
+  "BlueArchive_Hoshino:Kuro": {
+    "NAME": "쿠로",
+    "MOVES": [
+      "무기력증",
+      "돌진이다-!!!"
+    ],
+    "DIALOG": [
+      ""
+    ]
+  },
+  "BlueArchive_Hoshino:HodPillar": {
+    "NAME": "침식 타워",
+    "MOVES": [
+    ],
+    "DIALOG": [
+      ""
+    ]
+  },
+  "BlueArchive_Hoshino:Kaitenger_red": {
+    "NAME": "카이텐져 레드",
+    "MOVES": [
+      "카이텐 포즈! 열혈의 레드!"
+    ],
+    "DIALOG": [
+      "무한초밥전대 카이텐져 등장!"
+    ]
+  },
+  "BlueArchive_Hoshino:Kaitenger_green": {
+    "NAME": "카이텐져 그린",
+    "MOVES": [
+      "카이텐 포즈! 주휴의 그린!"
+    ],
+    "DIALOG": [
+      ""
+    ]
+  },
+  "BlueArchive_Hoshino:Kaitenger_pink": {
+    "NAME": "카이텐져 핑크",
+    "MOVES": [
+      "카이텐 포즈! 순정의 핑크!"
+    ],
+    "DIALOG": [
+      ""
+    ]
+  },
+  "BlueArchive_Hoshino:Kaitenger_yellow": {
+    "NAME": "카이텐져 옐로",
+    "MOVES": [
+      "카이텐 포즈! 열정의 옐로!"
+    ],
+    "DIALOG": [
+      ""
+    ]
+  },
+  "BlueArchive_Hoshino:Kaitenger_black": {
+    "NAME": "카이텐져 블랙",
+    "MOVES": [
+      "카이텐 포즈! 냉철의 블랙!"
+    ],
+    "DIALOG": [
+      ""
+    ]
+  },
+  "BlueArchive_Hoshino:Perorodzilla": {
+    "NAME": "페로로지라",
+    "MOVES": [
+      "아쿠아볼",
+      "백열안광",
+      "미니언 소환",
+      "하이퍼 스파이럴 열시선"
+    ],
+    "DIALOG": [
+      "크오오오오...!"
+    ]
+  },
+  "BlueArchive_Hoshino:Peroro": {
+    "NAME": "페로로",
+    "MOVES": [
+    ],
+    "DIALOG": [
+      ""
+    ]
+  },
+  "BlueArchive_Hoshino:KaitenFXMK0": {
+    "NAME": "KAITEN FX Mk.0",
+    "MOVES": [
+      "무한회전ㆍ슈퍼 새우 머신건",
+      "무한회전ㆍ하이퍼 정어리 미사일",
+      "무한회전ㆍ울트라 뚜껑 실드",
+      "무한회전ㆍ파이널 고등어 슬래쉬"
+    ],
+    "DIALOG": [
+      ""
+    ]
+  },
+  "BlueArchive_Hoshino:Hifumi": {
+    "NAME": "히후미",
+    "MOVES": [
+      "페로로 님의 응원",
+      "앵그리 아델리 씨의 가호",
+      "도와줘요, 페로로 님!",
+      "수집가의 근성"
+    ],
+    "DIALOG": [
+      "아하하... 즐거웠어요. 당신과의 친구놀이.",
+      "아하하... 즐거웠어요. 호시노님과의 친구놀이."
+    ]
+  },
+  "BlueArchive_Hoshino:PeroroHifumi": {
+    "NAME": "페로로",
+    "MOVES": [
+    ],
+    "DIALOG": [
+      ""
+    ]
+  }
+}

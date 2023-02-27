@@ -1,6 +1,10 @@
 package BlueArchive_Hoshino;
 
 import BlueArchive_Hoshino.events.*;
+import BlueArchive_Hoshino.monsters.act1.boss.*;
+import BlueArchive_Hoshino.monsters.act2.boss.*;
+import BlueArchive_Hoshino.monsters.act4.boss.Hifumi;
+import BlueArchive_Hoshino.monsters.act4.boss.PeroroHifumi;
 import BlueArchive_Hoshino.potions.BulletPotion;
 import BlueArchive_Hoshino.potions.SkilledPotion;
 import BlueArchive_Hoshino.relics.*;
@@ -24,6 +28,9 @@ import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.monsters.MonsterGroup;
+import com.megacrit.cardcrawl.ui.buttons.EndTurnButton;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import BlueArchive_Hoshino.characters.Hoshino;
@@ -35,6 +42,8 @@ import BlueArchive_Hoshino.variables.DefaultSecondMagicNumber;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Properties;
 
 //TODO: DON'T MASS RENAME/REFACTOR
@@ -81,14 +90,18 @@ public class DefaultMod implements
     private static String modID;
 
     // Mod-settings settings. This is if you want an on/off savable button
-    public static Properties theDefaultDefaultSettings = new Properties();
-    public static final String ENABLE_PLACEHOLDER_SETTINGS = "enablePlaceholder";
-    public static boolean enablePlaceholder = true; // The boolean we'll be setting on/off (true/false)
+    public static Properties defaultSettings = new Properties();
+    public static final String DISABLE_BLUEARCHIVE_BOSS = "disableBluearchiveBoss";
+    public static final String ENABLE_ONLY_BLUEARCHIVE_BOSS = "enableOnlyBluearchiveBoss";
+    public static boolean enableBoss = true;
+    public static boolean onlyBluearchiveBoss = false;
 
     //This is for the in-game mod settings panel.
     private static final String MODNAME = "Default Mod";
     private static final String AUTHOR = "joy1999"; // And pretty soon - You!
     private static final String DESCRIPTION = "HOSHINO TEST.";
+    ModLabeledToggleButton disableBossButton = null;
+    ModLabeledToggleButton enableBossOnlyButton = null;
     
     // =============== INPUT TEXTURE LOCATION =================
     
@@ -165,6 +178,12 @@ public class DefaultMod implements
     public static String makeEventPath(String resourcePath) {
         return getModID() + "Resources/images/events/" + resourcePath;
     }
+    public static String makeMonstersPath(String resourcePath) {
+        return getModID() + "Resources/images/monsters/" + resourcePath;
+    }
+    public static String makeBgmPath(String resourcePath) {
+        return getModID() + "Resources/bgm/" + resourcePath;
+    }
     
     // =============== /MAKE IMAGE PATHS/ =================
     
@@ -221,14 +240,15 @@ public class DefaultMod implements
         
         
         logger.info("Adding mod settings");
-        // This loads the mod settings.
-        // The actual mod Button is added below in receivePostInitialize()
-        theDefaultDefaultSettings.setProperty(ENABLE_PLACEHOLDER_SETTINGS, "FALSE"); // This is the default setting. It's actually set...
+
+        defaultSettings.setProperty(DISABLE_BLUEARCHIVE_BOSS, "FALSE");
+        defaultSettings.setProperty(ENABLE_ONLY_BLUEARCHIVE_BOSS, "FALSE");
+
         try {
-            SpireConfig config = new SpireConfig("defaultMod", "theDefaultConfig", theDefaultDefaultSettings); // ...right here
-            // the "fileName" parameter is the name of the file MTS will create where it will save our setting.
-            config.load(); // Load the setting and set the boolean to equal it
-            enablePlaceholder = config.getBool(ENABLE_PLACEHOLDER_SETTINGS);
+            SpireConfig config = new SpireConfig("BlueArchive_Hoshino", "BlueArchiveConfig", defaultSettings);
+            config.load();
+            enableBoss = !config.getBool(DISABLE_BLUEARCHIVE_BOSS);
+            onlyBluearchiveBoss = config.getBool(ENABLE_ONLY_BLUEARCHIVE_BOSS);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -316,28 +336,58 @@ public class DefaultMod implements
         
         // Create the Mod Menu
         ModPanel settingsPanel = new ModPanel();
-        
-        // Create the on/off button:
-        ModLabeledToggleButton enableNormalsButton = new ModLabeledToggleButton("This is the text which goes next to the checkbox.",
-                350.0f, 700.0f, Settings.CREAM_COLOR, FontHelper.charDescFont, // Position (trial and error it), color, font
-                enablePlaceholder, // Boolean it uses
-                settingsPanel, // The mod panel in which this button will be in
-                (label) -> {}, // thing??????? idk
-                (button) -> { // The actual button:
+        disableBossButton = new ModLabeledToggleButton("BlueArchive Boss doesn't appear.",
+                350.0f, 700.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                !enableBoss,
+                settingsPanel,
+                (label) -> {},
+                (button) -> {
             
-            enablePlaceholder = button.enabled; // The boolean true/false will be whether the button is enabled or not
+            enableBoss = !button.enabled;
+            if(enableBossOnlyButton != null && button.enabled && enableBossOnlyButton.toggle.enabled) {
+                enableBossOnlyButton.toggle.toggle();
+            }
             try {
-                // And based on that boolean, set the settings and save them
-                SpireConfig config = new SpireConfig("defaultMod", "theDefaultConfig", theDefaultDefaultSettings);
-                config.setBool(ENABLE_PLACEHOLDER_SETTINGS, enablePlaceholder);
+                if(enableBoss){
+                        enableBoss();
+                }else{
+                        disableBoss();
+                }
+            } catch (Exception e) {
+                        e.printStackTrace();
+            }
+
+            try {
+                SpireConfig config = new SpireConfig("BlueArchive_Hoshino", "BlueArchiveConfig", defaultSettings);
+                config.setBool(DISABLE_BLUEARCHIVE_BOSS, !enableBoss);
                 config.save();
             } catch (Exception e) {
                 e.printStackTrace();
             }
         });
+
+
+        enableBossOnlyButton = new ModLabeledToggleButton("If possible, only the Blue Archive Boss comes out.",
+                350.0f, 700.0f - 100.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                onlyBluearchiveBoss,
+                settingsPanel,
+                (label) -> {},
+                (button) -> {
+                    onlyBluearchiveBoss = button.enabled;
+                    if(disableBossButton != null && button.enabled && disableBossButton.toggle.enabled) {
+                        disableBossButton.toggle.toggle();
+                    }
+                    try {
+                        SpireConfig config = new SpireConfig("BlueArchive_Hoshino", "BlueArchiveConfig", defaultSettings);
+                        config.setBool(ENABLE_ONLY_BLUEARCHIVE_BOSS, onlyBluearchiveBoss);
+                        config.save();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                });
         
-        settingsPanel.addUIElement(enableNormalsButton); // Add the button to the settings panel. Button is a go.
-        
+        settingsPanel.addUIElement(disableBossButton); // Add the button to the settings panel. Button is a go.
+        settingsPanel.addUIElement(enableBossOnlyButton);
         BaseMod.registerModBadge(badgeTexture, MODNAME, AUTHOR, DESCRIPTION, settingsPanel);
 
         
@@ -387,12 +437,97 @@ public class DefaultMod implements
                     .create();
             BaseMod.addEvent(eventParams);
         }
+        {
+            AddEventParams eventParams = new AddEventParams.Builder(PeroroEvent.ID, PeroroEvent.class)
+                    .dungeonID(TheBeyond.ID)
+                    .create();
+            BaseMod.addEvent(eventParams);
+        }
 
 
         // =============== /EVENTS/ =================
         logger.info("Done loading badge Image and mod options");
+        addCustomMonster();
     }
-    
+
+
+    public void enableBoss() {
+        if(BaseMod.getBossInfo(Siro.ID) == null)
+            BaseMod.addBoss("Exordium", Siro.ID, makeMonstersPath("Siro_boss.png"), makeMonstersPath("Siro_out.png"));
+        if(BaseMod.getBossInfo(Binah.ID) == null)
+            BaseMod.addBoss("Exordium", Binah.ID, makeMonstersPath("Binah_boss.png"), makeMonstersPath("Binah_out.png"));
+        if(BaseMod.getBossInfo(KaitengerRed.ID) == null)
+            BaseMod.addBoss("Exordium", KaitengerRed.ID, makeMonstersPath("Kaitenger_boss.png"), makeMonstersPath("Kaitenger_out.png"));
+        if(BaseMod.getBossInfo(Hod.ID) == null)
+            BaseMod.addBoss("TheCity", Hod.ID, makeMonstersPath("Hod_boss.png"), makeMonstersPath("Hod_out.png"));
+        if(BaseMod.getBossInfo(Perorodzilla.ID) == null)
+            BaseMod.addBoss("TheCity", Perorodzilla.ID, makeMonstersPath("Perorodzilla_boss.png"), makeMonstersPath("Perorodzilla_out.png"));
+        if(BaseMod.getBossInfo(KaitenFXMK0.ID) == null)
+            BaseMod.addBoss("TheCity", KaitenFXMK0.ID, makeMonstersPath("KaitenFXMK0_boss.png"), makeMonstersPath("KaitenFXMK0_out.png"));
+        if(BaseMod.getBossInfo(Hifumi.ID) == null)
+            BaseMod.addBoss("TheEnding", Hifumi.ID, makeMonstersPath("Hifumi_boss.png"), makeMonstersPath("Hifumi_out.png"));
+
+    }
+
+    public void disableBoss(String dungeonId) {
+        HashMap<String, List<BaseMod.BossInfo>> customBosses = (HashMap<String, List<BaseMod.BossInfo>>) ReflectionHacks.getPrivateStatic(BaseMod.class, "customBosses");
+
+        if(customBosses.containsKey(dungeonId)) {
+            List<BaseMod.BossInfo> boss = customBosses.get(dungeonId);
+            boss.removeIf(element -> element.id.startsWith(getModID()));
+        }
+
+    }
+    public void disableBoss() {
+        disableBoss("Exordium");
+        disableBoss("TheCity");
+    }
+
+    public void addCustomMonster() {
+        BaseMod.addMonster(Binah.ID, () -> {
+            return new Binah();
+        });
+        BaseMod.addMonster(Siro.ID, () -> {
+            return new Siro();
+        });
+        BaseMod.addMonster(Kuro.ID, () -> {
+            return new Kuro();
+        });
+        BaseMod.addMonster(Hod.ID, () -> {
+            return new Hod();
+        });
+        //BaseMod.addMonster(HodPillar.ID, () -> {
+       //     return new HodPillar();
+       // });
+        BaseMod.addMonster(KaitengerRed.ID, () -> {
+            return new KaitengerRed();
+        });
+        BaseMod.addMonster(Perorodzilla.ID, () -> {
+            return new Perorodzilla();
+        });
+        BaseMod.addMonster(Peroro.ID, () -> {
+            return new Peroro();
+        });
+        BaseMod.addMonster(KaitenFXMK0.ID, () -> {
+            return new KaitenFXMK0();
+        });
+        BaseMod.addMonster(Hifumi.ID, () -> {
+            AbstractMonster[] monsters = new AbstractMonster[] {
+                    new PeroroHifumi(-400.0f, 0.0f),
+                    new Hifumi()
+            };
+
+            return new MonsterGroup(monsters);
+        });
+
+        if(enableBoss) {
+            enableBoss();
+        }
+
+        //TheBeyond
+    }
+
+
     // =============== / POST-INITIALIZE/ =================
     
     // ================ ADD POTIONS ===================
@@ -448,6 +583,7 @@ public class DefaultMod implements
         BaseMod.addRelic(new ShirokoRelic(), RelicType.SHARED);
         BaseMod.addRelic(new NonomiRelic(), RelicType.SHARED);
         BaseMod.addRelic(new SerikaRelic(), RelicType.SHARED);
+        BaseMod.addRelic(new PeroroRelic(), RelicType.SHARED);
         //BaseMod.addRelic(new HoshinoRelic(), RelicType.SHARED);
         BaseMod.addRelic(new FireSupportDroneRelic(), RelicType.SHARED);
         BaseMod.addRelic(new GoldCardRelic(), RelicType.SHARED);
@@ -539,6 +675,9 @@ public class DefaultMod implements
 
         BaseMod.loadCustomStringsFile(TutorialStrings.class,
                 pathByLanguage + "Hoshino-Tutorial-Strings.json");
+
+        BaseMod.loadCustomStringsFile(MonsterStrings.class,
+                pathByLanguage + "Hoshino-Monster-Strings.json");
 
         logger.info("Done edittting strings");
     }

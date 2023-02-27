@@ -17,7 +17,6 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import static BlueArchive_Hoshino.DefaultMod.makePowerPath;
-import static BlueArchive_Hoshino.DefaultMod.theDefaultDefaultSettings;
 
 //Gain 1 dex for the turn for each card played.
 

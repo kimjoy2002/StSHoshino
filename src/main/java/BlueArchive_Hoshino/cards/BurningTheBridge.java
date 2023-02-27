@@ -38,7 +38,7 @@ public class BurningTheBridge extends AbstractDynamicCard {
     private static final int COST = 2;
 
 
-    private static final int BLOCK = 6;
+    private static final int BLOCK = 8;
     // /STAT DECLARATION/
     private static final int UPGRADE_PLUS_BLOCK = 2;
 

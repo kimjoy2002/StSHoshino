@@ -9,8 +9,8 @@
   },
   "BlueArchive_Hoshino:QuickReloadSkill": {
     "NAME": "빠른 장전",
-    "DESCRIPTION": "빈 bluearchive_hoshino:탄약이 있으면 bluearchive_hoshino:장전 합니다. NL 카드를 뽑습니다.",
-    "UPGRADE_DESCRIPTION": "보존. NL 빈 bluearchive_hoshino:탄약이 있으면 bluearchive_hoshino:장전 합니다. NL 카드를 뽑습니다."
+    "DESCRIPTION": "bluearchive_hoshino:장전 합니다. NL 카드를 뽑습니다.",
+    "UPGRADE_DESCRIPTION": "보존. NL bluearchive_hoshino:장전 합니다. NL 카드를 뽑습니다."
   },
   "BlueArchive_Hoshino:TacticalShieldSkill": {
     "NAME": "전술 방패",
@@ -140,11 +140,12 @@
   },
   "BlueArchive_Hoshino:Memorial": {
     "NAME": "추억",
-    "DESCRIPTION": "덱을 섞을때마다 힘 과 민첩을 !M! 얻습니다."
+    "DESCRIPTION": "덱을 섞을때마다 힘 과 민첩을 !M! 얻습니다.",
+    "UPGRADE_DESCRIPTION": "덱을 섞을때마다 힘 과 민첩을 !M! 얻습니다. NL 덱을 섞습니다."
   },
   "BlueArchive_Hoshino:EmergencyFieldAidSkill": {
     "NAME": "응급 치료",
-    "DESCRIPTION": "휘발성. NL 자신의 체력이 절반 이하일때만 사용가능합니다. NL 체력을 !M! 회복합니다. NL 소멸."
+    "DESCRIPTION": "휘발성. NL 방어도를 !B! 얻습니다. NL 자신의 체력이 절반 이하일때는 방어도 대신 체력을 !M! 회복합니다. NL 소멸."
   },
   "BlueArchive_Hoshino:ShieldRebound": {
     "NAME": "빗겨막기",
@@ -239,8 +240,8 @@
   },
   "BlueArchive_Hoshino:NoWasteReload": {
     "NAME": "낭비없는 장전",
-    "DESCRIPTION": "bluearchive_hoshino:탄약이 모두 비어있으면 [E] [E] 를 얻습니다. NL 빈 bluearchive_hoshino:탄약이 있으면 bluearchive_hoshino:장전 합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "보존. NL bluearchive_hoshino:탄약이 모두 비어있으면 [E] [E] 를 얻습니다. NL 빈 bluearchive_hoshino:탄약이 있으면 bluearchive_hoshino:장전 합니다. NL 소멸."
+    "DESCRIPTION": "bluearchive_hoshino:탄약이 모두 비어있으면 [E] [E] 를 얻습니다. NL bluearchive_hoshino:장전 합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "보존. NL bluearchive_hoshino:탄약이 모두 비어있으면 [E] [E] 를 얻습니다. NL bluearchive_hoshino:장전 합니다. NL 소멸."
   },
   "BlueArchive_Hoshino:HorusOfEye": {
     "NAME": "호루스의 눈",
@@ -294,8 +295,8 @@
   },
   "BlueArchive_Hoshino:Lubricating": {
     "NAME": "총기 손질",
-    "DESCRIPTION": "bluearchive_hoshino:탄약을 사용하는 무작위 카드를 1장 소멸시킵니다. NL 버린 카드 더미에 있는 카드를 !M! 장 손으로 가져옵니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "bluearchive_hoshino:탄약을 사용하는 카드를 1장 소멸시킵니다. NL 버린 카드 더미에 있는 카드를 !M! 장 손으로 가져옵니다. NL 소멸."
+    "DESCRIPTION": "무작위 카드를 1장 소멸시킵니다. NL 버린 카드 더미에 있는 카드를 !M! 장 손으로 가져옵니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "카드를 1장 소멸시킵니다. NL 버린 카드 더미에 있는 카드를 !M! 장 손으로 가져옵니다. NL 소멸."
   },
 
   "BlueArchive_Hoshino:WideShot": {
@@ -399,5 +400,13 @@
   "BlueArchive_Hoshino:FixedSkill": {
     "NAME": "손패 고정",
     "DESCRIPTION": "선천성. NL 뽑을 카드 더미에서 !M! 장의 카드를 선택하여 보관합니다. 매 턴 시작시 보관된 카드중 하나를 선택하여 가져옵니다."
+  },
+  "BlueArchive_Hoshino:SiroBomb": {
+    "NAME": "콰앙!!",
+    "DESCRIPTION": "사용불가. NL 휘발성. NL 턴 종료 시 피해를 !M! 받습니다."
+  },
+  "BlueArchive_Hoshino:PeroroRising": {
+    "NAME": "페로로 강화 의식",
+    "DESCRIPTION": "사용불가. NL 이 카드를 뽑으면 페로로님을 강화합니다."
   }
 }

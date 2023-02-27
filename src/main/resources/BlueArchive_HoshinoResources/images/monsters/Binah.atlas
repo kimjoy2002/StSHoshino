@@ -1,0 +1,13 @@
+
+Binah.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Binah_Banner_1
+  rotate: false
+  xy: 1, 1
+  size: 591, 215
+  orig: 700, 215
+  offset: 108, 0
+  index: -1

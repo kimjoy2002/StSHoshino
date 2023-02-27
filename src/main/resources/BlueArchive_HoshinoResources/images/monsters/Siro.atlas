@@ -1,0 +1,62 @@
+
+Siro.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+siro_ball
+  rotate: false
+  xy: 1, 1
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: -1
+siro_left_leg
+  rotate: false
+  xy: 203, 403
+  size: 200, 200
+  orig: 200, 200
+  offset: 0, 0
+  index: -1
+siro_right_leg
+  rotate: false
+  xy: 1, 605
+  size: 200, 200
+  orig: 200, 200
+  offset: 0, 0
+  index: -1
+siro_tail
+  rotate: false
+  xy: 1, 807
+  size: 200, 200
+  orig: 200, 200
+  offset: 0, 0
+  index: -1
+siro_left_arm
+  rotate: false
+  xy: 403, 1
+  size: 200, 200
+  orig: 200, 200
+  offset: 0, 0
+  index: -1
+siro_right_arm
+  rotate: false
+  xy: 1, 403
+  size: 200, 200
+  orig: 200, 200
+  offset: 0, 0
+  index: -1
+siro_body
+  rotate: false
+  xy: 203, 605
+  size: 200, 200
+  orig: 200, 200
+  offset: 0, 0
+  index: -1
+siro_head
+  rotate: false
+  xy: 203, 807
+  size: 200, 200
+  orig: 200, 200
+  offset: 0, 0
+  index: -1

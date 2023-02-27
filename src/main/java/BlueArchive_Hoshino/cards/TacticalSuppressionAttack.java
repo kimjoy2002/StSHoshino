@@ -68,7 +68,7 @@ public class TacticalSuppressionAttack extends CustomCard implements DrowsyCard,
     public static final CardColor COLOR = Hoshino.Enums.COLOR_PINK;
 
     private static final int COST = 3;
-    private static final int DAMAGE = 6;
+    private static final int DAMAGE = 7;
     private static final int UPGRADE_PLUS_DMG = 2;
 
     private static final int DROWSY = 4;

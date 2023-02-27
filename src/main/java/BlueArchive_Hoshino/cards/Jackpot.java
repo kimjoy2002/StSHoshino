@@ -49,7 +49,7 @@ public class Jackpot extends CustomCard implements DrowsyCard {
     private static final int DAMAGE = 2;
     private int AMOUNT = 48;
     private static final int UPGRADE_PLUS_AMOUNT = 27;
-    private static final int DROWSY = 7;
+    private static final int DROWSY = 6;
 
     public Jackpot() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);

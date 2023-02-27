@@ -1,0 +1,27 @@
+
+Hod.png
+size: 1024,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+hod_halo
+  rotate: false
+  xy: 1, 1205
+  size: 800, 600
+  orig: 800, 600
+  offset: 0, 0
+  index: -1
+hod_body
+  rotate: false
+  xy: 1, 1
+  size: 800, 600
+  orig: 800, 600
+  offset: 0, 0
+  index: -1
+hod_hand
+  rotate: false
+  xy: 1, 603
+  size: 800, 600
+  orig: 800, 600
+  offset: 0, 0
+  index: -1

@@ -79,5 +79,10 @@
       "손으로 가져올 카드를 선택하십시오. (손패 고정)",
       "선택"
     ]
+  },
+  "BlueArchive_Hoshino:TauntMessage": {
+    "TEXT": [
+      "도발 당했어!"
+    ]
   }
 }

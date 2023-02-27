@@ -142,5 +142,12 @@
     "DESCRIPTIONS": [
       "모든 #y상태이상과 #y저주 카드가 \" #ybluearchive_hoshino:카운트다운(2) : 즉시 소멸하고 카드를 2장 뽑습니다. \" 를 얻습니다."
     ]
+  },
+  "BlueArchive_Hoshino:PeroroRelic": {
+    "NAME": "한정판 페로로 굿즈",
+    "FLAVOR": "기분나쁘게 생긴 마스코트캐릭터입니다.",
+    "DESCRIPTIONS": [
+      "가지고 있으면 특별한 일이 생깁니다."
+    ]
   }
 }
