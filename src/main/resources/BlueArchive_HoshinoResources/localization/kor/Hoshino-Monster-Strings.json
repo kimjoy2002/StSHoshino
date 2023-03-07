@@ -149,5 +149,84 @@
     "DIALOG": [
       ""
     ]
+  },
+  "BlueArchive_Hoshino:Goz": {
+    "NAME": "고즈",
+    "MOVES": [
+      "Now You See Us",
+      "쓰리 라이트 몬테",
+      "매지컬 코인햇",
+      "서프라이즈 프레젠트",
+      "스크림 라이더"
+    ],
+    "DIALOG": [
+      ""
+    ]
+  },
+  "BlueArchive_Hoshino:Chesed": {
+    "NAME": "헤세드",
+    "MOVES": [
+      "왕좌로 부르는 소리 있도다",
+      "지고의 권능을 목도하라",
+      "왕은 자비를 베풀지어다",
+      "노출된 왕좌"
+    ],
+    "DIALOG": [
+      ""
+    ]
+  },
+  "BlueArchive_Hoshino:Soldier": {
+    "NAME": "실험용 오토마타",
+    "MOVES": [],
+    "DIALOG": [
+      ""
+    ]
+  },
+  "BlueArchive_Hoshino:Drone": {
+    "NAME": "실험용 드론",
+    "MOVES": [],
+    "DIALOG": [
+      ""
+    ]
+  },
+  "BlueArchive_Hoshino:Turret": {
+    "NAME": "터렛",
+    "MOVES": [],
+    "DIALOG": [
+      ""
+    ]
+  },
+  "BlueArchive_Hoshino:Goliat": {
+    "NAME": "골리앗",
+    "MOVES": [],
+    "DIALOG": [
+      ""
+    ]
+  },
+  "BlueArchive_Hoshino:Hieronymus": {
+    "NAME": "예로니무스",
+    "MOVES": [
+      "다마소의 부름",
+      "불가타의 경전",
+      "사자의 구제",
+      "사막의 고행"
+    ],
+    "DIALOG": [
+      ""
+    ]
+  },
+  "BlueArchive_Hoshino:GreenRelic": {
+    "NAME": "성유물",
+    "MOVES": [],
+    "DIALOG": [
+      ""
+    ]
+  },
+  "BlueArchive_Hoshino:RedRelic": {
+    "NAME": "성유물",
+    "MOVES": [],
+    "DIALOG": [
+      ""
+    ]
   }
 }

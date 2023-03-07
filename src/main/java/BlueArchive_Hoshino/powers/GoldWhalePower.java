@@ -78,7 +78,7 @@ public class GoldWhalePower extends AbstractPower implements CloneablePowerInter
 
 
         for(int i = 0; i < amount; i ++) {
-            if(AbstractDungeon.cardRandomRng.random(99)<=32) {
+            if(AbstractDungeon.cardRandomRng.random(99)<=39) {
                 total_curse++;
 
             }

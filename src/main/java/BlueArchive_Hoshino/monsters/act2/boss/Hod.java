@@ -65,9 +65,9 @@ public class Hod extends CustomMonster {
         this.dialogY -= (this.hb_y - 55.0F) * Settings.scale;
 
         if (AbstractDungeon.ascensionLevel >= 9) {
-            this.setHp(390);
+            this.setHp(420);
         } else {
-            this.setHp(360);
+            this.setHp(410);
         }
 
         if (AbstractDungeon.ascensionLevel >= 4) {

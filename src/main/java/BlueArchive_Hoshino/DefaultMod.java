@@ -3,6 +3,7 @@ package BlueArchive_Hoshino;
 import BlueArchive_Hoshino.events.*;
 import BlueArchive_Hoshino.monsters.act1.boss.*;
 import BlueArchive_Hoshino.monsters.act2.boss.*;
+import BlueArchive_Hoshino.monsters.act3.boss.*;
 import BlueArchive_Hoshino.monsters.act4.boss.Hifumi;
 import BlueArchive_Hoshino.monsters.act4.boss.PeroroHifumi;
 import BlueArchive_Hoshino.potions.BulletPotion;
@@ -93,8 +94,10 @@ public class DefaultMod implements
     public static Properties defaultSettings = new Properties();
     public static final String DISABLE_BLUEARCHIVE_BOSS = "disableBluearchiveBoss";
     public static final String ENABLE_ONLY_BLUEARCHIVE_BOSS = "enableOnlyBluearchiveBoss";
+    public static final String ENABLE_ACT3_EVENT = "enableAct3Event";
     public static boolean enableBoss = true;
     public static boolean onlyBluearchiveBoss = false;
+    public static boolean enableAct3Event = false;
 
     //This is for the in-game mod settings panel.
     private static final String MODNAME = "Default Mod";
@@ -102,6 +105,7 @@ public class DefaultMod implements
     private static final String DESCRIPTION = "HOSHINO TEST.";
     ModLabeledToggleButton disableBossButton = null;
     ModLabeledToggleButton enableBossOnlyButton = null;
+    ModLabeledToggleButton enableAct3EventButton = null;
     
     // =============== INPUT TEXTURE LOCATION =================
     
@@ -249,6 +253,7 @@ public class DefaultMod implements
             config.load();
             enableBoss = !config.getBool(DISABLE_BLUEARCHIVE_BOSS);
             onlyBluearchiveBoss = config.getBool(ENABLE_ONLY_BLUEARCHIVE_BOSS);
+            enableAct3Event = config.getBool(ENABLE_ACT3_EVENT);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -385,9 +390,26 @@ public class DefaultMod implements
                         e.printStackTrace();
                     }
                 });
-        
-        settingsPanel.addUIElement(disableBossButton); // Add the button to the settings panel. Button is a go.
+
+        enableAct3EventButton = new ModLabeledToggleButton("The first event room in Act 3 always has a hifumi event.",
+                350.0f, 700.0f - 200.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                enableAct3Event,
+                settingsPanel,
+                (label) -> {},
+                (button) -> {
+                    enableAct3Event = button.enabled;
+                    try {
+                        SpireConfig config = new SpireConfig("BlueArchive_Hoshino", "BlueArchiveConfig", defaultSettings);
+                        config.setBool(ENABLE_ACT3_EVENT, enableAct3Event);
+                        config.save();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                });
+
+        settingsPanel.addUIElement(disableBossButton);
         settingsPanel.addUIElement(enableBossOnlyButton);
+        settingsPanel.addUIElement(enableAct3EventButton);
         BaseMod.registerModBadge(badgeTexture, MODNAME, AUTHOR, DESCRIPTION, settingsPanel);
 
         
@@ -464,6 +486,12 @@ public class DefaultMod implements
             BaseMod.addBoss("TheCity", Perorodzilla.ID, makeMonstersPath("Perorodzilla_boss.png"), makeMonstersPath("Perorodzilla_out.png"));
         if(BaseMod.getBossInfo(KaitenFXMK0.ID) == null)
             BaseMod.addBoss("TheCity", KaitenFXMK0.ID, makeMonstersPath("KaitenFXMK0_boss.png"), makeMonstersPath("KaitenFXMK0_out.png"));
+        if(BaseMod.getBossInfo(Goz.ID) == null)
+            BaseMod.addBoss("TheBeyond", Goz.ID, makeMonstersPath("Goz_boss.png"), makeMonstersPath("Goz_out.png"));
+        if(BaseMod.getBossInfo(Chesed.ID) == null)
+            BaseMod.addBoss("TheBeyond", Chesed.ID, makeMonstersPath("Chesed_boss.png"), makeMonstersPath("Chesed_out.png"));
+        if(BaseMod.getBossInfo(Hieronymus.ID) == null)
+            BaseMod.addBoss("TheBeyond", Hieronymus.ID, makeMonstersPath("Hieronymus_boss.png"), makeMonstersPath("Hieronymus_out.png"));
         if(BaseMod.getBossInfo(Hifumi.ID) == null)
             BaseMod.addBoss("TheEnding", Hifumi.ID, makeMonstersPath("Hifumi_boss.png"), makeMonstersPath("Hifumi_out.png"));
 
@@ -481,6 +509,7 @@ public class DefaultMod implements
     public void disableBoss() {
         disableBoss("Exordium");
         disableBoss("TheCity");
+        disableBoss("TheBeyond");
     }
 
     public void addCustomMonster() {
@@ -510,6 +539,23 @@ public class DefaultMod implements
         });
         BaseMod.addMonster(KaitenFXMK0.ID, () -> {
             return new KaitenFXMK0();
+        });
+        BaseMod.addMonster(Goz.ID, () -> {
+            return new Goz();
+        });
+        BaseMod.addMonster(Chesed.ID, () -> {
+            AbstractMonster[] monsters = new AbstractMonster[] {
+                    new Chesed(200.0f, 0.0f)
+            };
+            return new MonsterGroup(monsters);
+        });
+        BaseMod.addMonster(Hieronymus.ID, () -> {
+            AbstractMonster[] monsters = new AbstractMonster[] {
+                    new RedRelic(-450.0f, 0.0f),
+                    new Hieronymus(-100.0f, 0.0f),
+                    new GreenRelic(200.0f, 0.0f)
+            };
+            return new MonsterGroup(monsters);
         });
         BaseMod.addMonster(Hifumi.ID, () -> {
             AbstractMonster[] monsters = new AbstractMonster[] {

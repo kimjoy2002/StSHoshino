@@ -2,6 +2,7 @@ package BlueArchive_Hoshino.monsters.act1.boss;
 
 import BlueArchive_Hoshino.DefaultMod;
 import BlueArchive_Hoshino.cards.BankRobbery;
+import BlueArchive_Hoshino.cards.SandStorm;
 import basemod.abstracts.CustomMonster;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
@@ -49,7 +50,7 @@ public class Binah extends CustomMonster {
     }
 
     public Binah(float x, float y) {
-        super(NAME, ID, 190, -5.0F, 0.0F, 460.0F, 430.0F, (String)null, x, y);
+        super(NAME, ID, 180, -5.0F, 0.0F, 460.0F, 430.0F, (String)null, x, y);
         this.loadAnimation(ATLAS, SKEL, 0.6F);
         AnimationState.TrackEntry e = this.state.setAnimation(0, "base_animation", true);
         e.setTime(e.getEndTime() * MathUtils.random());
@@ -59,9 +60,9 @@ public class Binah extends CustomMonster {
         this.dialogY -= (this.hb_y - 55.0F) * Settings.scale;
 
         if (AbstractDungeon.ascensionLevel >= 9) {
-            this.setHp(200);
-        } else {
             this.setHp(190);
+        } else {
+            this.setHp(180);
         }
 
         this.dmg_missle = 3;
@@ -105,9 +106,9 @@ public class Binah extends CustomMonster {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new WeakPower(AbstractDungeon.player, 2, true), 2));
                 AbstractDungeon.actionManager.addToBottom(new SFXAction("MONSTER_SLIME_ATTACK"));
                 if (AbstractDungeon.ascensionLevel >= 19) {
-                    AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(new Wound(), 3));
+                    AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(new SandStorm(), 3));
                 } else {
-                    AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(new Wound(), 2));
+                    AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(new SandStorm(), 2));
                 }
                 break;
             case 5:

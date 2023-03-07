@@ -68,8 +68,8 @@ public class CardGroupPatch {
                             break;
                         }
                     }
-                    if(!isSystemShuffle && card instanceof OnDeckCard) {
-                        ((OnDeckCard)card).onDeck();
+                    if(card instanceof OnDeckCard) {
+                        ((OnDeckCard)card).onDeck(isSystemShuffle);
                     }
                     if(!isSystemShuffle && AbstractDungeon.player.hasRelic("BlueArchive_Hoshino:WhaleTubeRelic")) {
                         AbstractDungeon.player.getRelic("BlueArchive_Hoshino:WhaleTubeRelic").flash();
@@ -100,7 +100,7 @@ public class CardGroupPatch {
                 }
                 if(__instance.type == CardGroup.CardGroupType.DRAW_PILE &&
                        card instanceof OnDeckCard) {
-                    ((OnDeckCard) card).onDeck();
+                    ((OnDeckCard) card).onDeck(false);
                 }
                 if(__instance.type == CardGroup.CardGroupType.DRAW_PILE &&
                         AbstractDungeon.player.hasRelic("BlueArchive_Hoshino:WhaleTubeRelic")) {
@@ -131,7 +131,7 @@ public class CardGroupPatch {
                 }
                 if(__instance.type == CardGroup.CardGroupType.DRAW_PILE &&
                        card instanceof OnDeckCard) {
-                    ((OnDeckCard) card).onDeck();
+                    ((OnDeckCard) card).onDeck(false);
                 }
                 if(__instance.type == CardGroup.CardGroupType.DRAW_PILE &&
                         AbstractDungeon.player.hasRelic("BlueArchive_Hoshino:WhaleTubeRelic")) {

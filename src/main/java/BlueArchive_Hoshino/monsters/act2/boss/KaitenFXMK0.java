@@ -44,8 +44,6 @@ public class KaitenFXMK0 extends CustomMonster {
     protected Color color =  new Color(1.0f, 1.0f, 1.0f, 1.0f);
     private static final String BGM ="KaitenFXMK0.ogg";
     private static Texture CIRCLE = new Texture(makeMonstersPath("Circle.png"));
-    private static Texture RED_CIRCLE = new Texture(makeMonstersPath("RedMagicCircle.png"));
-    private static Texture GREEN_CIRCLE = new Texture(makeMonstersPath("GreenMagicCircle.png"));
     private int dmg_gatling;
     private int dmg_missle;
     private int dmg_slash;

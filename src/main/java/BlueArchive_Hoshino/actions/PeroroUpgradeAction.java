@@ -33,9 +33,9 @@ public class PeroroUpgradeAction extends AbstractGameAction {
                 PeroroHifumi k = (PeroroHifumi)m;
                 ((DamageInfo)k.damage.get(0)).base+=5;
                 ((DamageInfo)k.damage.get(1)).base+=1;
-                k.maxHealth += 10;
+                k.maxHealth += 5;
                 if(!k.halfDead) {
-                    k.heal(10);
+                    k.heal(5);
                 }
                 k.sizeUp();
                 k.updateMove();

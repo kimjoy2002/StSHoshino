@@ -35,7 +35,7 @@ public class Technique extends AbstractDynamicCard {
     private static final int COST = 1;
 
     // /STAT DECLARATION/
-    private int AMOUNT = 4;
+    private int AMOUNT = 3;
     private static final int UPGRADE_PLUS_AMOUNT = 2;
 
 

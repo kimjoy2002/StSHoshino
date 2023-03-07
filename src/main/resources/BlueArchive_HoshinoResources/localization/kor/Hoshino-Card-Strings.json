@@ -26,8 +26,7 @@
   },
   "BlueArchive_Hoshino:LockAndLoad": {
     "NAME": "준비만전",
-    "DESCRIPTION": "빈 bluearchive_hoshino:탄약 슬롯을 !M! 개 얻습니다.",
-    "UPGRADE_DESCRIPTION": "선천성. NL 빈 bluearchive_hoshino:탄약 슬롯을 !M! 개 얻습니다."
+    "DESCRIPTION": "빈 bluearchive_hoshino:탄약 슬롯을 !M! 개 얻습니다."
   },
   "BlueArchive_Hoshino:DoubleShotAttack": {
     "NAME": "이중 사격",
@@ -101,7 +100,8 @@
   },
   "BlueArchive_Hoshino:Contract": {
     "NAME": "계약",
-    "DESCRIPTION": "bluearchive_hoshino:탄약의 최대치가 1 감소합니다. NL 힘을 !M! 얻습니다. NL bluearchive_hoshino:숙련을 !M! 얻습니다."
+    "DESCRIPTION": "bluearchive_hoshino:탄약의 최대치가 1 감소합니다. NL 힘을 !M! 얻습니다. NL bluearchive_hoshino:숙련을 !M! 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "bluearchive_hoshino:탄약의 최대치가 1 감소합니다. NL 힘을 !M! 얻습니다. NL bluearchive_hoshino:숙련을 !M! 얻습니다."
   },
   "BlueArchive_Hoshino:CoverLoad": {
     "NAME": "엄폐 장전",
@@ -122,7 +122,7 @@
   },
   "BlueArchive_Hoshino:Jackpot": {
     "NAME": "잭팟",
-    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 카드를 1장 뽑습니다. NL  bluearchive_hoshino:카운트다운(7): 피해량이 !M! 증가합니다.",
+    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 카드를 1장 뽑습니다. NL  bluearchive_hoshino:카운트다운(5): 피해량이 !M! 증가합니다.",
     "UPGRADE_DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 카드를 1장 뽑습니다. ",
     "EXTENDED_DESCRIPTION": [
       "bluearchive_hoshino:카운트다운(",
@@ -318,7 +318,7 @@
   },
   "BlueArchive_Hoshino:GoldWhale": {
     "NAME": "황금 고래",
-    "DESCRIPTION": "전투 종료시, 무작위 유물을 얻고 NL 33% 확률로 무작위 저주 카드를 받습니다."
+    "DESCRIPTION": "전투 종료시, 무작위 유물을 얻고 NL 40% 확률로 무작위 저주 카드를 받습니다."
   },
   "BlueArchive_Hoshino:RecoveryShell": {
     "NAME": "탄피 회수",
@@ -408,5 +408,13 @@
   "BlueArchive_Hoshino:PeroroRising": {
     "NAME": "페로로 강화 의식",
     "DESCRIPTION": "사용불가. NL 이 카드를 뽑으면 페로로님을 강화합니다."
+  },
+  "BlueArchive_Hoshino:GozBomb": {
+    "NAME": "선물",
+    "DESCRIPTION": "사용불가. NL 덱에 들어갈때마다 특정 카드에 숨습니다. 턴 종료 시 피해를 !M! 받습니다."
+  },
+  "BlueArchive_Hoshino:SandStorm": {
+    "NAME": "모래 바람",
+    "DESCRIPTION": "카드를 !M! 장 뽑습니다."
   }
 }

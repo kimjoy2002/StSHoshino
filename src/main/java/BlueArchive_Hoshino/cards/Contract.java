@@ -8,6 +8,8 @@ import BlueArchive_Hoshino.powers.ExpertPower;
 import BlueArchive_Hoshino.subscriber.BulletSubscriber;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
@@ -25,6 +27,7 @@ public class Contract extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(Contract.class.getSimpleName());
     public static final String IMG = makeCardPath("Contract.png");
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     // /TEXT DECLARATION/
 
@@ -40,12 +43,12 @@ public class Contract extends AbstractDynamicCard {
 
     // /STAT DECLARATION/
     private int AMOUNT = 2;
-    private static final int UPGRADE_PLUS_AMOUNT = 1;
 
 
     public Contract() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         magicNumber = baseMagicNumber = AMOUNT;
+        exhaust = true;
     }
 
     // Actions the card should do.
@@ -64,7 +67,8 @@ public class Contract extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_PLUS_AMOUNT);
+            exhaust = false;
+            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
             initializeDescription();
         }
     }

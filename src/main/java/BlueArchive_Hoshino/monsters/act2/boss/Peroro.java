@@ -46,9 +46,9 @@ public class Peroro extends AbstractMonster {
         AnimationState.TrackEntry e = this.state.setAnimation(0, "base_animation", true);
         e.setTime(e.getEndTime() * MathUtils.random());
         if (AbstractDungeon.ascensionLevel >= 9) {
-            this.setHp(70);
+            this.setHp(58, 63);
         } else {
-            this.setHp(60);
+            this.setHp(55,60);
         }
 
         this.damage.add(new DamageInfo(this, BEAM_DMG));

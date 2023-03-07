@@ -9,8 +9,8 @@
   },
   "BlueArchive_Hoshino:QuickReloadSkill": {
     "NAME": "Quick Reload",
-    "DESCRIPTION": "If you have empty bluearchive_hoshino:Ammo slot, bluearchive_hoshino:Reload. NL Draw 1 card.",
-    "UPGRADE_DESCRIPTION": "Retain. NL If you have empty bluearchive_hoshino:Ammo, bluearchive_hoshino:Reload. NL Draw 1 card."
+    "DESCRIPTION": "bluearchive_hoshino:Reload. NL Draw 1 card.",
+    "UPGRADE_DESCRIPTION": "Retain. NL bluearchive_hoshino:Reload. NL Draw 1 card."
   },
   "BlueArchive_Hoshino:TacticalShieldSkill": {
     "NAME": "Tactical Shield",
@@ -285,8 +285,8 @@
   },
   "BlueArchive_Hoshino:MilitarySupplies": {
     "NAME": "Military Supplies",
-    "DESCRIPTION": "Gain !B! Armor.  NL Put 1 Exhausted *Ammo *Box card into your hand.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Armor.  NL Put 1 Exhausted *Ammo *Box card into your hand. It costs 1 less turn."
+    "DESCRIPTION": "Gain !B! Block.  NL Put 1 Exhausted *Ammo *Box card into your hand.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block.  NL Put 1 Exhausted *Ammo *Box card into your hand. It costs 1 less turn."
   },
   "BlueArchive_Hoshino:BlindShot": {
     "NAME": "Shooting Spree",
@@ -369,7 +369,7 @@
   },
   "BlueArchive_Hoshino:LeaveItToMe": {
     "NAME": "Leave It To Me!",
-    "DESCRIPTION": "Use 1 bluearchive_hoshino:Ammo. NL Deal !D! damage. NL Gain !B! Block. NL +4 Block per floor climbed, then resets. NL Exhaust."
+    "DESCRIPTION": "Use 1 bluearchive_hoshino:Ammo. NL Deal !D! damage. NL Gain !B! Block. NL + !M! Block per floor climbed, then resets. NL Exhaust."
   },
   "BlueArchive_Hoshino:FixShield": {
     "NAME": "Fix Shield",

@@ -3,6 +3,7 @@ package BlueArchive_Hoshino.characters;
 import BlueArchive_Hoshino.effects.HoshinoSmile;
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpineAnimation;
+import basemod.animations.SpriterAnimation;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -103,9 +104,12 @@ public class Hoshino extends CustomPlayer {
 
     public Hoshino(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures,
-                "BlueArchive_HoshinoResources/images/char/defaultCharacter/orb/vfx.png", null,
+         "BlueArchive_HoshinoResources/images/char/defaultCharacter/orb/vfx.png", null,
                 new SpineAnimation("BlueArchive_HoshinoResources/images/char/defaultCharacter/Hoshino.atlas",
                         "BlueArchive_HoshinoResources/images/char/defaultCharacter/Hoshino.json", 1f));
+
+
+
 
 
         // =============== TEXTURES, ENERGY, LOADOUT =================  

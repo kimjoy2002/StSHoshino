@@ -14,7 +14,7 @@ public class ShirokoRelic extends CustomRelic {
      * https://github.com/daviscook477/BaseMod/wiki/Custom-Relics
      *
      */
-    public static final int GOLD = 12;
+    public static final int GOLD = 10;
 
     // ID, images, text.
     public static final String ID = DefaultMod.makeID("ShirokoRelic");

@@ -60,8 +60,10 @@ public class AquaticSupport extends AbstractDynamicCard implements OnDeckCard {
 
 
     @Override
-    public void onDeck() {
-        freeToPlayOnce = true;
+    public void onDeck(boolean discardSuffle) {
+        if(!discardSuffle)
+            freeToPlayOnce = true;
+
     }
 
 

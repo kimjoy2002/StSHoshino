@@ -39,8 +39,8 @@ public class RaiseShield extends AbstractDynamicCard implements ShuffleCard {
     public static final CardColor COLOR = Hoshino.Enums.COLOR_PINK;
 
     private static final int COST = 2;
-    private static final int BLOCK = 12;
-    private static final int UPGRADE_PLUS_BLOCK = 3;
+    private static final int BLOCK = 13;
+    private static final int UPGRADE_PLUS_BLOCK = 4;
 
 
     // /STAT DECLARATION/

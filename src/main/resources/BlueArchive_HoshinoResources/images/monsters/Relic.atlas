@@ -1,0 +1,27 @@
+
+Relic.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Relic_red
+  rotate: false
+  xy: 1, 1
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1
+Relic_green
+  rotate: false
+  xy: 305, 1
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1
+Relic
+  rotate: false
+  xy: 153, 1
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1

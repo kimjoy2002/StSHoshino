@@ -19,8 +19,8 @@ public class HoshinoBaseRelicPlus extends CustomRelic  implements ReloadRelic {
      * https://github.com/daviscook477/BaseMod/wiki/Custom-Relics
      *
      */
-    public static final int BLOCK = 5;
-    public static final int MAGIC = 5;
+    public static final int BLOCK = 4;
+    public static final int MAGIC = 4;
 
     // ID, images, text.
     public static final String ID = DefaultMod.makeID("HoshinoBaseRelicPlus");

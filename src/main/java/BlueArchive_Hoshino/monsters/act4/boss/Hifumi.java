@@ -78,14 +78,14 @@ public class Hifumi extends CustomMonster {
         switch (this.nextMove) {
             case 1:
                 if(peroro != null)
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new TauntPower(AbstractDungeon.player,peroro, 3)));
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new TauntPower(AbstractDungeon.player,peroro, 2)));
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new WeakPower(AbstractDungeon.player, 2, true), 2));
                 break;
             case 2:
                 if(peroro != null) {
                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(peroro, this, new ExplodePower(peroro , this, explodeAmt), explodeAmt));
                 }
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new MetallicizePower(this, 15), 15));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new MetallicizePower(this, 10), 10));
                 explodeAmt+=20;
                 break;
             case 3:

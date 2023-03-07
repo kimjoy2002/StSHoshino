@@ -64,16 +64,16 @@ public class Perorodzilla extends CustomMonster {
     }
 
     public Perorodzilla(float x, float y) {
-        super(NAME, ID, 580, -5.0F, 0.0F, 500.0F, 600.0F, makeMonstersPath("Perorodzilla.png"), x, y);
+        super(NAME, ID, 550, -5.0F, 0.0F, 500.0F, 600.0F, makeMonstersPath("Perorodzilla.png"), x, y);
         this.flipHorizontal = false;
         this.type = EnemyType.BOSS;
         this.dialogX = (this.hb_x - 70.0F) * Settings.scale;
         this.dialogY -= (this.hb_y - 55.0F) * Settings.scale;
 
         if (AbstractDungeon.ascensionLevel >= 9) {
-            this.setHp(600);
+            this.setHp(570);
         } else {
-            this.setHp(580);
+            this.setHp(550);
         }
 
         if (AbstractDungeon.ascensionLevel >= 4) {

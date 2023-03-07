@@ -56,8 +56,7 @@ public class LockAndLoad extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
-            this.isInnate = true;
+            this.upgradeBaseCost(0);
             initializeDescription();
         }
     }

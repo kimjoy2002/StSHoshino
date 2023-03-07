@@ -66,7 +66,6 @@ public class FullBarrelFire extends CustomCard  implements ShotCard {
 
     private static final int COST = 2;
     private static final int DAMAGE = 4;
-    private static final int UPGRADE_PLUS_DMG = 1;
 
 
     public FullBarrelFire() {
@@ -100,7 +99,7 @@ public class FullBarrelFire extends CustomCard  implements ShotCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(UPGRADE_PLUS_DMG);
+            this.upgradeBaseCost(1);
             initializeDescription();
         }
     }
