@@ -95,7 +95,7 @@ public class Chesed extends CustomMonster {
                     AbstractMonster m = (AbstractMonster)var1.next();
                     AbstractDungeon.actionManager.addToBottom(new GainBlockAction(m, this, blockAmt));
                 }
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new ChesedStrPower(this, 2), 2));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new ChesedStrPower(this, 3), 3));
                 break;
             case 2:
                 AbstractDungeon.actionManager.addToBottom(new VFXAction(this, new ShockWaveEffect(this.hb.cX, this.hb.cY, Settings.BLUE_TEXT_COLOR, ShockWaveEffect.ShockWaveType.CHAOTIC), 0.75F));

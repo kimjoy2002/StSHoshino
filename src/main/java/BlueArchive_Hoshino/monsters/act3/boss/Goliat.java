@@ -1,6 +1,8 @@
 package BlueArchive_Hoshino.monsters.act3.boss;
 
 import BlueArchive_Hoshino.DefaultMod;
+import com.badlogic.gdx.math.MathUtils;
+import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.AnimateFastAttackAction;
 import com.megacrit.cardcrawl.actions.animations.AnimateSlowAttackAction;
@@ -25,6 +27,8 @@ public class Goliat extends AbstractMonster {
     public static final String NAME;
     public static final String[] MOVES;
     public static final String[] DIALOG;
+    private static final String ATLAS = makeMonstersPath("Goliat.atlas");
+    private static final String SKEL = makeMonstersPath("Goliat.json");
     private int bomb = 24;
     private int gatling = 6;
     private int nuke = 45;
@@ -34,8 +38,11 @@ public class Goliat extends AbstractMonster {
         this(0.0F, 0.0F);
     }
     public Goliat(float x, float y) {
-        super(NAME, ID, 200, 0.0F, 0.0F, 250.0F, 250.0F, makeMonstersPath("Goliat.png"), x, y);
+        super(NAME, ID, 200, 0.0F, 0.0F, 350.0F, 420.0F, (String)null, x, y);
 
+        this.loadAnimation(ATLAS, SKEL, 0.8F);
+        AnimationState.TrackEntry e = this.state.setAnimation(0, "base_animation", true);
+        e.setTime(e.getEndTime() * MathUtils.random());
         if (AbstractDungeon.ascensionLevel >= 7) {
             this.setHp(205);
         } else {

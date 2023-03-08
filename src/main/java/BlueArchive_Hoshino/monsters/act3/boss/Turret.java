@@ -30,8 +30,7 @@ public class Turret extends AbstractMonster {
         this(0.0F, 0.0F);
     }
     public Turret(float x, float y) {
-        super(NAME, ID, 120, 0.0F, 0.0F, 150.0F, 200.0F, makeMonstersPath("Turret.png"), x, y);
-        this.flipHorizontal = true;
+        super(NAME, ID, 120, 0.0F, 0.0F, 150.0F, 320.0F, makeMonstersPath("Turret.png"), x, y);
         if (AbstractDungeon.ascensionLevel >= 7) {
             this.setHp(125);
         } else {

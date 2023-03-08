@@ -1,0 +1,69 @@
+
+Goliat.png
+size: 512,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Goliat_right_hand
+  rotate: false
+  xy: 1, 521
+  size: 231, 80
+  orig: 231, 80
+  offset: 0, 0
+  index: -1
+Goliat_right_arm
+  rotate: false
+  xy: 403, 1
+  size: 95, 134
+  orig: 95, 134
+  offset: 0, 0
+  index: -1
+Goliat_right_leg
+  rotate: false
+  xy: 1, 228
+  size: 167, 150
+  orig: 167, 150
+  offset: 0, 0
+  index: -1
+Goliat_body
+  rotate: false
+  xy: 1, 1
+  size: 219, 225
+  orig: 219, 225
+  offset: 0, 0
+  index: -1
+Goliat_left_leg
+  rotate: false
+  xy: 222, 1
+  size: 179, 159
+  orig: 179, 159
+  offset: 0, 0
+  index: -1
+Goliat_head
+  rotate: false
+  xy: 170, 263
+  size: 225, 91
+  orig: 225, 91
+  offset: 0, 0
+  index: -1
+Goliat_left_side
+  rotate: false
+  xy: 397, 263
+  size: 107, 175
+  orig: 107, 175
+  offset: 0, 0
+  index: -1
+Goliat_left_arm
+  rotate: false
+  xy: 170, 356
+  size: 117, 163
+  orig: 117, 163
+  offset: 0, 0
+  index: -1
+Goliat_left_hand
+  rotate: false
+  xy: 222, 162
+  size: 257, 99
+  orig: 257, 99
+  offset: 0, 0
+  index: -1

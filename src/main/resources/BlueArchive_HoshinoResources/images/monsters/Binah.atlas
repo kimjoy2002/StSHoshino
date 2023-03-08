@@ -1,13 +1,20 @@
 
 Binah.png
-size: 1024,256
+size: 1024,512
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
-Binah_Banner_1
+binah_body
   rotate: false
   xy: 1, 1
-  size: 591, 215
-  orig: 700, 215
-  offset: 108, 0
+  size: 457, 409
+  orig: 457, 409
+  offset: 0, 0
+  index: -1
+binah_head
+  rotate: false
+  xy: 460, 1
+  size: 543, 245
+  orig: 543, 245
+  offset: 0, 0
   index: -1

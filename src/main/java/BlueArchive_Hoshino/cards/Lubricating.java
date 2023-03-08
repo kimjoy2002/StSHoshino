@@ -61,14 +61,7 @@ public class Lubricating extends AbstractDynamicCard {
 
         Iterator var2 = AbstractDungeon.player.hand.group.iterator();
 
-        AbstractCard c;
-        while(var2.hasNext()) {
-            c = (AbstractCard)var2.next();
-            if (c instanceof ShotCard) {
-                this.addToBot(new BetterDiscardPileToHandAction(magicNumber, true));
-                break;
-            }
-        }
+        this.addToBot(new BetterDiscardPileToHandAction(magicNumber, true));
     }
 
 

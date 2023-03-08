@@ -100,6 +100,10 @@ public class Binah extends CustomMonster {
                 AbstractDungeon.actionManager.addToBottom(new VFXAction(this, new ScreenOnFireEffect(), 1.0F));
                 AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, (DamageInfo)this.damage.get(2), AbstractGameAction.AttackEffect.NONE));
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new VulnerablePower(AbstractDungeon.player, 3, true), 3));
+
+                AnimationState.TrackEntry e = this.state.setAnimation(0, "ready_animation", false);
+                AnimationState.TrackEntry e2 = this.state.addAnimation(0, "sand_animation", false, e.getEndTime());
+                this.state.addAnimation(0, "base_animation", true, e2.getEndTime());
                 break;
             case 4:
                 AbstractDungeon.actionManager.addToBottom(new AnimateSlowAttackAction(this));
