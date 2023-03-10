@@ -1,6 +1,7 @@
 package BlueArchive_Hoshino.monsters.act3.boss;
 
 import BlueArchive_Hoshino.DefaultMod;
+import BlueArchive_Hoshino.actions.HalfDeadAction;
 import BlueArchive_Hoshino.cards.GozBomb;
 import BlueArchive_Hoshino.effects.KuroCarEffect;
 import BlueArchive_Hoshino.monsters.act2.boss.Peroro;
@@ -8,6 +9,7 @@ import BlueArchive_Hoshino.powers.GozeBushinPower;
 import BlueArchive_Hoshino.powers.GozeThresholdPower;
 import BlueArchive_Hoshino.powers.HodGloryPower;
 import basemod.abstracts.CustomMonster;
+import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.AnimateFastAttackAction;
 import com.megacrit.cardcrawl.actions.animations.AnimateSlowAttackAction;
@@ -45,10 +47,13 @@ public class GozBunsin extends CustomMonster {
     public static final String NAME;
     public static final String[] MOVES;
     public static final String[] DIALOG;
+    private static final String ATLAS = makeMonstersPath("Goz.atlas");
+    private static final String SKEL = makeMonstersPath("Goz.json");
     private int dmg;
     private int dmg_threelight;
     private int numTurns = 0;
     public boolean isReal = false;
+    public boolean make_end = false;
     public int remain_hp = 0;
 
     public GozBunsin() {
@@ -56,8 +61,11 @@ public class GozBunsin extends CustomMonster {
     }
 
     public GozBunsin(float x, float y, boolean isReal, int remain_hp) {
-        super(NAME, ID, BUNSHIN_HP, -5.0F, 0.0F, 300.0F, 500.0F, makeMonstersPath("Goz.png"), x, y);
-        this.flipHorizontal = false;
+        super(NAME, ID, BUNSHIN_HP, -5.0F, 0.0F, 300.0F, 350.0F, (String)null, x, y);
+
+        this.loadAnimation(ATLAS, SKEL, 0.9F);
+        AnimationState.TrackEntry e = this.state.setAnimation(0, "base_animation", true);
+        e.setTime(0);
         this.type = EnemyType.BOSS;
         this.dialogX = (this.hb_x - 70.0F) * Settings.scale;
         this.dialogY -= (this.hb_y - 55.0F) * Settings.scale;
@@ -67,7 +75,7 @@ public class GozBunsin extends CustomMonster {
         this.setHp(BUNSHIN_HP);
 
         this.remain_hp = remain_hp;
-        if(remain_hp < BUNSHIN_HP) {
+        if (remain_hp < BUNSHIN_HP) {
             this.setHp(remain_hp);
         }
 
@@ -89,7 +97,7 @@ public class GozBunsin extends CustomMonster {
             case 1:
                 AbstractDungeon.actionManager.addToBottom(new AnimateFastAttackAction(this));
 
-                AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, (DamageInfo)this.damage.get(0), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+                AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, (DamageInfo) this.damage.get(0), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
                 break;
             case 2:
                 break;
@@ -100,12 +108,12 @@ public class GozBunsin extends CustomMonster {
                     AbstractDungeon.actionManager.addToBottom(new VFXAction(new GrandFinalEffect(), 1.0F));
                 }
                 AbstractDungeon.actionManager.addToBottom(new AnimateSlowAttackAction(this));
-                AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, (DamageInfo)this.damage.get(1), AbstractGameAction.AttackEffect.SLASH_HEAVY));
-                AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, (DamageInfo)this.damage.get(1), AbstractGameAction.AttackEffect.SLASH_HEAVY));
-                AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, (DamageInfo)this.damage.get(1), AbstractGameAction.AttackEffect.SLASH_HEAVY));
+                AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, (DamageInfo) this.damage.get(1), AbstractGameAction.AttackEffect.SLASH_HEAVY));
+                AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, (DamageInfo) this.damage.get(1), AbstractGameAction.AttackEffect.SLASH_HEAVY));
+                AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, (DamageInfo) this.damage.get(1), AbstractGameAction.AttackEffect.SLASH_HEAVY));
                 break;
             case 4:
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, isReal?3:1), isReal?3:1));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, isReal ? 3 : 1), isReal ? 3 : 1));
                 break;
         }
 
@@ -113,25 +121,25 @@ public class GozBunsin extends CustomMonster {
     }
 
     protected void getMove(int num) {
-        if(numTurns == 0) {
-            this.setMove((byte)4, Intent.BUFF);
-        } else if(numTurns != 3) {
+        if (numTurns == 0) {
+            this.setMove((byte) 4, Intent.BUFF);
+        } else if (numTurns != 3) {
             if (this.getPower("BlueArchive_Hoshino:GozeBushinPower") != null) {
-                GozeBushinPower var = (GozeBushinPower)this.getPower("BlueArchive_Hoshino:GozeBushinPower");
+                GozeBushinPower var = (GozeBushinPower) this.getPower("BlueArchive_Hoshino:GozeBushinPower");
                 var.revealed = true;
                 var.updateDescription();
             }
-            this.setMove((byte)1, Intent.ATTACK, ((DamageInfo)this.damage.get(0)).base);
+            this.setMove((byte) 1, Intent.ATTACK, ((DamageInfo) this.damage.get(0)).base);
         } else {
-            if(!isReal) {
-                this.setMove((byte)2, Intent.SLEEP);
+            if (!isReal) {
+                this.setMove((byte) 2, Intent.SLEEP);
             } else {
-                this.setMove(MOVES[1], (byte)3, Intent.ATTACK, ((DamageInfo)this.damage.get(1)).base, 3, true);
+                this.setMove(MOVES[1], (byte) 3, Intent.ATTACK, ((DamageInfo) this.damage.get(1)).base, 3, true);
             }
         }
 
         numTurns++;
-        if(numTurns == 4) {
+        if (numTurns == 4) {
             numTurns = 0;
         }
         this.createIntent();
@@ -149,15 +157,15 @@ public class GozBunsin extends CustomMonster {
             Iterator s = this.powers.iterator();
 
             AbstractPower p;
-            while(s.hasNext()) {
-                p = (AbstractPower)s.next();
+            while (s.hasNext()) {
+                p = (AbstractPower) s.next();
                 p.onDeath();
             }
 
             s = AbstractDungeon.player.relics.iterator();
 
-            while(s.hasNext()) {
-                AbstractRelic r = (AbstractRelic)s.next();
+            while (s.hasNext()) {
+                AbstractRelic r = (AbstractRelic) s.next();
                 r.onMonsterDeath(this);
             }
 
@@ -167,44 +175,48 @@ public class GozBunsin extends CustomMonster {
 
     public void init() {
         super.init();
-        if(remain_hp > BUNSHIN_HP) {
+        if (remain_hp > BUNSHIN_HP) {
             AbstractDungeon.actionManager.addToBottom(new CannotLoseAction());
         }
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new GozeBushinPower(this)));
     }
 
     public void die() {
-        if(isReal && remain_hp > BUNSHIN_HP) {
-            Goz newGoz = new Goz(0.0F, 0.0F, remain_hp-BUNSHIN_HP);
+        if (make_end) {
+            super.die();
+        } else if (isReal && remain_hp > BUNSHIN_HP) {
+            halfDead = true;
+            Goz newGoz = new Goz(0.0F, 0.0F, remain_hp - BUNSHIN_HP);
             AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(newGoz, false));
-            if(remain_hp-BUNSHIN_HP > BUNSHIN_THREASHOLD) {
+            if (remain_hp - BUNSHIN_HP > BUNSHIN_THREASHOLD) {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(newGoz, this, new GozeThresholdPower(newGoz, BUNSHIN_THREASHOLD)));
             }
 
             Iterator var1 = AbstractDungeon.getMonsters().monsters.iterator();
 
-            while(var1.hasNext()) {
+            while (var1.hasNext()) {
                 AbstractMonster m = (AbstractMonster) var1.next();
-                if(!m.isDying && !m.isDead && !m.halfDead && m != this){
+                if (!m.isDying && !m.isDead && !m.halfDead && m != this) {
                     AbstractDungeon.actionManager.addToBottom(new SuicideAction(m, false));
                 }
             }
             AbstractDungeon.actionManager.addToBottom(new CanLoseAction());
+            AbstractDungeon.actionManager.addToBottom(new HalfDeadAction(this, false));
+
             AbstractDungeon.actionManager.addToBottom(new SuicideAction(this, false));
-        }
-        else if (isReal) {
+            make_end = true;
+        } else if (isReal) {
             Iterator var1 = AbstractDungeon.getMonsters().monsters.iterator();
 
-            while(var1.hasNext()) {
+            while (var1.hasNext()) {
                 AbstractMonster m = (AbstractMonster) var1.next();
-                if(!m.isDying && !m.isDead && !m.halfDead && m != this){
+                if (!m.isDying && !m.isDead && !m.halfDead && m != this) {
                     AbstractDungeon.actionManager.addToBottom(new SuicideAction(m, false));
                 }
             }
             this.onBossVictoryLogic();
             super.die();
-        }
-        else {
+        } else {
             super.die();
         }
     }

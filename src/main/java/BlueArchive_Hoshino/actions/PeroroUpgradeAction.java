@@ -31,11 +31,11 @@ public class PeroroUpgradeAction extends AbstractGameAction {
             AbstractMonster m = (AbstractMonster)var1.next();
             if(m instanceof PeroroHifumi) {
                 PeroroHifumi k = (PeroroHifumi)m;
-                ((DamageInfo)k.damage.get(0)).base+=5;
+                ((DamageInfo)k.damage.get(0)).base+=4;
                 ((DamageInfo)k.damage.get(1)).base+=1;
-                k.maxHealth += 5;
+                k.maxHealth += 4;
                 if(!k.halfDead) {
-                    k.heal(5);
+                    k.heal(4);
                 }
                 k.sizeUp();
                 k.updateMove();

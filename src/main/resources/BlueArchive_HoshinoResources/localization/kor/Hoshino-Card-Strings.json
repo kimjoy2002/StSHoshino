@@ -407,11 +407,12 @@
   },
   "BlueArchive_Hoshino:PeroroRising": {
     "NAME": "페로로 강화 의식",
-    "DESCRIPTION": "사용불가. NL 이 카드를 뽑으면 페로로님을 강화합니다."
+    "DESCRIPTION": "사용불가. NL 휘발성. NL 이 카드를 뽑으면 페로로님을 강화합니다.",
+    "UPGRADE_DESCRIPTION": "사용불가. NL 이 카드를 뽑으면 페로로님을 강화합니다. NL 이 카드가 소멸하면 복제본을 버리는 더미에 둡니다."
   },
   "BlueArchive_Hoshino:GozBomb": {
     "NAME": "선물",
-    "DESCRIPTION": "사용불가. NL 덱에 들어갈때마다 특정 카드에 숨습니다. 턴 종료 시 피해를 !M! 받습니다."
+    "DESCRIPTION": "사용불가. NL 덱에 들어갈때마다 카드에 숨습니다. 턴 종료 시 피해를 !M! 받습니다."
   },
   "BlueArchive_Hoshino:SandStorm": {
     "NAME": "모래 바람",

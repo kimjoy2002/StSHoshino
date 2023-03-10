@@ -53,6 +53,8 @@ public class Goz extends CustomMonster {
     public static final String NAME;
     public static final String[] MOVES;
     public static final String[] DIALOG;
+    private static final String ATLAS = makeMonstersPath("Goz.atlas");
+    private static final String SKEL = makeMonstersPath("Goz.json");
     private static final String BGM ="Goz.ogg";
     private int dmg;
     private int dmg_debuf;
@@ -71,8 +73,11 @@ public class Goz extends CustomMonster {
     }
 
     public Goz(float x, float y, int remain_hp) {
-        super(NAME, ID, 540, -5.0F, 0.0F, 300.0F, 500.0F, makeMonstersPath("Goz.png"), x, y);
-        this.flipHorizontal = false;
+        super(NAME, ID, 540, -5.0F, 0.0F, 300.0F, 300.0F, (String)null, x, y);
+
+        this.loadAnimation(ATLAS, SKEL, 1.0F);
+        AnimationState.TrackEntry e = this.state.setAnimation(0, "base_animation", true);
+        e.setTime(0);
         this.type = EnemyType.BOSS;
         this.dialogX = (this.hb_x - 70.0F) * Settings.scale;
         this.dialogY -= (this.hb_y - 55.0F) * Settings.scale;
@@ -185,7 +190,7 @@ public class Goz extends CustomMonster {
     public void damage(DamageInfo info) {
         int tmpHealth = this.currentHealth;
         super.damage(info);
-        if (tmpHealth > this.currentHealth && !this.isDying) {
+        if (tmpHealth > this.currentHealth && !this.isDying ) {
             this.dmgTaken += tmpHealth - this.currentHealth;
             if (this.getPower("BlueArchive_Hoshino:GozeThresholdPower") != null) {
                 AbstractPower var = this.getPower("BlueArchive_Hoshino:GozeThresholdPower");

@@ -41,14 +41,14 @@ public class Peroro extends AbstractMonster {
         this(0.0F, 0.0F);
     }
     public Peroro(float x, float y) {
-        super(NAME, ID, 60, 0.0F, 0.0F, 150.0F, 200.0F, (String)null, x, y);
+        super(NAME, ID, 50, 0.0F, 0.0F, 150.0F, 200.0F, (String)null, x, y);
         this.loadAnimation(ATLAS, SKEL, 1.0F);
         AnimationState.TrackEntry e = this.state.setAnimation(0, "base_animation", true);
         e.setTime(e.getEndTime() * MathUtils.random());
         if (AbstractDungeon.ascensionLevel >= 9) {
-            this.setHp(58, 63);
+            this.setHp(53, 55);
         } else {
-            this.setHp(55,60);
+            this.setHp(49,51);
         }
 
         this.damage.add(new DamageInfo(this, BEAM_DMG));
@@ -71,7 +71,7 @@ public class Peroro extends AbstractMonster {
                 while(var1.hasNext()) {
                     AbstractMonster m = (AbstractMonster)var1.next();
                     if(m instanceof Perorodzilla) {
-                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, this, new DelayedPower(m, this, new StrengthPower(this, (AbstractDungeon.ascensionLevel >= 19)?3:2))));
+                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, this, new DelayedPower(m, this, new StrengthPower(this, (AbstractDungeon.ascensionLevel >= 19)?2:1))));
                     }
                 }
                 break;

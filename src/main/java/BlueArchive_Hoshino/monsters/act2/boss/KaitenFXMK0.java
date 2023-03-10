@@ -17,6 +17,7 @@ import com.megacrit.cardcrawl.actions.animations.AnimateSlowAttackAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.status.Wound;
@@ -42,6 +43,8 @@ public class KaitenFXMK0 extends CustomMonster {
     public static final String[] MOVES;
     public static final String[] DIALOG;
     protected Color color =  new Color(1.0f, 1.0f, 1.0f, 1.0f);
+    private static final String ATLAS = makeMonstersPath("KaitenFXMK0.atlas");
+    private static final String SKEL = makeMonstersPath("KaitenFXMK0.json");
     private static final String BGM ="KaitenFXMK0.ogg";
     private static Texture CIRCLE = new Texture(makeMonstersPath("Circle.png"));
     private int dmg_gatling;
@@ -62,9 +65,11 @@ public class KaitenFXMK0 extends CustomMonster {
     }
 
     public KaitenFXMK0(float x, float y) {
-        super(NAME, ID, 480, -5.0F, 0.0F, 460.0F, 600.0F, makeMonstersPath("KaitenFXMK0.png"), x, y);
+        super(NAME, ID, 480, -5.0F, 0.0F, 460.0F, 520.0F, (String)null, x, y);
+        this.loadAnimation(ATLAS, SKEL, 1.0F);
+        AnimationState.TrackEntry e = this.state.setAnimation(0, "base_animation", true);
+        e.setTime(e.getEndTime() * MathUtils.random());
 
-        this.flipHorizontal = false;
         this.type = EnemyType.BOSS;
         this.dialogX = (this.hb_x - 70.0F) * Settings.scale;
         this.dialogY -= (this.hb_y - 55.0F) * Settings.scale;
@@ -98,6 +103,7 @@ public class KaitenFXMK0 extends CustomMonster {
 
     public void takeTurn() {
         AbstractPlayer p = AbstractDungeon.player;
+        AnimationState.TrackEntry e = null;
         switch (this.nextMove) {
             case 1:
                 AbstractDungeon.actionManager.addToBottom(new AnimateFastAttackAction(this));
@@ -107,6 +113,8 @@ public class KaitenFXMK0 extends CustomMonster {
                 if(getColor()==1) {
                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new VulnerablePower(AbstractDungeon.player, 2, true), 2));
                 }
+                e = this.state.setAnimation(0, "shoot_animation", false);
+                this.state.addAnimation(0, "base_animation", true, e.getEndTime());
 
                 break;
             case 2:
@@ -125,12 +133,20 @@ public class KaitenFXMK0 extends CustomMonster {
             case 3:
                 AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this, this, this.blockAmt));
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new PlatedArmorPower(this, this.plateAmt), this.plateAmt));
+
+                e = this.state.setAnimation(0, "shield_animation", false);
+                this.state.addAnimation(0, "base_animation", true, e.getEndTime());
+
                 break;
             case 4:
+                AbstractDungeon.actionManager.addToBottom(new WaitAction(0.5F));
                 AbstractDungeon.actionManager.addToBottom(new AnimateSlowAttackAction(this));
                 AbstractDungeon.actionManager.addToBottom(new VFXAction(this, new DieDieDieEffect(), 0.5F));
                 AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, (DamageInfo)this.damage.get(2), AbstractGameAction.AttackEffect.SLASH_HEAVY));
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new MackerelSlashPower(this, this, slashUP), slashUP));
+
+                e = this.state.setAnimation(0, "sword_animation", false);
+                this.state.addAnimation(0, "base_animation", true, e.getEndTime());
                 break;
             case 5:
                 break;

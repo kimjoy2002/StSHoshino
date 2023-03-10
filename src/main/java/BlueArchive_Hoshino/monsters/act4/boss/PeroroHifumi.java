@@ -45,8 +45,9 @@ public class PeroroHifumi extends AbstractMonster {
     private static final String SKEL = makeMonstersPath("Peroro.json");
     private static final int BEAM_DMG = 15;
     private static final int BEAM2_DMG = 1;
-    public int beam_power = 7;
+    public int beam_power = 6;
     private static boolean is_first = true;
+    private static boolean after_revive = false;
     public float size = 1.0f;
 
     public float pwidth = 1.0f;
@@ -56,14 +57,14 @@ public class PeroroHifumi extends AbstractMonster {
         this(0.0F, 0.0F);
     }
     public PeroroHifumi(float x, float y) {
-        super(NAME, ID, 60, 0.0F, 0.0F, 300.0F, 300.0F, (String)null, x, y);
+        super(NAME, ID, 40, 0.0F, 0.0F, 300.0F, 300.0F, (String)null, x, y);
         this.loadAnimation(ATLAS, SKEL, 1.0F);
         AnimationState.TrackEntry e = this.state.setAnimation(0, "base_animation", true);
         e.setTime(e.getEndTime() * MathUtils.random());
         if (AbstractDungeon.ascensionLevel >= 9) {
-            this.setHp(70);
+            this.setHp(45);
         } else {
-            this.setHp(60);
+            this.setHp(40);
         }
         this.pwidth = this.skeleton.getData().getWidth();
         this.pheight = this.skeleton.getData().getWidth();
@@ -115,6 +116,7 @@ public class PeroroHifumi extends AbstractMonster {
                 AbstractDungeon.actionManager.addToBottom(new HealAction(this, this, this.maxHealth));
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new MinionPower(this)));
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new PeroroRevivePower(this, this)));
+                after_revive = true;
                 this.halfDead = false;
                 Iterator var1 = AbstractDungeon.player.relics.iterator();
 
@@ -172,7 +174,6 @@ public class PeroroHifumi extends AbstractMonster {
     }
 
     public void sizeUp() {
-
         size += 0.2f;
         this.loadAnimation(ATLAS, SKEL, 1.0F/size);
         AnimationState.TrackEntry e = this.state.setAnimation(0, "base_animation", true);
@@ -188,6 +189,9 @@ public class PeroroHifumi extends AbstractMonster {
     protected void getMove(int num) {
         if(halfDead) {
             this.setMove((byte)3, Intent.UNKNOWN);
+        } else if(after_revive) {
+            this.setMove((byte)1, Intent.ATTACK, ((DamageInfo)this.damage.get(0)).base);
+            after_revive = false;
         } else if(is_first) {
             if (AbstractDungeon.aiRng.randomBoolean()) {
                 this.setMove((byte)2, Intent.ATTACK, ((DamageInfo)this.damage.get(1)).base, beam_power, true);

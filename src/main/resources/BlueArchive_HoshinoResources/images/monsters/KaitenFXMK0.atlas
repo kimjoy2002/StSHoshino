@@ -1,0 +1,62 @@
+
+KaitenFXMK0.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Kaiten_right_leg
+  rotate: false
+  xy: 1, 686
+  size: 219, 233
+  orig: 219, 233
+  offset: 0, 0
+  index: -1
+Kaiten_left_leg
+  rotate: false
+  xy: 203, 1
+  size: 193, 315
+  orig: 193, 315
+  offset: 0, 0
+  index: -1
+Kaiten_right_arm
+  rotate: false
+  xy: 222, 686
+  size: 157, 273
+  orig: 157, 273
+  offset: 0, 0
+  index: -1
+Kaiten_body
+  rotate: false
+  xy: 1, 403
+  size: 245, 281
+  orig: 245, 281
+  offset: 0, 0
+  index: -1
+Kaiten_head
+  rotate: false
+  xy: 522, 881
+  size: 153, 133
+  orig: 153, 133
+  offset: 0, 0
+  index: -1
+Kaiten_left_arm
+  rotate: false
+  xy: 381, 686
+  size: 139, 299
+  orig: 139, 299
+  offset: 0, 0
+  index: -1
+Kaiten_shield
+  rotate: false
+  xy: 522, 686
+  size: 181, 193
+  orig: 181, 193
+  offset: 0, 0
+  index: -1
+Kaiten_sword
+  rotate: false
+  xy: 1, 1
+  size: 200, 400
+  orig: 200, 400
+  offset: 0, 0
+  index: -1

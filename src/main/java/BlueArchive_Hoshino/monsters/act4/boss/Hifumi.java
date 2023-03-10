@@ -65,9 +65,9 @@ public class Hifumi extends CustomMonster {
         }
 
         if (AbstractDungeon.ascensionLevel >= 4) {
-            blockAmt = 100;
+            blockAmt = 45;
         } else {
-            blockAmt = 90;
+            blockAmt = 40;
         }
 
     }
@@ -93,13 +93,22 @@ public class Hifumi extends CustomMonster {
                 AbstractDungeon.actionManager.addToBottom(new VFXAction(new HeartMegaDebuffEffect()));
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new WeakPower(AbstractDungeon.player, 2, true), 2));
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new FrailPower(AbstractDungeon.player, 2, true), 2));
-                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new PeroroRising(), 1, true, false, false, (float)Settings.WIDTH * 0.2F, (float)Settings.HEIGHT / 2.0F));
-                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new PeroroRising(), 1, true, false, false, (float)Settings.WIDTH * 0.35F, (float)Settings.HEIGHT / 2.0F));
-                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new PeroroRising(), 1, true, false, false, (float)Settings.WIDTH * 0.5F, (float)Settings.HEIGHT / 2.0F));
-                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new PeroroRising(), 1, true, false, false, (float)Settings.WIDTH * 0.65F, (float)Settings.HEIGHT / 2.0F));
+                PeroroRising p1 = new PeroroRising();
                 if (AbstractDungeon.ascensionLevel >= 19) {
-                    AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new PeroroRising(), 1, true, false, false, (float) Settings.WIDTH * 0.8F, (float) Settings.HEIGHT / 2.0F));
+                    p1.upgrade();
                 }
+                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(p1, 1, true, false, false, (float)Settings.WIDTH * 0.2F, (float)Settings.HEIGHT / 2.0F));
+                PeroroRising p2 = new PeroroRising();
+                if (AbstractDungeon.ascensionLevel >= 19) {
+                    p2.upgrade();
+                }
+                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(p2, 1, true, false, false, (float)Settings.WIDTH * 0.4F, (float)Settings.HEIGHT / 2.0F));
+                PeroroRising p3 = new PeroroRising();
+                p3.upgrade();
+                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(p3, 1, true, false, false, (float)Settings.WIDTH * 0.6F, (float)Settings.HEIGHT / 2.0F));
+                PeroroRising p4 = new PeroroRising();
+                p4.upgrade();
+                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(p4, 1, true, false, false, (float)Settings.WIDTH * 0.8F, (float)Settings.HEIGHT / 2.0F));
                 break;
             case 4:
                 AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this, this, blockAmt));

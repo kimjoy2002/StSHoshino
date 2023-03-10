@@ -55,7 +55,7 @@ public class Hod extends CustomMonster {
     }
 
     public Hod(float x, float y) {
-        super(NAME, ID, 360, -5.0F, 0.0F, 600.0F, 500.0F, (String)null, x, y);
+        super(NAME, ID, 410, -5.0F, 0.0F, 600.0F, 500.0F, (String)null, x, y);
         this.loadAnimation(ATLAS, SKEL, 1.5F);
         AnimationState.TrackEntry e = this.state.setAnimation(0, "base_animation", true);
         e.setTime(e.getEndTime() * MathUtils.random());

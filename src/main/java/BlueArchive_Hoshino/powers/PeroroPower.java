@@ -23,7 +23,7 @@ public class PeroroPower extends AbstractPower implements CloneablePowerInterfac
     public AbstractCreature perorodzilla;
 
     public final int damage = 50;
-    public final int str_power = (AbstractDungeon.ascensionLevel >= 19)?3:2;
+    public final int str_power = (AbstractDungeon.ascensionLevel >= 19)?2:1;
 
     public static final String POWER_ID = DefaultMod.makeID("PeroroPower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
