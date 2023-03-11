@@ -105,7 +105,7 @@ public class Perorodzilla extends CustomMonster {
                 AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, this.hb.cX- 100.0F * Settings.scale, this.hb.cY+ 100.0F * Settings.scale), 0.0F));
                 AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, this.hb.cX+ 100.0F * Settings.scale, this.hb.cY+ 100.0F * Settings.scale), 0.3F));
                 AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, (DamageInfo)this.damage.get(1), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new VulnerablePower(AbstractDungeon.player, 3, true), 3));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new VulnerablePower(AbstractDungeon.player, (AbstractDungeon.ascensionLevel >= 19)?3:2, true), (AbstractDungeon.ascensionLevel >= 19)?3:2));
                 break;
             case 4:
                 AbstractDungeon.actionManager.addToBottom(new VFXAction(new LaserBeamEffect(this.hb.cX - 100.0F * Settings.scale, this.hb.cY + 100.0F * Settings.scale), 0.0F));

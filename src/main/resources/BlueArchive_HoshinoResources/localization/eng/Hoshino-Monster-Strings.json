@@ -1,12 +1,233 @@
 {
   "BlueArchive_Hoshino:Binah": {
-    "NAME": "비나",
+    "NAME": "Binah",
     "MOVES": [
-      "아칠루트의 빛",
-      "공의의 불꽃",
-      "정화의 폭풍",
-      "짙은 모래폭풍"
+      "Atsilut's Light",
+      "Fires of Severity",
+      "Purifying Storm",
+      "Raging Sandstorm"
     ],
+    "DIALOG": [
+      ""
+    ]
+  },
+  "BlueArchive_Hoshino:Hod": {
+    "NAME": "Hod",
+    "MOVES": [
+      "Destruction Type I",
+      "Destruction Type II",
+      "Invader Pillar Generation",
+      "Energy Overload",
+      "Radiance Glory"
+    ],
+    "DIALOG": [
+      ""
+    ]
+  },
+  "BlueArchive_Hoshino:Siro": {
+    "NAME": "Shiro",
+    "MOVES": [
+      "Dun-Dun-Dun!",
+      "Keep Rollin' Rollin' Rollin'!"
+    ],
+    "DIALOG": [
+      ""
+    ]
+  },
+  "BlueArchive_Hoshino:Kuro": {
+    "NAME": "Kuro",
+    "MOVES": [
+      "Apathy Syndrome",
+      "Charge!!!"
+    ],
+    "DIALOG": [
+      ""
+    ]
+  },
+  "BlueArchive_Hoshino:HodPillar": {
+    "NAME": "Invader Pillar",
+    "MOVES": [
+    ],
+    "DIALOG": [
+      ""
+    ]
+  },
+  "BlueArchive_Hoshino:Kaitenger_red": {
+    "NAME": "Kaitenger Red",
+    "MOVES": [
+      "Kaiten Pose! Red of Zealousness!"
+    ],
+    "DIALOG": [
+      "Mugen Kaiten Sushi Sentai Kaitenger Toujou!"
+    ]
+  },
+  "BlueArchive_Hoshino:Kaitenger_green": {
+    "NAME": "Kaitenger Green",
+    "MOVES": [
+      "Kaiten Pose! Green of Weekend OT"
+    ],
+    "DIALOG": [
+      ""
+    ]
+  },
+  "BlueArchive_Hoshino:Kaitenger_pink": {
+    "NAME": "Kaitenger Pink",
+    "MOVES": [
+      "Kaiten Pose! Pink of Pure Heart!"
+    ],
+    "DIALOG": [
+      ""
+    ]
+  },
+  "BlueArchive_Hoshino:Kaitenger_yellow": {
+    "NAME": "Kaitenger Yellow",
+    "MOVES": [
+      "Kaiten Pose! Yellow of Passion!"
+    ],
+    "DIALOG": [
+      ""
+    ]
+  },
+  "BlueArchive_Hoshino:Kaitenger_black": {
+    "NAME": "Kaitenger Black",
+    "MOVES": [
+      "Kaiten Pose! Black of Shrewdness!"
+    ],
+    "DIALOG": [
+      ""
+    ]
+  },
+  "BlueArchive_Hoshino:Perorodzilla": {
+    "NAME": "Perorodzilla",
+    "MOVES": [
+      "Bubble",
+      "Incandescent Eye Laser",
+      "Summon Perorominions",
+      "Hyper Spiral Eye Laser"
+    ],
+    "DIALOG": [
+      "Rooooaaarrr...!"
+    ]
+  },
+  "BlueArchive_Hoshino:Peroro": {
+    "NAME": "Peroro",
+    "MOVES": [
+    ],
+    "DIALOG": [
+      ""
+    ]
+  },
+  "BlueArchive_Hoshino:KaitenFXMK0": {
+    "NAME": "KAITEN FX Mk.0",
+    "MOVES": [
+      "MUGEN KAITEN SUPER SHRIMP MACHINE GUN",
+      "MUGEN KAITEN HYPER SARDINE MISSILES",
+      "MUGEN KAITEN ULTRA PLATE SHIELD",
+      "MUGEN KAITEN FINAL MACKEREL SLASH"
+    ],
+    "DIALOG": [
+      ""
+    ]
+  },
+  "BlueArchive_Hoshino:Hifumi": {
+    "NAME": "Hifumi",
+    "MOVES": [
+      "Peroro-sama's Support",
+      "Angry Adelie's Blessing",
+      "Help me, Peroro-sama!",
+      "Collector's Spirit"
+    ],
+    "DIALOG": [
+      "Ahaha... It was nice pretending to be friends with you",
+      "Ahaha... It was nice pretending to be friends with hoshino-sama",
+      "~Nooooooo,~ ~Peroro-sama!~",
+      "Peroro-sama, please!",
+      "Peroro-sama... you are so beautiful today..."
+    ]
+  },
+  "BlueArchive_Hoshino:PeroroHifumi": {
+    "NAME": "Peroro",
+    "MOVES": [
+    ],
+    "DIALOG": [
+      ""
+    ]
+  },
+  "BlueArchive_Hoshino:Goz": {
+    "NAME": "Goz",
+    "MOVES": [
+      "Now You See Us",
+      "Three Light Monte",
+      "Magical Coin Hats",
+      "Surprise Present",
+      "Scream Rider"
+    ],
+    "DIALOG": [
+      ""
+    ]
+  },
+  "BlueArchive_Hoshino:Chesed": {
+    "NAME": "Chesed",
+    "MOVES": [
+      "Call of the Throne",
+      "Witness My Supreme Powers",
+      "Majesty's Mercy",
+      "Exposed Throne"
+    ],
+    "DIALOG": [
+      ""
+    ]
+  },
+  "BlueArchive_Hoshino:Soldier": {
+    "NAME": "Robo Soldier",
+    "MOVES": [],
+    "DIALOG": [
+      ""
+    ]
+  },
+  "BlueArchive_Hoshino:Drone": {
+    "NAME": "Cyber Drone",
+    "MOVES": [],
+    "DIALOG": [
+      ""
+    ]
+  },
+  "BlueArchive_Hoshino:Turret": {
+    "NAME": "Mount Turret",
+    "MOVES": [],
+    "DIALOG": [
+      ""
+    ]
+  },
+  "BlueArchive_Hoshino:Goliat": {
+    "NAME": "Giga Mecha",
+    "MOVES": [],
+    "DIALOG": [
+      ""
+    ]
+  },
+  "BlueArchive_Hoshino:Hieronymus": {
+    "NAME": "Hieronymus",
+    "MOVES": [
+      "Damasus' Call",
+      "Vulgate's Sacred Book",
+      "Reaper's Execution",
+      "Desert Penance"
+    ],
+    "DIALOG": [
+      ""
+    ]
+  },
+  "BlueArchive_Hoshino:GreenRelic": {
+    "NAME": "Relic",
+    "MOVES": [],
+    "DIALOG": [
+      ""
+    ]
+  },
+  "BlueArchive_Hoshino:RedRelic": {
+    "NAME": "Relic",
+    "MOVES": [],
     "DIALOG": [
       ""
     ]

@@ -61,9 +61,9 @@ public class GozBunsin extends CustomMonster {
     }
 
     public GozBunsin(float x, float y, boolean isReal, int remain_hp) {
-        super(NAME, ID, BUNSHIN_HP, -5.0F, 0.0F, 300.0F, 350.0F, (String)null, x, y);
+        super(NAME, ID, BUNSHIN_HP, -5.0F, 0.0F, 300.0F, 400.0F, (String)null, x, y);
 
-        this.loadAnimation(ATLAS, SKEL, 0.9F);
+        this.loadAnimation(ATLAS, SKEL, 0.8F);
         AnimationState.TrackEntry e = this.state.setAnimation(0, "base_animation", true);
         e.setTime(0);
         this.type = EnemyType.BOSS;

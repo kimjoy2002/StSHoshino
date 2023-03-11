@@ -41,10 +41,15 @@ public class Hifumi extends CustomMonster {
     public static final String NAME;
     public static final String[] MOVES;
     public static final String[] DIALOG;
+    private static final String ATLAS = makeMonstersPath("Hifumi.atlas");
+    private static final String SKEL = makeMonstersPath("Hifumi.json");
     private boolean isFirstMove = true;
+    private boolean firstPeroroDead = false;
+    private boolean firstPeroroBuff = false;
+    private boolean firstPeroroBigger = false;
     private int moveCount = 0;
     private int blockAmt;
-    private int explodeAmt = 40;
+    private int explodeAmt = 30;
 
     private HashMap<Integer, AbstractMonster> enemySlots = new HashMap();
     public Hifumi() {
@@ -52,8 +57,11 @@ public class Hifumi extends CustomMonster {
     }
 
     public Hifumi(float x, float y) {
-        super(NAME, ID, 750, -5.0F, 0.0F, 400.0F, 450.0F, makeMonstersPath("Hifumi.png"), x, y);
-        this.flipHorizontal = false;
+        super(NAME, ID, 750, -5.0F, 0.0F, 200.0F, 300.0F, (String)null, x, y);
+        this.loadAnimation(ATLAS, SKEL, 0.9F);
+        AnimationState.TrackEntry e = this.state.setAnimation(0, "base_animation", true);
+        e.setTime(0);
+        this.flipHorizontal = true;
         this.type = EnemyType.BOSS;
         this.dialogX = (this.hb_x - 70.0F) * Settings.scale;
         this.dialogY -= (this.hb_y - 55.0F) * Settings.scale;
@@ -66,13 +74,26 @@ public class Hifumi extends CustomMonster {
 
         if (AbstractDungeon.ascensionLevel >= 4) {
             blockAmt = 45;
+            explodeAmt = 35;
         } else {
             blockAmt = 40;
+            explodeAmt = 30;
         }
 
     }
 
     public void takeTurn() {
+        if(firstPeroroBigger == false && getPeroro() != null && getPeroro().maxHealth >= 100) {
+            firstPeroroBigger = true;
+            AbstractDungeon.actionManager.addToBottom(new ShoutAction(this, DIALOG[4], 1.0F, 2.0F));
+        }
+        else if(this.nextMove == 4) {
+            if(firstPeroroBuff == false) {
+                firstPeroroBuff = true;
+                AbstractDungeon.actionManager.addToBottom(new ShoutAction(this, DIALOG[3], 1.0F, 2.0F));
+            }
+        }
+
         AbstractPlayer p = AbstractDungeon.player;
         AbstractMonster peroro = getPeroro();
         switch (this.nextMove) {
@@ -85,8 +106,7 @@ public class Hifumi extends CustomMonster {
                 if(peroro != null) {
                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(peroro, this, new ExplodePower(peroro , this, explodeAmt), explodeAmt));
                 }
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new MetallicizePower(this, 10), 10));
-                explodeAmt+=20;
+                explodeAmt+=10;
                 break;
             case 3:
                 AbstractDungeon.actionManager.addToBottom(new ShoutAction(this, (AbstractDungeon.player instanceof  Hoshino)? DIALOG[1]:DIALOG[0], 1.0F, 2.0F));
@@ -94,9 +114,7 @@ public class Hifumi extends CustomMonster {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new WeakPower(AbstractDungeon.player, 2, true), 2));
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new FrailPower(AbstractDungeon.player, 2, true), 2));
                 PeroroRising p1 = new PeroroRising();
-                if (AbstractDungeon.ascensionLevel >= 19) {
-                    p1.upgrade();
-                }
+                p1.upgrade();
                 AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(p1, 1, true, false, false, (float)Settings.WIDTH * 0.2F, (float)Settings.HEIGHT / 2.0F));
                 PeroroRising p2 = new PeroroRising();
                 if (AbstractDungeon.ascensionLevel >= 19) {
@@ -104,10 +122,8 @@ public class Hifumi extends CustomMonster {
                 }
                 AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(p2, 1, true, false, false, (float)Settings.WIDTH * 0.4F, (float)Settings.HEIGHT / 2.0F));
                 PeroroRising p3 = new PeroroRising();
-                p3.upgrade();
                 AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(p3, 1, true, false, false, (float)Settings.WIDTH * 0.6F, (float)Settings.HEIGHT / 2.0F));
                 PeroroRising p4 = new PeroroRising();
-                p4.upgrade();
                 AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(p4, 1, true, false, false, (float)Settings.WIDTH * 0.8F, (float)Settings.HEIGHT / 2.0F));
                 break;
             case 4:
@@ -170,6 +186,19 @@ public class Hifumi extends CustomMonster {
     }
 
 
+    public static void isHifumiReact() {
+        Iterator var1 = AbstractDungeon.getMonsters().monsters.iterator();
+
+        while(var1.hasNext()) {
+            AbstractMonster m = (AbstractMonster) var1.next();
+            if (m instanceof Hifumi) {
+                if(((Hifumi)m).firstPeroroDead == false) {
+                    ((Hifumi)m).firstPeroroDead = true;
+                    AbstractDungeon.actionManager.addToBottom(new ShoutAction(m, DIALOG[2], 1.0F, 2.0F));
+                }
+            }
+        }
+    }
 
     public void usePreBattleAction() {
         CardCrawlGame.music.unsilenceBGM();

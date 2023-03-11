@@ -1,0 +1,97 @@
+
+Hifumi.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+hifumi_right_left
+  rotate: false
+  xy: 233, 190
+  size: 29, 65
+  orig: 29, 65
+  offset: 0, 0
+  index: -1
+hifumi_right_foot
+  rotate: false
+  xy: 202, 64
+  size: 34, 61
+  orig: 34, 61
+  offset: 0, 0
+  index: -1
+hifumi_left_left
+  rotate: false
+  xy: 264, 190
+  size: 29, 65
+  orig: 29, 65
+  offset: 0, 0
+  index: -1
+hifumi_left_foot
+  rotate: false
+  xy: 202, 127
+  size: 34, 61
+  orig: 34, 61
+  offset: 0, 0
+  index: -1
+hifumi_hair
+  rotate: false
+  xy: 1, 1
+  size: 117, 102
+  orig: 117, 102
+  offset: 0, 0
+  index: -1
+hifumi_bag
+  rotate: false
+  xy: 120, 1
+  size: 80, 102
+  orig: 80, 102
+  offset: 0, 0
+  index: -1
+hifumi_left_arm
+  rotate: false
+  xy: 238, 64
+  size: 44, 42
+  orig: 44, 42
+  offset: 0, 0
+  index: -1
+hifumi_left_hand
+  rotate: false
+  xy: 177, 197
+  size: 54, 39
+  orig: 54, 39
+  offset: 0, 0
+  index: -1
+hifumi_body
+  rotate: false
+  xy: 1, 105
+  size: 89, 120
+  orig: 89, 120
+  offset: 0, 0
+  index: -1
+hifumi_right_arm
+  rotate: false
+  xy: 247, 1
+  size: 41, 33
+  orig: 41, 33
+  offset: 0, 0
+  index: -1
+hifumi_right_hand
+  rotate: false
+  xy: 202, 1
+  size: 43, 61
+  orig: 43, 61
+  offset: 0, 0
+  index: -1
+hifumi_halo
+  rotate: false
+  xy: 92, 197
+  size: 83, 42
+  orig: 83, 42
+  offset: 0, 0
+  index: -1
+hifumi_head
+  rotate: false
+  xy: 92, 105
+  size: 108, 90
+  orig: 108, 90
+  offset: 0, 0
+  index: -1

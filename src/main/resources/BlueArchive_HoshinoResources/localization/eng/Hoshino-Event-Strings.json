@@ -109,6 +109,23 @@
       "(Result : ",
       ""
     ]
+  },
+  "BlueArchive_Hoshino:PeroroEvent": {
+    "NAME": "Peroro Goods",
+    "DESCRIPTIONS": [
+      "Along the way, you pick up an unpleasant doll that has fallen to the ground. NL \"Oh! That's not available now @Limited@ @Edition@ @Peroro@ @Goods!@ I'll pay any amount, so please sell it!\" NL A girl suddenly appears and asks to sell this item. NL It's something you don't need anyway, but what do you do?",
+      "It's an unpleasant doll, but it's a waste to give it to someone. NL \" ~Ahaha...~ \" NL She gives up and walks away with a meaningful smile. NL You're on your way, but you don't notice that someone is following you...",
+      "\"thank you!\" NL You feel lighter because of your good deeds.",
+      "You want to take a chance and decide to sell it for a very high price. NL In fact, you're just giving it away for free. NL The guilt of cheating on a girl leaves me with regret."
+    ],
+    "OPTIONS": [
+      "[Don't Give] #gObtain #ga #gspecial #gRelic. ",
+      "[Give It] #gRemove #ga #gcard #gfrom #gyour #gdeck.",
+      "[Rip Off] #gGain #g",
+      " #gGold. #rBecome #rCursed #r- #rRegret.",
+      "[Leave]",
+      "Select a Card to Remove."
+    ]
   }
 }
 

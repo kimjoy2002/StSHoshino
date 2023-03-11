@@ -398,5 +398,22 @@
   "BlueArchive_Hoshino:FixedSkill": {
     "NAME": "Fixed Skill",
     "DESCRIPTION": "Innate. NL Choose !M! cards from your draw pile and keep them. At the start of your turn, Choose one of the kept cards and take it."
+  },
+  "BlueArchive_Hoshino:SiroBomb": {
+    "NAME": "BOOM!!",
+    "DESCRIPTION": "Unplayable. NL Ethereal. NL At the end of your turn, take !M! damage."
+  },
+  "BlueArchive_Hoshino:PeroroRising": {
+    "NAME": "Peroro's Ritual",
+    "DESCRIPTION": "Unplayable. NL Ethereal. NL When this card is drawn, Strengthen Peroro.",
+    "UPGRADE_DESCRIPTION": "Unplayable. NL When this card is drawn, Strengthen Peroro. NL If this card is Exhausted, Add a copy of this card into discard pile."
+  },
+  "BlueArchive_Hoshino:GozBomb": {
+    "NAME": "Gift",
+    "DESCRIPTION": "Unplayable. NL Every time into the draw pile, hides in the card. At the end of your turn, take !M! damage."
+  },
+  "BlueArchive_Hoshino:SandStorm": {
+    "NAME": "Sand Storm",
+    "DESCRIPTION": "Draw !M! card."
   }
 }

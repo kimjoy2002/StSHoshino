@@ -40,15 +40,15 @@ public class KaitengerPink extends KaitengerCommon {
     }
 
     public KaitengerPink(float x, float y) {
-        super(NAME, ID, 35, -5.0F, 0.0F, 150.0F, 250.0F, makeMonstersPath("Kaitenger_pink.png"), x, y);
+        super(NAME, ID, 32, -5.0F, 0.0F, 150.0F, 250.0F, makeMonstersPath("Kaitenger_pink.png"), x, y);
         this.type = EnemyType.BOSS;
         this.dialogX = (this.hb_x - 70.0F) * Settings.scale;
         this.dialogY -= (this.hb_y - 55.0F) * Settings.scale;
 
         if (AbstractDungeon.ascensionLevel >= 9) {
-            this.setHp(38);
-        } else {
             this.setHp(35);
+        } else {
+            this.setHp(32);
         }
 
         if (AbstractDungeon.ascensionLevel >= 4) {
@@ -105,7 +105,7 @@ public class KaitengerPink extends KaitengerCommon {
 
                 while(var1.hasNext()) {
                     AbstractMonster m = (AbstractMonster)var1.next();
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, this, new DelayedPower(m, this, new StrengthPower(this, 2))));
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, this, new DelayedPower(m, this, new StrengthPower(this, (AbstractDungeon.ascensionLevel >= 19)?2:1))));
                 }
                 break;
             case 3:

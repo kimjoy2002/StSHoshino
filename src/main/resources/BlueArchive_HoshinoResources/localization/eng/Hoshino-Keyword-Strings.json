@@ -72,6 +72,13 @@
       "out"
     ],
     "DESCRIPTION": "Activates when all Ammo is empty."
+  },
+  {
+    "PROPER_NAME": "Gift",
+    "NAMES": [
+      "GOZBOMB"
+    ],
+    "DESCRIPTION": "Hide in order of card in order of high cost, high rarity."
   }
 ]
 

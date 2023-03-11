@@ -60,9 +60,9 @@ public class KaitengerRed extends KaitengerCommon {
         }
 
         if (AbstractDungeon.ascensionLevel >= 4) {
-            this.dmg = 7;
-        } else {
             this.dmg = 6;
+        } else {
+            this.dmg = 5;
         }
         turn = 0;
 
@@ -138,8 +138,15 @@ public class KaitengerRed extends KaitengerCommon {
         } else {
             if (this.lastMove((byte)2)){
                 this.setMove((byte)1, Intent.ATTACK, ((DamageInfo)this.damage.get(0)).base);
-            } else {
+            } else if(this.lastMove((byte)1)) {
                 this.setMove(MOVES[0], (byte)2, Intent.DEBUFF);
+            } else {
+                if(AbstractDungeon.ascensionLevel >= 19) {
+                    this.setMove(MOVES[0], (byte)2, Intent.DEBUFF);
+                }
+                else {
+                    this.setMove((byte)1, Intent.ATTACK, ((DamageInfo)this.damage.get(0)).base);
+                }
             }
         }
         this.createIntent();

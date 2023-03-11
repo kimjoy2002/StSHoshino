@@ -142,6 +142,13 @@
     "DESCRIPTIONS": [
       "All #yStatus and #yCurse cards gain \" #ybluearchive_hoshino:Countdown(2) : Instantly #yExhaust and draw 2 card. \"."
     ]
+  },
+  "BlueArchive_Hoshino:PeroroRelic": {
+    "NAME": "Limited Edition Peroro Goods",
+    "FLAVOR": "It's a bad looking mascot character.",
+    "DESCRIPTIONS": [
+      "If you have it, something special will happen."
+    ]
   }
 }
 

@@ -79,6 +79,16 @@
       "Choose a card to bring into your hand. (Fixed Skill)",
       "Choose"
     ]
+  },
+  "BlueArchive_Hoshino:TauntMessage": {
+    "TEXT": [
+      "I was provoked!"
+    ]
+  },
+  "BlueArchive_Hoshino:GozBombText": {
+    "TEXT": [
+      " NL (Add *Gift to hand.)"
+    ]
   }
 }
 

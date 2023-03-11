@@ -39,15 +39,15 @@ public class KaitengerYellow extends KaitengerCommon {
     }
 
     public KaitengerYellow(float x, float y) {
-        super(NAME, ID, 35, -5.0F, 0.0F, 150.0F, 250.0F, makeMonstersPath("Kaitenger_yellow.png"), x, y);
+        super(NAME, ID, 32, -5.0F, 0.0F, 150.0F, 250.0F, makeMonstersPath("Kaitenger_yellow.png"), x, y);
         this.type = EnemyType.BOSS;
         this.dialogX = (this.hb_x - 70.0F) * Settings.scale;
         this.dialogY -= (this.hb_y - 55.0F) * Settings.scale;
 
         if (AbstractDungeon.ascensionLevel >= 9) {
-            this.setHp(38);
-        } else {
             this.setHp(35);
+        } else {
+            this.setHp(32);
         }
 
         if (AbstractDungeon.ascensionLevel >= 4) {

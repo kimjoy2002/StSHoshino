@@ -33,6 +33,7 @@ import com.megacrit.cardcrawl.vfx.combat.SmallLaserEffect;
 import java.util.Iterator;
 
 import static BlueArchive_Hoshino.DefaultMod.makeMonstersPath;
+import static BlueArchive_Hoshino.monsters.act4.boss.Hifumi.isHifumiReact;
 
 public class PeroroHifumi extends AbstractMonster {
     public static final String ID = DefaultMod.makeID(PeroroHifumi.class.getSimpleName());
@@ -76,7 +77,7 @@ public class PeroroHifumi extends AbstractMonster {
         this.damage.add(new DamageInfo(this, BEAM2_DMG));
     }
 
-    protected  boolean isHifumiLive() {
+    protected boolean isHifumiLive() {
 
         Iterator var1 = AbstractDungeon.getMonsters().monsters.iterator();
 
@@ -89,6 +90,9 @@ public class PeroroHifumi extends AbstractMonster {
         }
         return false;
     }
+
+
+
     public void takeTurn() {
         switch (this.nextMove) {
             case 1:
@@ -153,7 +157,7 @@ public class PeroroHifumi extends AbstractMonster {
             }
             this.powers.clear();
             this.addToBot(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, "BlueArchive_Hoshino:TauntPower"));
-
+            isHifumiReact();
             this.setMove((byte)3, Intent.UNKNOWN);
             this.createIntent();
         }
