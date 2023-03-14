@@ -72,6 +72,13 @@
       "空仓"
     ],
     "DESCRIPTION": "当所有弹药槽都为空时，触发效果。"
+  },
+  {
+    "PROPER_NAME": "Gift",
+    "NAMES": [
+      "GOZBOMB"
+    ],
+    "DESCRIPTION": "Hide in order of card in order of high cost, high rarity."
   }
 ]
 

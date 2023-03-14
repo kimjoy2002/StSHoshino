@@ -125,8 +125,8 @@
     "NAME": "Golden Whale",
     "DESCRIPTIONS": [
       "the end of battle, Gain #b",
-      " relic and 33% chance to gain #yCurse.",
-      " relics and 33% chance to gain #yCurses."
+      " relic and 40% chance to gain #yCurse.",
+      " relics and 40% chance to gain #yCurses."
     ]
   },
   "BlueArchive_Hoshino:SprintPower": {

@@ -104,9 +104,10 @@ public class Hifumi extends CustomMonster {
                 break;
             case 2:
                 if(peroro != null) {
+                    AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(peroro, this, ExplodePower.POWER_ID));
                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(peroro, this, new ExplodePower(peroro , this, explodeAmt), explodeAmt));
                 }
-                explodeAmt+=10;
+                explodeAmt+=15;
                 break;
             case 3:
                 AbstractDungeon.actionManager.addToBottom(new ShoutAction(this, (AbstractDungeon.player instanceof  Hoshino)? DIALOG[1]:DIALOG[0], 1.0F, 2.0F));

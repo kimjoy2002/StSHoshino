@@ -28,7 +28,10 @@ public class RelicAura extends AbstractGameEffect {
             this.color = new Color(MathUtils.random(0.6F, 0.7F), MathUtils.random(0.0F, 0.1F), MathUtils.random(0.1F, 0.2F), 0.0F);
         } else if (color.equals("Green")) {
             this.color = new Color(MathUtils.random(0.1F, 0.2F), MathUtils.random(0.6F, 0.7F), MathUtils.random(0.1F, 0.2F), 0.0F);
-        } else {
+        } else if (color.equals("Blue")) {
+            this.scale = MathUtils.random(3.7F, 4.5F) * Settings.scale;
+            this.color = new Color(MathUtils.random(0.1F, 0.2F), MathUtils.random(0.1F, 0.2F), MathUtils.random(0.6F, 0.7F), 0.0F);
+        }else {
             this.color = new Color(MathUtils.random(0.6F, 0.7F), MathUtils.random(0.6F, 0.7F), MathUtils.random(0.6F, 0.7F), 0.0F);
         }
 

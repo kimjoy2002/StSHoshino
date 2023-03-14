@@ -4,11 +4,14 @@ import BlueArchive_Hoshino.DefaultMod;
 import BlueArchive_Hoshino.actions.HalfDeadAction;
 import BlueArchive_Hoshino.cards.GozBomb;
 import BlueArchive_Hoshino.effects.KuroCarEffect;
+import BlueArchive_Hoshino.effects.RelicAura;
 import BlueArchive_Hoshino.monsters.act2.boss.Peroro;
 import BlueArchive_Hoshino.powers.GozeBushinPower;
 import BlueArchive_Hoshino.powers.GozeThresholdPower;
 import BlueArchive_Hoshino.powers.HodGloryPower;
 import basemod.abstracts.CustomMonster;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.AnimateFastAttackAction;
@@ -51,8 +54,10 @@ public class GozBunsin extends CustomMonster {
     private static final String SKEL = makeMonstersPath("Goz.json");
     private int dmg;
     private int dmg_threelight;
+    protected float particleTimer;
     private int numTurns = 0;
     public boolean isReal = false;
+    public boolean revealed = false;
     public boolean make_end = false;
     public int remain_hp = 0;
 
@@ -91,6 +96,16 @@ public class GozBunsin extends CustomMonster {
         this.damage.add(new DamageInfo(this, this.dmg_threelight, DamageInfo.DamageType.NORMAL));
     }
 
+    public void update() {
+        super.update();
+        if(isReal && revealed) {
+            this.particleTimer -= Gdx.graphics.getDeltaTime();
+            if (this.particleTimer < 0.0F) {
+                this.particleTimer = MathUtils.random(0.3F, 0.4F);
+                AbstractDungeon.effectsQueue.add(new RelicAura(this, "Blue"));
+            }
+        }
+    }
     public void takeTurn() {
         AbstractPlayer p = AbstractDungeon.player;
         switch (this.nextMove) {
@@ -129,6 +144,7 @@ public class GozBunsin extends CustomMonster {
                 var.revealed = true;
                 var.updateDescription();
             }
+            revealed = true;
             this.setMove((byte) 1, Intent.ATTACK, ((DamageInfo) this.damage.get(0)).base);
         } else {
             if (!isReal) {

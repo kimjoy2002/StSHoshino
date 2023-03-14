@@ -125,8 +125,8 @@
     "NAME": "金鲸",
     "DESCRIPTIONS": [
       "战斗结束时，获得 #b",
-      " 个遗物并有33%概率获得 #y诅咒 。",
-      " 个遗物并有33%概率获得 #y诅咒 。"
+      " 个遗物并有40%概率获得 #y诅咒 。",
+      " 个遗物并有40%概率获得 #y诅咒 。"
     ]
   },
   "BlueArchive_Hoshino:SprintPower": {
@@ -171,6 +171,134 @@
     "NAME": "固有技能",
     "DESCRIPTIONS": [
       "回合开始时，从以下卡牌中选择拿取一张: "
+    ]
+  },
+  "BlueArchive_Hoshino:EnergyLosePower": {
+    "NAME": "Energy Rduction",
+    "DESCRIPTIONS": [
+      "Lose ",
+      " [E] ",
+      " this turn."
+    ]
+  },
+  "BlueArchive_Hoshino:HodGloryPower": {
+    "NAME": "Hidden Glory",
+    "DESCRIPTIONS": [
+      "If all the #yArtifact disappear, Gain #b3 #yVulnerable."
+    ]
+  },
+  "BlueArchive_Hoshino:ReflectablePower": {
+    "NAME": "Reflectable",
+    "DESCRIPTIONS": [
+      "If you completely block this boss' attack, you will return the attack."
+    ]
+  },
+  "BlueArchive_Hoshino:SiroKuroPower": {
+    "NAME": "Horror of Slumpia",
+    "DESCRIPTIONS": [
+      "If you knock down Shiro, Kuro appears."
+    ]
+  },
+  "BlueArchive_Hoshino:KaitengerPower": {
+    "NAME": "MUGEN KAITEN",
+    "DESCRIPTIONS": [
+      "There are #y",
+      " Kaitengers left."
+    ]
+  },
+  "BlueArchive_Hoshino:DelayedPower": {
+    "NAME": "Delayed",
+    "DESCRIPTIONS": [
+      "At the end of the turn, gain: #y",
+      ""
+    ]
+  },
+  "BlueArchive_Hoshino:TauntPower": {
+    "NAME": "Taunt",
+    "DESCRIPTIONS": [
+      "You can only point to #y",
+      " as the target of the card."
+    ]
+  },
+  "BlueArchive_Hoshino:PeroroPower": {
+    "NAME": "Hive Mind",
+    "DESCRIPTIONS": [
+      "If you kill this minion, Deal #b",
+      " damage to boss. But when absorbed by the boss, Boss gains #b",
+      " #yStrength."
+    ]
+  },
+  "BlueArchive_Hoshino:KaitenMagicCirclePower": {
+    "NAME": "Heart Ablaze",
+    "DESCRIPTIONS": [
+      "#pPink : All damage is increased by #b30%.",
+      "#rRed : Apply 2 #yVulnerable the target.",
+      "#gGreen : At the end of turn, Gain #b3 #yStrength.",
+      " After taking #b",
+      " damage, it switches in the order of #pPink -> #rRed -> #gGreen."
+    ]
+  },
+  "BlueArchive_Hoshino:MackerelSlashPower": {
+    "NAME": "Mega Egg Overcharge",
+    "DESCRIPTIONS": [
+      "Increase the damage of MUGEN KAITEN FINAL MACKEREL SLASH by #b",
+      ""
+    ]
+  },
+  "BlueArchive_Hoshino:PeroroRevivePower": {
+    "NAME": "immortality",
+    "DESCRIPTIONS": [
+      "Respawns next turn, even if killed."
+    ]
+  },
+  "BlueArchive_Hoshino:ExplodePower": {
+    "NAME": "Explode",
+    "DESCRIPTIONS": [
+      "When killed, Deal #b",
+      " damage to the player."
+    ]
+  },
+  "BlueArchive_Hoshino:GozeThresholdPower": {
+    "NAME": "Now You See Us",
+    "DESCRIPTIONS": [
+      "After taking #b",
+      " damage, Immediately creates a clone and changes the pattern."
+    ]
+  },
+  "BlueArchive_Hoshino:GozeBushinPower": {
+    "NAME": "Clone",
+    "DESCRIPTIONS": [
+      "When the real one is defeated, all clones are died and the original form reappears. The real one is revealed next turn.",
+      "The real one. When defeated, all clones are died and the original form reappears.",
+      "Fake. Even if defeated, nothing happens.",
+      "When the real one is defeated, all clones are died and you win. The real one is revealed next turn..",
+      "The real one. When defeated, all clones are died and you win."
+    ]
+  },
+  "BlueArchive_Hoshino:ChesedMinionPower": {
+    "NAME": "Solid Kingdom",
+    "DESCRIPTIONS": [
+      "Takes only 10% of all damage before defeating the remaining #b",
+      " waves."
+    ]
+  },
+  "BlueArchive_Hoshino:ChesedStrPower": {
+    "NAME": "Supreme Power",
+    "DESCRIPTIONS": [
+      "The attack damage done by all the soldiers increases by #b",
+      ""
+    ]
+  },
+  "BlueArchive_Hoshino:GreenRelicPower": {
+    "NAME": "Holy Light (Green)",
+    "DESCRIPTIONS": [
+      "Cannot be attacked. Heal #g1 HP every time a #ySkill card is used. When HP is full, Cannot draw cards until the end of the turn."
+    ]
+  },
+  "BlueArchive_Hoshino:RedRelicPower": {
+    "NAME": "Holy Light (Red)",
+    "DESCRIPTIONS": [
+      "Cannot be attacked. Heal #g1 HP every time a #yAttack card is used. When HP is full, increases the cost of all cards by 1 until the end of the turn."
     ]
   }
 }

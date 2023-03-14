@@ -26,8 +26,7 @@
   },
   "BlueArchive_Hoshino:LockAndLoad": {
     "NAME": "Lock And Load",
-    "DESCRIPTION": "Gain !M! empty bluearchive_hoshino:Ammo slots.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Gain !M! empty bluearchive_hoshino:Ammo slots."
+    "DESCRIPTION": "Gain !M! empty bluearchive_hoshino:Ammo slots."
   },
   "BlueArchive_Hoshino:DoubleShotAttack": {
     "NAME": "Double Shot",
@@ -101,7 +100,8 @@
   },
   "BlueArchive_Hoshino:Contract": {
     "NAME": "Contract",
-    "DESCRIPTION": "Lose 1 bluearchive_hoshino:Ammo slot. NL Gain !M! Strength. NL Gain !M! bluearchive_hoshino:Expert."
+    "DESCRIPTION": "Lose 1 bluearchive_hoshino:Ammo slot. NL Gain !M! Strength. NL Gain !M! bluearchive_hoshino:Expert. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Lose 1 bluearchive_hoshino:Ammo slot. NL Gain !M! Strength. NL Gain !M! bluearchive_hoshino:Expert."
   },
   "BlueArchive_Hoshino:CoverLoad": {
     "NAME": "Covered Reload",
@@ -122,7 +122,7 @@
   },
   "BlueArchive_Hoshino:Jackpot": {
     "NAME": "Jackpot",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Draw 1 card. NL bluearchive_hoshino:Countdown(7): Increases damage by !M!",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Draw 1 card. NL bluearchive_hoshino:Countdown(5): Increases damage by !M!",
     "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL Draw 1 card. NL ",
     "EXTENDED_DESCRIPTION": [
       "bluearchive_hoshino:Countdown(",
@@ -140,11 +140,12 @@
   },
   "BlueArchive_Hoshino:Memorial": {
     "NAME": "Memorial",
-    "DESCRIPTION": "Gain !M! Strength and Dexterity whenever you shuffle your draw pile."
+    "DESCRIPTION": "Gain !M! Strength and Dexterity whenever you shuffle your draw pile.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Strength and Dexterity whenever you shuffle your draw pile. NL Then shuffle your draw pile."
   },
   "BlueArchive_Hoshino:EmergencyFieldAidSkill": {
     "NAME": "Emergency Field Aid",
-    "DESCRIPTION": "Ethereal. NL If below 50% HP: NL Heal !M! HP. NL Exhaust."
+    "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL If below 50% HP: Heal !M! HP instead of Block. NL Exhaust."
   },
   "BlueArchive_Hoshino:ShieldRebound": {
     "NAME": "Deflect Bullet",
@@ -294,8 +295,8 @@
   },
   "BlueArchive_Hoshino:Lubricating": {
     "NAME": "Lubricate",
-    "DESCRIPTION": "Exhaust 1 random card that uses bluearchive_hoshino:Ammo. NL Return !M! card from discard pile to hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Exhaust 1 card that uses bluearchive_hoshino:Ammo. NL Return !M! card from discard pile to hand. NL Exhaust."
+    "DESCRIPTION": "Exhaust 1 random card. NL Return !M! card from discard pile to hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Exhaust 1 card. NL Return !M! card from discard pile to hand. NL Exhaust."
   },
   "BlueArchive_Hoshino:WideShot": {
     "NAME": "Wide Shot",
@@ -316,7 +317,7 @@
   },
   "BlueArchive_Hoshino:GoldWhale": {
     "NAME": "Golden Whale",
-    "DESCRIPTION": "End of combat: NL Gain a random relic. 33% chance to gain a random Curse too."
+    "DESCRIPTION": "End of combat: NL Gain a random relic. 40% chance to gain a random Curse too."
   },
   "BlueArchive_Hoshino:RecoveryShell": {
     "NAME": "Recovery Shell",

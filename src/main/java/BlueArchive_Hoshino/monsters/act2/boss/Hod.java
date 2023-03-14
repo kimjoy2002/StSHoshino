@@ -209,6 +209,15 @@ public class Hod extends CustomMonster {
     public void die() {
         super.die();
         this.onBossVictoryLogic();
+
+        Iterator var1 = AbstractDungeon.getMonsters().monsters.iterator();
+
+        while(var1.hasNext()) {
+            AbstractMonster m = (AbstractMonster) var1.next();
+            if(!m.isDying && !m.isDead && !m.halfDead){
+                AbstractDungeon.actionManager.addToBottom(new SuicideAction(m, false));
+            }
+        }
     }
     static {
         monsterStrings = CardCrawlGame.languagePack.getMonsterStrings("BlueArchive_Hoshino:Hod");

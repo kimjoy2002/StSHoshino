@@ -9,8 +9,8 @@
   },
   "BlueArchive_Hoshino:QuickReloadSkill": {
     "NAME": "快速装填",
-    "DESCRIPTION": "如果你有空的 bluearchive_hoshino:弹药 槽, bluearchive_hoshino:装填 。 NL 抽1张牌。",
-    "UPGRADE_DESCRIPTION": " 保留 。 NL 如果你有空的 bluearchive_hoshino:弹药 槽， bluearchive_hoshino:装填 。 NL 抽1张牌。"
+    "DESCRIPTION": "bluearchive_hoshino:装填 。 NL 抽1张牌。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL bluearchive_hoshino:装填 。 NL 抽1张牌。"
   },
   "BlueArchive_Hoshino:TacticalShieldSkill": {
     "NAME": "战术盾牌",
@@ -26,8 +26,7 @@
   },
   "BlueArchive_Hoshino:LockAndLoad": {
     "NAME": "上膛",
-    "DESCRIPTION": "获得 !M! 个空 bluearchive_hoshino:弹药 槽。",
-    "UPGRADE_DESCRIPTION": " 固有 。 NL 获得 !M! 个空 bluearchive_hoshino:弹药 槽。"
+    "DESCRIPTION": "获得 !M! 个空 bluearchive_hoshino:弹药 槽。"
   },
   "BlueArchive_Hoshino:DoubleShotAttack": {
     "NAME": "二连射击",
@@ -101,7 +100,8 @@
   },
   "BlueArchive_Hoshino:Contract": {
     "NAME": "杀手契约",
-    "DESCRIPTION": "失去 1 bluearchive_hoshino:弹药 槽 。 NL 获得 !M! 点 力量 。 NL 获得 !M! 层 bluearchive_hoshino:行家 。"
+    "DESCRIPTION": "失去 1 bluearchive_hoshino:弹药 槽 。 NL 获得 !M! 点 力量 。 NL 获得 !M! 层 bluearchive_hoshino:行家 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "失去 1 bluearchive_hoshino:弹药 槽 。 NL 获得 !M! 点 力量 。 NL 获得 !M! 层 bluearchive_hoshino:行家 。"
   },
   "BlueArchive_Hoshino:CoverLoad": {
     "NAME": "掩护装填",
@@ -122,7 +122,7 @@
   },
   "BlueArchive_Hoshino:Jackpot": {
     "NAME": "大满贯",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 抽1张牌。 NL bluearchive_hoshino:计数 (7) : 伤害提高 !M! 点。",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 抽1张牌。 NL bluearchive_hoshino:计数 (5) : 伤害提高 !M! 点。",
     "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 抽1张牌。 NL ",
     "EXTENDED_DESCRIPTION": [
       " bluearchive_hoshino:计数 (",
@@ -140,11 +140,12 @@
   },
   "BlueArchive_Hoshino:Memorial": {
     "NAME": "纪念品",
-    "DESCRIPTION": "每次将抽牌堆洗牌时，获得 !M! 点 力量 和 敏捷 。"
+    "DESCRIPTION": "每次将抽牌堆洗牌时，获得 !M! 点 力量 和 敏捷 。",
+    "UPGRADE_DESCRIPTION": "每次将抽牌堆洗牌时，获得 !M! 点 力量 和 敏捷 。 NL 然后将牌组洗混。"
   },
   "BlueArchive_Hoshino:EmergencyFieldAidSkill": {
     "NAME": "战地急救",
-    "DESCRIPTION": " 虚无 。 NL 只能在生命值低于一半时使用。 NL 回复 !M! 点生命。 NL 消耗 。"
+    "DESCRIPTION": " 虚无 。 NL 获得 !B! 点 格挡 。自己的生命值低于一半时，回复 !M! 点生命值而不是获得护甲值 。 NL 消耗 。"
   },
   "BlueArchive_Hoshino:ShieldRebound": {
     "NAME": "偏折子弹",
@@ -239,8 +240,8 @@
   },
   "BlueArchive_Hoshino:NoWasteReload": {
     "NAME": "完美装填",
-    "DESCRIPTION": " bluearchive_hoshino:空仓 时，获得 [E] [E] 。 NL 如果你有空的 bluearchive_hoshino:弹药 槽， bluearchive_hoshino:装填 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 保留 。 NL bluearchive_hoshino:空仓 时，获得 [E] [E] 。 NL 如果你有空的 bluearchive_hoshino:弹药 槽， bluearchive_hoshino:装填 。 NL 消耗 。"
+    "DESCRIPTION": " bluearchive_hoshino:空仓 时，获得 [E] [E] 。 NL bluearchive_hoshino:装填 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 保留 。 NL bluearchive_hoshino:空仓 时，获得 [E] [E] 。 NL bluearchive_hoshino:装填 。 NL 消耗 。"
   },
   "BlueArchive_Hoshino:HorusOfEye": {
     "NAME": "荷鲁斯之眼",
@@ -294,8 +295,8 @@
   },
   "BlueArchive_Hoshino:Lubricating": {
     "NAME": "润滑",
-    "DESCRIPTION": "随机消耗一张使用 bluearchive_hoshino:弹药 的手牌。 NL 将 !M! 张牌从弃牌堆加入手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "消耗一张使用 bluearchive_hoshino:弹药 的手牌。 NL 将 !M! 张牌从弃牌堆加入手牌。 NL 消耗 。"
+    "DESCRIPTION": "消耗 一张随机手牌。 NL 将 !M! 张牌从弃牌堆加入手牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "消耗 一张手牌。 NL 将 !M! 张牌从弃牌堆加入手牌。 NL 消耗 。"
   },
   "BlueArchive_Hoshino:WideShot": {
     "NAME": "广阔射击",
@@ -316,7 +317,7 @@
   },
   "BlueArchive_Hoshino:GoldWhale": {
     "NAME": "黄金鲸鱼",
-    "DESCRIPTION": "战斗结束时，获得一个随机遗物。33%几率获得一张随机 诅咒 。"
+    "DESCRIPTION": "战斗结束时，获得一个随机遗物。40%几率获得一张随机 诅咒 。"
   },
   "BlueArchive_Hoshino:RecoveryShell": {
     "NAME": "拾捡弹壳",
@@ -398,5 +399,22 @@
   "BlueArchive_Hoshino:FixedSkill": {
     "NAME": "固有技能",
     "DESCRIPTION": " 固有 。 NL 从抽牌堆中选择 !M! 张牌并放在一边。回合开始时选择拿取其中一张。"
+  },
+  "BlueArchive_Hoshino:SiroBomb": {
+    "NAME": "BOOM!!",
+    "DESCRIPTION": "Unplayable. NL Ethereal. NL At the end of your turn, take !M! damage."
+  },
+  "BlueArchive_Hoshino:PeroroRising": {
+    "NAME": "Peroro's Ritual",
+    "DESCRIPTION": "Unplayable. NL Ethereal. NL When this card is drawn, Strengthen Peroro.",
+    "UPGRADE_DESCRIPTION": "Unplayable. NL When this card is drawn, Strengthen Peroro. NL If this card is Exhausted, Add a copy of this card into discard pile."
+  },
+  "BlueArchive_Hoshino:GozBomb": {
+    "NAME": "Gift",
+    "DESCRIPTION": "Unplayable. NL Every time into the draw pile, hides in the card. At the end of your turn, take !M! damage."
+  },
+  "BlueArchive_Hoshino:SandStorm": {
+    "NAME": "Sand Storm",
+    "DESCRIPTION": "Draw !M! card."
   }
 }
