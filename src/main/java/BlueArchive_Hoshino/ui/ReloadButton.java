@@ -8,6 +8,7 @@ import BlueArchive_Hoshino.powers.FreeReloadPower;
 import BlueArchive_Hoshino.subscriber.BulletSubscriber;
 import basemod.*;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
@@ -54,6 +55,9 @@ import com.megacrit.cardcrawl.vfx.EndTurnLongPressBarFlashEffect;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Iterator;
+
+import static BlueArchive_Hoshino.DefaultMod.reloadKey;
+import static com.megacrit.cardcrawl.helpers.input.InputAction.TEXT_CONVERSIONS;
 
 public class ReloadButton {
     private static final TutorialStrings tutorialStrings;
@@ -103,6 +107,22 @@ public class ReloadButton {
         this.holdProgress = 0.0F;
         this.holdBarColor = new Color(1.0F, 1.0F, 1.0F, 0.0F);
         this.endTurnButton = endTurnButton;
+    }
+
+    public int getKeyCode() {
+        return reloadKey;
+    }
+    public boolean isJustPressed() {
+        return Gdx.input.isKeyJustPressed(getKeyCode());
+    }
+
+    public boolean isPressed() {
+        return Gdx.input.isKeyPressed(getKeyCode());
+    }
+
+    public String getKeyString() {
+        String keycodeStr = Input.Keys.toString(getKeyCode());
+        return (String)TEXT_CONVERSIONS.getOrDefault(keycodeStr, keycodeStr);
     }
 
     public void update() {
@@ -167,7 +187,8 @@ public class ReloadButton {
             AbstractDungeon.effectsQueue.add(new EndTurnLongPressBarFlashEffect());
         }
 
-        if ((!Settings.USE_LONG_PRESS || !Settings.isControllerMode && !InputActionSet.endTurn.isPressed()) && (this.hb.clicked || (InputActionSet.endTurn.isJustPressed() || CInputActionSet.proceed.isJustPressed()) && !this.isDisabled && this.enabled)) {
+        if ((!Settings.USE_LONG_PRESS || !Settings.isControllerMode && !isPressed())
+                && (this.hb.clicked || (isJustPressed() || CInputActionSet.proceed.isJustPressed()) && !this.isDisabled && this.enabled)) {
             this.hb.clicked = false;
             if (!this.isDisabled && !AbstractDungeon.isScreenUp) {
                 this.disable(true);
@@ -299,7 +320,7 @@ public class ReloadButton {
                 }
 
                 if (this.hb.hovered && !AbstractDungeon.isScreenUp && !Settings.isTouchScreen) {
-                    TipHelper.renderGenericTip(this.current_x - 90.0F * Settings.scale, this.current_y + 300.0F * Settings.scale, LABEL[0], MSG[0] );
+                    TipHelper.renderGenericTip(this.current_x - 90.0F * Settings.scale, this.current_y + 300.0F * Settings.scale, LABEL[0] + " (" + getKeyString() + ")", MSG[0] );
                 }
             } else if (this.label.equals(ENEMY_TURN_MSG)) {
                 this.textColor = Settings.CREAM_COLOR;

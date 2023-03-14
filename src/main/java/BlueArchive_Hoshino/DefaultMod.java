@@ -15,6 +15,9 @@ import basemod.eventUtil.AddEventParams;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input;
+import com.badlogic.gdx.InputAdapter;
+import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -95,9 +98,12 @@ public class DefaultMod implements
     public static final String DISABLE_BLUEARCHIVE_BOSS = "disableBluearchiveBoss";
     public static final String ENABLE_ONLY_BLUEARCHIVE_BOSS = "enableOnlyBluearchiveBoss";
     public static final String ENABLE_ACT3_EVENT = "enableAct3Event";
+    public static final String RELOAD_BUTTON_KEY = "reloadButton";
     public static boolean enableBoss = true;
     public static boolean onlyBluearchiveBoss = false;
     public static boolean enableAct3Event = false;
+    public static int reloadKey = 46; //R
+    private InputProcessor oldInputProcessor;
 
     //This is for the in-game mod settings panel.
     private static final String MODNAME = "Default Mod";
@@ -106,6 +112,7 @@ public class DefaultMod implements
     ModLabeledToggleButton disableBossButton = null;
     ModLabeledToggleButton enableBossOnlyButton = null;
     ModLabeledToggleButton enableAct3EventButton = null;
+
     
     // =============== INPUT TEXTURE LOCATION =================
     
@@ -247,6 +254,8 @@ public class DefaultMod implements
 
         defaultSettings.setProperty(DISABLE_BLUEARCHIVE_BOSS, "FALSE");
         defaultSettings.setProperty(ENABLE_ONLY_BLUEARCHIVE_BOSS, "FALSE");
+        defaultSettings.setProperty(ENABLE_ACT3_EVENT, "FALSE");
+        defaultSettings.setProperty(RELOAD_BUTTON_KEY, "46");
 
         try {
             SpireConfig config = new SpireConfig("BlueArchive_Hoshino", "BlueArchiveConfig", defaultSettings);
@@ -254,6 +263,7 @@ public class DefaultMod implements
             enableBoss = !config.getBool(DISABLE_BLUEARCHIVE_BOSS);
             onlyBluearchiveBoss = config.getBool(ENABLE_ONLY_BLUEARCHIVE_BOSS);
             enableAct3Event = config.getBool(ENABLE_ACT3_EVENT);
+            reloadKey = config.getInt(RELOAD_BUTTON_KEY);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -341,8 +351,40 @@ public class DefaultMod implements
         
         // Create the Mod Menu
         ModPanel settingsPanel = new ModPanel();
+
+        ModLabel buttonLabel = new ModLabel("", 475.0F, 700.0F, settingsPanel, (me) -> {
+            if (me.parent.waitingOnEvent) {
+                me.text = "Press key";
+            } else {
+                me.text = "Change reload hotkey (" + Input.Keys.toString(reloadKey) + ")";
+            }
+
+        });
+        settingsPanel.addUIElement(buttonLabel);
+        ModButton consoleKeyButton = new ModButton(350.0F, 650.0F, settingsPanel, (me) -> {
+            me.parent.waitingOnEvent = true;
+            this.oldInputProcessor = Gdx.input.getInputProcessor();
+            Gdx.input.setInputProcessor(new InputAdapter() {
+                public boolean keyUp(int keycode) {
+                    reloadKey = keycode;
+                    try {
+                        SpireConfig config = new SpireConfig("BlueArchive_Hoshino", "BlueArchiveConfig", defaultSettings);
+                        config.setInt(RELOAD_BUTTON_KEY, keycode);
+                        config.save();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                    me.parent.waitingOnEvent = false;
+                    Gdx.input.setInputProcessor(oldInputProcessor);
+                    return true;
+                }
+            });
+        });
+        settingsPanel.addUIElement(consoleKeyButton);
+
+
         disableBossButton = new ModLabeledToggleButton("BlueArchive Boss doesn't appear.",
-                350.0f, 700.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                350.0f, 550.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
                 !enableBoss,
                 settingsPanel,
                 (label) -> {},
@@ -373,7 +415,7 @@ public class DefaultMod implements
 
 
         enableBossOnlyButton = new ModLabeledToggleButton("If possible, only the Blue Archive Boss comes out.",
-                350.0f, 700.0f - 100.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                350.0f, 450.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
                 onlyBluearchiveBoss,
                 settingsPanel,
                 (label) -> {},
@@ -392,7 +434,7 @@ public class DefaultMod implements
                 });
 
         enableAct3EventButton = new ModLabeledToggleButton("The first event room in Act 3 always has a hifumi event.",
-                350.0f, 700.0f - 200.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                350.0f, 350.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
                 enableAct3Event,
                 settingsPanel,
                 (label) -> {},
