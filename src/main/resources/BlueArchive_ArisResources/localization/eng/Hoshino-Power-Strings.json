@@ -1,0 +1,306 @@
+{
+  "BlueArchive_Hoshino:TacticalReloadPower": {
+    "NAME": "Tactical Reload",
+    "DESCRIPTIONS": [
+      "when #yReloaded, Deal #b",
+      " damage to all enemies.",
+      " damage to all enemies."
+    ]
+  },
+  "BlueArchive_Hoshino:ShieldPower": {
+    "NAME": "Shield",
+    "DESCRIPTIONS": [
+      "At the beginning of the turn, #yBlock equal to the #yShield does not removed. #yShield cannot be higher than the current #yBlock."
+    ]
+  },
+  "BlueArchive_Hoshino:SupressionVeteranPower": {
+    "NAME": "Suppression Veteran",
+    "DESCRIPTIONS": [
+      "When #yammo is used, Gain #b",
+      " #yBlock.",
+      " #yBlock ."
+    ]
+  },
+  "BlueArchive_Hoshino:HoshinoEvolutionPower": {
+    "NAME": "Impatient",
+    "DESCRIPTIONS": [
+      "If you draw a #ycountdown card, increase the card's #yconcentration by 1 and #b",
+      "Pull it out.",
+      "Pull it out."
+    ]
+  },
+  "BlueArchive_Hoshino:ReloadLosePower": {
+    "NAME": "Reduced Power Reloaded",
+    "DESCRIPTIONS": [
+      "when #yReloaded. Lose #b",
+      " #yStrength.",
+      " #yStrength."
+    ]
+  },
+  "BlueArchive_Hoshino:AnAceInTheHolePower": {
+    "NAME": "Ace In The Hole",
+    "DESCRIPTIONS": [
+      "every time use a card, Lose #b",
+      " HP.",
+      " HP."
+    ]
+  },
+  "BlueArchive_Hoshino:RefillAmmoPower": {
+    "NAME": "Memorial",
+    "DESCRIPTIONS": [
+      "When you shuffle your deck, Gain #b",
+      " #yStrength and #yDexterity.",
+      " #yStrength and #yDexterity."
+    ]
+  },
+  "BlueArchive_Hoshino:SwimsuitFormPower": {
+    "NAME": "Swimsuit Form",
+    "DESCRIPTIONS": [
+      "At the start of your turn, select and draw #b",
+      " card from the draw pile. That card's cost becomes 0 until played.",
+      " cards from the draw pile. The cost of those cards becomes 0 until played."
+    ]
+  },
+  "BlueArchive_Hoshino:BulletVigor": {
+    "NAME": "Ammo Damage Increased",
+    "DESCRIPTIONS": [
+      "Increases #b",
+      " damage from cards using #yAmmo. Removed when #yReload."
+    ]
+  },
+  "BlueArchive_Hoshino:BulletVune": {
+    "NAME": "Frag ammo",
+    "DESCRIPTIONS": [
+      "Cards using #yAmmo have also Apply #b",
+      " Vulnerability. Removed when #yReload."
+    ]
+  },
+  "BlueArchive_Hoshino:BulletIgni": {
+    "NAME": "incendiary ammo",
+    "DESCRIPTIONS": [
+      "When using #yAmmo, Deal #b",
+      " damage to all enemies. Removed when #yReload."
+    ]
+  },
+  "BlueArchive_Hoshino:FreeReloadPower": {
+    "NAME": "Free Reoad",
+    "DESCRIPTIONS": [
+      "Your next #b",
+      " #yReload is will be zero.",
+      " #yReloads cost zero."
+    ]
+  },
+  "BlueArchive_Hoshino:RoundManualChamberingPower": {
+    "NAME": "First Round Reload",
+    "DESCRIPTIONS": [
+      "The first #yReload you use each turn costs 0.",
+      "every turn #b",
+      " #yReload used once will cost 0."
+    ]
+  },
+  "BlueArchive_Hoshino:BountyPower": {
+    "NAME": "prize",
+    "DESCRIPTIONS": [
+      "if you kill this monster, Gain #b",
+      " Gold. Ignore artifacts.",
+      " Golds. Ignore artifacts."
+    ]
+  },
+  "BlueArchive_Hoshino:HorusOfEyePower": {
+    "NAME": "Eye of Horus",
+    "DESCRIPTIONS": [
+      "the #yCountdown of all cards in hand at the start of each turn #b",
+      "Reduce it.",
+      "Reduce it."
+    ]
+  },
+  "BlueArchive_Hoshino:HorusOfEyePower2": {
+    "NAME": "Eye of Horus",
+    "DESCRIPTIONS": [
+      "Deal #b",
+      " damage to random enemies whenever #yCountdown decreases"
+    ]
+  },
+  "BlueArchive_Hoshino:GoldWhalePower": {
+    "NAME": "Golden Whale",
+    "DESCRIPTIONS": [
+      "the end of battle, Gain #b",
+      " relic and 40% chance to gain #yCurse.",
+      " relics and 40% chance to gain #yCurses."
+    ]
+  },
+  "BlueArchive_Hoshino:SprintPower": {
+    "NAME": "Sprint",
+    "DESCRIPTIONS": [
+      "Draw #b",
+      " card, no more cards can be drawn.",
+      " cards, no more cards can be drawn."
+    ]
+  },
+  "BlueArchive_Hoshino:BlackMarketPower": {
+    "NAME": "Black Market",
+    "DESCRIPTIONS": [
+      "When #yReloading Random #b",
+      " card that use #yAmmo to your hand.",
+      " cards that use #yAmmo to your hand."
+    ]
+  },
+  "BlueArchive_Hoshino:PlaceboPower": {
+    "NAME": "Placebo",
+    "DESCRIPTIONS": [
+      "It doesn't do anything, but it feels good!"
+    ]
+  },
+  "BlueArchive_Hoshino:ExpertPower": {
+    "NAME": "Expert",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " #yBlock when #yReloading.",
+      " #yBlock when #yReloading."
+    ]
+  },
+  "BlueArchive_Hoshino:FixShieldPower": {
+    "NAME": "Fix Shield",
+    "DESCRIPTIONS": [
+      "If you have a #yShield at the end of your turn, Gain #b",
+      "Block.",
+      "Block."
+    ]
+  },
+  "BlueArchive_Hoshino:FixedSkillPower": {
+    "NAME": "Fixed Skill",
+    "DESCRIPTIONS": [
+      "At the start of your turn, Choose and take one of the following cards: "
+    ]
+  },
+  "BlueArchive_Hoshino:EnergyLosePower": {
+    "NAME": "Energy Rduction",
+    "DESCRIPTIONS": [
+      "Lose ",
+      " [E] ",
+      " this turn."
+    ]
+  },
+  "BlueArchive_Hoshino:HodGloryPower": {
+    "NAME": "Hidden Glory",
+    "DESCRIPTIONS": [
+      "If all the #yArtifact disappear, Gain #b3 #yVulnerable."
+    ]
+  },
+  "BlueArchive_Hoshino:ReflectablePower": {
+    "NAME": "Reflectable",
+    "DESCRIPTIONS": [
+      "If you completely block this boss' attack, you will return the attack."
+    ]
+  },
+  "BlueArchive_Hoshino:SiroKuroPower": {
+    "NAME": "Horror of Slumpia",
+    "DESCRIPTIONS": [
+      "If you knock down Shiro, Kuro appears."
+    ]
+  },
+  "BlueArchive_Hoshino:KaitengerPower": {
+    "NAME": "MUGEN KAITEN",
+    "DESCRIPTIONS": [
+      "There are #y",
+      " Kaitengers left."
+    ]
+  },
+  "BlueArchive_Hoshino:DelayedPower": {
+    "NAME": "Delayed",
+    "DESCRIPTIONS": [
+      "At the end of the turn, gain: #y",
+      ""
+    ]
+  },
+  "BlueArchive_Hoshino:TauntPower": {
+    "NAME": "Taunt",
+    "DESCRIPTIONS": [
+      "You can only point to #y",
+      " as the target of the card."
+    ]
+  },
+  "BlueArchive_Hoshino:PeroroPower": {
+    "NAME": "Hive Mind",
+    "DESCRIPTIONS": [
+      "If you kill this minion, Deal #b",
+      " damage to boss. But when absorbed by the boss, Boss gains #b",
+      " #yStrength."
+    ]
+  },
+  "BlueArchive_Hoshino:KaitenMagicCirclePower": {
+    "NAME": "Heart Ablaze",
+    "DESCRIPTIONS": [
+      "#pPink : All damage is increased by #b30%.",
+      "#rRed : Apply 2 #yVulnerable the target.",
+      "#gGreen : At the end of turn, Gain #b3 #yStrength.",
+      " After taking #b",
+      " damage, it switches in the order of #pPink -> #rRed -> #gGreen."
+    ]
+  },
+  "BlueArchive_Hoshino:MackerelSlashPower": {
+    "NAME": "Mega Egg Overcharge",
+    "DESCRIPTIONS": [
+      "Increase the damage of MUGEN KAITEN FINAL MACKEREL SLASH by #b",
+      ""
+    ]
+  },
+  "BlueArchive_Hoshino:PeroroRevivePower": {
+    "NAME": "immortality",
+    "DESCRIPTIONS": [
+      "Respawns next turn, even if killed."
+    ]
+  },
+  "BlueArchive_Hoshino:ExplodePower": {
+    "NAME": "Explode",
+    "DESCRIPTIONS": [
+      "When killed, Deal #b",
+      " damage to the player."
+    ]
+  },
+  "BlueArchive_Hoshino:GozeThresholdPower": {
+    "NAME": "Now You See Us",
+    "DESCRIPTIONS": [
+      "After taking #b",
+      " damage, Immediately creates a clone and changes the pattern."
+    ]
+  },
+  "BlueArchive_Hoshino:GozeBushinPower": {
+    "NAME": "Clone",
+    "DESCRIPTIONS": [
+      "When the real one is defeated, all clones are died and the original form reappears. The real one is revealed next turn.",
+      "The real one. When defeated, all clones are died and the original form reappears.",
+      "Fake. Even if defeated, nothing happens.",
+      "When the real one is defeated, all clones are died and you win. The real one is revealed next turn..",
+      "The real one. When defeated, all clones are died and you win."
+    ]
+  },
+  "BlueArchive_Hoshino:ChesedMinionPower": {
+    "NAME": "Solid Kingdom",
+    "DESCRIPTIONS": [
+      "Takes only 10% of all damage before defeating the remaining #b",
+      " waves."
+    ]
+  },
+  "BlueArchive_Hoshino:ChesedStrPower": {
+    "NAME": "Supreme Power",
+    "DESCRIPTIONS": [
+      "The attack damage done by all the soldiers increases by #b",
+      ""
+    ]
+  },
+  "BlueArchive_Hoshino:GreenRelicPower": {
+    "NAME": "Holy Light (Green)",
+    "DESCRIPTIONS": [
+      "Cannot be attacked. Heal #g1 HP every time a #ySkill card is used. When HP is full, Cannot draw cards until the end of the turn."
+    ]
+  },
+  "BlueArchive_Hoshino:RedRelicPower": {
+    "NAME": "Holy Light (Red)",
+    "DESCRIPTIONS": [
+      "Cannot be attacked. Heal #g1 HP every time a #yAttack card is used. When HP is full, increases the cost of all cards by 1 until the end of the turn."
+    ]
+  }
+}
+
+

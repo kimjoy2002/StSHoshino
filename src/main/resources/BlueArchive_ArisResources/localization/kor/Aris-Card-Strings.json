@@ -1,0 +1,99 @@
+{
+  "BlueArchive_Aris:ArisStrike": {
+    "NAME": "타격",
+    "DESCRIPTION": "피해를 !D! 줍니다."
+  },
+  "BlueArchive_Aris:ArisDefend": {
+    "NAME": "수비",
+    "DESCRIPTION": "방어도를 !B! 얻습니다."
+  },
+  "BlueArchive_Aris:SuperNova": {
+    "NAME": "슈퍼 노바",
+    "DESCRIPTION": "BlueArchive_Aris:장비: 광역딜러. NL BlueArchive_Aris:클래스체인지: 적 전체에 피해를 !D! 줍니다. NL *직업 *효과: 이름에 \"타격\"이 붙은 카드가 피해를 !M! 만큼 더 줍니다."
+  },
+  "BlueArchive_Aris:WoodenStick": {
+    "NAME": "초보자용 무기",
+    "DESCRIPTION": "BlueArchive_Aris:장비: 초보자. NL BlueArchive_Aris:클래스체인지: 카드를 뽑습니다. NL *직업 *효과: 없습니다.",
+    "UPGRADE_DESCRIPTION": "보존. BlueArchive_Aris:장비: 초보자. NL BlueArchive_Aris:클래스체인지: 카드를 뽑습니다. NL *직업 *효과: 없습니다."
+  },
+  "BlueArchive_Aris:EnergyCharge": {
+    "NAME": "에너지 충전",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL BlueArchive_Aris:충전을 !M! 얻습니다."
+  },
+  "BlueArchive_Aris:EnergyProjection": {
+    "NAME": "에너지 투사",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL BlueArchive_Aris:과부하: 피해가 2배가 됩니다."
+  },
+  "BlueArchive_Aris:ShootTheFloor": {
+    "NAME": "바닥 부수기",
+    "DESCRIPTION": "피해를 !M! 받습니다. NL 모든 적에게 피해를 !D! 줍니다."
+  },
+  "BlueArchive_Aris:SelfRepair": {
+    "NAME": "자가 수복",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL BlueArchive_Aris:과부하: 추가로 방어도를 !B! 얻습니다."
+  },
+  "BlueArchive_Aris:Ouch": {
+    "NAME": "끄앙!",
+    "DESCRIPTION": "피해를 !M! 받습니다. NL 카드를 2 장 뽑습니다. NL 사용할때마다 이번 전투동안 받는 피해가 !BlueArchive_Aris:M! 증가합니다."
+  },
+  "BlueArchive_Aris:HailingLight": {
+    "NAME": "빛이여!",
+    "DESCRIPTION": "BlueArchive_Aris:출력. NL BlueArchive_Aris:충전을 !M! 얻습니다."
+  },
+  "BlueArchive_Aris:ReactiveArmour": {
+    "NAME": "반응 장갑",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. 피해를 받을 때마다 이 카드를 버린 카드 더미에서 손으로 들고 옵니다."
+  },
+  "BlueArchive_Aris:EquipHotkey": {
+    "NAME": "장비 단축키",
+    "DESCRIPTION": "선천성. 뽑을 카드 더미에서 BlueArchive_Aris:장비 카드를 1장 선택해 가져옵니다."
+  },
+  "BlueArchive_Aris:FullCharging": {
+    "NAME": "풀 차징",
+    "DESCRIPTION": "BlueArchive_Aris:출력. NL 카드를 X장 뽑고 BlueArchive_Aris:충전을 X 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "BlueArchive_Aris:출력. NL 카드를 X+1장 뽑고 BlueArchive_Aris:충전을 X+1 얻습니다. NL 소멸."
+  },
+  "BlueArchive_Aris:Shock": {
+    "NAME": "찌릿!",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL BlueArchive_Aris:감전을 !M! 부여합니다. NL 소멸."
+  },
+  "BlueArchive_Aris:StaticStrike": {
+    "NAME": "정전기 타격",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL *찌릿! 카드를 1장 얻습니다.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL *찌릿!+ 카드를 1장 얻습니다."
+  },
+  "BlueArchive_Aris:ShortCircuit": {
+    "NAME": "누전",
+    "DESCRIPTION": "손이 가득찰때까지 *찌릿! 카드를 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "손이 가득찰때까지 *찌릿! 카드를 얻습니다."
+  },
+  "BlueArchive_Aris:Firewall": {
+    "NAME": "방화벽",
+    "DESCRIPTION": "약화를 !M! 부여합니다. BlueArchive_Aris:감전을 !BlueArchive_Aris:M! 부여합니다."
+  },
+  "BlueArchive_Aris:PrismaticBeams": {
+    "NAME": "분광 광선",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL BlueArchive_Aris:과부하: 피해가 !M! 증가하고 휘발성, 소멸 붙은 *분광 *광선 카드를 얻습니다.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL BlueArchive_Aris:과부하: 피해가 !M! 증가하고 휘발성, 소멸 붙은 *분광 *광선+ 카드를 얻습니다.",
+    "EXTENDED_DESCRIPTION": [
+      "휘발성. NL 피해를 !D! 줍니다. NL BlueArchive_Aris:과부하: 피해가 !M! 증가하고 휘발성, 소멸 붙은 *분광 *광선 카드를 얻습니다. NL 소멸.",
+      "휘발성. NL 피해를 !D! 줍니다. NL BlueArchive_Aris:과부하: 피해가 !M! 증가하고 휘발성, 소멸 붙은 *분광 *광선+ 카드를 얻습니다. NL 소멸."
+    ]
+  },
+  "BlueArchive_Aris:StraightStrike": {
+    "NAME": "일직선 타격",
+    "DESCRIPTION": "적 전체에 피해를 !D! 줍니다. NL BlueArchive_Aris:클래스체인지 효과가 발동할때마다 이 카드를 버린 카드 더미에서 손으로 들고 옵니다."
+  },
+  "BlueArchive_Aris:SavePoint": {
+    "NAME": "저장 지점",
+    "DESCRIPTION": "체력이 0 이하가 될 때 한 번 체력을 !M! 회복하고 부활합니다."
+  },
+  "BlueArchive_Aris:BalanceBroken": {
+    "NAME": "밸런스 붕괴",
+    "DESCRIPTION": "BlueArchive_Aris:과부하가 2번 발동합니다."
+  },
+  "BlueArchive_Aris:CleanInventory": {
+    "NAME": "인벤토리 정리",
+    "DESCRIPTION": "카드를 !M! 장 뽑습니다. BlueArchive_Aris:과부하: 카드를 !BlueArchive_Aris:M! 장 더 뽑습니다."
+  }
+}

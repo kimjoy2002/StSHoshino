@@ -15,6 +15,8 @@ public class EnumPatch {
 
     @SpireEnum
     public static AbstractCard.CardTags GOZ_BOMB;
+    @SpireEnum
+    public static AbstractCard.CardTags EQUIPMENT;
 
 
     public EnumPatch() {

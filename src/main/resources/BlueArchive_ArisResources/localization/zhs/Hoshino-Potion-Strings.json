@@ -1,0 +1,10 @@
+{
+        "BlueArchive_Hoshino:SkilledPotion": {
+                "NAME": "熟练药水",
+                "DESCRIPTIONS": ["获得 #b", " 层 #y行家 。"]
+        },
+        "BlueArchive_Hoshino:BulletPotion": {
+                "NAME": "弹匣药水",
+                "DESCRIPTIONS": ["获得 #b", " 个 #y弹药槽 。"]
+        }
+}

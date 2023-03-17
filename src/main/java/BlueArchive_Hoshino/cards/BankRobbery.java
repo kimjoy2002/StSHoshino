@@ -72,7 +72,7 @@ public class BankRobbery extends AbstractDynamicCard {
             if(!mo.hasPower("Minion")) {
                 this.addToBot(new ApplyPowerAction(mo, p, new BountyPower(mo, p, magicNumber), magicNumber));
             }
-            this.addToBot(new ApplyPowerAction(mo, p, new VulnerablePower(mo, upgraded?4:3, false), 2));
+            this.addToBot(new ApplyPowerAction(mo, p, new VulnerablePower(mo, upgraded?4:3, false), upgraded?4:3));
         }
     }
 

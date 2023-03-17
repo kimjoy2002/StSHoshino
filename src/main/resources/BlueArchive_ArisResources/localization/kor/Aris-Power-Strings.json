@@ -1,0 +1,42 @@
+{
+  "BlueArchive_Aris:JobAoePower": {
+    "NAME": "직업: 광역딜러",
+    "DESCRIPTIONS": [
+      "이름에 \"타격\"이 포함한 카드가 추가로 피해를 #b",
+      " 줍니다."
+    ]
+  },
+  "BlueArchive_Aris:JobNewbyPower": {
+    "NAME": "직업: 초보자",
+    "DESCRIPTIONS": [
+      "아무 효과도 없습니다."
+    ]
+  },
+  "BlueArchive_Aris:ChargePower": {
+    "NAME": "충전",
+    "DESCRIPTIONS": [
+      "모자란 에너지 대신 충전을 소모하여 카드를 사용할 수 있습니다. 턴이 끝나면 사라집니다."
+    ]
+  },
+  "BlueArchive_Aris:ShockPower": {
+    "NAME": "감전",
+    "DESCRIPTIONS": [
+      "공격으로 인해 피해를 받을때마다 체력을 #r",
+      " 잃고 수치가 1 감소합니다."
+    ]
+  },
+  "BlueArchive_Aris:SavePointPower": {
+    "NAME": "저장 지점",
+    "DESCRIPTIONS": [
+      "체력이 0 이하가 될 때 한 번 체력을 #b",
+      " 회복하고 부활합니다."
+    ]
+  },
+  "BlueArchive_Aris:BalanceBrokenPower": {
+    "NAME": "밸런스붕괴",
+    "DESCRIPTIONS": [
+      "#y과부하가 #b",
+      " 번 발동합니다."
+    ]
+  }
+}

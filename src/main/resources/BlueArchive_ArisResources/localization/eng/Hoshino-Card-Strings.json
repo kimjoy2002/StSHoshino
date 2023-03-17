@@ -1,0 +1,420 @@
+{
+  "BlueArchive_Hoshino:HoshinoStrike": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Use 1 bluearchive_hoshino:Ammo. NL Deal !D! damage"
+  },
+  "BlueArchive_Hoshino:HoshinoDefend": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "BlueArchive_Hoshino:QuickReloadSkill": {
+    "NAME": "Quick Reload",
+    "DESCRIPTION": "bluearchive_hoshino:Reload. NL Draw 1 card.",
+    "UPGRADE_DESCRIPTION": "Retain. NL bluearchive_hoshino:Reload. NL Draw 1 card."
+  },
+  "BlueArchive_Hoshino:TacticalShieldSkill": {
+    "NAME": "Tactical Shield",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! bluearchive_hoshino:Shield."
+  },
+  "BlueArchive_Hoshino:FullBarrelFire": {
+    "NAME": "Full Salvo",
+    "DESCRIPTION": "Use all bluearchive_hoshino:Ammo. NL Each deals !D! damage."
+  },
+  "BlueArchive_Hoshino:TacticalReload": {
+    "NAME": "Tactical Reload",
+    "DESCRIPTION": "Whenever you bluearchive_hoshino:Reload, NL Deal !M! damage to ALL enemies."
+  },
+  "BlueArchive_Hoshino:LockAndLoad": {
+    "NAME": "Lock And Load",
+    "DESCRIPTION": "Gain !M! empty bluearchive_hoshino:Ammo slots."
+  },
+  "BlueArchive_Hoshino:DoubleShotAttack": {
+    "NAME": "Double Shot",
+    "DESCRIPTION": "Use 2 bluearchive_hoshino:Ammo. NL Each deals !D! damage."
+  },
+  "BlueArchive_Hoshino:TacticalSuppressionAttack": {
+    "NAME": "Tactical Suppression",
+    "DESCRIPTION": "Use 5 bluearchive_hoshino:Ammo. NL Each deals !D! damage NL to ALL enemies. NL Exhausts. NL bluearchive_hoshino:Countdown(4): bluearchive_hoshino:Stun them.",
+    "UPGRADE_DESCRIPTION": "Use 5 bluearchive_hoshino:Ammo. NL Each deals !D! damage NL to ALL enemies. NL Exhausts. NL ",
+    "EXTENDED_DESCRIPTION": [
+      "bluearchive_hoshino:Countdown(",
+      "): bluearchive_hoshino:Stun them."
+    ]
+  },
+  "BlueArchive_Hoshino:QuickShotAttack": {
+    "NAME": "Rapid Fire",
+    "DESCRIPTION": "Use 1 bluearchive_hoshino:Ammo. NL Deal !D! damage. NL Put this card on top of your draw pile."
+  },
+  "BlueArchive_Hoshino:ShieldAttack": {
+    "NAME": "Shield Slam",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! bluearchive_hoshino:Shield. NL Deal damage equal to your bluearchive_hoshino:Shield.",
+    "UPGRADE_DESCRIPTION": " NL ( Deal !D! damage )"
+  },
+  "BlueArchive_Hoshino:IronWallSkill": {
+    "NAME": "Iron Wall",
+    "DESCRIPTION": "Remove Frail from you. NL Gain !B! Block. NL Gain !M! bluearchive_hoshino:Shield."
+  },
+  "BlueArchive_Hoshino:SupressionVeteran": {
+    "NAME": "Suppression Veteran",
+    "DESCRIPTION": "Whenever bluearchive_hoshino:Ammo is used, gain !M! Block."
+  },
+  "BlueArchive_Hoshino:FirstShot": {
+    "NAME": "First Shot",
+    "DESCRIPTION": "Use 1 bluearchive_hoshino:Ammo. NL Deal !D! damage. NL bluearchive_hoshino:Countdown(2): This costs 1 more.",
+    "UPGRADE_DESCRIPTION": "Use 1 bluearchive_hoshino:Ammo. NL Deal !D! damage. NL bluearchive_hoshino:Countdown(3): This costs 1 more.",
+    "EXTENDED_DESCRIPTION": [
+      "Use 1 bluearchive_hoshino:Ammo. NL Deal !D! damage. NL ",
+      "bluearchive_hoshino:Countdown(",
+      "): This costs 1 more."
+    ]
+  },
+  "BlueArchive_Hoshino:OperationTime": {
+    "NAME": "Operation Time",
+    "DESCRIPTION": "Draw !M! cards. NL Put 1 card on top of the draw pile."
+  },
+  "BlueArchive_Hoshino:BDNote": {
+    "NAME": "BD Note",
+    "DESCRIPTION": "Put a bluearchive_hoshino:Countdown card from draw pile to hand and raise or lower its bluearchive_hoshino:Countdown by 1. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "There are no Countdown cards in the draw pile."
+    ]
+  },
+  "BlueArchive_Hoshino:MissShot": {
+    "NAME": "Miss Shot",
+    "DESCRIPTION": "Use all bluearchive_hoshino:Ammo. NL Deal !D! damage"
+  },
+  "BlueArchive_Hoshino:WeakPointShot": {
+    "NAME": "WeakPoint Shot",
+    "DESCRIPTION": "Use 1 bluearchive_hoshino:Ammo. NL Deal !D! damage. NL Apply Vulnerable equal to remaining bluearchive_hoshino:Ammo."
+  },
+  "BlueArchive_Hoshino:Preparation": {
+    "NAME": "Preparation",
+    "DESCRIPTION": "Put a card from your discard pile on top of your draw pile. NL bluearchive_hoshino:Countdown(3): Gain [E]. NL bluearchive_hoshino:Countdown(4): Gain [E].",
+    "UPGRADE_DESCRIPTION": "Put a card from your discard pile on top of your draw pile. NL bluearchive_hoshino:Countdown(2): Gain [E]. NL bluearchive_hoshino:Countdown(3): Gain [E].",
+    "EXTENDED_DESCRIPTION": [
+      "Put a card from your discard pile on top of your draw pile. NL ",
+      "bluearchive_hoshino:Countdown(",
+      "): Gain [E]. NL bluearchive_hoshino:Countdown(",
+      "): Gain [E]."
+    ]
+  },
+  "BlueArchive_Hoshino:Contract": {
+    "NAME": "Contract",
+    "DESCRIPTION": "Lose 1 bluearchive_hoshino:Ammo slot. NL Gain !M! Strength. NL Gain !M! bluearchive_hoshino:Expert. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Lose 1 bluearchive_hoshino:Ammo slot. NL Gain !M! Strength. NL Gain !M! bluearchive_hoshino:Expert."
+  },
+  "BlueArchive_Hoshino:CoverLoad": {
+    "NAME": "Covered Reload",
+    "DESCRIPTION": "Gain !B! Block per empty bluearchive_hoshino:Ammo slot. NL bluearchive_hoshino:Reload."
+  },
+  "BlueArchive_Hoshino:UnplannedGamble": {
+    "NAME": "Unplanned Gamble",
+    "DESCRIPTION": "Shuffle any number of cards into your draw pile, then draw that many cards. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Shuffle any number of cards into your draw pile, then draw that many cards."
+  },
+  "BlueArchive_Hoshino:AnAceInTheHole": {
+    "NAME": "Ace In The Hole",
+    "DESCRIPTION": "Draw cards until your hand is full. NL Lose !M! HP each time you play a card this turn."
+  },
+  "BlueArchive_Hoshino:ButtstockAttack": {
+    "NAME": "Buttstock Strike",
+    "DESCRIPTION": "Deal !D! damage. NL bluearchive_hoshino:Out *of bluearchive_hoshino:Ammo: NL Apply !M! Weak."
+  },
+  "BlueArchive_Hoshino:Jackpot": {
+    "NAME": "Jackpot",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Draw 1 card. NL bluearchive_hoshino:Countdown(5): Increases damage by !M!",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL Draw 1 card. NL ",
+    "EXTENDED_DESCRIPTION": [
+      "bluearchive_hoshino:Countdown(",
+      "): Increases damage by !M!."
+    ]
+  },
+  "BlueArchive_Hoshino:ForwardDefense": {
+    "NAME": "Forward Defense",
+    "DESCRIPTION": "Gain !B! Block. NL bluearchive_hoshino:Countdown(3): Gain !M! Vulnerable.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL ",
+    "EXTENDED_DESCRIPTION": [
+      "bluearchive_hoshino:Countdown(",
+      "): Gain !M! Vulnerable."
+    ]
+  },
+  "BlueArchive_Hoshino:Memorial": {
+    "NAME": "Memorial",
+    "DESCRIPTION": "Gain !M! Strength and Dexterity whenever you shuffle your draw pile.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Strength and Dexterity whenever you shuffle your draw pile. NL Then shuffle your draw pile."
+  },
+  "BlueArchive_Hoshino:EmergencyFieldAidSkill": {
+    "NAME": "Emergency Field Aid",
+    "DESCRIPTION": "Ethereal. NL Gain !B! Block. NL If below 50% HP: Heal !M! HP instead of Block. NL Exhaust."
+  },
+  "BlueArchive_Hoshino:ShieldRebound": {
+    "NAME": "Deflect Bullet",
+    "DESCRIPTION": "Gain !B! Block. Put the next card you play this turn on top of your draw pile."
+  },
+  "BlueArchive_Hoshino:ThreatShot": {
+    "NAME": "Intimidating Fire",
+    "DESCRIPTION": "Use 1 bluearchive_hoshino:Ammo. NL Deal !D! damage to ALL enemies. NL ALL enemies lose !M! Strength this turn."
+  },
+  "BlueArchive_Hoshino:ChooseRepose":  {
+    "NAME": "Repose",
+    "DESCRIPTION": "Decrease bluearchive_hoshino:Countdown by 1."
+  },
+  "BlueArchive_Hoshino:ChooseNervous":  {
+    "NAME": "Nervous",
+    "DESCRIPTION": "Increase bluearchive_hoshino:Countdown by 1."
+  },
+  "BlueArchive_Hoshino:LastResort":  {
+    "NAME": "Secret weapon",
+    "DESCRIPTION": "Deal !D! damage. NL Draw !M! card. NL bluearchive_hoshino:Out *of bluearchive_hoshino:Ammo: Gain [E]."
+  },
+  "BlueArchive_Hoshino:BiteTheBullet":  {
+    "NAME": "Bite The Bullet",
+    "DESCRIPTION": "Gain !B! Block. NL Raise or lower all bluearchive_hoshino:Countdown in your hand by 1."
+  },
+  "BlueArchive_Hoshino:MakeStrategy":  {
+    "NAME": "Strategy",
+    "DESCRIPTION": "Increases the damage and Block of all cards in your hand !M! for this battle."
+  },
+  "BlueArchive_Hoshino:RicochetShot": {
+    "NAME": "Ricochet Shot",
+    "DESCRIPTION": "Use 3 bluearchive_hoshino:Ammo. NL Each deals !D! damage."
+  },
+  "BlueArchive_Hoshino:RetractableShield":  {
+    "NAME": "Retractable Shield",
+    "DESCRIPTION": "Gain bluearchive_hoshino:Shield equal to Block or vice versa.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Gain bluearchive_hoshino:Shield equal to Block or vice versa."
+  },
+  "BlueArchive_Hoshino:ChooseShieldUP":  {
+    "NAME": "Expand Shield",
+    "DESCRIPTION": "Gain bluearchive_hoshino:Shield equal to Block.",
+    "EXTENDED_DESCRIPTION": [
+      "Gain !M! bluearchive_hoshino:Shield."
+    ]
+  },
+  "BlueArchive_Hoshino:ChooseShieldDown":  {
+    "NAME": "Fold Shield",
+    "DESCRIPTION": "Gain Block equal to bluearchive_hoshino:Shield.",
+    "EXTENDED_DESCRIPTION": [
+      "Gains !B! Block."
+    ]
+  },
+  "BlueArchive_Hoshino:RefillAmmo": {
+    "NAME": "Refill Ammo",
+    "DESCRIPTION": "Shuffle all Exhausted *Ammo *box cards into your draw Pile. then draw that many cards. They costs 0 until played. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Shuffle all Exhausted *Ammo *box cards into your draw Pile. then draw that many cards. They costs 0 until played."
+  },
+  "BlueArchive_Hoshino:SwimsuitForm": {
+    "NAME": "Swimsuit Form",
+    "DESCRIPTION": "Ethereal. NL At the start of your turn, Choose a Card from your draw pile and place it into your hand. It costs 0 until played.",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, Choose a Card from your draw pile and place it into your hand. It costs 0 until played."
+  },
+  "BlueArchive_Hoshino:ChargingShot": {
+    "NAME": "Charging Shot",
+    "DESCRIPTION": "Use 1 bluearchive_hoshino:Ammo. NL Deal !D! damage. NL bluearchive_hoshino:Countdown(3): This card costs 0.",
+    "EXTENDED_DESCRIPTION": [
+      "Use 1 bluearchive_hoshino:Ammo. NL Deal !D! damage. NL ",
+      "bluearchive_hoshino:Countdown(",
+      "): This card costs 0."
+    ]
+  },
+  "BlueArchive_Hoshino:RampageShot": {
+    "NAME": "Rampage Shot",
+    "DESCRIPTION": "Use 1 bluearchive_hoshino:Ammo. NL Deal !D! damage. NL bluearchive_hoshino:Countdown(1): Resets NL to 1. + !M! damage this combat.",
+    "UPGRADE_DESCRIPTION": "Use 1 bluearchive_hoshino:Ammo. NL Deal !D! damage. NL ",
+    "EXTENDED_DESCRIPTION": [
+      "bluearchive_hoshino:Countdown(",
+      "): Resets NL to 1. + !M! damage this combat."
+    ]
+  },
+  "BlueArchive_Hoshino:OneLastShot": {
+    "NAME": "One Last Shot",
+    "DESCRIPTION": "Use 1 bluearchive_hoshino:Ammo. NL Deal !D! damage. NL Double damage when used with last bluearchive_hoshino:Ammo."
+  },
+  "BlueArchive_Hoshino:RoundManualChambering": {
+    "NAME": "First Round Reload",
+    "DESCRIPTION": "The first bluearchive_hoshino:Reload costs 0 each turn."
+  },
+  "BlueArchive_Hoshino:AquaticSupport": {
+    "NAME": "Aquatic Support",
+    "DESCRIPTION": "Gain !M! Strength. NL Draw 2 cards. NL If another card returns this to your draw pile, it costs 0 until played."
+  },
+  "BlueArchive_Hoshino:NoWasteReload": {
+    "NAME": "Perfect Reload",
+    "DESCRIPTION": "bluearchive_hoshino:Reload. NL bluearchive_hoshino:Out *of bluearchive_hoshino:Ammo: NL Gain [E] [E]. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL bluearchive_hoshino:Reload. NL bluearchive_hoshino:Out *of bluearchive_hoshino:Ammo: NL Gain [E] [E]. NL Exhaust."
+  },
+  "BlueArchive_Hoshino:HorusOfEye": {
+    "NAME": "Eye of Horus",
+    "DESCRIPTION": "Whenever bluearchive_hoshino:Countdown decreases, NL Deal !M! damage to a random enemy."
+  },
+  "BlueArchive_Hoshino:RaiseShield": {
+    "NAME": "Raise Shield",
+    "DESCRIPTION": "Gain !B! Block. NL Costs 1 less [E] for each your deck shuffled this turn."
+  },
+  "BlueArchive_Hoshino:DoorBreaching": {
+    "NAME": "Door Breaching",
+    "DESCRIPTION": "Deal !D! damage. NL bluearchive_hoshino:Countdown(2): Resets to 2. Apply !M! Weak.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL ",
+    "EXTENDED_DESCRIPTION": [
+      "bluearchive_hoshino:Countdown(",
+      "): Resets to 2. Apply !M! Weak."
+    ]
+  },
+  "BlueArchive_Hoshino:Mystery": {
+    "NAME": "Mystery",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! bluearchive_hoshino:Shield. NL Exhaust."
+  },
+  "BlueArchive_Hoshino:BankRobbery": {
+    "NAME": "Bank Robbery",
+    "DESCRIPTION": "Ethereal. NL Apply 2 Vulnerable to ALL enemies. NL They gain !M! bluearchive_hoshino:Bounty. NL Exhaust."
+  },
+  "BlueArchive_Hoshino:HitAndRun": {
+    "NAME": "Hit And Run",
+    "DESCRIPTION": "Use 1 bluearchive_hoshino:Ammo. NL Deal !D! damage. NL Next bluearchive_hoshino:Reload costs 0 this turn."
+  },
+  "BlueArchive_Hoshino:IncendiaryShot": {
+    "NAME": "Incendiary Ammo Box",
+    "DESCRIPTION": "bluearchive_hoshino:Reload. Until next bluearchive_hoshino:Reload, each Ammo deals !M! damage to ALL enemies. NL Exhaust."
+  },
+  "BlueArchive_Hoshino:FragShot": {
+    "NAME": "Frag Ammo Box",
+    "DESCRIPTION": "bluearchive_hoshino:Reload. Until next bluearchive_hoshino:Reload, each bluearchive_hoshino:Ammo applies !M! Vulnerable. NL Exhaust."
+  },
+  "BlueArchive_Hoshino:SlugShot": {
+    "NAME": "Slug Ammo Box",
+    "DESCRIPTION": "bluearchive_hoshino:Reload 1 bullet. Until next bluearchive_hoshino:Reload, it deals NL !M! damage. NL Exhaust."
+  },
+  "BlueArchive_Hoshino:MilitarySupplies": {
+    "NAME": "Military Supplies",
+    "DESCRIPTION": "Gain !B! Block.  NL Put 1 Exhausted *Ammo *Box card into your hand.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block.  NL Put 1 Exhausted *Ammo *Box card into your hand. It costs 1 less turn."
+  },
+  "BlueArchive_Hoshino:BlindShot": {
+    "NAME": "Shooting Spree",
+    "DESCRIPTION": "Use 1 bluearchive_hoshino:Ammo. NL Deal !D! damage to a random enemy !M! times."
+  },
+  "BlueArchive_Hoshino:Lubricating": {
+    "NAME": "Lubricate",
+    "DESCRIPTION": "Exhaust 1 random card. NL Return !M! card from discard pile to hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Exhaust 1 card. NL Return !M! card from discard pile to hand. NL Exhaust."
+  },
+  "BlueArchive_Hoshino:WideShot": {
+    "NAME": "Wide Shot",
+    "DESCRIPTION": "Use 1 bluearchive_hoshino:Ammo. NL Deal !D! damage to ALL enemies. NL Put 1 random card on top of your draw pile."
+  },
+  "BlueArchive_Hoshino:SnapShot": {
+    "NAME": "Autofire",
+    "DESCRIPTION": "Use X bluearchive_hoshino:Ammo. NL Each Deal !D! damage. NL bluearchive_hoshino:Reload automatically NL to keep firing."
+  },
+  "BlueArchive_Hoshino:DeepSleep": {
+    "NAME": "Deep Sleep",
+    "DESCRIPTION": "X times: Random card in hand costs 1 less NL this combat. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "X+1 times: NL Random card in hand costs 1 less NL this combat. NL Exhaust."
+  },
+  "BlueArchive_Hoshino:Revenge": {
+    "NAME": "Perfect Plan",
+    "DESCRIPTION": "Deal !D! damage. NL Choose !M! cards in draw pile. Discard the rest. Shuffle draw pile."
+  },
+  "BlueArchive_Hoshino:GoldWhale": {
+    "NAME": "Golden Whale",
+    "DESCRIPTION": "End of combat: NL Gain a random relic. 40% chance to gain a random Curse too."
+  },
+  "BlueArchive_Hoshino:RecoveryShell": {
+    "NAME": "Recovery Shell",
+    "DESCRIPTION": "Use 1 bluearchive_hoshino:Ammo. NL Deal !D! damage. NL Use !M! bluearchive_hoshino:Ammo. NL Each draws 1 card."
+  },
+  "BlueArchive_Hoshino:ShellStrike": {
+    "NAME": "Shell Strike",
+    "DESCRIPTION": "Deal damage equal to !M! times the number of bluearchive_hoshino:Reload this battle.",
+    "UPGRADE_DESCRIPTION": " NL ( Deal !D! Damage )"
+  },
+  "BlueArchive_Hoshino:Sprint": {
+    "NAME": "Sprint",
+    "DESCRIPTION": "Draw !M! more cards per turn, NL then can't draw more cards."
+  },
+  "BlueArchive_Hoshino:BlackMarket": {
+    "NAME": "Black Market",
+    "DESCRIPTION": "Whenever you bluearchive_hoshino:Reload, Put a random card that use bluearchive_hoshino:Ammo into your hand."
+  },
+  "BlueArchive_Hoshino:Disguise": {
+    "NAME": "Disguise",
+    "DESCRIPTION": "Gain !B! Block. NL +5 after bluearchive_hoshino:Countdown(4). NL Then swap this with a random bluearchive_hoshino:Countdown card from draw pile.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL +5 after ",
+    "EXTENDED_DESCRIPTION": [
+      "bluearchive_hoshino:Countdown(",
+      "). NL Then swap this with a random bluearchive_hoshino:Countdown card from draw pile."
+    ]},
+  "BlueArchive_Hoshino:Patience": {
+    "NAME": "Patience",
+    "DESCRIPTION": "Unplayable. NL Gain !B! Block whenever this card is put into your hand. NL bluearchive_hoshino:Countdown(5): Gain !M! Dexterity. Exhausts.",
+    "UPGRADE_DESCRIPTION": "Unplayable. NL Gain !B! Block whenever this card is put into your hand. NL ",
+    "EXTENDED_DESCRIPTION": [
+      "bluearchive_hoshino:Countdown(",
+      "): Gain !M! Dexterity. Exhausts.",
+      "This card cannot be used."
+    ]},
+  "BlueArchive_Hoshino:Determination": {
+    "NAME": "Determination",
+    "DESCRIPTION": "Unplayable. NL Draw 1 card whenever this card is put into your hand. NL bluearchive_hoshino:Countdown(5): Gain !M! Strength. Exhausts.",
+    "UPGRADE_DESCRIPTION": "Unplayable. NL Draw 2 card whenever this card is put into your hand. NL bluearchive_hoshino:Countdown(5): Gain !M! Strength. Exhausts.",
+    "EXTENDED_DESCRIPTION": [
+      "Unplayable. NL Draw 1 card whenever this card is put into your hand. NL ",
+      "Unplayable. NL Draw 2 card whenever this card is put into your hand. NL ",
+      "bluearchive_hoshino:Countdown(",
+      "): Gain !M! Strength. Exhausts.",
+      "This card cannot be used."
+    ]},
+  "BlueArchive_Hoshino:BurningTheBridge": {
+    "NAME": "Burn The Bridge",
+    "DESCRIPTION": "Return any number of cards to top of draw pile in random order. NL Gain !B! Block for each."
+  },
+  "BlueArchive_Hoshino:LeaveItToMe": {
+    "NAME": "Leave It To Me!",
+    "DESCRIPTION": "Use 1 bluearchive_hoshino:Ammo. NL Deal !D! damage. NL Gain !B! Block. NL + !M! Block per floor climbed, then resets. NL Exhaust."
+  },
+  "BlueArchive_Hoshino:FixShield": {
+    "NAME": "Fix Shield",
+    "DESCRIPTION": "At the end of your turn, if you have a bluearchive_hoshino:Shield, Gain !M! Block."
+  },
+  "BlueArchive_Hoshino:Technique": {
+  "NAME": "Technique",
+  "DESCRIPTION": "Gain !M! bluearchive_hoshino:Expert."
+  },
+  "BlueArchive_Hoshino:SurpriseAttack": {
+    "NAME": "Surprise Attack",
+    "DESCRIPTION": "Use 1 bluearchive_hoshino:Ammo. NL Deal !D! damage. NL Costs 1 more [E] for each bluearchive_hoshino:Reload this turn."
+  },
+  "BlueArchive_Hoshino:RushStandby": {
+    "NAME": "Rush Standby",
+    "DESCRIPTION": "Gain !B! Block. NL bluearchive_hoshino:Reload !M! Times."
+  },
+  "BlueArchive_Hoshino:TriggerHappy": {
+    "NAME": "Trigger Happy",
+    "DESCRIPTION": "Use 1 bluearchive_hoshino:Ammo. NL Deal !D! damage. NL Put all Trigger Happy from draw pile to hand. Trigger Happy deals NL + !M! damage this turn."
+  },
+  "BlueArchive_Hoshino:Retry": {
+    "NAME": "Retry",
+    "DESCRIPTION": "Shuffle !M! cards from discard pile into draw pile. Gain !B! Block for each with bluearchive_hoshino:Countdown."
+  },
+  "BlueArchive_Hoshino:FixedSkill": {
+    "NAME": "Fixed Skill",
+    "DESCRIPTION": "Innate. NL Choose !M! cards from your draw pile and keep them. At the start of your turn, Choose one of the kept cards and take it."
+  },
+  "BlueArchive_Hoshino:SiroBomb": {
+    "NAME": "BOOM!!",
+    "DESCRIPTION": "Unplayable. NL Ethereal. NL At the end of your turn, take !M! damage."
+  },
+  "BlueArchive_Hoshino:PeroroRising": {
+    "NAME": "Peroro's Ritual",
+    "DESCRIPTION": "Unplayable. NL Ethereal. NL When this card is drawn, Strengthen Peroro.",
+    "UPGRADE_DESCRIPTION": "Unplayable. NL When this card is drawn, Strengthen Peroro. NL If this card is Exhausted, Add a copy of this card into discard pile."
+  },
+  "BlueArchive_Hoshino:GozBomb": {
+    "NAME": "Gift",
+    "DESCRIPTION": "Unplayable. NL Every time into the draw pile, hides in the card. At the end of your turn, take !M! damage."
+  },
+  "BlueArchive_Hoshino:SandStorm": {
+    "NAME": "Sand Storm",
+    "DESCRIPTION": "Draw !M! card."
+  }
+}

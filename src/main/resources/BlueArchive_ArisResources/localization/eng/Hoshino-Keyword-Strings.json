@@ -1,0 +1,85 @@
+[
+  {
+    "PROPER_NAME": "Reload",
+    "NAMES": [
+      "reload",
+      "reloads",
+      "reloaded",
+      "reloading"
+    ],
+    "DESCRIPTION": "Use to refill the Ammo to full."
+  },
+  {
+    "PROPER_NAME": "Shield",
+    "NAMES": [
+      "shield",
+      "shields"
+    ],
+    "DESCRIPTION": "At the beginning of the turn, Block equal to Shield does not removed. Shield cannot be higher than the current Block."
+  },
+  {
+    "PROPER_NAME": "Ammo",
+    "NAMES": [
+      "ammo",
+      "ammo:"
+    ],
+    "DESCRIPTION": "Some cards require Ammo. Empty Ammo Slot can be refilled by reloading."
+  },
+  {
+    "PROPER_NAME": "Stun",
+    "NAMES": [
+      "stun",
+      "stunned"
+    ],
+    "DESCRIPTION": "Enemy stunned skips next turn."
+  },
+  {
+    "PROPER_NAME": "Countdown",
+    "NAMES": [
+      "countdown",
+      "countdown(",
+      "countdown(0)",
+      "countdown(1)",
+      "countdown(2)",
+      "countdown(3)",
+      "countdown(4)",
+      "countdown(5)",
+      "countdown(6)",
+      "countdown(7)",
+      "countdown(8)",
+      "countdown(9)"
+    ],
+    "DESCRIPTION": "When you put this card into your hand, its value is reduced by 1. If the value is 0, that effect is also applied."
+  },
+  {
+    "PROPER_NAME": "Bounty",
+    "NAMES": [
+      "bounty"
+    ],
+    "DESCRIPTION": "When a buffed enemy dies, you gain that much gold."
+  },
+  {
+    "PROPER_NAME": "Expert",
+    "NAMES": [
+      "expert"
+    ],
+    "DESCRIPTION": "Gain Block equal to the value when reloading."
+  },
+  {
+    "PROPER_NAME": "Out Of Ammo",
+    "NAMES": [
+      "outofammo",
+      "out"
+    ],
+    "DESCRIPTION": "Activates when all Ammo is empty."
+  },
+  {
+    "PROPER_NAME": "Gift",
+    "NAMES": [
+      "GOZBOMB"
+    ],
+    "DESCRIPTION": "Hide in order of card in order of high cost, high rarity."
+  }
+]
+
+

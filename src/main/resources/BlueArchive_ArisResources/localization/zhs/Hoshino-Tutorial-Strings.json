@@ -1,0 +1,11 @@
+{
+  "BlueArchive_Hoshino:ReloadButtonUITip": {
+    "TEXT": [
+      "花费 [E] 来装填所有空弹药槽。"
+    ],
+    "LABEL": [
+      "reload",
+      "reload"
+    ]
+  }
+}

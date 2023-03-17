@@ -1,0 +1,10 @@
+{
+  "BlueArchive_Aris:ArisBaseRelic": {
+    "NAME": "강화 마법입니다!",
+    "FLAVOR": "\"아리스는 키보토스에, 마법이 없다고 생각하지 않습니다.\"",
+    "DESCRIPTIONS": [
+      "매 전투마다 처음 #ybluearchive_aris:클래스체인지가 발동할때 #ybluearchive_aris:충전을 #b",
+      " 얻습니다."
+    ]
+  }
+}

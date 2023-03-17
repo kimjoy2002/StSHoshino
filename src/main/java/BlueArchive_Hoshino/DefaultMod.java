@@ -1,5 +1,8 @@
 package BlueArchive_Hoshino;
 
+import BlueArchive_Aris.characters.Aris;
+import BlueArchive_Aris.relics.ArisBaseRelic;
+import BlueArchive_Aris.variables.SecondMagicNumber;
 import BlueArchive_Hoshino.events.*;
 import BlueArchive_Hoshino.monsters.act1.boss.*;
 import BlueArchive_Hoshino.monsters.act2.boss.*;
@@ -34,7 +37,6 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
-import com.megacrit.cardcrawl.ui.buttons.EndTurnButton;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import BlueArchive_Hoshino.characters.Hoshino;
@@ -92,6 +94,7 @@ public class DefaultMod implements
     // Making relics? EditRelicsSubscriber. etc., etc., for a full list and how to make your own, visit the basemod wiki.
     public static final Logger logger = LogManager.getLogger(DefaultMod.class.getName());
     private static String modID;
+    private static String arisModID;
 
     // Mod-settings settings. This is if you want an on/off savable button
     public static Properties defaultSettings = new Properties();
@@ -119,6 +122,7 @@ public class DefaultMod implements
     // Colors (RGB)
     // Character Color
     public static final Color DEFAULT_PINK = CardHelper.getColor(255.0f, 208.0f, 220.0f);
+    public static final Color DEFAULT_BLUE = CardHelper.getColor(10.0f, 10.0f, 200.0f);
     
     // Potion Colors in RGB
     public static final Color SKILLED_POTION_LIQUID = CardHelper.getColor(53.0f, 203.0f, 18.0f);
@@ -149,33 +153,69 @@ public class DefaultMod implements
     private static final String SKILL_DEFAULT_GRAY_PORTRAIT = "BlueArchive_HoshinoResources/images/1024/bg_skill_default_gray.png";
     private static final String POWER_DEFAULT_GRAY_PORTRAIT = "BlueArchive_HoshinoResources/images/1024/bg_power_default_gray.png";
     private static final String ENERGY_ORB_DEFAULT_GRAY_PORTRAIT = "BlueArchive_HoshinoResources/images/1024/card_default_gray_orb.png";
-    
+
+
+
+
+    private static final String ATTACK_ARIS = "BlueArchive_ArisResources/images/512/bg_attack_default_gray.png";
+    private static final String SKILL_ARIS = "BlueArchive_ArisResources/images/512/bg_skill_default_gray.png";
+    private static final String POWER_ARIS = "BlueArchive_ArisResources/images/512/bg_power_default_gray.png";
+
+    private static final String ENERGY_ORB_ARIS = "BlueArchive_ArisResources/images/512/card_default_gray_orb.png";
+    private static final String CARD_ARIS_ENERGY_ORB = "BlueArchive_ArisResources/images/512/card_small_orb.png";
+
+    private static final String ATTACK_ARIS_PORTRAIT = "BlueArchive_ArisResources/images/1024/bg_attack_default_gray.png";
+    private static final String SKILL_ARIS_PORTRAIT = "BlueArchive_ArisResources/images/1024/bg_skill_default_gray.png";
+    private static final String POWER_ARIS_PORTRAIT = "BlueArchive_ArisResources/images/1024/bg_power_default_gray.png";
+    private static final String ENERGY_ORB_ARIS_PORTRAIT = "BlueArchive_ArisResources/images/1024/card_default_gray_orb.png";
+
+
     // Character assets
     private static final String THE_DEFAULT_BUTTON = "BlueArchive_HoshinoResources/images/charSelect/DefaultCharacterButton.png";
     private static final String THE_DEFAULT_PORTRAIT = "BlueArchive_HoshinoResources/images/charSelect/HoshinoPortrait.png";
+    private static final String ARIS_BUTTON = "BlueArchive_ArisResources/images/charSelect/ArisButton.png";
+    private static final String ARIS_PORTRAIT = "BlueArchive_ArisResources/images/charSelect/ArisPortrait.png";
     public static final String THE_DEFAULT_SHOULDER_1 = "BlueArchive_HoshinoResources/images/char/defaultCharacter/shoulder.png";
     public static final String THE_DEFAULT_SHOULDER_2 = "BlueArchive_HoshinoResources/images/char/defaultCharacter/shoulder2.png";
     public static final String THE_DEFAULT_CORPSE = "BlueArchive_HoshinoResources/images/char/defaultCharacter/corpse.png";
-    
+
+    public static final String ARIS_SHOULDER_1 = "BlueArchive_ArisResources/images/char/defaultCharacter/shoulder.png";
+    public static final String ARIS_SHOULDER_2 = "BlueArchive_ArisResources/images/char/defaultCharacter/shoulder2.png";
+    public static final String ARIS_CORPSE = "BlueArchive_ArisResources/images/char/defaultCharacter/corpse.png";
+
+
     //Mod Badge - A small icon that appears in the mod settings menu next to your mod.
     public static final String BADGE_IMAGE = "BlueArchive_HoshinoResources/images/Badge.png";
     
     // Atlas and JSON files for the Animations
     public static final String THE_DEFAULT_SKELETON_ATLAS = "BlueArchive_HoshinoResources/images/char/defaultCharacter/Hoshino.atlas";
     public static final String THE_DEFAULT_SKELETON_JSON = "BlueArchive_HoshinoResources/images/char/defaultCharacter/Hoshino.json";
-    
+
+    public static final String ARIS_SKELETON_ATLAS = "BlueArchive_ArisResources/images/char/defaultCharacter/Aris.atlas";
+    public static final String ARIS_SKELETON_JSON = "BlueArchive_ArisResources/images/char/defaultCharacter/Aris.json";
+
     // =============== MAKE IMAGE PATHS =================
     
     public static String makeCardPath(String resourcePath) {
         return getModID() + "Resources/images/cards/" + resourcePath;
     }
-    
+    public static String makeArisCardPath(String resourcePath) {
+        return getArisModID() + "Resources/images/cards/" + resourcePath;
+    }
+
+
     public static String makeRelicPath(String resourcePath) {
         return getModID() + "Resources/images/relics/" + resourcePath;
     }
-    
+    public static String makeArisRelicPath(String resourcePath) {
+        return getArisModID() + "Resources/images/relics/" + resourcePath;
+    }
+
     public static String makeRelicOutlinePath(String resourcePath) {
         return getModID() + "Resources/images/relics/outline/" + resourcePath;
+    }
+    public static String makeArisRelicOutlinePath(String resourcePath) {
+        return getArisModID() + "Resources/images/relics/outline/" + resourcePath;
     }
     
     public static String makeOrbPath(String resourcePath) {
@@ -184,6 +224,10 @@ public class DefaultMod implements
     
     public static String makePowerPath(String resourcePath) {
         return getModID() + "Resources/images/powers/" + resourcePath;
+    }
+
+    public static String makeArisPowerPath(String resourcePath) {
+        return getArisModID() + "Resources/images/powers/" + resourcePath;
     }
     
     public static String makeEventPath(String resourcePath) {
@@ -221,6 +265,7 @@ public class DefaultMod implements
       */
       
         setModID("BlueArchive_Hoshino");
+        setArisModID("BlueArchive_Aris");
         // cool
         // TODO: NOW READ THIS!!!!!!!!!!!!!!!:
         
@@ -246,6 +291,12 @@ public class DefaultMod implements
                 ATTACK_DEFAULT_GRAY, SKILL_DEFAULT_GRAY, POWER_DEFAULT_GRAY, ENERGY_ORB_DEFAULT_GRAY,
                 ATTACK_DEFAULT_GRAY_PORTRAIT, SKILL_DEFAULT_GRAY_PORTRAIT, POWER_DEFAULT_GRAY_PORTRAIT,
                 ENERGY_ORB_DEFAULT_GRAY_PORTRAIT, CARD_ENERGY_ORB);
+        logger.info("Creating the color " + Aris.Enums.COLOR_BLUE.toString());
+        BaseMod.addColor(Aris.Enums.COLOR_BLUE, DEFAULT_BLUE, DEFAULT_BLUE, DEFAULT_BLUE,
+                DEFAULT_BLUE, DEFAULT_BLUE, DEFAULT_BLUE, DEFAULT_BLUE,
+                ATTACK_ARIS, SKILL_ARIS, POWER_ARIS, ENERGY_ORB_ARIS,
+                ATTACK_ARIS_PORTRAIT, SKILL_ARIS_PORTRAIT, POWER_ARIS_PORTRAIT,
+                ENERGY_ORB_ARIS_PORTRAIT, CARD_ARIS_ENERGY_ORB);
         
         logger.info("Done creating the color");
         
@@ -313,8 +364,29 @@ public class DefaultMod implements
     }// NO
     
     // ====== YOU CAN EDIT AGAIN ======
-    
-    
+
+
+    public static void setArisModID(String ID) {
+        Gson coolG = new Gson();
+        InputStream in = DefaultMod.class.getResourceAsStream("/IDCheckStringsDONT-EDIT-AT-ALL.json");
+        IDCheckDontTouchPls EXCEPTION_STRINGS = coolG.fromJson(new InputStreamReader(in, StandardCharsets.UTF_8), IDCheckDontTouchPls.class);
+        logger.info("You are attempting to set your Aris mod ID as: " + ID);
+        if (ID.equals(EXCEPTION_STRINGS.DEFAULTID)) {
+            throw new RuntimeException(EXCEPTION_STRINGS.EXCEPTION);
+        } else if (ID.equals(EXCEPTION_STRINGS.DEVID)) {
+            arisModID = EXCEPTION_STRINGS.DEFAULTID;
+        } else {
+            arisModID = ID;
+        }
+        logger.info("Success! Aris ID is " + modID);
+    }
+
+
+    public static String getArisModID() {
+        return arisModID;
+    }
+
+
     public static void initialize() {
         logger.info("========================= Initializing Default Mod. Hi. =========================");
         DefaultMod defaultmod = new DefaultMod();
@@ -332,9 +404,12 @@ public class DefaultMod implements
         
         BaseMod.addCharacter(new Hoshino("Hoshino", Hoshino.Enums.HOSHINO),
                 THE_DEFAULT_BUTTON, THE_DEFAULT_PORTRAIT, Hoshino.Enums.HOSHINO);
-        
-        receiveEditPotions();
         logger.info("Added " + Hoshino.Enums.HOSHINO.toString());
+
+        BaseMod.addCharacter(new Aris("Aris", Aris.Enums.ARIS),
+                ARIS_BUTTON, ARIS_PORTRAIT, Aris.Enums.ARIS);
+        logger.info("Added " + Aris.Enums.ARIS.toString());
+        receiveEditPotions();
     }
     
     // =============== /LOAD THE CHARACTER/ =================
@@ -666,6 +741,10 @@ public class DefaultMod implements
 
         BaseMod.addRelicToCustomPool(new IronHorusRelic(), Hoshino.Enums.COLOR_PINK);
 
+        BaseMod.addRelicToCustomPool(new ArisBaseRelic(), Aris.Enums.COLOR_BLUE);
+
+
+
         // This adds a relic to the Shared pool. Every character can find this relic.BaseMod.addRelic(new PlaceholderRelic2(), RelicType.SHARED);
         BaseMod.addRelic(new IOURelic(), RelicType.SHARED);
         BaseMod.addRelic(new ShirokoRelic(), RelicType.SHARED);
@@ -695,6 +774,7 @@ public class DefaultMod implements
         pathCheck();
         BaseMod.addDynamicVariable(new DefaultCustomVariable());
         BaseMod.addDynamicVariable(new DefaultSecondMagicNumber());
+        BaseMod.addDynamicVariable(new SecondMagicNumber());
         
         logger.info("Adding cards");
         //TODO: Rename the "DefaultMod" with the modid in your ModTheSpire.json file
@@ -703,6 +783,11 @@ public class DefaultMod implements
             .packageFilter("BlueArchive_Hoshino.cards") // filters to any class in the same package as AbstractDefaultCard, nested packages included
             .setDefaultSeen(true)
             .cards();
+
+        new AutoAdd("BlueArchive_Hoshino") // ${project.artifactId}
+                .packageFilter("BlueArchive_Aris.cards") // filters to any class in the same package as AbstractDefaultCard, nested packages included
+                .setDefaultSeen(true)
+                .cards();
 
 
         logger.info("Done adding cards!");
@@ -718,29 +803,44 @@ public class DefaultMod implements
         logger.info("You seeing this?");
         logger.info("Beginning to edit strings for mod with ID: " + getModID());
 
-        String pathByLanguage;
+        String pathByLanguage, pathByLanguageAris;
         switch(Settings.language) {
             case KOR:
                 pathByLanguage = getModID() + "Resources/localization/" + "kor/";
+                pathByLanguageAris = getArisModID() + "Resources/localization/" + "kor/";
                 break;
             case ZHS:
                 pathByLanguage = getModID() + "Resources/localization/" + "zhs/";
+                pathByLanguageAris = getArisModID() + "Resources/localization/" + "zhs/";
                 break;
             default:
                 pathByLanguage = getModID() + "Resources/localization/" + "eng/";
+                pathByLanguageAris = getArisModID() + "Resources/localization/" + "eng/";
         }
+
+
 
         // CardStrings
         BaseMod.loadCustomStringsFile(CardStrings.class,
                 pathByLanguage + "Hoshino-Card-Strings.json");
+        // CardStrings
+        BaseMod.loadCustomStringsFile(CardStrings.class,
+                pathByLanguageAris + "Aris-Card-Strings.json");
+
         
         // PowerStrings
         BaseMod.loadCustomStringsFile(PowerStrings.class,
                 pathByLanguage + "Hoshino-Power-Strings.json");
+        // PowerStrings
+        BaseMod.loadCustomStringsFile(PowerStrings.class,
+                pathByLanguageAris + "Aris-Power-Strings.json");
         
         // RelicStrings
         BaseMod.loadCustomStringsFile(RelicStrings.class,
                 pathByLanguage + "Hoshino-Relic-Strings.json");
+        // CardStrings
+        BaseMod.loadCustomStringsFile(RelicStrings.class,
+                pathByLanguageAris + "Aris-Relic-Strings.json");
         
         // Event Strings
         BaseMod.loadCustomStringsFile(EventStrings.class,
@@ -753,6 +853,8 @@ public class DefaultMod implements
         // CharacterStrings
         BaseMod.loadCustomStringsFile(CharacterStrings.class,
                 pathByLanguage + "Hoshino-Character-Strings.json");
+        BaseMod.loadCustomStringsFile(CharacterStrings.class,
+                pathByLanguageAris + "Aris-Character-Strings.json");
         
         // OrbStrings
         BaseMod.loadCustomStringsFile(OrbStrings.class,
@@ -760,6 +862,8 @@ public class DefaultMod implements
 
         BaseMod.loadCustomStringsFile(UIStrings.class,
                 pathByLanguage + "Hoshino-UI-Strings.json");
+        BaseMod.loadCustomStringsFile(UIStrings.class,
+                pathByLanguageAris + "Aris-UI-Strings.json");
 
         BaseMod.loadCustomStringsFile(TutorialStrings.class,
                 pathByLanguage + "Hoshino-Tutorial-Strings.json");
@@ -783,27 +887,42 @@ public class DefaultMod implements
         // If you're using multiword keywords, the first element in your NAMES array in your keywords-strings.json has to be the same as the PROPER_NAME.
         // That is, in Card-Strings.json you would have #yA_Long_Keyword (#y highlights the keyword in yellow).
         // In Keyword-Strings.json you would have PROPER_NAME as A Long Keyword and the first element in NAMES be a long keyword, and the second element be a_long_keyword
-        
+
         Gson gson = new Gson();
-        String pathByLanguage;
-        switch(Settings.language) {
+        String pathByLanguage, pathByLanguageAris;
+        switch (Settings.language) {
             case KOR:
                 pathByLanguage = getModID() + "Resources/localization/" + "kor/";
+                pathByLanguageAris = getArisModID() + "Resources/localization/" + "kor/";
                 break;
             case ZHS:
                 pathByLanguage = getModID() + "Resources/localization/" + "zhs/";
+                pathByLanguageAris = getArisModID() + "Resources/localization/" + "zhs/";
                 break;
             default:
                 pathByLanguage = getModID() + "Resources/localization/" + "eng/";
+                pathByLanguageAris = getArisModID() + "Resources/localization/" + "eng/";
         }
 
-        String json = Gdx.files.internal(pathByLanguage + "Hoshino-Keyword-Strings.json").readString(String.valueOf(StandardCharsets.UTF_8));
-        com.evacipated.cardcrawl.mod.stslib.Keyword[] keywords = gson.fromJson(json, com.evacipated.cardcrawl.mod.stslib.Keyword[].class);
-        
-        if (keywords != null) {
-            for (Keyword keyword : keywords) {
-                BaseMod.addKeyword(getModID().toLowerCase(), keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
-                //  getModID().toLowerCase() makes your keyword mod specific (it won't show up in other cards that use that word)
+        {
+            String json = Gdx.files.internal(pathByLanguage + "Hoshino-Keyword-Strings.json").readString(String.valueOf(StandardCharsets.UTF_8));
+            com.evacipated.cardcrawl.mod.stslib.Keyword[] keywords = gson.fromJson(json, com.evacipated.cardcrawl.mod.stslib.Keyword[].class);
+
+            if (keywords != null) {
+                for (Keyword keyword : keywords) {
+                    BaseMod.addKeyword(getModID().toLowerCase(), keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
+                    //  getModID().toLowerCase() makes your keyword mod specific (it won't show up in other cards that use that word)
+                }
+            }
+        }
+        {
+            String json = Gdx.files.internal(pathByLanguageAris + "Aris-Keyword-Strings.json").readString(String.valueOf(StandardCharsets.UTF_8));
+            com.evacipated.cardcrawl.mod.stslib.Keyword[] keywords = gson.fromJson(json, com.evacipated.cardcrawl.mod.stslib.Keyword[].class);
+
+            if (keywords != null) {
+                for (Keyword keyword : keywords) {
+                    BaseMod.addKeyword(getArisModID().toLowerCase(), keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
+                }
             }
         }
     }
@@ -816,6 +935,10 @@ public class DefaultMod implements
         return getModID() + ":" + idText;
     }
 
+    public static String makeArisID(String idText) {
+        return getArisModID() + ":" + idText;
+    }
+
     @Override
     public void receiveAddAudio() {
         BaseMod.addAudio("BlueArchive_Hoshino:Reload", getModID() + "Resources/sound/reload.mp3");
@@ -823,5 +946,7 @@ public class DefaultMod implements
         BaseMod.addAudio("BlueArchive_Hoshino:Fire", getModID() + "Resources/sound/shotgunfire.mp3");
         BaseMod.addAudio("BlueArchive_Hoshino:FireLight", getModID() + "Resources/sound/shotgunfirelight.mp3");
         BaseMod.addAudio("BlueArchive_Hoshino:FireHeavy", getModID() + "Resources/sound/shotgunfireheavy.mp3");
+
+        BaseMod.addAudio("BlueArchive_Aris:ArisLight", getArisModID() + "Resources/sound/Aris_light.mp3");
     }
 }
