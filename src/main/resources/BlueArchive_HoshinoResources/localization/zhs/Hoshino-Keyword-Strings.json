@@ -52,9 +52,9 @@
     "DESCRIPTION": "每当你将这张牌加入手牌，其计数值减1。计数值归零时，激活效果。"
   },
   {
-    "PROPER_NAME": "赏金",
+    "PROPER_NAME": "悬赏",
     "NAMES": [
-      "赏金"
+      "悬赏"
     ],
     "DESCRIPTION": "带有此效果的敌人死亡时，获得金币。"
   },
@@ -74,11 +74,11 @@
     "DESCRIPTION": "当所有弹药槽都为空时，触发效果。"
   },
   {
-    "PROPER_NAME": "Gift",
+    "PROPER_NAME": "礼物",
     "NAMES": [
       "GOZBOMB"
     ],
-    "DESCRIPTION": "Hide in order of card in order of high cost, high rarity."
+    "DESCRIPTION": "根据耗能和稀有度高低藏于卡牌之中。"
   }
 ]
 

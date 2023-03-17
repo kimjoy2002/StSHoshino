@@ -141,11 +141,11 @@
   "BlueArchive_Hoshino:Memorial": {
     "NAME": "纪念品",
     "DESCRIPTION": "每次将抽牌堆洗牌时，获得 !M! 点 力量 和 敏捷 。",
-    "UPGRADE_DESCRIPTION": "每次将抽牌堆洗牌时，获得 !M! 点 力量 和 敏捷 。 NL 然后将牌组洗混。"
+    "UPGRADE_DESCRIPTION": "每次将抽牌堆洗牌时，获得 !M! 点 力量 和 敏捷 。 NL 将抽牌堆洗牌。"
   },
   "BlueArchive_Hoshino:EmergencyFieldAidSkill": {
     "NAME": "战地急救",
-    "DESCRIPTION": " 虚无 。 NL 获得 !B! 点 格挡 。自己的生命值低于一半时，回复 !M! 点生命值而不是获得护甲值 。 NL 消耗 。"
+    "DESCRIPTION": " 虚无 。 NL 获得 !B! 点 格挡 。自己的生命值低于一半时，改为回复 !M! 点生命值。 NL 消耗 。"
   },
   "BlueArchive_Hoshino:ShieldRebound": {
     "NAME": "偏折子弹",
@@ -266,7 +266,7 @@
   },
   "BlueArchive_Hoshino:BankRobbery": {
     "NAME": "抢银行",
-    "DESCRIPTION": " 虚无 。 NL 对所有敌人施加 !M! 层 悬赏 。 NL 对所有敌人施加2层 易伤 。 NL 消耗 。"
+    "DESCRIPTION": " 虚无 。 NL 对所有敌人施加 !M! 层 bluearchive_hoshino:悬赏 。 NL 对所有敌人施加2层 易伤 。 NL 消耗 。"
   },
   "BlueArchive_Hoshino:HitAndRun": {
     "NAME": "游击",
@@ -295,8 +295,8 @@
   },
   "BlueArchive_Hoshino:Lubricating": {
     "NAME": "润滑",
-    "DESCRIPTION": "消耗 一张随机手牌。 NL 将 !M! 张牌从弃牌堆加入手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "消耗 一张手牌。 NL 将 !M! 张牌从弃牌堆加入手牌。 NL 消耗 。"
+    "DESCRIPTION": "消耗一张随机手牌。 NL 将 !M! 张牌从弃牌堆加入手牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "消耗一张手牌。 NL 将 !M! 张牌从弃牌堆加入手牌。 NL 消耗 。"
   },
   "BlueArchive_Hoshino:WideShot": {
     "NAME": "广阔射击",
@@ -365,7 +365,7 @@
       "这张牌不能被打出。"
     ]},
   "BlueArchive_Hoshino:BurningTheBridge": {
-    "NAME": "破釜沉舟",
+    "NAME": "背水一战",
     "DESCRIPTION": "选择任意张手牌以随机顺序放回抽牌堆顶部， NL 每放回一张获得 !B! 点 格挡 。"
   },
   "BlueArchive_Hoshino:LeaveItToMe": {
@@ -402,19 +402,19 @@
   },
   "BlueArchive_Hoshino:SiroBomb": {
     "NAME": "BOOM!!",
-    "DESCRIPTION": "Unplayable. NL Ethereal. NL At the end of your turn, take !M! damage."
+    "DESCRIPTION": " 不能被打出 。 NL 虚无 。 NL 回合结束时，受到 !M! 点伤害。"
   },
   "BlueArchive_Hoshino:PeroroRising": {
-    "NAME": "Peroro's Ritual",
-    "DESCRIPTION": "Unplayable. NL Ethereal. NL When this card is drawn, Strengthen Peroro.",
-    "UPGRADE_DESCRIPTION": "Unplayable. NL When this card is drawn, Strengthen Peroro. NL If this card is Exhausted, Add a copy of this card into discard pile."
+    "NAME": "佩洛洛仪式",
+    "DESCRIPTION": " 不能被打出 。 NL 虚无 。 NL 每当抽到这张牌，强化佩洛洛。",
+    "UPGRADE_DESCRIPTION": " 不能被打出 。 NL 每当抽到这张牌，强化佩洛洛。 NL 如果这张牌被消耗，将一张复制品放入弃牌堆。"
   },
   "BlueArchive_Hoshino:GozBomb": {
-    "NAME": "Gift",
-    "DESCRIPTION": "Unplayable. NL Every time into the draw pile, hides in the card. At the end of your turn, take !M! damage."
+    "NAME": "礼物",
+    "DESCRIPTION": " 不能被打出 。 NL 每当这张牌进入抽牌堆，将自己藏匿于其他牌中。回合结束时，受到 !M! 点伤害。"
   },
   "BlueArchive_Hoshino:SandStorm": {
-    "NAME": "Sand Storm",
-    "DESCRIPTION": "Draw !M! card."
+    "NAME": "沙暴",
+    "DESCRIPTION": "抽 !M! 张牌。"
   }
 }

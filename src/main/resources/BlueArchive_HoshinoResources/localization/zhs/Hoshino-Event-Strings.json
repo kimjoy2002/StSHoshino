@@ -25,7 +25,7 @@
       "您对本次购物还满意吗?",
       "你戴上面具一脚踢开银行大门。 NL 机器人迅速围了上来。 NL @抢银行的时间到了！@",
       "你微薄的钱包都不够这些会社塞牙缝的！ NL 你转身离开，并想象着那些商人失望的神情。",
-      "袭击很成功。 NL 你离开银行，并决定带走 ~亿点~ 战利品。 NL (获得 #y300金币。 )",
+      "袭击很成功。 NL 你离开银行，并决定带走 ~亿点~ 战利品。 NL (获得 #y300金币 。)",
       "袭击很成功。 NL 你离开银行，并决定带走 ~亿点~ 战利品。 NL 这张纸也作废了。 NL (失去 #g欠条 并获得 #y300金币 。)"
     ],
     "OPTIONS": [
@@ -111,20 +111,20 @@
     ]
   },
   "BlueArchive_Hoshino:PeroroEvent": {
-    "NAME": "Peroro Goods",
+    "NAME": "佩洛洛玩偶",
     "DESCRIPTIONS": [
-      "Along the way, you pick up an unpleasant doll that has fallen to the ground. NL \"Oh! That's not available now @Limited@ @Edition@ @Peroro@ @Goods!@ I'll pay any amount, so please sell it!\" NL A girl suddenly appears and asks to sell this item. NL It's something you don't need anyway, but what do you do?",
-      "It's an unpleasant doll, but it's a waste to give it to someone. NL \" ~Ahaha...~ \" NL She gives up and walks away with a meaningful smile. NL You're on your way, but you don't notice that someone is following you...",
-      "\"thank you!\" NL You feel lighter because of your good deeds.",
-      "You want to take a chance and decide to sell it for a very high price. NL In fact, you're just giving it away for free. NL The guilt of cheating on a girl leaves me with regret."
+      "你在地上拾起一个可疑的玩偶。 NL \"呀！这不是已经停售的 @限量版佩洛洛周边吗!@ 可以卖给我吗，多少钱我都会给!\" NL 一名女孩突然出现，打算买下你手中的玩偶。 NL 反正这东西也用不上，你准备怎么做？",
+      "虽然这个玩偶很可疑，但要给别人也太浪费了。 NL \" ~啊哈哈...~ \" NL 她带着意味深长的笑离开了。 NL 你也转身离开，但你并没有察觉到有什么东西在你身后...",
+      "\"谢谢你!\" NL 你的善举让你感到轻松了一些。",
+      "你决定趁机狠赚一笔。 NL 毕竟天下没有免费的午餐。 NL 欺骗女孩的负罪感让你感到悔恨。"
     ],
     "OPTIONS": [
-      "[Don't Give] #gObtain #ga #gspecial #gRelic. ",
-      "[Give It] #gRemove #ga #gcard #gfrom #gyour #gdeck.",
-      "[Rip Off] #gGain #g",
-      " #gGold. #rBecome #rCursed #r- #rRegret.",
-      "[Leave]",
-      "Select a Card to Remove."
+      "[不给] #g获得一个特殊遗物。 ",
+      "[给她] #g从牌组中移除一张牌。 ",
+      "[敲诈] #g获得",
+      " #g金币。 #r被诅咒- #r悔恨 #r。 ",
+      "[离开]",
+      "选择一张牌以移除"
     ]
   }
 }

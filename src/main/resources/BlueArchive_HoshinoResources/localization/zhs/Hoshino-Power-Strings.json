@@ -8,7 +8,7 @@
     ]
   },
   "BlueArchive_Hoshino:ShieldPower": {
-    "NAME": "Shield",
+    "NAME": "盾牌",
     "DESCRIPTIONS": [
       "回合开始时，保留 #y盾牌 层数的 #y格挡 。 #y盾牌 层数不会高于当前 #y格挡 值。"
     ]
@@ -99,7 +99,7 @@
     ]
   },
   "BlueArchive_Hoshino:BountyPower": {
-    "NAME": "赏金",
+    "NAME": "悬赏",
     "DESCRIPTIONS": [
       "如果你杀死这个怪物，获得 #b",
       " 金币。 无视人工制品。",
@@ -174,133 +174,131 @@
     ]
   },
   "BlueArchive_Hoshino:EnergyLosePower": {
-    "NAME": "Energy Rduction",
+    "NAME": "能量减少",
     "DESCRIPTIONS": [
-      "Lose ",
+      "本回合失去 ",
       " [E] ",
-      " this turn."
+      " 。"
     ]
   },
   "BlueArchive_Hoshino:HodGloryPower": {
-    "NAME": "Hidden Glory",
+    "NAME": "潜藏荣耀",
     "DESCRIPTIONS": [
-      "If all the #yArtifact disappear, Gain #b3 #yVulnerable."
+      "如果失去所有 #y人工制品 ，获得 #b3 层 #y易伤 。"
     ]
   },
   "BlueArchive_Hoshino:ReflectablePower": {
-    "NAME": "Reflectable",
+    "NAME": "反射",
     "DESCRIPTIONS": [
-      "If you completely block this boss' attack, you will return the attack."
+      "如果你完全抵挡住攻击伤害，将伤害反弹给敌人。"
     ]
   },
   "BlueArchive_Hoshino:SiroKuroPower": {
-    "NAME": "Horror of Slumpia",
+    "NAME": "废弃公园的恐惧",
     "DESCRIPTIONS": [
-      "If you knock down Shiro, Kuro appears."
+      "如果你击败了白，黑就会出现。"
     ]
   },
   "BlueArchive_Hoshino:KaitengerPower": {
-    "NAME": "MUGEN KAITEN",
+    "NAME": "无限寿司人",
     "DESCRIPTIONS": [
-      "There are #y",
-      " Kaitengers left."
+      "还剩 #y",
+      " 个寿司人。"
     ]
   },
   "BlueArchive_Hoshino:DelayedPower": {
-    "NAME": "Delayed",
+    "NAME": "延迟",
     "DESCRIPTIONS": [
-      "At the end of the turn, gain: #y",
+      "回合结束时，获得: #y",
       ""
     ]
   },
   "BlueArchive_Hoshino:TauntPower": {
-    "NAME": "Taunt",
+    "NAME": "嘲讽",
     "DESCRIPTIONS": [
-      "You can only point to #y",
-      " as the target of the card."
+      "你的牌只能以 #y",
+      " 为目标。"
     ]
   },
   "BlueArchive_Hoshino:PeroroPower": {
-    "NAME": "Hive Mind",
+    "NAME": "蜂巢思维",
     "DESCRIPTIONS": [
-      "If you kill this minion, Deal #b",
-      " damage to boss. But when absorbed by the boss, Boss gains #b",
-      " #yStrength."
+      "当你杀死这个爪牙，对BOSS造成 #b",
+      " 点伤害。BOSS吸收这个爪牙时，获得 #b",
+      " 点 #y力量 。"
     ]
   },
   "BlueArchive_Hoshino:KaitenMagicCirclePower": {
-    "NAME": "Heart Ablaze",
+    "NAME": "激昂的心",
     "DESCRIPTIONS": [
-      "#pPink : All damage is increased by #b30%.",
-      "#rRed : Apply 2 #yVulnerable the target.",
-      "#gGreen : At the end of turn, Gain #b3 #yStrength.",
-      " After taking #b",
-      " damage, it switches in the order of #pPink -> #rRed -> #gGreen."
+      "#p粉色:攻击伤害提高 #b30% 。",
+      "#r红色:对目标施加2层 #y易伤 。",
+      "#g绿色:回合结束时，获得 #b3 点 #y力量 。",
+      "再受到 #b",
+      " 点伤害，颜色会以 #p粉色 -> #r红色 -> #g绿色 的顺序依次改变。"
     ]
   },
   "BlueArchive_Hoshino:MackerelSlashPower": {
-    "NAME": "Mega Egg Overcharge",
+    "NAME": "超绝蛋药充能",
     "DESCRIPTIONS": [
-      "Increase the damage of MUGEN KAITEN FINAL MACKEREL SLASH by #b",
-      ""
+      "无限回转终级鲭鱼斩的伤害提高 #b",
+      " 点。"
     ]
   },
   "BlueArchive_Hoshino:PeroroRevivePower": {
-    "NAME": "immortality",
+    "NAME": "不朽",
     "DESCRIPTIONS": [
-      "Respawns next turn, even if killed."
+      "被杀死时，下回合复活。"
     ]
   },
   "BlueArchive_Hoshino:ExplodePower": {
-    "NAME": "Explode",
+    "NAME": "爆炸",
     "DESCRIPTIONS": [
-      "When killed, Deal #b",
-      " damage to the player."
+      "被杀死时，对玩家造成 #b",
+      " 点伤害。"
     ]
   },
   "BlueArchive_Hoshino:GozeThresholdPower": {
-    "NAME": "Now You See Us",
+    "NAME": "被你发现了",
     "DESCRIPTIONS": [
-      "After taking #b",
-      " damage, Immediately creates a clone and changes the pattern."
+      "受到 #b",
+      " 点伤害后，立即创造一个分身并改变意图。"
     ]
   },
   "BlueArchive_Hoshino:GozeBushinPower": {
-    "NAME": "Clone",
+    "NAME": "分身",
     "DESCRIPTIONS": [
-      "When the real one is defeated, all clones are died and the original form reappears. The real one is revealed next turn.",
-      "The real one. When defeated, all clones are died and the original form reappears.",
-      "Fake. Even if defeated, nothing happens.",
-      "When the real one is defeated, all clones are died and you win. The real one is revealed next turn..",
-      "The real one. When defeated, all clones are died and you win."
+      "当真身被击杀时，所有分身消失，原始形态会再次出现。真身会在下回合显现。",
+      "真身。被击杀时，所有分身消失，原始形态会再次出现。",
+      "假身。击杀也没有任何效果。",
+      "当真身被击杀时，所有分身消失，你获得胜利。真身会在下回合显现。",
+      "真身。被击杀时，所有分身消失，你获得胜利。"
     ]
   },
   "BlueArchive_Hoshino:ChesedMinionPower": {
-    "NAME": "Solid Kingdom",
+    "NAME": "固若金汤",
     "DESCRIPTIONS": [
-      "Takes only 10% of all damage before defeating the remaining #b",
-      " waves."
+      "在击败剩余 #b",
+      " 波兵力之前，只受到10%的伤害。"
     ]
   },
   "BlueArchive_Hoshino:ChesedStrPower": {
-    "NAME": "Supreme Power",
+    "NAME": "至尊之力",
     "DESCRIPTIONS": [
-      "The attack damage done by all the soldiers increases by #b",
-      ""
+      "所有士兵造成的伤害提高 #b",
+      " 点。"
     ]
   },
   "BlueArchive_Hoshino:GreenRelicPower": {
-    "NAME": "Holy Light (Green)",
+    "NAME": "圣光(绿色)",
     "DESCRIPTIONS": [
-      "Cannot be attacked. Heal #g1 HP every time a #ySkill card is used. When HP is full, Cannot draw cards until the end of the turn."
+      "不能被攻击。每打出一张 #y技能 牌，回复 #g1 生命。如果生命值为满，回合结束前不能再抽牌。"
     ]
   },
   "BlueArchive_Hoshino:RedRelicPower": {
-    "NAME": "Holy Light (Red)",
+    "NAME": "圣光(红色)",
     "DESCRIPTIONS": [
-      "Cannot be attacked. Heal #g1 HP every time a #yAttack card is used. When HP is full, increases the cost of all cards by 1 until the end of the turn."
+      "不能被攻击。每打出一张 #y攻击 牌，回复 #g1 生命。如果生命值为满，本回合所有手牌耗能提高1点。"
     ]
   }
 }
-
-

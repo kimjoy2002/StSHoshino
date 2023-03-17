@@ -2,10 +2,10 @@
   "BlueArchive_Hoshino:Binah": {
     "NAME": "Binah",
     "MOVES": [
-      "Atsilut's Light",
-      "Fires of Severity",
-      "Purifying Storm",
-      "Raging Sandstorm"
+      "神性之光",
+      "审判之火",
+      "净尘之风",
+      "怒砂之袭"
     ],
     "DIALOG": [
       ""
@@ -14,38 +14,38 @@
   "BlueArchive_Hoshino:Hod": {
     "NAME": "Hod",
     "MOVES": [
-      "Destruction Type I",
-      "Destruction Type II",
-      "Invader Pillar Generation",
-      "Energy Overload",
-      "Radiance Glory"
+      "毁灭形态I",
+      "毁灭形态II",
+      "生成侵蚀之柱",
+      "能量过载",
+      "辉耀闪光"
     ],
     "DIALOG": [
       ""
     ]
   },
   "BlueArchive_Hoshino:Siro": {
-    "NAME": "Shiro",
+    "NAME": "白",
     "MOVES": [
-      "Dun-Dun-Dun!",
-      "Keep Rollin' Rollin' Rollin'!"
+      "咚咚咚!",
+      "滚啊滚啊滚啊滚!"
     ],
     "DIALOG": [
       ""
     ]
   },
   "BlueArchive_Hoshino:Kuro": {
-    "NAME": "Kuro",
+    "NAME": "黑",
     "MOVES": [
-      "Apathy Syndrome",
-      "Charge!!!"
+      "脱力症",
+      "蓄力!!!"
     ],
     "DIALOG": [
       ""
     ]
   },
   "BlueArchive_Hoshino:HodPillar": {
-    "NAME": "Invader Pillar",
+    "NAME": "侵蚀之柱",
     "MOVES": [
     ],
     "DIALOG": [
@@ -53,64 +53,64 @@
     ]
   },
   "BlueArchive_Hoshino:Kaitenger_red": {
-    "NAME": "Kaitenger Red",
+    "NAME": "红寿司人",
     "MOVES": [
-      "Kaiten Pose! Red of Zealousness!"
+      "回转姿态! 热血之红!"
     ],
     "DIALOG": [
-      "Mugen Kaiten Sushi Sentai Kaitenger Toujou!"
+      "无限回转寿司战队，寿司人登场!"
     ]
   },
   "BlueArchive_Hoshino:Kaitenger_green": {
-    "NAME": "Kaitenger Green",
+    "NAME": "绿寿司人",
     "MOVES": [
-      "Kaiten Pose! Green of Weekend OT"
+      "回转姿态! 加班之绿！"
     ],
     "DIALOG": [
       ""
     ]
   },
   "BlueArchive_Hoshino:Kaitenger_pink": {
-    "NAME": "Kaitenger Pink",
+    "NAME": "粉寿司人",
     "MOVES": [
-      "Kaiten Pose! Pink of Pure Heart!"
+      "回转姿态! 纯情之粉!"
     ],
     "DIALOG": [
       ""
     ]
   },
   "BlueArchive_Hoshino:Kaitenger_yellow": {
-    "NAME": "Kaitenger Yellow",
+    "NAME": "黄寿司人",
     "MOVES": [
-      "Kaiten Pose! Yellow of Passion!"
+      "回转姿态! 激情之黄!"
     ],
     "DIALOG": [
       ""
     ]
   },
   "BlueArchive_Hoshino:Kaitenger_black": {
-    "NAME": "Kaitenger Black",
+    "NAME": "黑寿司人",
     "MOVES": [
-      "Kaiten Pose! Black of Shrewdness!"
+      "回转姿态! 冷酷之黑!"
     ],
     "DIALOG": [
       ""
     ]
   },
   "BlueArchive_Hoshino:Perorodzilla": {
-    "NAME": "Perorodzilla",
+    "NAME": "佩洛洛斯拉",
     "MOVES": [
-      "Bubble",
-      "Incandescent Eye Laser",
-      "Summon Perorominions",
-      "Hyper Spiral Eye Laser"
+      "泡泡",
+      "闪耀眼部射线",
+      "召唤佩洛洛仆从",
+      "超级螺旋眼部射线"
     ],
     "DIALOG": [
-      "Rooooaaarrr...!"
+      "呜嗷嗷嗷...!"
     ]
   },
   "BlueArchive_Hoshino:Peroro": {
-    "NAME": "Peroro",
+    "NAME": "佩洛洛",
     "MOVES": [
     ],
     "DIALOG": [
@@ -120,33 +120,33 @@
   "BlueArchive_Hoshino:KaitenFXMK0": {
     "NAME": "KAITEN FX Mk.0",
     "MOVES": [
-      "MUGEN KAITEN SUPER SHRIMP MACHINE GUN",
-      "MUGEN KAITEN HYPER SARDINE MISSILES",
-      "MUGEN KAITEN ULTRA PLATE SHIELD",
-      "MUGEN KAITEN FINAL MACKEREL SLASH"
+      "无限回转高级虾米机关枪",
+      "无限回转超级沙丁鱼导弹",
+      "无限回转究极板甲巨盾",
+      "无限回转终极鲭鱼斩"
     ],
     "DIALOG": [
       ""
     ]
   },
   "BlueArchive_Hoshino:Hifumi": {
-    "NAME": "Hifumi",
+    "NAME": "日富美",
     "MOVES": [
-      "Peroro-sama's Support",
-      "Angry Adelie's Blessing",
-      "Help me, Peroro-sama!",
-      "Collector's Spirit"
+      "佩洛洛大人援护",
+      "愤怒企鹅的祝福",
+      "救我，佩洛洛大人!",
+      "收藏家精神"
     ],
     "DIALOG": [
-      "Ahaha... It was nice pretending to be friends with you",
-      "Ahaha... It was nice pretending to be friends with hoshino-sama",
-      "~Nooooooo,~ ~Peroro-sama!~",
-      "Peroro-sama, please!",
-      "Peroro-sama... you are so beautiful today..."
+      "啊哈哈... 假装和你做朋友的感觉真不错",
+      "啊哈哈... 假装和星野殿下做朋友的感觉真不错",
+      "~不，~ ~佩洛洛大人!~",
+      "佩洛洛大人，拜托你了!",
+      "佩洛洛大人...你今天真漂亮..."
     ]
   },
   "BlueArchive_Hoshino:PeroroHifumi": {
-    "NAME": "Peroro",
+    "NAME": "佩洛洛",
     "MOVES": [
     ],
     "DIALOG": [
@@ -156,77 +156,77 @@
   "BlueArchive_Hoshino:Goz": {
     "NAME": "Goz",
     "MOVES": [
-      "Now You See Us",
-      "Three Light Monte",
-      "Magical Coin Hats",
-      "Surprise Present",
-      "Scream Rider"
+      "被你发现了",
+      "三盏灯把戏",
+      "魔术硬币帽",
+      "惊喜礼物",
+      "尖叫骑士"
     ],
     "DIALOG": [
       ""
     ]
   },
   "BlueArchive_Hoshino:Chesed": {
-    "NAME": "Chesed",
+    "NAME": "球球",
     "MOVES": [
-      "Call of the Throne",
-      "Witness My Supreme Powers",
-      "Majesty's Mercy",
-      "Exposed Throne"
+      "王座之唤",
+      "皇权见证",
+      "王之宽恕",
+      "王位暴露"
     ],
     "DIALOG": [
       ""
     ]
   },
   "BlueArchive_Hoshino:Soldier": {
-    "NAME": "Robo Soldier",
+    "NAME": "机器人士兵",
     "MOVES": [],
     "DIALOG": [
       ""
     ]
   },
   "BlueArchive_Hoshino:Drone": {
-    "NAME": "Cyber Drone",
+    "NAME": "电子无人机",
     "MOVES": [],
     "DIALOG": [
       ""
     ]
   },
   "BlueArchive_Hoshino:Turret": {
-    "NAME": "Mount Turret",
+    "NAME": "搭载炮塔",
     "MOVES": [],
     "DIALOG": [
       ""
     ]
   },
   "BlueArchive_Hoshino:Goliat": {
-    "NAME": "Giga Mecha",
+    "NAME": "巨型机甲",
     "MOVES": [],
     "DIALOG": [
       ""
     ]
   },
   "BlueArchive_Hoshino:Hieronymus": {
-    "NAME": "Hieronymus",
+    "NAME": "主教",
     "MOVES": [
-      "Damasus' Call",
-      "Vulgate's Sacred Book",
-      "Reaper's Execution",
-      "Desert Penance"
+      "教皇呼唤",
+      "圣经咏唱",
+      "赎罪处刑",
+      "沙漠痛楚"
     ],
     "DIALOG": [
       ""
     ]
   },
   "BlueArchive_Hoshino:GreenRelic": {
-    "NAME": "Relic",
+    "NAME": "绿色遗物",
     "MOVES": [],
     "DIALOG": [
       ""
     ]
   },
   "BlueArchive_Hoshino:RedRelic": {
-    "NAME": "Relic",
+    "NAME": "红色遗物",
     "MOVES": [],
     "DIALOG": [
       ""
