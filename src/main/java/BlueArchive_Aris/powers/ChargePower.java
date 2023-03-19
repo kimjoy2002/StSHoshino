@@ -8,8 +8,11 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+
+import java.util.Set;
 
 import static BlueArchive_Hoshino.DefaultMod.makeArisPowerPath;
 import static BlueArchive_Hoshino.DefaultMod.makePowerPath;
@@ -21,11 +24,12 @@ public class ChargePower extends AbstractPower implements CloneablePowerInterfac
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
+    public static int chargeThisCombat = 0;
 
     // We create 2 new textures *Using This Specific Texture Loader* - an 84x84 image and a 32x32 one.
     // There's a fallback "missing texture" image, so the game shouldn't crash if you accidentally put a non-existent file.
-    private static final Texture tex84 = TextureLoader.getTexture(makeArisPowerPath("TempPower84.png"));
-    private static final Texture tex32 = TextureLoader.getTexture(makeArisPowerPath("TempPower32.png"));
+    private static final Texture tex84 = TextureLoader.getTexture(makeArisPowerPath("ChargePower84.png"));
+    private static final Texture tex32 = TextureLoader.getTexture(makeArisPowerPath("ChargePower32.png"));
 
     public ChargePower(final AbstractCreature owner, final int amount) {
         name = NAME;
@@ -52,8 +56,17 @@ public class ChargePower extends AbstractPower implements CloneablePowerInterfac
     }
 
 
+    public void reducePower(int reduceAmount) {
+        super.reducePower(reduceAmount);
+        if(amount<= 0) {
+            this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
+        }
+    }
+
     public void atEndOfTurn(boolean isPlayer) {
-        this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
+        if(!AbstractDungeon.player.hasPower(AuxiliaryPower.POWER_ID)) {
+            this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
+        }
     }
 
     @Override

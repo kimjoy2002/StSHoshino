@@ -283,6 +283,16 @@ public class Aris extends CustomPlayer {
         return TEXT[2];
     }
 
+    public void newAnimation(String animation) {
+
+        loadAnimation(
+                ARIS_SKELETON_ATLAS,
+                ARIS_SKELETON_JSON,
+                0.9f);
+        AnimationState.TrackEntry e = state.setAnimation(0,animation.isEmpty()?BASE_ANIMATION:animation, true);
+        e.setTime(e.getEndTime() * MathUtils.random());
+    }
+
 
 
     public Texture getCutsceneBg() {

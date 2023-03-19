@@ -15,7 +15,7 @@ import static BlueArchive_Hoshino.DefaultMod.makeArisCardPath;
 public class ReactiveArmour extends AbstractDynamicCard implements AttackedCard {
 
     public static final String ID = DefaultMod.makeArisID(ReactiveArmour.class.getSimpleName());
-    public static final String IMG = makeArisCardPath("TempSkill.png");
+    public static final String IMG = makeArisCardPath("ReactiveArmour.png");
 
 
     private static final CardRarity RARITY = CardRarity.COMMON;

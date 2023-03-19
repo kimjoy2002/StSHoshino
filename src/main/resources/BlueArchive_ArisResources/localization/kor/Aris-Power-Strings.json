@@ -15,7 +15,7 @@
   "BlueArchive_Aris:ChargePower": {
     "NAME": "충전",
     "DESCRIPTIONS": [
-      "모자란 에너지 대신 충전을 소모하여 카드를 사용할 수 있습니다. 턴이 끝나면 사라집니다."
+      "모자란 에너지 대신 #y충전을 소모하여 카드를 사용할 수 있습니다. 턴이 끝나면 사라집니다."
     ]
   },
   "BlueArchive_Aris:ShockPower": {
@@ -37,6 +37,72 @@
     "DESCRIPTIONS": [
       "#y과부하가 #b",
       " 번 발동합니다."
+    ]
+  },
+  "BlueArchive_Aris:FreeCardPower": {
+    "NAME": "무료 사용",
+    "DESCRIPTIONS": [
+      "다음에 사용하는 카드의 비용이 0이 됩니다.",
+      "다음에 사용하는 #b",
+      " 장의 카드의 비용이 0이 됩니다."
+    ]
+  },
+  "BlueArchive_Aris:JobWarriorPower": {
+    "NAME": "직업: 전사",
+    "DESCRIPTIONS": [
+      "피해를 받은 후 방어도를 #b",
+      " 얻습니다."
+    ]
+  },
+  "BlueArchive_Aris:NanoMachinePower": {
+    "NAME": "나노머신",
+    "DESCRIPTIONS": [
+      "피해를 받지않습니다. 다음 턴이 끝날때 체력을 #r",
+      " 잃고 사라집니다.",
+      "피해를 받지않습니다. 이번 턴이 끝날때 체력을 #r",
+      " 잃고 사라집니다."
+    ]
+  },
+  "BlueArchive_Aris:AuxiliaryPower": {
+    "NAME": "보조 전원",
+    "DESCRIPTIONS": [
+      "턴이 끝나도 #y충전이 사라지지 않습니다."
+    ]
+  },
+  "BlueArchive_Aris:AwakeningSupernovaPower": {
+    "NAME": "슈퍼노바, 각성입니다!",
+    "DESCRIPTIONS": [
+      "충전을 소모할때마다 #y힘을 #b",
+      " 얻습니다. 얻은 힘은 턴이 끝날때 사라집니다."
+    ]
+  },
+  "BlueArchive_Aris:JobMasteryPower": {
+    "NAME": "직업 숙련",
+    "DESCRIPTIONS": [
+      "#y클래스체인지 효과가 발동할때마다 #y방어도를 #b",
+      " 얻습니다."
+    ]
+  },
+  "BlueArchive_Aris:WeaponMasterPower": {
+    "NAME": "웨폰 마스터",
+    "DESCRIPTIONS": [
+      "턴마다 #b",
+      " 번까지, #y장비 카드 사용시 기존 #y장비 카드가 덱으로 되돌아오는 대신 손으로 돌아옵니다."
+    ]
+  },
+  "BlueArchive_Aris:WeaponReturnPower": {
+    "NAME": "무기 반환",
+    "DESCRIPTIONS": [
+      "이번 턴 #b",
+      " 번까지 #y장비 카드가 손으로 돌아옵니다."
+    ]
+  },
+  "BlueArchive_Aris:JobHeroPower": {
+    "NAME": "직업: 용사",
+    "DESCRIPTIONS": [
+      "스킬 카드를 사용하면 #y검기 카드를 얻습니다.",
+      "스킬 카드를 사용하면 #y검기 카드를 #b",
+      " 장 얻습니다."
     ]
   }
 }

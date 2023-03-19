@@ -4,19 +4,17 @@ import BlueArchive_Aris.characters.Aris;
 import BlueArchive_Aris.powers.ShockPower;
 import BlueArchive_Hoshino.DefaultMod;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
-import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
 import static BlueArchive_Hoshino.DefaultMod.makeArisCardPath;
 
 public class Firewall extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeArisID(Firewall.class.getSimpleName());
-    public static final String IMG = makeArisCardPath("TempSkill.png");
+    public static final String IMG = makeArisCardPath("Firewall.png");
 
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;

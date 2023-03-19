@@ -1,6 +1,8 @@
 package BlueArchive_Hoshino.patches.power;
 
 import BlueArchive_Aris.cards.OutputCard;
+import BlueArchive_Aris.powers.AwakeningSupernovaPower;
+import BlueArchive_Aris.powers.FreeCardPower;
 import BlueArchive_Hoshino.patches.EnumPatch;
 import BlueArchive_Hoshino.patches.cards.JobCardPatch;
 import basemod.ReflectionHacks;
@@ -25,6 +27,7 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import javassist.CtBehavior;
 
+import static BlueArchive_Aris.powers.ChargePower.chargeThisCombat;
 import static java.lang.Math.min;
 
 public class ChargePatch {
@@ -76,10 +79,14 @@ public class ChargePatch {
             if(AbstractDungeon.player.hasPower("BlueArchive_Aris:ChargePower") && !(__instance instanceof OutputCard)) {
                 AbstractPower cgPower = AbstractDungeon.player.getPower("BlueArchive_Aris:ChargePower");
                 int use_ = c.costForTurn - EnergyPanel.totalCount;
-
-                if(use_ >= cgPower.amount) {
-                    AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, "BlueArchive_Aris:ChargePower"));
-                } else if(use_ > 0) {
+                if(use_ > 0) {
+                    int reduceAmount = min(cgPower.amount, use_);
+                    if(reduceAmount > 0){
+                        chargeThisCombat+=reduceAmount;
+                        if(AbstractDungeon.player.hasPower(AwakeningSupernovaPower.POWER_ID)) {
+                            ((AwakeningSupernovaPower) AbstractDungeon.player.getPower(AwakeningSupernovaPower.POWER_ID)).onSpend(reduceAmount);
+                        }
+                    }
                     AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, "BlueArchive_Aris:ChargePower", use_));
                 }
             }
@@ -130,5 +137,23 @@ public class ChargePatch {
                 return LineFinder.findInOrder(ctMethodToPatch, finalMatcher);
             }
         }
+    }
+
+    @SpirePatch(
+            clz = EnergyPanel.class,
+            method = "renderOrb",
+            paramtypez = {
+                    SpriteBatch.class
+            }
+    )
+    public static class renderOrbPatcher {
+        public static SpireReturn Prefix(EnergyPanel __instance, SpriteBatch sb) {
+            if ( __instance.totalCount == 0 && AbstractDungeon.player.hasPower("BlueArchive_Aris:ChargePower")) {
+                AbstractDungeon.player.renderOrb(sb, true, __instance.current_x, __instance.current_y);
+                return SpireReturn.Return(true);
+            }
+            return SpireReturn.Continue();
+        }
+
     }
 }

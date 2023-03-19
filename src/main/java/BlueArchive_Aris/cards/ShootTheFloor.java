@@ -2,7 +2,6 @@ package BlueArchive_Aris.cards;
 
 import BlueArchive_Aris.characters.Aris;
 import BlueArchive_Hoshino.DefaultMod;
-import BlueArchive_Hoshino.cards.AbstractDynamicCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -23,7 +22,7 @@ public class ShootTheFloor extends AbstractDynamicCard {
     public static final String ID = DefaultMod.makeArisID(ShootTheFloor.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    public static final String IMG = makeArisCardPath("TempAttack.png");
+    public static final String IMG = makeArisCardPath("ShootTheFloor.png");
 
 
     public static final String NAME = cardStrings.NAME;

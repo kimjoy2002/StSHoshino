@@ -2,7 +2,6 @@ package BlueArchive_Aris.cards;
 
 import BlueArchive_Aris.characters.Aris;
 import BlueArchive_Aris.powers.BalanceBrokenPower;
-import BlueArchive_Aris.powers.SavePointPower;
 import BlueArchive_Hoshino.DefaultMod;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -14,7 +13,7 @@ import static BlueArchive_Hoshino.DefaultMod.makeArisCardPath;
 public class BalanceBroken extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeArisID(BalanceBroken.class.getSimpleName());
-    public static final String IMG = makeArisCardPath("TempPower.png");
+    public static final String IMG = makeArisCardPath("BalanceBroken.png");
 
 
     private static final CardRarity RARITY = CardRarity.RARE;

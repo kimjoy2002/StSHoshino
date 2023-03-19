@@ -1,13 +1,41 @@
 
 Aris.png
-size: 256,512
+size: 1024,512
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 Alice
   rotate: false
-  xy: 1, 1
+  xy: 803, 1
   size: 200, 300
   orig: 200, 300
+  offset: 0, 0
+  index: -1
+Crowbar
+  rotate: false
+  xy: 1, 383
+  size: 218, 125
+  orig: 218, 125
+  offset: 0, 0
+  index: -1
+supernova
+  rotate: false
+  xy: 1, 1
+  size: 800, 380
+  orig: 800, 380
+  offset: 0, 0
+  index: -1
+woodenstick
+  rotate: false
+  xy: 803, 303
+  size: 200, 200
+  orig: 200, 200
+  offset: 0, 0
+  index: -1
+sword
+  rotate: false
+  xy: 221, 383
+  size: 218, 125
+  orig: 218, 125
   offset: 0, 0
   index: -1

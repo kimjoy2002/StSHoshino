@@ -28,6 +28,7 @@ import static BlueArchive_Hoshino.DefaultMod.makePowerPath;
 
 public class JobAoePower extends JobPower implements CloneablePowerInterface {
     public int strike_power;
+    public int base_strike_power;
     public int[] damage;
     public DamageInfo.DamageType damageTypeForTurn;
 
@@ -38,8 +39,8 @@ public class JobAoePower extends JobPower implements CloneablePowerInterface {
 
     // We create 2 new textures *Using This Specific Texture Loader* - an 84x84 image and a 32x32 one.
     // There's a fallback "missing texture" image, so the game shouldn't crash if you accidentally put a non-existent file.
-    private static final Texture tex84 = TextureLoader.getTexture(makeArisPowerPath("TempPower84.png"));
-    private static final Texture tex32 = TextureLoader.getTexture(makeArisPowerPath("TempPower32.png"));
+    private static final Texture tex84 = TextureLoader.getTexture(makeArisPowerPath("JobAoePower84.png"));
+    private static final Texture tex32 = TextureLoader.getTexture(makeArisPowerPath("JobAoePower32.png"));
 
     public JobAoePower(final AbstractCreature owner, final int amount
           , AbstractCard equip  , final int[] damage, final DamageInfo.DamageType damageTypeForTurn) {
@@ -48,6 +49,7 @@ public class JobAoePower extends JobPower implements CloneablePowerInterface {
 
         this.owner = owner;
         this.strike_power = amount;
+        this.base_strike_power = amount;
         this.equip = equip;
         this.damage = damage;
         this.damageTypeForTurn = damageTypeForTurn;
@@ -72,12 +74,26 @@ public class JobAoePower extends JobPower implements CloneablePowerInterface {
         description = DESCRIPTIONS[0] + strike_power + DESCRIPTIONS[1];
     }
 
+    public String getAnimation() {
+        return "baseAnimation_AOEDPS";
+    }
     public void onJobChange() {
+        super.onJobChange();
         this.addToBot(new SFXAction("ATTACK_DEFECT_BEAM"));
         this.addToBot(new VFXAction(owner, new SweepingBeamEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, AbstractDungeon.player.flipHorizontal), 0.4F));
         this.addToBot(new DamageAllEnemiesAction(owner, damage, damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
     }
 
+    public void levelUp(){
+        flash();
+        strike_power+=base_strike_power;
+        if(amount == -1) {
+            amount = 2;
+        }
+        else {
+            amount++;
+        }
+    }
     @Override
     public AbstractPower makeCopy() {
         return new JobAoePower(owner, strike_power, equip, damage, damageTypeForTurn);

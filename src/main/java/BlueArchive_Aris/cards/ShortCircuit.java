@@ -17,7 +17,7 @@ import static BlueArchive_Hoshino.DefaultMod.makeArisCardPath;
 public class ShortCircuit extends AbstractDynamicCard  {
 
     public static final String ID = DefaultMod.makeArisID(ShortCircuit.class.getSimpleName());
-    public static final String IMG = makeArisCardPath("TempSkill.png");
+    public static final String IMG = makeArisCardPath("ShortCircuit.png");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
 

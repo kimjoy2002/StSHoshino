@@ -1,5 +1,6 @@
 package BlueArchive_Aris.powers;
 
+import BlueArchive_Aris.actions.SafeCheckShockAction;
 import BlueArchive_Hoshino.DefaultMod;
 import BlueArchive_Hoshino.util.TextureLoader;
 import basemod.interfaces.CloneablePowerInterface;
@@ -28,8 +29,8 @@ public class ShockPower extends AbstractPower implements CloneablePowerInterface
 
     // We create 2 new textures *Using This Specific Texture Loader* - an 84x84 image and a 32x32 one.
     // There's a fallback "missing texture" image, so the game shouldn't crash if you accidentally put a non-existent file.
-    private static final Texture tex84 = TextureLoader.getTexture(makeArisPowerPath("TempPower84.png"));
-    private static final Texture tex32 = TextureLoader.getTexture(makeArisPowerPath("TempPower32.png"));
+    private static final Texture tex84 = TextureLoader.getTexture(makeArisPowerPath("ShockPower84.png"));
+    private static final Texture tex32 = TextureLoader.getTexture(makeArisPowerPath("ShockPower32.png"));
     AbstractCreature source;
     public ShockPower(final AbstractCreature owner, final AbstractCreature source, final int amount) {
         name = NAME;
@@ -67,7 +68,7 @@ public class ShockPower extends AbstractPower implements CloneablePowerInterface
             this.amount--;
             this.updateDescription();
             if(amount <= 0) {
-                this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
+                this.addToBot(new SafeCheckShockAction(this.owner));
             }
         }
         return damageAmount;

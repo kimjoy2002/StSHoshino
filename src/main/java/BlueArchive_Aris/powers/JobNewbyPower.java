@@ -31,8 +31,8 @@ public class JobNewbyPower extends JobPower implements CloneablePowerInterface {
 
     // We create 2 new textures *Using This Specific Texture Loader* - an 84x84 image and a 32x32 one.
     // There's a fallback "missing texture" image, so the game shouldn't crash if you accidentally put a non-existent file.
-    private static final Texture tex84 = TextureLoader.getTexture(makeArisPowerPath("TempPower84.png"));
-    private static final Texture tex32 = TextureLoader.getTexture(makeArisPowerPath("TempPower32.png"));
+    private static final Texture tex84 = TextureLoader.getTexture(makeArisPowerPath("JobNewbyPower84.png"));
+    private static final Texture tex32 = TextureLoader.getTexture(makeArisPowerPath("JobNewbyPower32.png"));
 
     public JobNewbyPower(final AbstractCreature owner, final int amount
           , AbstractCard equip) {
@@ -57,11 +57,23 @@ public class JobNewbyPower extends JobPower implements CloneablePowerInterface {
     public void updateDescription() {
         description = DESCRIPTIONS[0];
     }
-
+    public String getAnimation() {
+        return "baseAnimation_Newby";
+    }
     public void onJobChange() {
+        super.onJobChange();
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(owner, draw_power));
     }
 
+    public void levelUp(){
+        flash();
+        if(amount == -1) {
+            amount = 2;
+        }
+        else {
+            amount++;
+        }
+    }
     @Override
     public AbstractPower makeCopy() {
         return new JobNewbyPower(owner, draw_power, equip);

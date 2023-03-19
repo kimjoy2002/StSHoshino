@@ -4,7 +4,6 @@ import BlueArchive_Aris.actions.JobChangeAction;
 import BlueArchive_Aris.characters.Aris;
 import BlueArchive_Aris.powers.JobAoePower;
 import BlueArchive_Hoshino.DefaultMod;
-import BlueArchive_Hoshino.cards.AbstractDynamicCard;
 import BlueArchive_Hoshino.patches.EnumPatch;
 import BlueArchive_Hoshino.powers.GoldWhalePower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;

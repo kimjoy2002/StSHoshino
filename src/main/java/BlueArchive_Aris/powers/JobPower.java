@@ -1,12 +1,39 @@
 package BlueArchive_Aris.powers;
 
+import BlueArchive_Aris.characters.Aris;
+import BlueArchive_Hoshino.characters.Hoshino;
 import basemod.abstracts.CustomMonster;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+
+import java.util.HashSet;
+import java.util.Set;
 
 public abstract class JobPower extends AbstractPower {
     public AbstractCard equip;
+    public static Set<String> jobThisCombat = new HashSet<String>();
+    public abstract void levelUp();
+    public abstract String getAnimation();
 
-    public abstract void onJobChange();
+    public void onJobChange() {
+        jobThisCombat.add(ID);
+        if(AbstractDungeon.player.hasPower(JobMasteryPower.POWER_ID)) {
+            ((JobMasteryPower) AbstractDungeon.player.getPower(JobMasteryPower.POWER_ID)).onClassChange();
+        }
+    };
+
+    public void onVictory() {
+        if(AbstractDungeon.player instanceof Aris){
+            ((Aris)AbstractDungeon.player).newAnimation("");
+        }
+    }
+
+    public void onRemove() {
+        if(AbstractDungeon.player instanceof Aris){
+            ((Aris)AbstractDungeon.player).newAnimation("");
+        }
+
+    }
 }

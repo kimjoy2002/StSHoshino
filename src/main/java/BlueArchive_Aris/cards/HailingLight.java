@@ -3,7 +3,6 @@ package BlueArchive_Aris.cards;
 import BlueArchive_Aris.characters.Aris;
 import BlueArchive_Aris.powers.ChargePower;
 import BlueArchive_Hoshino.DefaultMod;
-import BlueArchive_Hoshino.cards.AbstractDynamicCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -14,7 +13,7 @@ import static BlueArchive_Hoshino.DefaultMod.makeArisCardPath;
 public class HailingLight extends AbstractDynamicCard implements OutputCard {
 
     public static final String ID = DefaultMod.makeArisID(HailingLight.class.getSimpleName());
-    public static final String IMG = makeArisCardPath("TempSkill.png");
+    public static final String IMG = makeArisCardPath("HailingLight.png");
 
 
     private static final CardRarity RARITY = CardRarity.COMMON;

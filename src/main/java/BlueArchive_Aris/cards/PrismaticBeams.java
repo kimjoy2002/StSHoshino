@@ -2,9 +2,6 @@ package BlueArchive_Aris.cards;
 
 import BlueArchive_Aris.characters.Aris;
 import BlueArchive_Hoshino.DefaultMod;
-import BlueArchive_Hoshino.cards.AbstractDynamicCard;
-import BlueArchive_Hoshino.cards.ChooseRepose;
-import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -18,7 +15,6 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
 import com.megacrit.cardcrawl.vfx.combat.SmallLaserEffect;
 
 import static BlueArchive_Hoshino.DefaultMod.makeArisCardPath;
@@ -27,7 +23,7 @@ public class PrismaticBeams extends OverloadCard {
     public static final String ID = DefaultMod.makeArisID(PrismaticBeams.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    public static final String IMG = makeArisCardPath("TempAttack.png");
+    public static final String IMG = makeArisCardPath("PrismaticBeams.png");
 
 
     public static final String NAME = cardStrings.NAME;

@@ -2,7 +2,6 @@ package BlueArchive_Aris.cards;
 
 import BlueArchive_Aris.characters.Aris;
 import BlueArchive_Hoshino.DefaultMod;
-import BlueArchive_Hoshino.cards.AbstractDynamicCard;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -14,7 +13,7 @@ import static BlueArchive_Hoshino.DefaultMod.makeArisCardPath;
 public class SelfRepair extends OverloadCard {
 
     public static final String ID = DefaultMod.makeArisID(SelfRepair.class.getSimpleName());
-    public static final String IMG = makeArisCardPath("TempSkill.png");
+    public static final String IMG = makeArisCardPath("SelfRepair.png");
 
 
     private static final CardRarity RARITY = CardRarity.COMMON;
@@ -36,8 +35,10 @@ public class SelfRepair extends OverloadCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
+        super.use(p,m);
     }
 
+    @Override
     public void onOverload(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
     }

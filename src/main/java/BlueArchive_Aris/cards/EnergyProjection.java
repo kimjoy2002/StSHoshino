@@ -3,8 +3,6 @@ package BlueArchive_Aris.cards;
 import BlueArchive_Aris.characters.Aris;
 import BlueArchive_Aris.powers.BalanceBrokenPower;
 import BlueArchive_Hoshino.DefaultMod;
-import BlueArchive_Hoshino.cards.AbstractDynamicCard;
-import BlueArchive_Hoshino.subscriber.BulletSubscriber;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -22,7 +20,7 @@ public class EnergyProjection extends OverloadCard {
     public static final String ID = DefaultMod.makeArisID(EnergyProjection.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    public static final String IMG = makeArisCardPath("TempAttack.png");
+    public static final String IMG = makeArisCardPath("EnergyProjection.png");
 
 
     public static final String NAME = cardStrings.NAME;

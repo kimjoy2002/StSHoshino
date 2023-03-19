@@ -1,5 +1,7 @@
 package BlueArchive_Hoshino.patches.power;
 
+import BlueArchive_Aris.cards.OverloadCard;
+import BlueArchive_Aris.powers.ChargePower;
 import BlueArchive_Hoshino.cards.ShuffleCard;
 import BlueArchive_Hoshino.powers.FreeReloadPower;
 import BlueArchive_Hoshino.subscriber.BulletSubscriber;
@@ -8,6 +10,8 @@ import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.common.ShuffleAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import javassist.CtBehavior;
+
+import static BlueArchive_Aris.powers.JobPower.jobThisCombat;
 
 public class GameActionManagerPatch {
 
@@ -42,6 +46,9 @@ public class GameActionManagerPatch {
             ShuffleCard.totalShuffledThisTurn.set(0);
             BulletSubscriber.reloadedThisTurn.set(0);
             BulletSubscriber.reloadedThisCombat = 0;
+            ChargePower.chargeThisCombat = 0;
+            OverloadCard.overloadThisCombat = 0;
+            jobThisCombat.clear();
             FreeReloadPower.freeReload = false;
         }
     }

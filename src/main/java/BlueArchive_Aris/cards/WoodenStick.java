@@ -5,7 +5,6 @@ import BlueArchive_Aris.characters.Aris;
 import BlueArchive_Aris.powers.JobAoePower;
 import BlueArchive_Aris.powers.JobNewbyPower;
 import BlueArchive_Hoshino.DefaultMod;
-import BlueArchive_Hoshino.cards.AbstractDynamicCard;
 import BlueArchive_Hoshino.patches.EnumPatch;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -18,7 +17,7 @@ import static BlueArchive_Hoshino.DefaultMod.makeArisCardPath;
 public class WoodenStick extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeArisID(WoodenStick.class.getSimpleName());
-    public static final String IMG = makeArisCardPath("TempSkill.png");
+    public static final String IMG = makeArisCardPath("WoodenStick.png");
 
 
     private static final CardRarity RARITY = CardRarity.COMMON;

@@ -3,20 +3,18 @@ package BlueArchive_Aris.cards;
 import BlueArchive_Aris.characters.Aris;
 import BlueArchive_Aris.powers.ChargePower;
 import BlueArchive_Hoshino.DefaultMod;
-import BlueArchive_Hoshino.cards.AbstractDynamicCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import static BlueArchive_Hoshino.DefaultMod.makeArisCardPath;
 
 public class EnergyCharge extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeArisID(EnergyCharge.class.getSimpleName());
-    public static final String IMG = makeArisCardPath("TempSkill.png");
+    public static final String IMG = makeArisCardPath("EnergyCharge.png");
 
 
     private static final CardRarity RARITY = CardRarity.BASIC;

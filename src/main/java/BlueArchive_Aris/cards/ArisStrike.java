@@ -2,28 +2,16 @@ package BlueArchive_Aris.cards;
 
 import BlueArchive_Aris.characters.Aris;
 import BlueArchive_Hoshino.DefaultMod;
-import BlueArchive_Hoshino.actions.BulletModifyAction;
-import BlueArchive_Hoshino.cards.AbstractDynamicCard;
-import BlueArchive_Hoshino.cards.ShotCard;
-import BlueArchive_Hoshino.characters.Hoshino;
-import BlueArchive_Hoshino.patches.EnumPatch;
-import BlueArchive_Hoshino.subscriber.BulletSubscriber;
-import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
-import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
 
 import static BlueArchive_Hoshino.DefaultMod.makeArisCardPath;
-import static BlueArchive_Hoshino.DefaultMod.makeCardPath;
 public class ArisStrike extends AbstractDynamicCard {
     public static final String ID = DefaultMod.makeArisID(ArisStrike.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);

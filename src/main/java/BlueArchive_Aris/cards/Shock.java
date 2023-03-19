@@ -3,7 +3,6 @@ package BlueArchive_Aris.cards;
 import BlueArchive_Aris.characters.Aris;
 import BlueArchive_Aris.powers.ShockPower;
 import BlueArchive_Hoshino.DefaultMod;
-import BlueArchive_Hoshino.cards.AbstractDynamicCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -21,7 +20,7 @@ public class Shock extends AbstractDynamicCard {
     public static final String ID = DefaultMod.makeArisID(Shock.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    public static final String IMG = makeArisCardPath("TempAttack.png");
+    public static final String IMG = makeArisCardPath("Shock.png");
 
 
     public static final String NAME = cardStrings.NAME;

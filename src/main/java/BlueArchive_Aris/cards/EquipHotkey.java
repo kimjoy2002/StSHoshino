@@ -3,18 +3,16 @@ package BlueArchive_Aris.cards;
 import BlueArchive_Aris.actions.EquipHotkeyAction;
 import BlueArchive_Aris.characters.Aris;
 import BlueArchive_Hoshino.DefaultMod;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
 import static BlueArchive_Hoshino.DefaultMod.makeArisCardPath;
 
 public class EquipHotkey extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeArisID(EquipHotkey.class.getSimpleName());
-    public static final String IMG = makeArisCardPath("TempSkill.png");
+    public static final String IMG = makeArisCardPath("EquipHotkey.png");
 
 
     private static final CardRarity RARITY = CardRarity.RARE;
