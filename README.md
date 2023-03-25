@@ -33,7 +33,7 @@
 
 버그, 밸런스등 문제가 있으며 현재 한글만 제공합니다. 슬더스 mod 폴더에 넣어주세요  
 
-[아리스모드(미완성) 다운로드](http://joy1999.codns.com:8999/sts/BlueArchive_Hoshino.jar)   
+[아리스모드(미완성) 다운로드](https://www.mediafire.com/file/8qv5j1nzek5t7s7/BlueArchive_Hoshino.jar/file)   
 <br><br>
    
 
