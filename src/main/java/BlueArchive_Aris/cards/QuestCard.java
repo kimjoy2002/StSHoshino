@@ -10,6 +10,8 @@ import org.apache.logging.log4j.Logger;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+import static BlueArchive_Aris.cards.QuestCard.QuestProcess.TAS;
+
 public abstract class QuestCard extends AbstractDynamicCard {
     private static final Logger logger = LogManager.getLogger(QuestCard.class.getName());
     public QuestCard(String id, String img, int cost, CardType type, CardColor color, CardRarity rarity, CardTarget target) {
@@ -22,7 +24,10 @@ public abstract class QuestCard extends AbstractDynamicCard {
          GAIN_CARD,
          SKIP_CARD,
          SLAIN_ELITE,
-         PROGRESS_FLOOR
+         PROGRESS_FLOOR,
+         FINISH_BATTLE,
+         TAS
+
 
     }
     static ArrayList<AbstractCard> removeList = new ArrayList<AbstractCard>();
@@ -45,7 +50,7 @@ public abstract class QuestCard extends AbstractDynamicCard {
             while(var2.hasNext()) {
                 AbstractCard c = (AbstractCard)var2.next();
                 if (c instanceof QuestCard) {
-                    if(((QuestCard) c).onQuestCheck(process)) {
+                    if(process == TAS || ((QuestCard) c).onQuestCheck(process)) {
                         completeList.add(c);
                     }
                 }

@@ -33,6 +33,7 @@ public class Firewall extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         magicNumber = baseMagicNumber = MAGIC;
         secondMagicNumber = baseSecondMagicNumber = SECONDMAGIC;
+        exhaust = true;
     }
 
     // Actions the card should do.

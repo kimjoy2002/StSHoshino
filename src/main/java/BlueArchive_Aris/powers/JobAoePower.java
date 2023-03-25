@@ -77,8 +77,8 @@ public class JobAoePower extends JobPower implements CloneablePowerInterface {
     public String getAnimation() {
         return "baseAnimation_AOEDPS";
     }
-    public void onJobChange() {
-        super.onJobChange();
+    public void onJobChange(boolean withEquip) {
+        super.onJobChange(withEquip);
         this.addToBot(new SFXAction("ATTACK_DEFECT_BEAM"));
         this.addToBot(new VFXAction(owner, new SweepingBeamEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, AbstractDungeon.player.flipHorizontal), 0.4F));
         this.addToBot(new DamageAllEnemiesAction(owner, damage, damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));

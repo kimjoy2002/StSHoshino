@@ -34,8 +34,8 @@
   },
   "BlueArchive_Hoshino:TacticalSuppressionAttack": {
     "NAME": "전술 진압",
-    "DESCRIPTION": "bluearchive_hoshino:탄약을 5개까지 소모하고 하나당 적 전체에 피해를 !D! 줍니다. NL 소멸. NL bluearchive_hoshino:카운트다운(4): 추가로 적 전체를 bluearchive_hoshino:기절 시킵니다.",
-    "UPGRADE_DESCRIPTION": "bluearchive_hoshino:탄약을 5개까지 소모하고 하나당 적 전체에 피해를 !D! 줍니다. NL 소멸. NL ",
+    "DESCRIPTION": "bluearchive_hoshino:탄약을 5개까지 소모하고 하나당 적 전체에 피해를 !D! 줍니다. NL 소멸 NL bluearchive_hoshino:카운트다운(4): 추가로 적 전체를 bluearchive_hoshino:기절 시킵니다.",
+    "UPGRADE_DESCRIPTION": "bluearchive_hoshino:탄약을 5개까지 소모하고 하나당 적 전체에 피해를 !D! 줍니다. NL 소멸 NL ",
     "EXTENDED_DESCRIPTION": [
       "bluearchive_hoshino:카운트다운(",
       "): 추가로 적 전체를 bluearchive_hoshino:기절 시킵니다."
@@ -74,7 +74,7 @@
   },
   "BlueArchive_Hoshino:BDNote": {
     "NAME": "BD노트",
-    "DESCRIPTION": "뽑을 카드 더미에서 bluearchive_hoshino:카운트다운 카드를 1장 선택해 가져옵니다. NL 해당 카드의 bluearchive_hoshino:카운트다운 수치를 1 증가시키거나 1 감소시킵니다. NL 소멸.",
+    "DESCRIPTION": "뽑을 카드 더미에서 bluearchive_hoshino:카운트다운 카드를 1장 선택해 가져옵니다. NL 해당 카드의 bluearchive_hoshino:카운트다운 수치를 1 증가시키거나 1 감소시킵니다. NL 소멸",
     "EXTENDED_DESCRIPTION": [
       "뽑을 카드 더미에 NL 카운트다운 카드가 없어."
     ]
@@ -100,7 +100,7 @@
   },
   "BlueArchive_Hoshino:Contract": {
     "NAME": "계약",
-    "DESCRIPTION": "bluearchive_hoshino:탄약의 최대치가 1 감소합니다. NL 힘을 !M! 얻습니다. NL bluearchive_hoshino:숙련을 !M! 얻습니다. NL 소멸.",
+    "DESCRIPTION": "bluearchive_hoshino:탄약의 최대치가 1 감소합니다. NL 힘을 !M! 얻습니다. NL bluearchive_hoshino:숙련을 !M! 얻습니다. NL 소멸",
     "UPGRADE_DESCRIPTION": "bluearchive_hoshino:탄약의 최대치가 1 감소합니다. NL 힘을 !M! 얻습니다. NL bluearchive_hoshino:숙련을 !M! 얻습니다."
   },
   "BlueArchive_Hoshino:CoverLoad": {
@@ -109,7 +109,7 @@
   },
   "BlueArchive_Hoshino:UnplannedGamble": {
     "NAME": "즉흥적인 도박",
-    "DESCRIPTION": "원하는 만큼 카드를 뽑을 카드 더미로 되돌리고 섞습니다. 그 만큼 카드를 뽑습니다. NL 소멸.",
+    "DESCRIPTION": "원하는 만큼 카드를 뽑을 카드 더미로 되돌리고 섞습니다. 그 만큼 카드를 뽑습니다. NL 소멸",
     "UPGRADE_DESCRIPTION": "원하는 만큼 카드를 뽑을 카드 더미로 되돌리고 섞습니다. 그 만큼 카드를 뽑습니다."
   },
   "BlueArchive_Hoshino:AnAceInTheHole": {
@@ -145,7 +145,7 @@
   },
   "BlueArchive_Hoshino:EmergencyFieldAidSkill": {
     "NAME": "응급 치료",
-    "DESCRIPTION": "휘발성. NL 방어도를 !B! 얻습니다. NL 자신의 체력이 절반 이하일때는 방어도 대신 체력을 !M! 회복합니다. NL 소멸."
+    "DESCRIPTION": "휘발성. NL 방어도를 !B! 얻습니다. NL 자신의 체력이 절반 이하일때는 방어도 대신 체력을 !M! 회복합니다. NL 소멸"
   },
   "BlueArchive_Hoshino:ShieldRebound": {
     "NAME": "빗겨막기",
@@ -200,7 +200,7 @@
   },
   "BlueArchive_Hoshino:RefillAmmo": {
     "NAME": "탄약 보충",
-    "DESCRIPTION": "소멸된 *탄약 *상자 카드를 비용을 0으로 해서 전부 덱으로 되돌리고 섞습니다. NL 그만큼 카드를 뽑습니다. NL 소멸.",
+    "DESCRIPTION": "소멸된 *탄약 *상자 카드를 비용을 0으로 해서 전부 덱으로 되돌리고 섞습니다. NL 그만큼 카드를 뽑습니다. NL 소멸",
     "UPGRADE_DESCRIPTION": "소멸된 *탄약 *상자 카드를 비용을 0으로 해서 전부 덱으로 되돌리고 섞습니다. NL 그만큼 카드를 뽑습니다."
   },
   "BlueArchive_Hoshino:SwimsuitForm": {
@@ -240,8 +240,8 @@
   },
   "BlueArchive_Hoshino:NoWasteReload": {
     "NAME": "낭비없는 장전",
-    "DESCRIPTION": "bluearchive_hoshino:탄약이 모두 비어있으면 [E] [E] 를 얻습니다. NL bluearchive_hoshino:장전 합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "보존. NL bluearchive_hoshino:탄약이 모두 비어있으면 [E] [E] 를 얻습니다. NL bluearchive_hoshino:장전 합니다. NL 소멸."
+    "DESCRIPTION": "bluearchive_hoshino:탄약이 모두 비어있으면 [E] [E] 를 얻습니다. NL bluearchive_hoshino:장전 합니다. NL 소멸",
+    "UPGRADE_DESCRIPTION": "보존. NL bluearchive_hoshino:탄약이 모두 비어있으면 [E] [E] 를 얻습니다. NL bluearchive_hoshino:장전 합니다. NL 소멸"
   },
   "BlueArchive_Hoshino:HorusOfEye": {
     "NAME": "호루스의 눈",
@@ -262,11 +262,11 @@
   },
   "BlueArchive_Hoshino:Mystery": {
     "NAME": "신비",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL bluearchive_hoshino:방패를 !M! 얻습니다. NL 소멸."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL bluearchive_hoshino:방패를 !M! 얻습니다. NL 소멸"
   },
   "BlueArchive_Hoshino:BankRobbery": {
     "NAME": "범행 예고",
-    "DESCRIPTION": "휘발성. NL 적 전체에게 bluearchive_hoshino:현상금을 !M! 부여합니다. NL 적 전체에게 취약을 2 부여합니다. NL 소멸."
+    "DESCRIPTION": "휘발성. NL 적 전체에게 bluearchive_hoshino:현상금을 !M! 부여합니다. NL 적 전체에게 취약을 2 부여합니다. NL 소멸"
   },
   "BlueArchive_Hoshino:HitAndRun": {
     "NAME": "치고빠지기",
@@ -274,15 +274,15 @@
   },
   "BlueArchive_Hoshino:IncendiaryShot": {
     "NAME": "소이탄 탄약 상자",
-    "DESCRIPTION": "bluearchive_hoshino:장전 합니다. NL 다시 bluearchive_hoshino:장전할때 까지 bluearchive_hoshino:탄약을 소모할때마다 적 전체에 !M! 데미지를 줍니다 . NL 소멸."
+    "DESCRIPTION": "bluearchive_hoshino:장전 합니다. NL 다시 bluearchive_hoshino:장전할때 까지 bluearchive_hoshino:탄약을 소모할때마다 적 전체에 !M! 데미지를 줍니다 . NL 소멸"
   },
   "BlueArchive_Hoshino:FragShot": {
     "NAME": "파쇄탄 탄약 상자",
-    "DESCRIPTION": "bluearchive_hoshino:장전 합니다. NL 다시 bluearchive_hoshino:장전할때 까지 bluearchive_hoshino:탄약을 소모한 공격이 취약을 !M! 부여합니다. NL 소멸."
+    "DESCRIPTION": "bluearchive_hoshino:장전 합니다. NL 다시 bluearchive_hoshino:장전할때 까지 bluearchive_hoshino:탄약을 소모한 공격이 취약을 !M! 부여합니다. NL 소멸"
   },
   "BlueArchive_Hoshino:SlugShot": {
     "NAME": "슬러그탄 탄약 상자",
-    "DESCRIPTION": "한 발만 bluearchive_hoshino:장전 합니다. NL 다시 bluearchive_hoshino:장전할때 까지 bluearchive_hoshino:탄약을 소모한 공격에 !M! 피해를 추가합니다. NL 소멸."
+    "DESCRIPTION": "한 발만 bluearchive_hoshino:장전 합니다. NL 다시 bluearchive_hoshino:장전할때 까지 bluearchive_hoshino:탄약을 소모한 공격에 !M! 피해를 추가합니다. NL 소멸"
   },
   "BlueArchive_Hoshino:MilitarySupplies": {
     "NAME": "군수물자",
@@ -295,8 +295,8 @@
   },
   "BlueArchive_Hoshino:Lubricating": {
     "NAME": "총기 손질",
-    "DESCRIPTION": "무작위 카드를 1장 소멸시킵니다. NL 버린 카드 더미에 있는 카드를 !M! 장 손으로 가져옵니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "카드를 1장 소멸시킵니다. NL 버린 카드 더미에 있는 카드를 !M! 장 손으로 가져옵니다. NL 소멸."
+    "DESCRIPTION": "무작위 카드를 1장 소멸시킵니다. NL 버린 카드 더미에 있는 카드를 !M! 장 손으로 가져옵니다. NL 소멸",
+    "UPGRADE_DESCRIPTION": "카드를 1장 소멸시킵니다. NL 버린 카드 더미에 있는 카드를 !M! 장 손으로 가져옵니다. NL 소멸"
   },
 
   "BlueArchive_Hoshino:WideShot": {
@@ -309,8 +309,8 @@
   },
   "BlueArchive_Hoshino:DeepSleep": {
     "NAME": "숙면",
-    "DESCRIPTION": "X번 반복: NL 손의 무작위 카드의 비용을 이번 전투동안 1 감소시킵니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "X+1번 반복: NL 손의 무작위 카드의 비용을 이번 전투동안 1 감소시킵니다. NL 소멸."
+    "DESCRIPTION": "X번 반복: NL 손의 무작위 카드의 비용을 이번 전투동안 1 감소시킵니다. NL 소멸",
+    "UPGRADE_DESCRIPTION": "X+1번 반복: NL 손의 무작위 카드의 비용을 이번 전투동안 1 감소시킵니다. NL 소멸"
   },
   "BlueArchive_Hoshino:Revenge": {
     "NAME": "완벽한 계획",
@@ -371,7 +371,7 @@
   },
   "BlueArchive_Hoshino:LeaveItToMe": {
     "NAME": "나에게 맡겨!",
-    "DESCRIPTION": "bluearchive_hoshino:탄약을 소모합니다. NL 피해를 !D! 줍니다. NL 방어도를 !B! 얻습니다. NL (매 층마다 방어도를 영구적으로 !M! 증가시킵니다. 사용시 0으로 초기화됩니다.) NL 소멸."
+    "DESCRIPTION": "bluearchive_hoshino:탄약을 소모합니다. NL 피해를 !D! 줍니다. NL 방어도를 !B! 얻습니다. NL (매 층마다 방어도를 영구적으로 !M! 증가시킵니다. 사용시 0으로 초기화됩니다.) NL 소멸"
   },
   "BlueArchive_Hoshino:FixShield": {
     "NAME": "방패 고정",

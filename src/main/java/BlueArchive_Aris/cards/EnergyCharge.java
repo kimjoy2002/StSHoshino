@@ -1,12 +1,15 @@
 package BlueArchive_Aris.cards;
 
+import BlueArchive_Aris.actions.EnergyChargeAction;
 import BlueArchive_Aris.characters.Aris;
 import BlueArchive_Aris.powers.ChargePower;
 import BlueArchive_Hoshino.DefaultMod;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static BlueArchive_Hoshino.DefaultMod.makeArisCardPath;
@@ -21,10 +24,11 @@ public class EnergyCharge extends AbstractDynamicCard {
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = Aris.Enums.COLOR_BLUE;
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    private static final int COST = 1;
+    private static final int COST = 0;
     private static final int BLOCK = 4;
-    private static final int UPGRADE_PLUS_BLOCK = 3;
+    private static final int UPGRADE_BLOCK_AMOUT = 2;
     private static final int AMOUNT = 1;
 
 
@@ -40,7 +44,8 @@ public class EnergyCharge extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
-        this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ChargePower(AbstractDungeon.player, AMOUNT), AMOUNT));
+        AbstractDungeon.actionManager.addToBottom(new EnergyChargeAction(upgraded?2:1));
+
 
     }
 
@@ -49,7 +54,8 @@ public class EnergyCharge extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBlock(UPGRADE_PLUS_BLOCK);
+            upgradeBlock(UPGRADE_BLOCK_AMOUT);
+            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
             initializeDescription();
         }
     }

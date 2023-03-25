@@ -50,7 +50,7 @@
   "BlueArchive_Aris:JobWarriorPower": {
     "NAME": "직업: 전사",
     "DESCRIPTIONS": [
-      "피해를 받은 후 방어도를 #b",
+      "자신의 턴 종료시 피해를 받은 횟수만큼 방어도를 #b",
       " 얻습니다."
     ]
   },
@@ -97,12 +97,53 @@
       " 번까지 #y장비 카드가 손으로 돌아옵니다."
     ]
   },
+  "BlueArchive_Aris:WeaponMasterPower2": {
+    "NAME": "웨폰 마스터",
+    "DESCRIPTIONS": [
+      "직업이 바뀔때마다 카드를 #b",
+      " 장 뽑습니다."
+    ]
+  },
   "BlueArchive_Aris:JobHeroPower": {
     "NAME": "직업: 용사",
     "DESCRIPTIONS": [
       "스킬 카드를 사용하면 #y검기 카드를 얻습니다.",
       "스킬 카드를 사용하면 #y검기 카드를 #b",
       " 장 얻습니다."
+    ]
+  },
+  "BlueArchive_Aris:EndTurnBlockPower": {
+    "NAME": "방어 지연",
+    "DESCRIPTIONS": [
+      "자신의 턴이 끝나면 #y방어도를 #b",
+      " 얻습니다."
+    ]
+  },
+  "BlueArchive_Aris:StaticArmourPower": {
+    "NAME": "정전기 갑옷",
+    "DESCRIPTIONS": [
+      "피해를 받을때마다 적 전체에 #y감전을 #b",
+      " 부여합니다."
+    ]
+  },
+  "BlueArchive_Aris:TransformerPower": {
+    "NAME": "변압기",
+    "DESCRIPTIONS": [
+      "#y감전의 데미지가 모든 적에게 전파됩니다."
+    ]
+  },
+  "BlueArchive_Aris:JobRoguePower": {
+    "NAME": "직업: 도적",
+    "DESCRIPTIONS": [
+      "비용이 0인 공격 카드를 사용시 무작위 적에게 #y감전을 #b",
+      " 부여합니다."
+    ]
+  },
+  "BlueArchive_Aris:JobIdolPower": {
+    "NAME": "직업: 아이돌",
+    "DESCRIPTIONS": [
+      "턴이 시작할때 무작위 다른 직업 일반 카드를 #b",
+      " 장 가져옵니다."
     ]
   }
 }

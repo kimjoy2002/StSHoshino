@@ -5,6 +5,7 @@ import BlueArchive_Hoshino.util.TextureLoader;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -14,6 +15,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
 import static BlueArchive_Hoshino.DefaultMod.makeArisPowerPath;
 
@@ -62,15 +65,15 @@ public class JobWarriorPower extends JobPower implements CloneablePowerInterface
     public String getAnimation() {
         return "baseAnimation_Warrior";
     }
-    public void onJobChange() {
-        super.onJobChange();
+    public void onJobChange(boolean withEquip) {
+        super.onJobChange(withEquip);
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(owner, owner, block));
     }
 
     public int onAttacked(DamageInfo info, int damageAmount) {
         if (damageAmount < this.owner.currentHealth && damageAmount > 0 && info.owner != null && info.type != DamageInfo.DamageType.HP_LOSS) {
             this.flash();
-            this.addToTop(new GainBlockAction(this.owner, this.owner, this.bonusBlock));
+            this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EndTurnBlockPower(AbstractDungeon.player,  this.bonusBlock),  this.bonusBlock));
         }
         return damageAmount;
     }

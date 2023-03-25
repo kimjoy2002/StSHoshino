@@ -59,7 +59,7 @@ public class JobMasteryPower extends AbstractPower implements CloneablePowerInte
         return new JobMasteryPower(owner, amount);
     }
 
-    public void onClassChange() {
+    public void onClassChange(boolean withEquip) {
         this.flash();
         this.addToBot(new GainBlockAction(this.owner, this.owner, this.amount));
     }

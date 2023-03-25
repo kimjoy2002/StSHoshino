@@ -31,6 +31,7 @@ import static BlueArchive_Hoshino.DefaultMod.makeArisPowerPath;
 
 public class JobHeroPower extends JobPower implements CloneablePowerInterface {
     public int sword_amout = 1;
+    public int charge_amount = 1;
 
     public static final String POWER_ID = DefaultMod.makeArisID(JobHeroPower.class.getSimpleName());
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
@@ -42,12 +43,13 @@ public class JobHeroPower extends JobPower implements CloneablePowerInterface {
     private static final Texture tex84 = TextureLoader.getTexture(makeArisPowerPath("JobHeroPower84.png"));
     private static final Texture tex32 = TextureLoader.getTexture(makeArisPowerPath("JobHeroPower32.png"));
 
-    public JobHeroPower(final AbstractCreature owner, AbstractCard equip) {
+    public JobHeroPower(final AbstractCreature owner, AbstractCard equip, int charge_amount) {
         name = NAME;
         ID = POWER_ID;
 
         this.owner = owner;
         this.equip = equip;
+        this.charge_amount = charge_amount;
 
         type = PowerType.BUFF;
         isTurnBased = false;
@@ -77,9 +79,9 @@ public class JobHeroPower extends JobPower implements CloneablePowerInterface {
     public String getAnimation() {
         return "baseAnimation_Hero";
     }
-    public void onJobChange() {
-        super.onJobChange();
-        this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ChargePower(AbstractDungeon.player, 2), 2));
+    public void onJobChange(boolean withEquip) {
+        super.onJobChange(withEquip);
+        this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ChargePower(AbstractDungeon.player, charge_amount), charge_amount));
     }
 
     public void levelUp(){
@@ -94,6 +96,6 @@ public class JobHeroPower extends JobPower implements CloneablePowerInterface {
     }
     @Override
     public AbstractPower makeCopy() {
-        return new JobHeroPower(owner, equip);
+        return new JobHeroPower(owner, equip, charge_amount);
     }
 }

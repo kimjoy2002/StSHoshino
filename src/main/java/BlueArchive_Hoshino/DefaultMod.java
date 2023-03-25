@@ -1,7 +1,9 @@
 package BlueArchive_Hoshino;
 
 import BlueArchive_Aris.characters.Aris;
-import BlueArchive_Aris.relics.ArisBaseRelic;
+import BlueArchive_Aris.events.SaibaMidoriEvent;
+import BlueArchive_Aris.events.SaibaMomoiEvent;
+import BlueArchive_Aris.relics.*;
 import BlueArchive_Aris.variables.SecondMagicNumber;
 import BlueArchive_Hoshino.events.*;
 import BlueArchive_Hoshino.monsters.act1.boss.*;
@@ -232,6 +234,9 @@ public class DefaultMod implements
     
     public static String makeEventPath(String resourcePath) {
         return getModID() + "Resources/images/events/" + resourcePath;
+    }
+    public static String makeArisEventPath(String resourcePath) {
+        return getArisModID() + "Resources/images/events/" + resourcePath;
     }
     public static String makeMonstersPath(String resourcePath) {
         return getModID() + "Resources/images/monsters/" + resourcePath;
@@ -558,6 +563,12 @@ public class DefaultMod implements
             BaseMod.addEvent(eventParams);
         }
         {
+            AddEventParams eventParams = new AddEventParams.Builder(SaibaMidoriEvent.ID, SaibaMidoriEvent.class)
+                    .dungeonID(Exordium.ID)
+                    .create();
+            BaseMod.addEvent(eventParams);
+        }
+        {
             AddEventParams eventParams = new AddEventParams.Builder(KaiserCorporationEvent2.ID, KaiserCorporationEvent2.class)
                     .dungeonID(TheCity.ID)
                     .create();
@@ -567,6 +578,12 @@ public class DefaultMod implements
             AddEventParams eventParams = new AddEventParams.Builder(AbydosEvent.ID, AbydosEvent.class)
                     .dungeonID(TheCity.ID)
                     .playerClass(Hoshino.Enums.HOSHINO)
+                    .create();
+            BaseMod.addEvent(eventParams);
+        }
+        {
+            AddEventParams eventParams = new AddEventParams.Builder(SaibaMomoiEvent.ID, SaibaMomoiEvent.class)
+                    .dungeonID(TheCity.ID)
                     .create();
             BaseMod.addEvent(eventParams);
         }
@@ -742,7 +759,13 @@ public class DefaultMod implements
         BaseMod.addRelicToCustomPool(new IronHorusRelic(), Hoshino.Enums.COLOR_PINK);
 
         BaseMod.addRelicToCustomPool(new ArisBaseRelic(), Aris.Enums.COLOR_BLUE);
+        BaseMod.addRelicToCustomPool(new ArisBaseRelicPlus(), Aris.Enums.COLOR_BLUE);
 
+        BaseMod.addRelicToCustomPool(new HPPotion(), Aris.Enums.COLOR_BLUE);
+
+        BaseMod.addRelicToCustomPool(new CopyCat(), Aris.Enums.COLOR_BLUE);
+
+        BaseMod.addRelicToCustomPool(new TASRelic(), Aris.Enums.COLOR_BLUE);
 
 
         // This adds a relic to the Shared pool. Every character can find this relic.BaseMod.addRelic(new PlaceholderRelic2(), RelicType.SHARED);
@@ -845,6 +868,8 @@ public class DefaultMod implements
         // Event Strings
         BaseMod.loadCustomStringsFile(EventStrings.class,
                 pathByLanguage + "Hoshino-Event-Strings.json");
+        BaseMod.loadCustomStringsFile(EventStrings.class,
+                pathByLanguageAris + "Aris-Event-Strings.json");
         
         // PotionStrings
         BaseMod.loadCustomStringsFile(PotionStrings.class,

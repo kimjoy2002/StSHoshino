@@ -38,6 +38,7 @@ public class PrecisionCamera extends OverloadCard {
     public PrecisionCamera() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         magicNumber=baseMagicNumber=MAGIC;
+        exhaust = true;
     }
 
     // Actions the card should do.

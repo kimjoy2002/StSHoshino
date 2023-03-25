@@ -28,7 +28,7 @@ public class SwordOfHero extends AbstractDynamicCard {
 
     public SwordOfHero() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        magicNumber = baseMagicNumber = 2;
+        magicNumber = baseMagicNumber = 1;
         this.cardsToPreview = new SwordBlast();
         this.tags.add(EnumPatch.EQUIPMENT);
     }
@@ -37,7 +37,7 @@ public class SwordOfHero extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new JobChangeAction(this,
-                new JobHeroPower(p, this)));
+                new JobHeroPower(p, this, magicNumber)));
     }
 
     //Upgraded stats.
@@ -45,7 +45,7 @@ public class SwordOfHero extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            this.upgradeBaseCost(1);
+            upgradeMagicNumber(1);
             initializeDescription();
         }
     }

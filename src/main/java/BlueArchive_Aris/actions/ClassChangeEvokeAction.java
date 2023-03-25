@@ -25,7 +25,7 @@ public class ClassChangeEvokeAction extends AbstractGameAction {
         while(powerIter.hasNext()) {
             AbstractPower p = (AbstractPower) powerIter.next();
             if(p instanceof JobPower) {
-                ((JobPower)p).onJobChange();
+                ((JobPower)p).onJobChange(false);
 
                 while(iter.hasNext()) {
                     AbstractCard c = (AbstractCard)iter.next();

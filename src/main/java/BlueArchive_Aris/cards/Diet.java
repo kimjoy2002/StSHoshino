@@ -33,12 +33,13 @@ public class Diet extends QuestCard {
     private static final int AMOUNT = 1;
     private static final int UPGRADE_PLUS_AMOUNT = 1;
 
-    private static int count = 4;
+    private static int count = 3;
 
     public Diet() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         magicNumber = baseMagicNumber = AMOUNT;
         this.cardsToPreview = new NeatCompression();
+        exhaust = true;
     }
 
     // Actions the card should do.

@@ -32,7 +32,7 @@ public class ElixirSyndrome extends QuestCard {
     private static final int BLOCK = 7;
     private static final int UPGRADE_PLUS_BLOCK = 3;
 
-    private static int count = 4;
+    private static int count = 3;
 
     public ElixirSyndrome() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);

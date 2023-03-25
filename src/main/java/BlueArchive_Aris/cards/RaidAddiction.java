@@ -28,7 +28,7 @@ public class RaidAddiction extends QuestCard {
 
     private static final int COST = 2;
     private static final int DAMAGE = 16;
-    private static final int UPGRADE_PLUS_BLOCK = 5;
+    private static final int UPGRADE_PLUS_DAMAGE = 5;
 
     private static int count = 3;
 
@@ -51,7 +51,7 @@ public class RaidAddiction extends QuestCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBlock(UPGRADE_PLUS_BLOCK);
+            upgradeDamage(UPGRADE_PLUS_DAMAGE);
             if(this.cardsToPreview != null) {
                 this.cardsToPreview.upgrade();
             }

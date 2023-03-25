@@ -60,7 +60,7 @@ public class JobChangeAction extends AbstractGameAction {
 
 
         if(!sameJob){
-            power.onJobChange();
+            power.onJobChange(true);
 
             Iterator iter = AbstractDungeon.player.discardPile.group.iterator();
 

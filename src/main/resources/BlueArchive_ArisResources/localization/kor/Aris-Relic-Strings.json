@@ -6,5 +6,36 @@
       "매 전투마다 처음 #ybluearchive_aris:클래스체인지가 발동할때 #ybluearchive_aris:충전을 #b",
       " 얻습니다."
     ]
+  },
+  "BlueArchive_Aris:ArisBaseRelicPlus": {
+    "NAME": "강화 마법입니다!+",
+    "FLAVOR": "\"마법은 있습니다. 선생님은 지금, 아리스를 행복하게 만들었으니까요.\"",
+    "DESCRIPTIONS": [
+      "#r강화 #r마법입니다! 와 교체됩니다. 매 턴마다 처음 #ybluearchive_aris:클래스체인지가 발동할때 #ybluearchive_aris:충전을 #b",
+      " 얻습니다."
+    ]
+  },
+  "BlueArchive_Aris:HPPotion": {
+    "NAME": "HP포션",
+    "FLAVOR": "딸기맛 첨가입니다.",
+    "DESCRIPTIONS": [
+      "전투가 끝날때 전투동안 피해를 입은 횟수만큼 체력을 회복합니다."
+    ]
+  },
+  "BlueArchive_Aris:CopyCat": {
+    "NAME": "카피캣",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "무작위로 나온 캐릭터를 하나 선택하고 해당 캐릭터의 기본 유물을 얻습니다. 전투 보상 화면에 해당 캐릭터의 카드가 포함되고 카드 보상에서 카드 선택지가 1개 더 주어집니다.",
+      "캐릭터를 하나 선택하세요.",
+      "캐릭터의 기본 유물을 가져가세요."
+    ]
+  },
+  "BlueArchive_Aris:TASRelic": {
+    "NAME": "TAS",
+    "FLAVOR": "\"여기서 나무 위에 올라간 후에 화살을 조준하고 쏘자마자 인벤토리를 열어주세요.\"",
+    "DESCRIPTIONS": [
+      "획득시 덱에 있는 모든 퀘스트 카드가 보상으로 변합니다."
+    ]
   }
 }

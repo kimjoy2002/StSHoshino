@@ -18,7 +18,8 @@
   },
   "BlueArchive_Aris:EnergyCharge": {
     "NAME": "에너지 충전",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL BlueArchive_Aris:충전을 !M! 얻습니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL [E] 를 소모하고 그만큼 BlueArchive_Aris:충전을 얻습니다.",
+    "UPGRADE_DESCRIPTION": "방어도를 !B! 얻습니다. NL [E] [E] 를 소모하고 그만큼 BlueArchive_Aris:충전을 얻습니다."
   },
   "BlueArchive_Aris:EnergyProjection": {
     "NAME": "에너지 투사",
@@ -42,20 +43,20 @@
   },
   "BlueArchive_Aris:ReactiveArmour": {
     "NAME": "반응 장갑",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. 피해를 받을 때마다 이 카드를 버린 카드 더미에서 손으로 들고 옵니다."
+    "DESCRIPTION": "턴이 끝날때 방어도를 !B! 얻습니다. 피해를 받을 때마다 이 카드를 버린 카드 더미에서 손으로 들고 옵니다."
   },
   "BlueArchive_Aris:EquipHotkey": {
     "NAME": "장비 단축키",
-    "DESCRIPTION": "선천성. NL 뽑을 카드 더미에서 BlueArchive_Aris:장비 카드를 1장 선택해 가져옵니다."
+    "DESCRIPTION": "선천성. 휘발성 NL 뽑을 카드 더미에서 BlueArchive_Aris:장비 카드를 1장 선택해 가져옵니다. BlueArchive_Aris:장비 카드가 없다면 카드를 1장 뽑습니다. NL 소멸"
   },
   "BlueArchive_Aris:FullCharging": {
     "NAME": "풀 차징",
-    "DESCRIPTION": "BlueArchive_Aris:출력. NL 카드를 X장 뽑고 BlueArchive_Aris:충전을 X 얻습니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "BlueArchive_Aris:출력. NL 카드를 X+1장 뽑고 BlueArchive_Aris:충전을 X+1 얻습니다. NL 소멸."
+    "DESCRIPTION": "BlueArchive_Aris:출력. NL 카드를 X장 뽑고 BlueArchive_Aris:충전을 X 얻습니다. NL 소멸",
+    "UPGRADE_DESCRIPTION": "BlueArchive_Aris:출력. NL 카드를 X+1장 뽑고 BlueArchive_Aris:충전을 X+1 얻습니다. NL 소멸"
   },
   "BlueArchive_Aris:Shock": {
     "NAME": "찌릿!",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL BlueArchive_Aris:감전을 !M! 부여합니다. NL 소멸."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL BlueArchive_Aris:감전을 !M! 부여합니다. NL 소멸"
   },
   "BlueArchive_Aris:StaticStrike": {
     "NAME": "정전기 타격",
@@ -64,20 +65,20 @@
   },
   "BlueArchive_Aris:ShortCircuit": {
     "NAME": "누전",
-    "DESCRIPTION": "손이 가득찰때까지 *찌릿! 카드를 얻습니다. NL 소멸.",
+    "DESCRIPTION": "손이 가득찰때까지 *찌릿! 카드를 얻습니다. NL 소멸",
     "UPGRADE_DESCRIPTION": "손이 가득찰때까지 *찌릿! 카드를 얻습니다."
   },
   "BlueArchive_Aris:Firewall": {
     "NAME": "방화벽",
-    "DESCRIPTION": "약화를 !M! 부여합니다. BlueArchive_Aris:감전을 !BlueArchive_Aris:M! 부여합니다."
+    "DESCRIPTION": "약화를 !M! 부여합니다. BlueArchive_Aris:감전을 !BlueArchive_Aris:M! 부여합니다. NL 소멸"
   },
   "BlueArchive_Aris:PrismaticBeams": {
     "NAME": "분광 광선",
     "DESCRIPTION": "피해를 !D! 줍니다. NL BlueArchive_Aris:과부하: 피해가 !M! 증가하고 휘발성, 소멸 붙은 *분광 *광선 카드를 얻습니다.",
     "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL BlueArchive_Aris:과부하: 피해가 !M! 증가하고 휘발성, 소멸 붙은 *분광 *광선+ 카드를 얻습니다.",
     "EXTENDED_DESCRIPTION": [
-      "휘발성. NL 피해를 !D! 줍니다. NL BlueArchive_Aris:과부하: 피해가 !M! 증가하고 휘발성, 소멸 붙은 *분광 *광선 카드를 얻습니다. NL 소멸.",
-      "휘발성. NL 피해를 !D! 줍니다. NL BlueArchive_Aris:과부하: 피해가 !M! 증가하고 휘발성, 소멸 붙은 *분광 *광선+ 카드를 얻습니다. NL 소멸."
+      "휘발성. NL 피해를 !D! 줍니다. NL BlueArchive_Aris:과부하: 피해가 !M! 증가하고 휘발성, 소멸 붙은 *분광 *광선 카드를 얻습니다. NL 소멸",
+      "휘발성. NL 피해를 !D! 줍니다. NL BlueArchive_Aris:과부하: 피해가 !M! 증가하고 휘발성, 소멸 붙은 *분광 *광선+ 카드를 얻습니다. NL 소멸"
     ]
   },
   "BlueArchive_Aris:StraightStrike": {
@@ -98,11 +99,11 @@
   },
   "BlueArchive_Aris:ThresholdBreak": {
     "NAME": "임계점 돌파",
-    "DESCRIPTION": "피해를 !M! 받습니다. NL BlueArchive_Aris:충전을 !BlueArchive_Aris:M! 얻습니다. NL 소멸."
+    "DESCRIPTION": "피해를 !M! 받습니다. NL BlueArchive_Aris:충전을 !BlueArchive_Aris:M! 얻습니다. NL 소멸"
   },
   "BlueArchive_Aris:CreatedApotheosis": {
     "NAME": "창조된 신성",
-    "DESCRIPTION": "전투가 끝날 때까지 가진 무작위 카드 !M! 장을 강화합니다. NL 강화 횟수에 제한이 없습니다. NL 소멸."
+    "DESCRIPTION": "전투가 끝날 때까지 가진 무작위 카드 !M! 장을 강화합니다. NL 강화 횟수에 제한이 없습니다. NL 소멸"
   },
   "BlueArchive_Aris:Autofire": {
     "NAME": "공격 연사기능",
@@ -126,7 +127,7 @@
   },
   "BlueArchive_Aris:Bzzzzz": {
     "NAME": "파지직",
-    "DESCRIPTION": "적에게 부여된 BlueArchive_Aris:감전을 2배로 만들고 피해를 !D! 만큼 !M! 번 줍니다. 소멸."
+    "DESCRIPTION": "적에게 부여된 BlueArchive_Aris:감전을 2배로 만들고 피해를 !D! 만큼 !M! 번 줍니다. 소멸"
   },
   "BlueArchive_Aris:LevelUp": {
     "NAME": "레벨 업",
@@ -139,21 +140,21 @@
   },
   "BlueArchive_Aris:Crowbar": {
     "NAME": "쇠지렛대",
-    "DESCRIPTION": "BlueArchive_Aris:장비: 전사. NL BlueArchive_Aris:클래스체인지: 방어도를 !B! 얻습니다. NL BlueArchive_Aris:직업 *효과: 피해를 받은 후 방어도를 !M! 얻습니다."
+    "DESCRIPTION": "BlueArchive_Aris:장비: 전사. NL BlueArchive_Aris:클래스체인지: 방어도를 !B! 얻습니다. NL BlueArchive_Aris:직업 *효과: 자신의 턴 종료시 피해를 받은 횟수만큼 방어도를 !M! 얻습니다."
   },
   "BlueArchive_Aris:BookOfJob": {
     "NAME": "전직의 서",
-    "DESCRIPTION": "무작위 BlueArchive_Aris:장비 카드를 1장 손으로 가져옵니다. NL 가져온 카드는 이번 턴에만 비용이 0이 됩니다. NL 소멸."
+    "DESCRIPTION": "무작위 BlueArchive_Aris:장비 카드를 1장 손으로 가져옵니다. NL 가져온 카드는 이번 턴에만 비용이 0이 됩니다. NL 소멸"
   },
   "BlueArchive_Aris:DoubleCharge": {
     "NAME": "더블 차지",
-    "DESCRIPTION": "BlueArchive_Aris:충전이 2배가 됩니다. NL 소멸",
-    "UPGRADE_DESCRIPTION": "보존. NL BlueArchive_Aris:충전이 2배가 됩니다. NL 소멸"
+    "DESCRIPTION": "현재 BlueArchive_Aris:충전만큼 BlueArchive_Aris:충전을 얻습니다. NL 소멸",
+    "UPGRADE_DESCRIPTION": "현재 에너지와 BlueArchive_Aris:충전만큼 BlueArchive_Aris:충전을 얻습니다. NL 소멸"
   },
   "BlueArchive_Aris:NanoMachine": {
     "NAME": "나노머신",
-    "DESCRIPTION": "다음 턴이 끝날때까지 피해를 받지 않습니다. 다음 턴 종료시 그 절반 만큼 체력을 잃습니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "다음 턴이 끝날때까지 피해를 받지 않습니다. 다음 턴 종료시 그 절반의 절반 만큼 체력을 잃습니다. NL 소멸."
+    "DESCRIPTION": "다음 턴이 끝날때까지 피해를 받지 않습니다. 다음 턴 종료시 그 절반 만큼 체력을 잃습니다. NL 소멸",
+    "UPGRADE_DESCRIPTION": "다음 턴이 끝날때까지 피해를 받지 않습니다. 다음 턴 종료시 그 절반의 절반 만큼 체력을 잃습니다. NL 소멸"
   },
   "BlueArchive_Aris:AuxiliaryPowerCard": {
     "NAME": "보조전원",
@@ -169,12 +170,12 @@
   },
   "BlueArchive_Aris:WeaponMaster": {
     "NAME": "웨폰 마스터",
-    "DESCRIPTION": "턴마다 !M! 번까지, BlueArchive_Aris:장비 카드 사용시 기존 BlueArchive_Aris:장비 카드가 덱으로 되돌아오는 대신 손으로 돌아옵니다."
+    "DESCRIPTION": "BlueArchive_Aris:직업이 변경될때마다 카드를 1장 뽑습니다."
   },
   "BlueArchive_Aris:ElixirSyndrome": {
     "NAME": "엘릭서 증후군",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL BlueArchive_Aris:퀘스트: 포션을 4개 버립니다. NL 보상: *엘릭서",
-    "UPGRADE_DESCRIPTION": "방어도를 !B! 얻습니다. NL BlueArchive_Aris:퀘스트: 포션을 4개 버립니다. NL 보상: *엘릭서+",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL BlueArchive_Aris:퀘스트: 포션을 3개 버립니다. NL 보상: *엘릭서",
+    "UPGRADE_DESCRIPTION": "방어도를 !B! 얻습니다. NL BlueArchive_Aris:퀘스트: 포션을 3개 버립니다. NL 보상: *엘릭서+",
     "EXTENDED_DESCRIPTION": [
       " NL (",
       " 남았습니다.)"
@@ -182,7 +183,7 @@
   },
   "BlueArchive_Aris:Elixir": {
     "NAME": "엘릭서",
-    "DESCRIPTION": "BlueArchive_Aris:보상 NL 최대체력이 !M! 증가합니다. 체력을 전부 회복합니다. BlueArchive_Aris:영구소멸."
+    "DESCRIPTION": "BlueArchive_Aris:보상 NL 최대체력이 !M! 증가합니다. 체력을 전부 회복합니다. BlueArchive_Aris:영구소멸"
   },
   "BlueArchive_Aris:Grinding": {
     "NAME": "앵벌이",
@@ -199,8 +200,8 @@
   },
   "BlueArchive_Aris:Diet": {
     "NAME": "압축병",
-    "DESCRIPTION": "카드를 !M! 장 소멸합니다. NL BlueArchive_Aris:퀘스트: 카드를 4회 연속 스킵합니다. NL 보상: *깔끔한 *압축",
-    "UPGRADE_DESCRIPTION": "카드를 !M! 장 소멸합니다. NL BlueArchive_Aris:퀘스트: 카드를 4회 연속 스킵합니다. NL 보상: *깔끔한 *압축+",
+    "DESCRIPTION": "카드를 !M! 장 소멸합니다. NL BlueArchive_Aris:퀘스트: 카드를 3회 연속 스킵합니다. NL 보상: *깔끔한 *압축 NL 소멸",
+    "UPGRADE_DESCRIPTION": "카드를 !M! 장 소멸합니다. NL BlueArchive_Aris:퀘스트: 카드를 3회 연속 스킵합니다. NL 보상: *깔끔한 *압축+ NL 소멸",
     "EXTENDED_DESCRIPTION": [
       " NL (",
       " 남았습니다.)"
@@ -208,8 +209,8 @@
   },
   "BlueArchive_Aris:NeatCompression": {
     "NAME": "깔끔한 압축",
-    "DESCRIPTION": "BlueArchive_Aris:보상 NL 본 덱에서 카드를 1 장을 골라 BlueArchive_Aris:영구소멸 합니다. NL BlueArchive_Aris:영구소멸.",
-    "UPGRADE_DESCRIPTION": "BlueArchive_Aris:보상 NL 본 덱에서 카드를 1 장을 골라 BlueArchive_Aris:영구소멸 합니다. NL 덱에 있는 무작위 카드를 영구히 강화합니다. NL BlueArchive_Aris:영구소멸."
+    "DESCRIPTION": "BlueArchive_Aris:보상 NL 본 덱에서 카드를 1 장을 골라 BlueArchive_Aris:영구소멸 합니다. NL BlueArchive_Aris:영구소멸",
+    "UPGRADE_DESCRIPTION": "BlueArchive_Aris:보상 NL 본 덱에서 카드를 1 장을 골라 BlueArchive_Aris:영구소멸 합니다. NL 덱에 있는 무작위 카드를 영구히 강화합니다. NL BlueArchive_Aris:영구소멸"
   },
   "BlueArchive_Aris:RaidAddiction": {
     "NAME": "레이드 중독",
@@ -235,7 +236,7 @@
   },
   "BlueArchive_Aris:PrecisionCamera": {
     "NAME": "정밀 카메라",
-    "DESCRIPTION": "적 전체에 취약을 !M! 부여합니다. BlueArchive_Aris:과부하: 대신 약화를 !M! 부여합니다."
+    "DESCRIPTION": "적 전체에 취약을 !M! 부여합니다. BlueArchive_Aris:과부하: 대신 약화를 !M! 부여합니다. NL 소멸"
   },
   "BlueArchive_Aris:SteelBody": {
     "NAME": "강철 몸체",
@@ -266,5 +267,61 @@
   "BlueArchive_Aris:SwordBlast": {
     "NAME": "검기",
     "DESCRIPTION": "휘발성 NL 피해를 !D! 줍니다. NL 소멸"
+  },
+  "BlueArchive_Aris:StaticArmour": {
+    "NAME": "정전기 갑옷",
+    "DESCRIPTION": "피해를 받을때마다 적 전체에 BlueArchive_Aris:감전을 !M! 부여합니다."
+  },
+  "BlueArchive_Aris:Thunder": {
+    "NAME": "번개",
+    "DESCRIPTION": "피해를 !D! 줍니다. BlueArchive_Aris:과부하: BlueArchive_Aris:충전을 !M! 얻습니다."
+  },
+  "BlueArchive_Aris:Transformer": {
+    "NAME": "변압기",
+    "DESCRIPTION": "적에게 BlueArchive_Aris:감전을 !M! 겁니다. 해당 적의 BlueArchive_Aris:감전은 모든 적에게 피해를 줍니다. NL 소멸"
+  },
+  "BlueArchive_Aris:Rogue": {
+    "NAME": "도적의 단검",
+    "DESCRIPTION": "BlueArchive_Aris:장비: 도적. NL BlueArchive_Aris:클래스체인지: 적 전체에 약화, BlueArchive_Aris:감전을 !M! 부여합니다. NL BlueArchive_Aris:직업 *효과: 비용이 0인 공격카드 사용시 무작위 적에 BlueArchive_Aris:감전을 1 부여합니다."
+  },
+  "BlueArchive_Aris:IdolRibbon": {
+    "NAME": "아이돌 리본",
+    "DESCRIPTION": "BlueArchive_Aris:장비: 아이돌. NL BlueArchive_Aris:클래스체인지: 카드를 !M! 장 뽑습니다. NL BlueArchive_Aris:직업 *효과: 턴이 시작할때 무작위 다른 직업 일반 카드를 얻습니다."
+  },
+  "BlueArchive_Aris:DailyQuest": {
+    "NAME": "일일 퀘스트",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL BlueArchive_Aris:퀘스트: 전투를 3번 완료합니다. NL 보상: HP !M! 회복, *일일 *퀘스트",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL BlueArchive_Aris:퀘스트: 전투를 3번 완료합니다. NL 보상: HP !M! 회복, 50 골드, *일일 *퀘스트",
+    "EXTENDED_DESCRIPTION": [
+      " NL (",
+      " 남았습니다.)"
+    ]
+  },
+  "BlueArchive_Aris:CustomGameCard": {
+    "NAME": "자작 게임",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL (아직은 그림뿐이지만 더 발전할 수 있을 것 같네요!)",
+    "EXTENDED_DESCRIPTION": [
+      "휘발성 NL ",
+      "체력을 %3 잃습니다. ",
+      "피해를 !D! 줍니다. ",
+      "적 전체에 피해를 !D! 줍니다. ",
+      "피해를 !D! 만큼 %1 번 줍니다. ",
+      "무작위 적에게 피해를 !D! 줍니다. ",
+      "무작위 적에게 피해를 !D! 만큼 %1 번 줍니다. ",
+      "방어도를 !B! 얻습니다. ",
+      "약화를 %1 부여합니다. ",
+      "적 전체에 약화를 %1 부여합니다. ",
+      "취약을 %1 부여합니다. ",
+      "적 전체에 취약을 %1 부여합니다. ",
+      "적 전체에 약화와 취약을 %1 부여합니다. ",
+      "카드를 %1 장 뽑습니다. ",
+      "카드를 소멸합니다. ",
+      "무작위 카드를 소멸합니다. ",
+      "카드를 버립니다. ",
+      "무작위 카드를 버립니다. ",
+      "[E] 를 얻습니다. ",
+      "[E] [E] 를 얻습니다. ",
+      "NL 소멸 "
+    ]
   }
 }

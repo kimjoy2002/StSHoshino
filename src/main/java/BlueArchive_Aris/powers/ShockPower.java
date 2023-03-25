@@ -7,15 +7,15 @@ import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.WeakPower;
 
 import static BlueArchive_Hoshino.DefaultMod.makeArisPowerPath;
 
@@ -61,9 +61,21 @@ public class ShockPower extends AbstractPower implements CloneablePowerInterface
     public int onAttacked(DamageInfo info, int damageAmount) {
         if (amount > 0 && damageAmount < this.owner.currentHealth && damageAmount > 0 && info.owner != null && info.type == DamageInfo.DamageType.NORMAL && info.type != DamageInfo.DamageType.HP_LOSS) {
             this.flash();
-            AbstractDungeon.actionManager.addToBottom(
-                    new DamageAction(this.owner, new DamageInfo(this.source, this.amount, DamageInfo.DamageType.HP_LOSS),
-                            AbstractGameAction.AttackEffect.LIGHTNING));
+
+            if(this.owner.hasPower(TransformerPower.POWER_ID)) {
+                for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
+                    AbstractDungeon.actionManager.addToBottom(
+                            new DamageAction(mo, new DamageInfo(this.source, this.amount, DamageInfo.DamageType.HP_LOSS),
+                                    AbstractGameAction.AttackEffect.LIGHTNING));
+                }
+            }
+            else {
+                AbstractDungeon.actionManager.addToBottom(
+                        new DamageAction(this.owner, new DamageInfo(this.source, this.amount, DamageInfo.DamageType.HP_LOSS),
+                                AbstractGameAction.AttackEffect.LIGHTNING));
+            }
+
+
 
             this.amount--;
             this.updateDescription();

@@ -17,10 +17,13 @@ public abstract class JobPower extends AbstractPower {
     public abstract void levelUp();
     public abstract String getAnimation();
 
-    public void onJobChange() {
+    public void onJobChange(boolean withEquip) {
         jobThisCombat.add(ID);
         if(AbstractDungeon.player.hasPower(JobMasteryPower.POWER_ID)) {
-            ((JobMasteryPower) AbstractDungeon.player.getPower(JobMasteryPower.POWER_ID)).onClassChange();
+            ((JobMasteryPower) AbstractDungeon.player.getPower(JobMasteryPower.POWER_ID)).onClassChange(withEquip);
+        }
+        if(AbstractDungeon.player.hasPower(WeaponMasterPower2.POWER_ID)) {
+            ((JobMasteryPower) AbstractDungeon.player.getPower(WeaponMasterPower2.POWER_ID)).onClassChange(withEquip);
         }
     };
 

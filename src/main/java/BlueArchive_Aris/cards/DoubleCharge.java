@@ -1,5 +1,6 @@
 package BlueArchive_Aris.cards;
 
+import BlueArchive_Aris.actions.DoubleChargeAction;
 import BlueArchive_Aris.characters.Aris;
 import BlueArchive_Aris.powers.ChargePower;
 import BlueArchive_Hoshino.DefaultMod;
@@ -40,10 +41,7 @@ public class DoubleCharge extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if(AbstractDungeon.player.hasPower("BlueArchive_Aris:ChargePower")) {
-            AbstractPower cgPower = AbstractDungeon.player.getPower("BlueArchive_Aris:ChargePower");
-            this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ChargePower(AbstractDungeon.player, cgPower.amount), cgPower.amount));
-        }
+        this.addToBot(new DoubleChargeAction(upgraded));
     }
 
     //Upgraded stats.
@@ -51,7 +49,6 @@ public class DoubleCharge extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            selfRetain = true;
             this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
             initializeDescription();
         }

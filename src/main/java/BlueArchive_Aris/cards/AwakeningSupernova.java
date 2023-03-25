@@ -23,7 +23,7 @@ public class AwakeningSupernova extends AbstractDynamicCard {
     public static final CardColor COLOR = Aris.Enums.COLOR_BLUE;
 
     private static final int COST = 1;
-    private static final int AMOUNT = 1;
+    private static final int AMOUNT = 2;
     private static final int UPGRADE_PLUS_AMOUNT = 1;
 
     public AwakeningSupernova() {

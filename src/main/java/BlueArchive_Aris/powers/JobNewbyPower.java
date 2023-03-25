@@ -60,8 +60,8 @@ public class JobNewbyPower extends JobPower implements CloneablePowerInterface {
     public String getAnimation() {
         return "baseAnimation_Newby";
     }
-    public void onJobChange() {
-        super.onJobChange();
+    public void onJobChange(boolean withEquip) {
+        super.onJobChange(withEquip);
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(owner, draw_power));
     }
 

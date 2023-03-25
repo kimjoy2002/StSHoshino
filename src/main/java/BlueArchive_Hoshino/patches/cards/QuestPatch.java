@@ -17,6 +17,7 @@ import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.rewards.RewardItem;
+import com.megacrit.cardcrawl.rooms.MonsterRoom;
 import com.megacrit.cardcrawl.rooms.MonsterRoomElite;
 import com.megacrit.cardcrawl.saveAndContinue.SaveFile;
 import com.megacrit.cardcrawl.screens.CardRewardScreen;
@@ -122,10 +123,21 @@ public class QuestPatch {
     public static class eliteSlainPatcher {
         public static void Prefix(MonsterRoomElite __instance) {
             QuestCard.questCheck(QuestCard.QuestProcess.SLAIN_ELITE);
+            QuestCard.questCheck(QuestCard.QuestProcess.FINISH_BATTLE);
         }
 
     }
 
+    @SpirePatch(
+            clz = MonsterRoom.class,
+            method = "dropReward"
+    )
+    public static class monsterSlainPatcher {
+        public static void Prefix(MonsterRoom __instance) {
+            QuestCard.questCheck(QuestCard.QuestProcess.FINISH_BATTLE);
+        }
+
+    }
 
     @SpirePatch(
             clz = CardRewardScreen.class,

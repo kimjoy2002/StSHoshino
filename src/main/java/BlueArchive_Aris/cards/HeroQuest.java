@@ -75,6 +75,9 @@ public class HeroQuest extends QuestCard {
         super.onQuestComplete();
 
         SwordOfHero swordOfHero = new SwordOfHero();
+        if (upgraded) {
+            swordOfHero.upgrade();
+        }
         Iterator var1 = AbstractDungeon.player.relics.iterator();
 
         AbstractRelic r;

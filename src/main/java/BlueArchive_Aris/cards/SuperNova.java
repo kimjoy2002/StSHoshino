@@ -8,6 +8,7 @@ import BlueArchive_Hoshino.patches.EnumPatch;
 import BlueArchive_Hoshino.powers.GoldWhalePower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -54,8 +55,7 @@ public class SuperNova extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(UPGRADE_PLUS_DAMAGE);
-            upgradeMagicNumber(UPGRADE_PLUS_MAGIC);
+            this.upgradeBaseCost(1);
             initializeDescription();
         }
     }

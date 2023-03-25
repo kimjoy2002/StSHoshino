@@ -1,7 +1,9 @@
 package BlueArchive_Aris.cards;
 
 import BlueArchive_Aris.characters.Aris;
+import BlueArchive_Aris.powers.EndTurnBlockPower;
 import BlueArchive_Hoshino.DefaultMod;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.utility.DiscardToHandAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -37,7 +39,7 @@ public class ReactiveArmour extends AbstractDynamicCard implements AttackedCard 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
+        this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EndTurnBlockPower(AbstractDungeon.player,  this.block),  this.block));
     }
 
     public int onAttacked(DamageInfo info, int damageAmount) {

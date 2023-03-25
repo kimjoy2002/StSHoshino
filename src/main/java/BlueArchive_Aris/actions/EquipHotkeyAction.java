@@ -5,6 +5,7 @@ import BlueArchive_Hoshino.cards.ChooseRepose;
 import BlueArchive_Hoshino.cards.DrowsyCard;
 import BlueArchive_Hoshino.patches.EnumPatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.watcher.ChooseOneAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -45,6 +46,7 @@ public class EquipHotkeyAction extends AbstractGameAction {
             }
 
             if (tmp.size() == 0) {
+                AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, 1));
                 this.isDone = true;
             } else if (tmp.size() == 1) {
                 card = tmp.getTopCard();

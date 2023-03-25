@@ -26,6 +26,8 @@ public class EquipHotkey extends AbstractDynamicCard {
     public EquipHotkey() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         isInnate = true;
+        exhaust = true;
+        isEthereal = true;
     }
 
     // Actions the card should do.

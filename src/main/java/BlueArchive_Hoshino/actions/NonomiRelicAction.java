@@ -21,17 +21,17 @@ public class NonomiRelicAction extends AbstractGameAction {
     public void update() {
         int toDraw = 10 - AbstractDungeon.player.hand.size();
         for (int i = 0; i < toDraw; ++i) {
-            AbstractCard card = generateAnyCard();
+            AbstractCard card = generateAnyCard(false);
             AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(card, true));
         }
         this.isDone = true;
     }
-    private AbstractCard generateAnyCard() {
+    public static AbstractCard generateAnyCard(boolean common) {
         AbstractCard tmp;
         while(true) {
             int roll = AbstractDungeon.cardRandomRng.random(99);
             AbstractCard.CardRarity cardRarity;
-            if (roll < 55) {
+            if (common || roll < 55) {
                 cardRarity = AbstractCard.CardRarity.COMMON;
             } else if (roll < 85) {
                 cardRarity = AbstractCard.CardRarity.UNCOMMON;
