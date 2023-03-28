@@ -66,7 +66,15 @@ public class JobAoePower extends JobPower implements CloneablePowerInterface {
 
     @Override
     public float atDamageGive(float damage, DamageInfo.DamageType type, AbstractCard card) {
-        return type == DamageInfo.DamageType.NORMAL && card.hasTag(AbstractCard.CardTags.STRIKE) ? damage + (float)this.strike_power : damage;
+
+
+        int amount_ =  this.strike_power;
+
+        if(AbstractDungeon.player.hasPower(LevelUpPower.POWER_ID)) {
+            amount_+=this.strike_power*AbstractDungeon.player.getPower(LevelUpPower.POWER_ID).amount;
+        }
+
+        return type == DamageInfo.DamageType.NORMAL && card.hasTag(AbstractCard.CardTags.STRIKE) ? damage + (float)amount_ : damage;
     }
     // Update the description when you apply this power. (i.e. add or remove an "s" in keyword(s))
     @Override

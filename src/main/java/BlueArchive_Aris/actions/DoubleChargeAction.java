@@ -28,6 +28,8 @@ public class DoubleChargeAction extends AbstractGameAction {
             if(AbstractDungeon.player.hasPower("BlueArchive_Aris:ChargePower")) {
                 AbstractPower cgPower = AbstractDungeon.player.getPower("BlueArchive_Aris:ChargePower");
                 this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ChargePower(AbstractDungeon.player, cgPower.amount + current_energy), cgPower.amount + current_energy));
+            } else {
+                this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ChargePower(AbstractDungeon.player, current_energy), current_energy));
             }
         }
         this.isDone = true;

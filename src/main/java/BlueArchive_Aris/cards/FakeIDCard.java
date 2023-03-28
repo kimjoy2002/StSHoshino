@@ -18,7 +18,7 @@ public class FakeIDCard extends AbstractDynamicCard {
     public static final String IMG = makeArisCardPath("FakeIDCard.png");
 
 
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.SPECIAL;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = Aris.Enums.COLOR_BLUE;

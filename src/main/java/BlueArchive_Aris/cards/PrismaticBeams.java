@@ -40,11 +40,11 @@ public class PrismaticBeams extends OverloadCard {
     public static final CardColor COLOR = Aris.Enums.COLOR_BLUE;
 
     private static final int COST = 1;
-    private static final int DAMAGE = 8;
+    private static final int DAMAGE = 7;
     private static final int UPGRADE_PLUS_DMG = 2;
 
-    private static final int AMOUNT = 4;
-    private static final int UPGRADE_PLUS_AMOUNT = 2;
+    private static final int AMOUNT = 3;
+    private static final int UPGRADE_PLUS_AMOUNT = 1;
 
 
     public PrismaticBeams() {

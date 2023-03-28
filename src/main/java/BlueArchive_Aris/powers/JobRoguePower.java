@@ -37,8 +37,8 @@ public class JobRoguePower extends JobPower implements CloneablePowerInterface {
 
     // We create 2 new textures *Using This Specific Texture Loader* - an 84x84 image and a 32x32 one.
     // There's a fallback "missing texture" image, so the game shouldn't crash if you accidentally put a non-existent file.
-    private static final Texture tex84 = TextureLoader.getTexture(makeArisPowerPath("JobWarriorPower84.png"));
-    private static final Texture tex32 = TextureLoader.getTexture(makeArisPowerPath("JobWarriorPower32.png"));
+    private static final Texture tex84 = TextureLoader.getTexture(makeArisPowerPath("JobRoguePower84.png"));
+    private static final Texture tex32 = TextureLoader.getTexture(makeArisPowerPath("JobRoguePower32.png"));
 
     public JobRoguePower(final AbstractCreature owner, final int magic
           , AbstractCard equip) {
@@ -65,7 +65,7 @@ public class JobRoguePower extends JobPower implements CloneablePowerInterface {
         description = DESCRIPTIONS[0] + shock_count + DESCRIPTIONS[1];
     }
     public String getAnimation() {
-        return "baseAnimation_Warrior";
+        return "baseAnimation_Rogue";
     }
     public void onJobChange(boolean withEquip) {
         super.onJobChange(withEquip);
@@ -84,7 +84,13 @@ public class JobRoguePower extends JobPower implements CloneablePowerInterface {
 
             AbstractCreature target = AbstractDungeon.getMonsters().getRandomMonster((AbstractMonster)null, true, AbstractDungeon.cardRandomRng);
             if (target != null) {
-                this.addToBot(new ApplyPowerAction(target, owner, new ShockPower(target, owner, shock_count), shock_count));
+                int amount_ =  this.shock_count;
+
+                if(AbstractDungeon.player.hasPower(LevelUpPower.POWER_ID)) {
+                    amount_+=this.shock_count*AbstractDungeon.player.getPower(LevelUpPower.POWER_ID).amount;
+                }
+
+                this.addToBot(new ApplyPowerAction(target, owner, new ShockPower(target, owner, amount_), amount_));
             }
             this.flash();
         }

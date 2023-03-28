@@ -23,6 +23,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
@@ -69,6 +71,7 @@ public class CopyCat extends CustomRelic implements CustomSavable<Integer> {
             return;
         }
         CopyCatColor = AbstractCard.CardColor.values()[cardColor];
+        setDescriptionAfterLoading();
     }
 
 
@@ -82,14 +85,21 @@ public class CopyCat extends CustomRelic implements CustomSavable<Integer> {
         AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.INCOMPLETE;
 
         CardGroup retVal = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-        retVal.addToRandomSpot(new Strike_Red());
-        retVal.addToRandomSpot(new Strike_Blue());
-        retVal.addToRandomSpot(new Strike_Green());
-        retVal.addToRandomSpot(new Strike_Purple());
-        retVal.addToRandomSpot(new HoshinoStrike());
+        for(AbstractPlayer char_ :CardCrawlGame.characterManager.getAllCharacters()) {
+            if(char_.getCardColor() != Aris.Enums.COLOR_BLUE) {
+                AbstractCard temp = char_.getStartCardForEvent();
+                temp.name = char_.getLocalizedCharacterName();
+                temp.rawDescription = DESCRIPTIONS[3] + char_.getLocalizedCharacterName();
+                temp.initializeDescription();
+                temp.cardsToPreview = null;
+                retVal.addToRandomSpot(temp);
+            }
 
-        retVal.removeTopCard();
-        retVal.removeTopCard();
+        }
+
+        while(retVal.size()>3) {
+            retVal.removeTopCard();
+        }
         AbstractDungeon.gridSelectScreen.open(retVal, 1, DESCRIPTIONS[1], false, false, false, false);
     }
 
@@ -128,6 +138,7 @@ public class CopyCat extends CustomRelic implements CustomSavable<Integer> {
             }
             AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
+            setDescriptionAfterLoading();
 
         }
     }
@@ -136,5 +147,14 @@ public class CopyCat extends CustomRelic implements CustomSavable<Integer> {
         return numberOfCards + 1;
     }
 
-
+    public void setDescriptionAfterLoading() {
+        for(AbstractPlayer char_ :CardCrawlGame.characterManager.getAllCharacters()) {
+            if (char_.getCardColor() == CopyCatColor) {
+                this.description = DESCRIPTIONS[5] + char_.getLocalizedCharacterName().replace(" ", " #r") + DESCRIPTIONS[6];
+            }
+        }
+        this.tips.clear();
+        this.tips.add(new PowerTip(this.name, this.description));
+        this.initializeTips();
+    }
 }

@@ -36,8 +36,8 @@ public class JobIdolPower extends JobPower implements CloneablePowerInterface {
 
     // We create 2 new textures *Using This Specific Texture Loader* - an 84x84 image and a 32x32 one.
     // There's a fallback "missing texture" image, so the game shouldn't crash if you accidentally put a non-existent file.
-    private static final Texture tex84 = TextureLoader.getTexture(makeArisPowerPath("JobWarriorPower84.png"));
-    private static final Texture tex32 = TextureLoader.getTexture(makeArisPowerPath("JobWarriorPower32.png"));
+    private static final Texture tex84 = TextureLoader.getTexture(makeArisPowerPath("JobIdolPower84.png"));
+    private static final Texture tex32 = TextureLoader.getTexture(makeArisPowerPath("JobIdolPower32.png"));
 
     public JobIdolPower(final AbstractCreature owner, final int draw_power
           , AbstractCard equip) {
@@ -64,7 +64,7 @@ public class JobIdolPower extends JobPower implements CloneablePowerInterface {
         description = DESCRIPTIONS[0] + hello_count + DESCRIPTIONS[1];
     }
     public String getAnimation() {
-        return "baseAnimation_Warrior";
+        return "baseAnimation_Idol";
     }
     public void onJobChange(boolean withEquip) {
         super.onJobChange(withEquip);
@@ -74,8 +74,14 @@ public class JobIdolPower extends JobPower implements CloneablePowerInterface {
     public void atStartOfTurn() {
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             this.flash();
+            int amout_ =  this.hello_count;
 
-            for(int i = 0; i < this.hello_count; ++i) {
+            if(AbstractDungeon.player.hasPower(LevelUpPower.POWER_ID)) {
+                amout_+=AbstractDungeon.player.getPower(LevelUpPower.POWER_ID).amount;
+            }
+
+
+            for(int i = 0; i < amout_; ++i) {
                 AbstractCard card = generateAnyCard(true);
                 this.addToBot(new MakeTempCardInHandAction(card.makeCopy(), 1, false));
             }

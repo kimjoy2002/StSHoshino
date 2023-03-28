@@ -73,7 +73,12 @@ public class JobWarriorPower extends JobPower implements CloneablePowerInterface
     public int onAttacked(DamageInfo info, int damageAmount) {
         if (damageAmount < this.owner.currentHealth && damageAmount > 0 && info.owner != null && info.type != DamageInfo.DamageType.HP_LOSS) {
             this.flash();
-            this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EndTurnBlockPower(AbstractDungeon.player,  this.bonusBlock),  this.bonusBlock));
+            int amount_ =  this.bonusBlock;
+
+            if(AbstractDungeon.player.hasPower(LevelUpPower.POWER_ID)) {
+                amount_+=this.baseBonusBlock*AbstractDungeon.player.getPower(LevelUpPower.POWER_ID).amount;
+            }
+            this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EndTurnBlockPower(AbstractDungeon.player,  amount_),  amount_));
         }
         return damageAmount;
     }

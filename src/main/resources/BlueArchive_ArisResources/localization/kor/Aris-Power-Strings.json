@@ -13,9 +13,9 @@
     ]
   },
   "BlueArchive_Aris:ChargePower": {
-    "NAME": "충전",
+    "NAME": "전력",
     "DESCRIPTIONS": [
-      "모자란 에너지 대신 #y충전을 소모하여 카드를 사용할 수 있습니다. 턴이 끝나면 사라집니다."
+      "모자란 에너지 대신 #y전력을 소모하여 카드를 사용할 수 있습니다. 턴이 끝나면 사라집니다."
     ]
   },
   "BlueArchive_Aris:ShockPower": {
@@ -66,13 +66,13 @@
   "BlueArchive_Aris:AuxiliaryPower": {
     "NAME": "보조 전원",
     "DESCRIPTIONS": [
-      "턴이 끝나도 #y충전이 사라지지 않습니다."
+      "턴이 끝나도 #y전력이 사라지지 않습니다."
     ]
   },
   "BlueArchive_Aris:AwakeningSupernovaPower": {
     "NAME": "슈퍼노바, 각성입니다!",
     "DESCRIPTIONS": [
-      "충전을 소모할때마다 #y힘을 #b",
+      "전력을 소모할때마다 #y힘을 #b",
       " 얻습니다. 얻은 힘은 턴이 끝날때 사라집니다."
     ]
   },
@@ -144,6 +144,13 @@
     "DESCRIPTIONS": [
       "턴이 시작할때 무작위 다른 직업 일반 카드를 #b",
       " 장 가져옵니다."
+    ]
+  },
+  "BlueArchive_Aris:LevelUpPower": {
+    "NAME": "레벨업",
+    "DESCRIPTIONS": [
+      "자신의 #y직업 #y효과가 #b",
+      " 번 더 적용됩니다."
     ]
   }
 }

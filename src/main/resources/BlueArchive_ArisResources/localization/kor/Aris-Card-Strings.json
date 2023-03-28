@@ -14,12 +14,12 @@
   "BlueArchive_Aris:WoodenStick": {
     "NAME": "초보자용 무기",
     "DESCRIPTION": "BlueArchive_Aris:장비: 초보자. NL BlueArchive_Aris:클래스체인지: 카드를 뽑습니다. NL BlueArchive_Aris:직업 *효과: 없습니다.",
-    "UPGRADE_DESCRIPTION": "보존. BlueArchive_Aris:장비: 초보자. NL BlueArchive_Aris:클래스체인지: 카드를 뽑습니다. NL BlueArchive_Aris:직업 *효과: 없습니다."
+    "UPGRADE_DESCRIPTION": "선천성. NL BlueArchive_Aris:장비: 초보자. NL BlueArchive_Aris:클래스체인지: 카드를 뽑습니다. NL BlueArchive_Aris:직업 *효과: 없습니다."
   },
   "BlueArchive_Aris:EnergyCharge": {
     "NAME": "에너지 충전",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL [E] 를 소모하고 그만큼 BlueArchive_Aris:충전을 얻습니다.",
-    "UPGRADE_DESCRIPTION": "방어도를 !B! 얻습니다. NL [E] [E] 를 소모하고 그만큼 BlueArchive_Aris:충전을 얻습니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL [E] 를 소모하고 그만큼 BlueArchive_Aris:전력을 얻습니다.",
+    "UPGRADE_DESCRIPTION": "방어도를 !B! 얻습니다. NL [E] [E] 를 소모하고 그만큼 BlueArchive_Aris:전력을 얻습니다."
   },
   "BlueArchive_Aris:EnergyProjection": {
     "NAME": "에너지 투사",
@@ -39,7 +39,7 @@
   },
   "BlueArchive_Aris:HailingLight": {
     "NAME": "빛이여!",
-    "DESCRIPTION": "BlueArchive_Aris:출력. NL BlueArchive_Aris:충전을 !M! 얻습니다."
+    "DESCRIPTION": "BlueArchive_Aris:출력. NL BlueArchive_Aris:전력을 !M! 얻습니다."
   },
   "BlueArchive_Aris:ReactiveArmour": {
     "NAME": "반응 장갑",
@@ -51,8 +51,8 @@
   },
   "BlueArchive_Aris:FullCharging": {
     "NAME": "풀 차징",
-    "DESCRIPTION": "BlueArchive_Aris:출력. NL 카드를 X장 뽑고 BlueArchive_Aris:충전을 X 얻습니다. NL 소멸",
-    "UPGRADE_DESCRIPTION": "BlueArchive_Aris:출력. NL 카드를 X+1장 뽑고 BlueArchive_Aris:충전을 X+1 얻습니다. NL 소멸"
+    "DESCRIPTION": "BlueArchive_Aris:출력. NL 카드를 X장 뽑고 BlueArchive_Aris:전력을 X 얻습니다. NL 소멸",
+    "UPGRADE_DESCRIPTION": "BlueArchive_Aris:출력. NL 카드를 X+1장 뽑고 BlueArchive_Aris:전력을 X+1 얻습니다. NL 소멸"
   },
   "BlueArchive_Aris:Shock": {
     "NAME": "찌릿!",
@@ -90,7 +90,7 @@
     "DESCRIPTION": "체력이 0 이하가 될 때 한 번 체력을 !M! 회복하고 부활합니다."
   },
   "BlueArchive_Aris:BalanceBroken": {
-    "NAME": "밸런스 붕괴",
+    "NAME": "글리치",
     "DESCRIPTION": "BlueArchive_Aris:과부하가 2번 발동합니다."
   },
   "BlueArchive_Aris:CleanInventory": {
@@ -99,11 +99,11 @@
   },
   "BlueArchive_Aris:ThresholdBreak": {
     "NAME": "임계점 돌파",
-    "DESCRIPTION": "피해를 !M! 받습니다. NL BlueArchive_Aris:충전을 !BlueArchive_Aris:M! 얻습니다. NL 소멸"
+    "DESCRIPTION": "피해를 !M! 받습니다. NL BlueArchive_Aris:전력을 !BlueArchive_Aris:M! 얻습니다. NL 소멸"
   },
   "BlueArchive_Aris:CreatedApotheosis": {
     "NAME": "창조된 신성",
-    "DESCRIPTION": "전투가 끝날 때까지 가진 무작위 카드 !M! 장을 강화합니다. NL 강화 횟수에 제한이 없습니다. NL 소멸"
+    "DESCRIPTION": "전투가 끝날 때까지 가진 무작위 카드 !M! 장을 강화합니다. NL 이 카드는 강화 횟수에 제한이 없습니다. NL 소멸"
   },
   "BlueArchive_Aris:Autofire": {
     "NAME": "공격 연사기능",
@@ -131,7 +131,7 @@
   },
   "BlueArchive_Aris:LevelUp": {
     "NAME": "레벨 업",
-    "DESCRIPTION": "BlueArchive_Aris:직업이 바뀌기 전까지 현재 BlueArchive_Aris:직업 *효과가 한번 더 적용 됩니다."
+    "DESCRIPTION": "BlueArchive_Aris:직업 *효과가 한번 더 적용 됩니다."
   },
   "BlueArchive_Aris:AllRound": {
     "NAME": "올라운더",
@@ -148,8 +148,8 @@
   },
   "BlueArchive_Aris:DoubleCharge": {
     "NAME": "더블 차지",
-    "DESCRIPTION": "현재 BlueArchive_Aris:충전만큼 BlueArchive_Aris:충전을 얻습니다. NL 소멸",
-    "UPGRADE_DESCRIPTION": "현재 에너지와 BlueArchive_Aris:충전만큼 BlueArchive_Aris:충전을 얻습니다. NL 소멸"
+    "DESCRIPTION": "현재 BlueArchive_Aris:전력만큼 BlueArchive_Aris:전력을 얻습니다. NL 소멸",
+    "UPGRADE_DESCRIPTION": "현재 에너지와 BlueArchive_Aris:전력만큼 BlueArchive_Aris:전력을 얻습니다. NL 소멸"
   },
   "BlueArchive_Aris:NanoMachine": {
     "NAME": "나노머신",
@@ -158,11 +158,11 @@
   },
   "BlueArchive_Aris:AuxiliaryPowerCard": {
     "NAME": "보조전원",
-    "DESCRIPTION": "턴이 끝나도 BlueArchive_Aris:충전이 사라지지 않습니다."
+    "DESCRIPTION": "턴이 끝나도 BlueArchive_Aris:전력이 사라지지 않습니다."
   },
   "BlueArchive_Aris:AwakeningSupernova": {
     "NAME": "슈퍼노바, 각성입니다!",
-    "DESCRIPTION": "BlueArchive_Aris:충전을 소모할때마다 힘을 !M! 얻습니다. 얻은 힘은 턴이 끝날때 사라집니다."
+    "DESCRIPTION": "BlueArchive_Aris:전력을 소모할때마다 힘을 !M! 얻습니다. 얻은 힘은 턴이 끝날때 사라집니다."
   },
   "BlueArchive_Aris:JobMastery": {
     "NAME": "직업 숙련",
@@ -196,7 +196,8 @@
   },
   "BlueArchive_Aris:ExecutionSword": {
     "NAME": "집행검",
-    "DESCRIPTION": "BlueArchive_Aris:보상 NL 힘이 골드의 1/100만큼 증가합니다."
+    "DESCRIPTION": "BlueArchive_Aris:보상 NL 피해를 골드의 1/10만큼 줍니다.",
+    "UPGRADE_DESCRIPTION": " NL (피해를 !D! 줍니다.)"
   },
   "BlueArchive_Aris:Diet": {
     "NAME": "압축병",
@@ -236,11 +237,11 @@
   },
   "BlueArchive_Aris:PrecisionCamera": {
     "NAME": "정밀 카메라",
-    "DESCRIPTION": "적 전체에 취약을 !M! 부여합니다. BlueArchive_Aris:과부하: 대신 약화를 !M! 부여합니다. NL 소멸"
+    "DESCRIPTION": "적 전체에 취약을 !M! 부여합니다. NL BlueArchive_Aris:과부하: 대신 약화를 !M! 부여합니다. NL 소멸"
   },
   "BlueArchive_Aris:SteelBody": {
     "NAME": "강철 몸체",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. BlueArchive_Aris:과부하: BlueArchive_Aris:충전을 1 얻습니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL BlueArchive_Aris:과부하: BlueArchive_Aris:전력을 1 얻습니다."
   },
   "BlueArchive_Aris:HoldOn": {
     "NAME": "버텨내기",
@@ -262,7 +263,7 @@
   },
   "BlueArchive_Aris:SwordOfHero": {
     "NAME": "용사의 검",
-    "DESCRIPTION": "BlueArchive_Aris:보상. BlueArchive_Aris:장비: 용사. NL BlueArchive_Aris:클래스체인지: BlueArchive_Aris:충전을 !M! 얻습니다. NL BlueArchive_Aris:직업 *효과: 스킬 카드를 사용할때마다 *검기 카드를 얻습니다."
+    "DESCRIPTION": "BlueArchive_Aris:보상. BlueArchive_Aris:장비: 용사. NL BlueArchive_Aris:클래스체인지: BlueArchive_Aris:전력을 !M! 얻습니다. NL BlueArchive_Aris:직업 *효과: 스킬 카드를 사용할때마다 *검기 카드를 얻습니다."
   },
   "BlueArchive_Aris:SwordBlast": {
     "NAME": "검기",
@@ -274,7 +275,7 @@
   },
   "BlueArchive_Aris:Thunder": {
     "NAME": "번개",
-    "DESCRIPTION": "피해를 !D! 줍니다. BlueArchive_Aris:과부하: BlueArchive_Aris:충전을 !M! 얻습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. BlueArchive_Aris:과부하: BlueArchive_Aris:전력을 !M! 얻습니다."
   },
   "BlueArchive_Aris:Transformer": {
     "NAME": "변압기",
@@ -286,7 +287,7 @@
   },
   "BlueArchive_Aris:IdolRibbon": {
     "NAME": "아이돌 리본",
-    "DESCRIPTION": "BlueArchive_Aris:장비: 아이돌. NL BlueArchive_Aris:클래스체인지: 카드를 !M! 장 뽑습니다. NL BlueArchive_Aris:직업 *효과: 턴이 시작할때 무작위 다른 직업 일반 카드를 얻습니다."
+    "DESCRIPTION": "BlueArchive_Aris:장비: 아이돌. NL BlueArchive_Aris:클래스체인지: 카드를 !M! 장 뽑습니다. NL BlueArchive_Aris:직업 *효과: 턴이 시작할때 무작위 다른 캐릭터 일반 카드를 얻습니다."
   },
   "BlueArchive_Aris:DailyQuest": {
     "NAME": "일일 퀘스트",
@@ -295,6 +296,15 @@
     "EXTENDED_DESCRIPTION": [
       " NL (",
       " 남았습니다.)"
+    ]
+  },
+  "BlueArchive_Aris:Thoughtsteal": {
+    "NAME": "생각 훔치기",
+    "DESCRIPTION": "다른 캐릭터의 무작위 카드 !M! 장을 휘발성 소멸 을 붙여 얻습니다. NL 가져온 카드는 이번 턴동안 비용이 1 감소합니다.",
+    "UPGRADE_DESCRIPTION": "다른 캐릭터의 무작위 카드 !M! 장을 휘발성 소멸 을 붙여 얻습니다. NL 손에 있는 모든 다른 캐릭터 카드는 이번 턴동안 비용이 1 감소합니다.",
+    "EXTENDED_DESCRIPTION": [
+      "휘발성 NL ",
+      " NL 소멸 "
     ]
   },
   "BlueArchive_Aris:CustomGameCard": {

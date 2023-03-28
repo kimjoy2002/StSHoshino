@@ -62,7 +62,12 @@ public class JobHeroPower extends JobPower implements CloneablePowerInterface {
     }
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if(card.type == AbstractCard.CardType.SKILL) {
-            this.addToBot(new MakeTempCardInHandAction( new SwordBlast(), sword_amout));
+            int amount_ =  this.sword_amout;
+
+            if(AbstractDungeon.player.hasPower(LevelUpPower.POWER_ID)) {
+                amount_+=AbstractDungeon.player.getPower(LevelUpPower.POWER_ID).amount;
+            }
+            this.addToBot(new MakeTempCardInHandAction( new SwordBlast(), amount_));
             this.flash();
         }
     }

@@ -23,7 +23,7 @@ public abstract class JobPower extends AbstractPower {
             ((JobMasteryPower) AbstractDungeon.player.getPower(JobMasteryPower.POWER_ID)).onClassChange(withEquip);
         }
         if(AbstractDungeon.player.hasPower(WeaponMasterPower2.POWER_ID)) {
-            ((JobMasteryPower) AbstractDungeon.player.getPower(WeaponMasterPower2.POWER_ID)).onClassChange(withEquip);
+            ((WeaponMasterPower2) AbstractDungeon.player.getPower(WeaponMasterPower2.POWER_ID)).onClassChange(withEquip);
         }
     };
 

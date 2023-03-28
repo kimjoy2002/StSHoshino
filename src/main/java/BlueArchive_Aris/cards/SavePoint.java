@@ -32,6 +32,7 @@ public class SavePoint extends AbstractDynamicCard {
     public SavePoint() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         magicNumber = baseMagicNumber = MAGIC;
+        this.tags.add(CardTags.HEALING);
     }
 
     // Actions the card should do.

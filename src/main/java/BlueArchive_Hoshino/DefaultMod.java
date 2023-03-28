@@ -1,6 +1,7 @@
 package BlueArchive_Hoshino;
 
 import BlueArchive_Aris.characters.Aris;
+import BlueArchive_Aris.events.CaveofClassChangeEvent;
 import BlueArchive_Aris.events.SaibaMidoriEvent;
 import BlueArchive_Aris.events.SaibaMomoiEvent;
 import BlueArchive_Aris.relics.*;
@@ -565,6 +566,13 @@ public class DefaultMod implements
         {
             AddEventParams eventParams = new AddEventParams.Builder(SaibaMidoriEvent.ID, SaibaMidoriEvent.class)
                     .dungeonID(Exordium.ID)
+                    .create();
+            BaseMod.addEvent(eventParams);
+        }
+        {
+            AddEventParams eventParams = new AddEventParams.Builder(CaveofClassChangeEvent.ID, CaveofClassChangeEvent.class)
+                    .dungeonID(Exordium.ID)
+                    .playerClass(Aris.Enums.ARIS)
                     .create();
             BaseMod.addEvent(eventParams);
         }

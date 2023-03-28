@@ -49,7 +49,7 @@ public class WoodenStick extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            this.selfRetain = true;
+            this.isInnate = true;
             this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
             initializeDescription();
         }
