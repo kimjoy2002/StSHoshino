@@ -3,6 +3,7 @@ package BlueArchive_Aris.events;
 import BlueArchive_Aris.cards.Crowbar;
 import BlueArchive_Aris.cards.IdolRibbon;
 import BlueArchive_Aris.cards.Rogue;
+import BlueArchive_Aris.cards.WizardHat;
 import BlueArchive_Hoshino.DefaultMod;
 import BlueArchive_Hoshino.patches.EnumPatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -44,7 +45,8 @@ public class CaveofClassChangeEvent extends AbstractImageEvent {
         this.imageEventText.setDialogOption(OPTIONS[0], CardLibrary.getCopy(Crowbar.ID));
         imageEventText.setDialogOption(OPTIONS[1], CardLibrary.getCopy(Rogue.ID));
         imageEventText.setDialogOption(OPTIONS[2], CardLibrary.getCopy(IdolRibbon.ID));
-        imageEventText.setDialogOption(OPTIONS[3]);
+        imageEventText.setDialogOption(OPTIONS[3], CardLibrary.getCopy(WizardHat.ID));
+        imageEventText.setDialogOption(OPTIONS[4]);
     }
 
     public void removeAllEquipment() {
@@ -65,7 +67,7 @@ public class CaveofClassChangeEvent extends AbstractImageEvent {
                 switch (i) {
                     case 0:
                         this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
-                        this.imageEventText.updateDialogOption(0, OPTIONS[3]);
+                        this.imageEventText.updateDialogOption(0, OPTIONS[4]);
                         removeAllEquipment();
                         AbstractCard crowbar = new Crowbar();
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(crowbar, (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
@@ -76,7 +78,7 @@ public class CaveofClassChangeEvent extends AbstractImageEvent {
                         break;
                     case 1:
                         this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
-                        this.imageEventText.updateDialogOption(0, OPTIONS[3]);
+                        this.imageEventText.updateDialogOption(0, OPTIONS[4]);
                         removeAllEquipment();
                         AbstractCard rogue = new Rogue();
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(rogue, (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
@@ -87,7 +89,7 @@ public class CaveofClassChangeEvent extends AbstractImageEvent {
                         break;
                     case 2:
                         this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
-                        this.imageEventText.updateDialogOption(0, OPTIONS[3]);
+                        this.imageEventText.updateDialogOption(0, OPTIONS[4]);
                         removeAllEquipment();
                         AbstractCard idolRibbon = new IdolRibbon();
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(idolRibbon, (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
@@ -97,8 +99,19 @@ public class CaveofClassChangeEvent extends AbstractImageEvent {
                         screenNum = 1;
                         break;
                     case 3:
+                        this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
+                        this.imageEventText.updateDialogOption(0, OPTIONS[4]);
+                        removeAllEquipment();
+                        AbstractCard wizardHat = new WizardHat();
+                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(wizardHat, (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+                        this.imageEventText.clearRemainingOptions();
+
+                        AbstractEvent.logMetricObtainCard("CaveofClassChangeEvent", "Wizard",new WizardHat());
+                        screenNum = 1;
+                        break;
+                    case 4:
                         this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
-                        this.imageEventText.updateDialogOption(0, OPTIONS[3]);
+                        this.imageEventText.updateDialogOption(0, OPTIONS[4]);
                         this.imageEventText.clearRemainingOptions();
                         screenNum = 1;
 

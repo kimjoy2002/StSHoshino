@@ -73,12 +73,7 @@ public class ThoughtStealAction extends AbstractGameAction {
             }
             card.isCostModifiedForTurn = true;
 
-            if(!card.isEthereal){
-                card.isEthereal = true;
-                card.tags.add(EnumPatch.ETHEREAL);
-                card.initializeDescription();
-            }
-            if(!card.exhaust && card.type != AbstractCard.CardType.POWER){
+            if(!card.exhaust && card.type != AbstractCard.CardType.POWER && card.cost != -2){
                 card.exhaust = true;
                 card.tags.add(EnumPatch.EXHAUST);
                 card.initializeDescription();

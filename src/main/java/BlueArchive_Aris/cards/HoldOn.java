@@ -2,8 +2,10 @@ package BlueArchive_Aris.cards;
 
 import BlueArchive_Aris.actions.ModifyMagicNumberAction;
 import BlueArchive_Aris.characters.Aris;
+import BlueArchive_Aris.powers.EndTurnBlockPower;
 import BlueArchive_Hoshino.DefaultMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
@@ -23,7 +25,7 @@ public class HoldOn extends AbstractDynamicCard {
     public static final String IMG = makeArisCardPath("HoldOn.png");
 
 
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = Aris.Enums.COLOR_BLUE;
@@ -31,15 +33,15 @@ public class HoldOn extends AbstractDynamicCard {
 
     private static final int COST = 1;
     private static final int DAMAGE = 3;
-    private static final int BLOCK = 14;
-    private static final int UPGRADE_PLUS_BLOCK = 5;
+    private static final int MAGIC2 = 14;
+    private static final int UPGRADE_PLUS_MAGIC2 = 5;
 
 
 
     public HoldOn() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         magicNumber = baseMagicNumber = DAMAGE;
-        baseBlock = BLOCK;
+        baseSecondMagicNumber = secondMagicNumber = MAGIC2;
     }
 
     // Actions the card should do.
@@ -48,7 +50,9 @@ public class HoldOn extends AbstractDynamicCard {
         AbstractDungeon.actionManager.addToBottom(
                 new DamageAction(p, new DamageInfo(p, magicNumber, DamageInfo.DamageType.THORNS),
                         AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
+
+
+        this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EndTurnBlockPower(AbstractDungeon.player,  this.secondMagicNumber),  this.secondMagicNumber));
     }
 
     //Upgraded stats.
@@ -56,7 +60,7 @@ public class HoldOn extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBlock(UPGRADE_PLUS_BLOCK);
+            upgradeSecondMagicNumber(UPGRADE_PLUS_MAGIC2);
             initializeDescription();
         }
     }

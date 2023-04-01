@@ -24,7 +24,7 @@ public class Transformer extends AbstractDynamicCard {
     public static final CardColor COLOR = Aris.Enums.COLOR_BLUE;
 
     private static final int COST = 2;
-    private static final int MAGIC = 6;
+    private static final int MAGIC = 7;
     private static final int UPGRADE_PLUS_MAGIC = 2;
 
 

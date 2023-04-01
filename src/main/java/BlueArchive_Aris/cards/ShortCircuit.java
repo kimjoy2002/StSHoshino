@@ -32,6 +32,7 @@ public class ShortCircuit extends AbstractDynamicCard  {
     public ShortCircuit() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.cardsToPreview = new Shock();
+        isEthereal = true;
         exhaust = true;
     }
 
@@ -50,7 +51,7 @@ public class ShortCircuit extends AbstractDynamicCard  {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            exhaust = false;
+            isEthereal = false;
             this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
             initializeDescription();
         }

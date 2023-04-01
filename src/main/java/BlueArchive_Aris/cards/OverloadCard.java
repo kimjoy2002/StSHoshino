@@ -1,6 +1,8 @@
 package BlueArchive_Aris.cards;
 
 import BlueArchive_Aris.powers.BalanceBrokenPower;
+import BlueArchive_Aris.powers.SystemOverloadPower;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -19,6 +21,7 @@ public abstract class OverloadCard extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (EnergyPanel.totalCount <= this.costForTurn) {
             onOverload(p, m);
+
             overloadThisCombat++;
             if(AbstractDungeon.player.hasPower(BalanceBrokenPower.POWER_ID)) {
                 AbstractPower power = AbstractDungeon.player.getPower(BalanceBrokenPower.POWER_ID);

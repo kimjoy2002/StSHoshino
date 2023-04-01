@@ -47,7 +47,7 @@ public class JobChangeAction extends AbstractGameAction {
                     ((WeaponMasterPower)AbstractDungeon.player.getPower(WeaponMasterPower.POWER_ID)).flash();
                     AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, WeaponReturnPower.POWER_ID, 1));
                 } else {
-                    this.addToBot(new MakeTempCardInDrawPileAction(((JobPower)p).equip, 1, true, false));
+                    this.addToBot(new MakeTempCardInDiscardAction(((JobPower)p).equip, 1));
                 }
 
                 this.addToBot(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, p));

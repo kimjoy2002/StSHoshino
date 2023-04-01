@@ -36,7 +36,6 @@ public class HeroQuest extends QuestCard {
     public HeroQuest() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.cardsToPreview = new SwordOfHero();
-        isInnate = true;
     }
 
     // Actions the card should do.

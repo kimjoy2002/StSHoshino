@@ -6,6 +6,7 @@ import BlueArchive_Aris.powers.JobPower;
 import BlueArchive_Hoshino.DefaultMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.defect.NewThunderStrikeAction;
 import com.megacrit.cardcrawl.actions.unique.WhirlwindAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -33,22 +34,20 @@ public class ElectronicExplosion extends AbstractDynamicCard {
 
     // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.RARE;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = Aris.Enums.COLOR_BLUE;
 
-    private static final int COST = 2;
-    private static final int DAMAGE = 6;
-    private static final int UPGRADE_PLUS_DMG = 2;
+    private static final int COST = 1;
+    private static final int DAMAGE = 3;
+    private static final int UPGRADE_PLUS_DMG = 1;
 
 
     public ElectronicExplosion() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         magicNumber = baseMagicNumber = 0;
-        isMultiDamage = true;
-        exhaust = true;
     }
 
     public void updateVal () {
@@ -77,7 +76,9 @@ public class ElectronicExplosion extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         updateVal();
         this.calculateCardDamage(m);
-        this.addToBot(new ElecWhirlwindAction(p, this.multiDamage, this.damageTypeForTurn));
+        for(int i = 0; i < this.magicNumber; ++i) {
+            this.addToBot(new NewThunderStrikeAction(this));
+        }
     }
 
     // Upgraded stats.

@@ -23,7 +23,7 @@ public class SuperNova extends AbstractDynamicCard {
 
     private static final CardRarity RARITY = CardRarity.BASIC;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final CardType TYPE = CardType.SKILL;
+    private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = Aris.Enums.COLOR_BLUE;
 
     private static final int COST = 2;

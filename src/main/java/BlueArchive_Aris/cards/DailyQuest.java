@@ -5,6 +5,7 @@ import BlueArchive_Hoshino.DefaultMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.tempCards.ThroughViolence;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -33,10 +34,16 @@ public class DailyQuest extends QuestCard {
 
     private static int count = 3;
 
+    public DailyQuest(int i) {
+        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        baseDamage = DAMAGE;
+        magicNumber = baseMagicNumber = AMOUNT;
+    }
     public DailyQuest() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         magicNumber = baseMagicNumber = AMOUNT;
+        this.cardsToPreview = new DailyQuest(1);
     }
 
     // Actions the card should do.

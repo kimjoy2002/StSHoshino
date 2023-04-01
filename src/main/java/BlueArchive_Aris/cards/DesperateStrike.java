@@ -57,7 +57,7 @@ public class DesperateStrike extends AbstractDynamicCard {
         if(upgraded){
             s.upgrade();
         }
-        this.addToBot(new ReturnJobAction());
+        this.addToBot(new ReturnJobAction(false));
     }
 
     // Upgraded stats.

@@ -71,6 +71,7 @@ public class ChargePatch {
             }
     )
     public static class useCardPatcher {
+        public static int chargeThisUse = 0;
         @SpireInsertPatch(
                 locator = Locator.class
         )
@@ -83,12 +84,19 @@ public class ChargePatch {
                     int reduceAmount = min(cgPower.amount, use_);
                     if(reduceAmount > 0){
                         chargeThisCombat+=reduceAmount;
+                        chargeThisUse=reduceAmount;
                         if(AbstractDungeon.player.hasPower(AwakeningSupernovaPower.POWER_ID)) {
                             ((AwakeningSupernovaPower) AbstractDungeon.player.getPower(AwakeningSupernovaPower.POWER_ID)).onSpend(reduceAmount);
                         }
+                    } else {
+                        chargeThisUse = 0;
                     }
                     AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, "BlueArchive_Aris:ChargePower", use_));
+                } else {
+                    chargeThisUse = 0;
                 }
+            } else {
+                chargeThisUse = 0;
             }
         }
 

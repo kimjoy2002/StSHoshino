@@ -113,10 +113,10 @@
     ]
   },
   "BlueArchive_Aris:EndTurnBlockPower": {
-    "NAME": "방어 지연",
+    "NAME": "복구",
     "DESCRIPTIONS": [
-      "자신의 턴이 끝나면 #y방어도를 #b",
-      " 얻습니다."
+      "자신의 턴이 끝나면 #y방어도 #b",
+      " 으로 변환됩니다."
     ]
   },
   "BlueArchive_Aris:StaticArmourPower": {
@@ -151,6 +151,20 @@
     "DESCRIPTIONS": [
       "자신의 #y직업 #y효과가 #b",
       " 번 더 적용됩니다."
+    ]
+  },
+  "BlueArchive_Aris:SystemOverloadPower": {
+    "NAME": "시스템 과부하",
+    "DESCRIPTIONS": [
+      "이번 턴 모든 카드는 #y\"과부하: #y소멸합니다. #y방어도를 #b",
+      " 얻습니다.\" 를 얻습니다."
+    ]
+  },
+  "BlueArchive_Aris:JobWizardPower": {
+    "NAME": "직업: 마법사",
+    "DESCRIPTIONS": [
+      "파워 카드를 사용할때마다 #y방어도를 #b",
+      " 얻습니다."
     ]
   }
 }

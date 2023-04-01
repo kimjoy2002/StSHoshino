@@ -26,20 +26,20 @@ public class ReactiveArmour extends AbstractDynamicCard implements AttackedCard 
     public static final CardColor COLOR = Aris.Enums.COLOR_BLUE;
 
     private static final int COST = 1;
-    private static final int BLOCK = 8;
-    private static final int UPGRADE_PLUS_BLOCK = 3;
+    private static final int MAGIC = 8;
+    private static final int UPGRADE_PLUS_MAGIC = 3;
 
 
     public ReactiveArmour() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseBlock = BLOCK;
+        baseMagicNumber = magicNumber = MAGIC;
         this.tags.add(CardTags.STARTER_DEFEND);
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EndTurnBlockPower(AbstractDungeon.player,  this.block),  this.block));
+        this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EndTurnBlockPower(AbstractDungeon.player,  this.magicNumber),  this.magicNumber));
     }
 
     public int onAttacked(DamageInfo info, int damageAmount) {
@@ -54,7 +54,7 @@ public class ReactiveArmour extends AbstractDynamicCard implements AttackedCard 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBlock(UPGRADE_PLUS_BLOCK);
+            upgradeMagicNumber(UPGRADE_PLUS_MAGIC);
             initializeDescription();
         }
     }
