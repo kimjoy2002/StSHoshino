@@ -18,5 +18,10 @@
     "TEXT": [
       "손으로 가져올 파워 카드를 선택하십시오"
     ]
+  },
+  "BlueArchive_Aris:TutorialAction": {
+    "TEXT": [
+      "비용을 줄일 카드를 선택하십시오"
+    ]
   }
 }

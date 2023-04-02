@@ -31,7 +31,8 @@ public class PurifyCardAction extends AbstractGameAction {
         AbstractCard card;
         if (this.duration == Settings.ACTION_DUR_MED) {
             CardGroup tmp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-            Iterator var5 = this.p.masterDeck.group.iterator();
+            CardGroup purgeable = CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck.getPurgeableCards());
+            Iterator var5 = purgeable.group.iterator();
 
             while(var5.hasNext()) {
                 AbstractCard c = (AbstractCard)var5.next();

@@ -330,7 +330,7 @@
   },
   "BlueArchive_Aris:SystemOverload": {
     "NAME": "시스템 과부하",
-    "DESCRIPTION": "이번 턴 소멸 이 없는 모든 카드는 \" BlueArchive_Aris:과부하: 소멸합니다. 방어도를 !M! 얻습니다. \" 를 얻습니다."
+    "DESCRIPTION": "이번 턴 모든 카드는 \" BlueArchive_Aris:과부하: 소멸합니다. 방어도를 !M! 얻습니다. \" 를 얻습니다."
   },
   "BlueArchive_Aris:Ranker": {
     "NAME": "랭커",
@@ -344,6 +344,14 @@
     "NAME": "마법사의 모자",
     "DESCRIPTION": "BlueArchive_Aris:장비: 마법사. NL BlueArchive_Aris:클래스체인지: 덱에서 무작위 파워 카드를 손으로 가져옵니다. NL BlueArchive_Aris:직업 *효과: 파워 카드를 쓸때마다 방어도를 !M! 얻습니다.",
     "UPGRADE_DESCRIPTION": "BlueArchive_Aris:장비: 마법사. NL BlueArchive_Aris:클래스체인지: 덱에서 파워 카드를 선택해 손으로 가져옵니다. NL BlueArchive_Aris:직업 *효과: 파워 카드를 쓸때마다 방어도를 !M! 얻습니다."
+  },
+  "BlueArchive_Aris:Tutorial": {
+    "NAME": "튜토리얼",
+    "DESCRIPTION": "BlueArchive_Aris:출력 NL 방어도 !B! 를 X번 얻습니다. NL 비용이 X보다 낮은 카드 한 장을 골라 턴이 끝날때까지 비용을 0으로 합니다. NL 소멸"
+  },
+  "BlueArchive_Aris:Fishing": {
+    "NAME": "낚시",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 버린 카드 더미에서 무작위 카드 한 장을 손으로 가져옵니다."
   },
   "BlueArchive_Aris:CustomGameCard": {
     "NAME": "자작 게임",

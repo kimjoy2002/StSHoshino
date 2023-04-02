@@ -39,7 +39,7 @@ public class SystemOverloadPatch {
 
             if (EnergyPanel.totalCount <= c.costForTurn) {
                 if(AbstractDungeon.player.hasPower(SystemOverloadPower.POWER_ID)) {
-                    if(c.exhaust == false && c.type != AbstractCard.CardType.POWER) {
+                    {
                         AbstractPower power = AbstractDungeon.player.getPower(SystemOverloadPower.POWER_ID);
                         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, power.amount));
                         c.exhaust = true;

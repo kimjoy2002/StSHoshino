@@ -36,7 +36,7 @@ public class StaticStrike extends AbstractDynamicCard {
     public static final CardColor COLOR = Aris.Enums.COLOR_BLUE;
 
     private static final int COST = 1;
-    private static final int DAMAGE = 7;
+    private static final int DAMAGE = 8;
 
 
     public StaticStrike() {
