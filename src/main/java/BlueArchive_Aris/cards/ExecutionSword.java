@@ -18,7 +18,7 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import static BlueArchive_Hoshino.DefaultMod.makeArisCardPath;
 
-public class ExecutionSword extends AbstractDynamicCard {
+public class ExecutionSword extends AbstractDynamicCard implements RewardCard {
     public static final String ID = DefaultMod.makeArisID(ExecutionSword.class.getSimpleName());
     public static final String IMG = makeArisCardPath("ExecutionSword.png");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);

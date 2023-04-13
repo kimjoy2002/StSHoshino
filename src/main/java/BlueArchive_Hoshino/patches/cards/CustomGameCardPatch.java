@@ -24,8 +24,8 @@ public class CustomGameCardPatch {
         )
         public static void Insert(String key, int upgradeTime, int misc, AbstractCard retVal) {
             if(retVal instanceof CustomGameCard) {
-                ((CustomGameCard) retVal).reloadImage();
                 ((CustomGameCard) retVal).initializeCustomCard();
+                ((CustomGameCard) retVal).reloadImage();
             }
         }
         private static class Locator extends SpireInsertLocator {

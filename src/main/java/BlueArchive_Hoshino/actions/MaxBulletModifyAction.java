@@ -1,6 +1,7 @@
 package BlueArchive_Hoshino.actions;
 
 import BlueArchive_Hoshino.subscriber.BulletSubscriber;
+import BlueArchive_Hoshino.ui.BulletUI;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 
 import java.util.UUID;
@@ -14,6 +15,7 @@ public class MaxBulletModifyAction extends AbstractGameAction {
     }
 
     public void update() {
+        BulletUI.useBulletBooleanTurn = true;
         if(amount > 0) {
             BulletSubscriber.addMaxBullet(amount);
         } else if(amount < 0) {

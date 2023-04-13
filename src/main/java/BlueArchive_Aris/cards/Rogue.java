@@ -17,7 +17,7 @@ import java.util.Iterator;
 
 import static BlueArchive_Hoshino.DefaultMod.makeArisCardPath;
 
-public class Rogue extends AbstractDynamicCard {
+public class Rogue extends EquipmentCard {
 
     public static final String ID = DefaultMod.makeArisID(Rogue.class.getSimpleName());
     public static final String IMG = makeArisCardPath("Rogue.png");

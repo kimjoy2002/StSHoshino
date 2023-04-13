@@ -5,6 +5,7 @@ import BlueArchive_Aris.powers.ChargePower;
 import BlueArchive_Hoshino.cards.ShuffleCard;
 import BlueArchive_Hoshino.powers.FreeReloadPower;
 import BlueArchive_Hoshino.subscriber.BulletSubscriber;
+import BlueArchive_Hoshino.ui.BulletUI;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.common.ShuffleAction;
@@ -48,6 +49,7 @@ public class GameActionManagerPatch {
             BulletSubscriber.reloadedThisCombat = 0;
             ChargePower.chargeThisCombat = 0;
             OverloadCard.overloadThisCombat = 0;
+            BulletUI.useBulletBooleanTurn = false;
             jobThisCombat.clear();
             FreeReloadPower.freeReload = false;
         }

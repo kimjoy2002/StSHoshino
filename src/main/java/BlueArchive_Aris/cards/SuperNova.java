@@ -15,7 +15,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static BlueArchive_Hoshino.DefaultMod.makeArisCardPath;
 
-public class SuperNova extends AbstractDynamicCard {
+public class SuperNova extends EquipmentCard {
 
     public static final String ID = DefaultMod.makeArisID(SuperNova.class.getSimpleName());
     public static final String IMG = makeArisCardPath("SuperNova.png");

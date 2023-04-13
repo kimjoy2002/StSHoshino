@@ -4,6 +4,7 @@ import BlueArchive_Aris.cards.CustomGameCard;
 import BlueArchive_Aris.cards.QuestCard;
 import BlueArchive_Hoshino.DefaultMod;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DescriptionLine;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractEvent;
@@ -17,6 +18,7 @@ import java.util.List;
 
 import static BlueArchive_Aris.cards.CustomGameCard.makeCustomCard;
 import static BlueArchive_Hoshino.DefaultMod.makeArisEventPath;
+import static com.megacrit.cardcrawl.cards.AbstractCard.TEXT;
 
 public class SaibaMomoiEvent extends AbstractImageEvent {
 
@@ -49,6 +51,21 @@ public class SaibaMomoiEvent extends AbstractImageEvent {
         return false;
     }
 
+
+
+    static public boolean isUpgradedCustomGameCard() {
+        Iterator var2 = AbstractDungeon.player.masterDeck.group.iterator();
+
+        while(var2.hasNext()) {
+            AbstractCard c = (AbstractCard)var2.next();
+            if (c instanceof CustomGameCard) {
+                return c.upgraded;
+            }
+        }
+        return false;
+    }
+
+
     public void ConfirmedCustomGameCard() {
         Iterator var2 = AbstractDungeon.player.masterDeck.group.iterator();
 
@@ -59,6 +76,7 @@ public class SaibaMomoiEvent extends AbstractImageEvent {
                 c.cost = current_card.cost;
                 c.costForTurn = current_card.cost;
                 ((CustomGameCard) c).initializeCustomCard();
+                ((CustomGameCard) c).reloadImage();
             }
         }
     }
@@ -138,9 +156,47 @@ public class SaibaMomoiEvent extends AbstractImageEvent {
                 switch (buttonPressed) {
                     case 0:
                         imageEventText.loadImage(IMG);
-                        this.imageEventText.updateBodyText(count%3==0?DESCRIPTIONS[5]:(count%3==1?DESCRIPTIONS[6]:DESCRIPTIONS[7]));
-                        this.imageEventText.clearRemainingOptions();
                         current_card = makeCustomGameCard();
+                        if(isUpgradedCustomGameCard())
+                            current_card.upgrade();
+                        String text_ = count%3==0?DESCRIPTIONS[5]:(count%3==1?DESCRIPTIONS[6]:DESCRIPTIONS[7]);
+                        text_ += " NL NL ";
+
+
+                        String typetext;
+                        switch (current_card.type) {
+                            case ATTACK:
+                                typetext = TEXT[0];
+                                break;
+                            case CURSE:
+                                typetext = TEXT[3];
+                                break;
+                            case STATUS:
+                                typetext = TEXT[7];
+                                break;
+                            case SKILL:
+                                typetext = TEXT[1];
+                                break;
+                            case POWER:
+                                typetext = TEXT[2];
+                                break;
+                            default:
+                                typetext = TEXT[5];
+                        }
+
+                        text_ += " (" + current_card.cost + "/"+typetext+") #g" + current_card.name.replace(" ", " #g");
+                        text_ += " NL ";
+                        for(DescriptionLine iter : current_card.description) {
+                            String text_temp =  iter.text;
+                            text_temp = text_temp.replace("*", "#y");
+                            text_temp = text_temp.replace("!D!",String.valueOf(current_card.baseDamage));
+                            text_temp = text_temp.replace("!B!",String.valueOf(current_card.baseBlock));
+                            text_temp = text_temp.replace("!M!",String.valueOf(current_card.baseMagicNumber));
+                            text_ += text_temp;
+                            text_ += " NL ";
+                        }
+                        this.imageEventText.updateBodyText(text_);
+                        this.imageEventText.clearRemainingOptions();
                         if(count!=0) {
                             AbstractDungeon.player.loseGold(reroll_gold);
                         }
@@ -185,10 +241,13 @@ public class SaibaMomoiEvent extends AbstractImageEvent {
     }
 
     private AbstractCard makeCustomGameCard() {
+        AbstractCard.CardType type_ = AbstractDungeon.miscRng.randomBoolean() ? AbstractCard.CardType.ATTACK: AbstractCard.CardType.SKILL;
         int cost = AbstractDungeon.miscRng.randomBoolean(0.4f)?1:(AbstractDungeon.miscRng.randomBoolean(0.5f)?2:(AbstractDungeon.miscRng.randomBoolean(0.66f)?0:3));
+        if(type_ == AbstractCard.CardType.SKILL && cost > 2)
+            cost = 2;
         int value = cost==0?60:(cost==1?100:(cost==2?200:300));
         value+=AbstractDungeon.miscRng.random(0.9f,1.15f);
-        current_card = makeCustomCard(cost, value, AbstractCard.CardType.ATTACK);
+        current_card = makeCustomCard(cost, value, type_);
         return current_card;
     }
 

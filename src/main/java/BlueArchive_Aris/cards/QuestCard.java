@@ -51,6 +51,8 @@ public abstract class QuestCard extends AbstractDynamicCard {
                 AbstractCard c = (AbstractCard)var2.next();
                 if (c instanceof QuestCard) {
                     if(process == TAS || ((QuestCard) c).onQuestCheck(process)) {
+                        if(process == TAS)
+                            c.upgrade();
                         completeList.add(c);
                     }
                 }

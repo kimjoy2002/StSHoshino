@@ -17,12 +17,14 @@ import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 public class CSAction extends AbstractGameAction {
     private DamageInfo info;
     private AbstractCard theCard = null;
+    private boolean upgrade = false;
 
-    public CSAction(AbstractCreature target, DamageInfo info) {
+    public CSAction(AbstractCreature target, DamageInfo info, boolean upgrade) {
         this.info = info;
         this.setValues(target, info);
         this.actionType = ActionType.DAMAGE;
         this.duration = Settings.ACTION_DUR_MED;
+        this.upgrade = upgrade;
     }
 
     public void update() {
@@ -31,7 +33,7 @@ public class CSAction extends AbstractGameAction {
             this.target.damage(this.info);
             AbstractCard card = new LevelUp();
             card.upgrade();
-            if ((((AbstractMonster)this.target).isDying || this.target.currentHealth <= 0)) {
+            if (upgrade || (((AbstractMonster)this.target).isDying || this.target.currentHealth <= 0)) {
                 this.addToBot(new MakeTempCardInHandAction(card, 1));
             } else {
                 this.addToBot(new MakeTempCardInDrawPileAction(card, 1, true, true));

@@ -89,6 +89,7 @@ public class TutorialAction  extends AbstractGameAction {
                 }
                 this.isDone = true;
             }
+            AbstractDungeon.gridSelectScreen.selectedCards.clear();
             this.tickDuration();
         }
     }

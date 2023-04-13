@@ -26,14 +26,13 @@ public class ReactiveArmour extends AbstractDynamicCard implements AttackedCard 
     public static final CardColor COLOR = Aris.Enums.COLOR_BLUE;
 
     private static final int COST = 1;
-    private static final int MAGIC = 8;
+    private static final int MAGIC = 9;
     private static final int UPGRADE_PLUS_MAGIC = 3;
 
 
     public ReactiveArmour() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC;
-        this.tags.add(CardTags.STARTER_DEFEND);
     }
 
     // Actions the card should do.
@@ -43,7 +42,7 @@ public class ReactiveArmour extends AbstractDynamicCard implements AttackedCard 
     }
 
     public int onAttacked(DamageInfo info, int damageAmount) {
-        if (damageAmount < AbstractDungeon.player.currentHealth && damageAmount > 0 && info.owner != null && info.type != DamageInfo.DamageType.HP_LOSS) {
+        if (damageAmount < AbstractDungeon.player.currentHealth && damageAmount > 0 && info.owner != null) {
             this.addToBot(new DiscardToHandAction(this));
         }
         return damageAmount;

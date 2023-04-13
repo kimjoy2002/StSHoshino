@@ -7,8 +7,10 @@ import BlueArchive_Hoshino.cards.ChooseNervous;
 import BlueArchive_Hoshino.cards.ChooseRepose;
 import BlueArchive_Hoshino.cards.HoshinoStrike;
 import BlueArchive_Hoshino.cards.ShotCard;
+import BlueArchive_Hoshino.characters.Hoshino;
 import BlueArchive_Hoshino.patches.relics.BottledPlaceholderField;
 import BlueArchive_Hoshino.relics.IOURelic;
+import BlueArchive_Hoshino.ui.BulletUI;
 import BlueArchive_Hoshino.util.TextureLoader;
 import basemod.abstracts.CustomRelic;
 import basemod.abstracts.CustomSavable;
@@ -34,8 +36,7 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-import static BlueArchive_Hoshino.DefaultMod.makeArisRelicOutlinePath;
-import static BlueArchive_Hoshino.DefaultMod.makeArisRelicPath;
+import static BlueArchive_Hoshino.DefaultMod.*;
 
 public class CopyCat extends CustomRelic implements CustomSavable<Integer> {
 
@@ -71,6 +72,7 @@ public class CopyCat extends CustomRelic implements CustomSavable<Integer> {
             return;
         }
         CopyCatColor = AbstractCard.CardColor.values()[cardColor];
+        applyCharacter(CopyCatColor);
         setDescriptionAfterLoading();
     }
 
@@ -96,11 +98,22 @@ public class CopyCat extends CustomRelic implements CustomSavable<Integer> {
             }
 
         }
+        retVal.shuffle();
 
         while(retVal.size()>3) {
             retVal.removeTopCard();
         }
         AbstractDungeon.gridSelectScreen.open(retVal, 1, DESCRIPTIONS[1], false, false, false, false);
+    }
+
+
+    public void applyCharacter(AbstractCard.CardColor char_color) {
+        if (char_color == AbstractCard.CardColor.BLUE) {
+            AbstractDungeon.player.masterMaxOrbs = 3;
+        }
+        else if (char_color == Hoshino.Enums.COLOR_PINK) {
+            BulletUI.useBulletBoolean = true;
+        }
     }
 
     @Override
@@ -132,6 +145,7 @@ public class CopyCat extends CustomRelic implements CustomSavable<Integer> {
                 AbstractDungeon.getCurrRoom().rewardPopOutTimer = 0.25F;
             }
 
+            applyCharacter(CopyCatColor);
 
             if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.INCOMPLETE) {
                 AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;

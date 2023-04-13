@@ -31,7 +31,7 @@ public class HeroQuest extends QuestCard {
 
     private static final int COST = -2;
 
-    private static int count = 15;
+    private static int count = 12;
 
     public HeroQuest() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);

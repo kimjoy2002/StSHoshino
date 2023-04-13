@@ -4,13 +4,6 @@ size: 1024,1024
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
-idol
-  rotate: false
-  xy: 803, 1
-  size: 200, 300
-  orig: 200, 300
-  offset: 0, 0
-  index: -1
 Alice
   rotate: false
   xy: 803, 303
@@ -18,9 +11,16 @@ Alice
   orig: 200, 300
   offset: 0, 0
   index: -1
-Crowbar
+idol
   rotate: false
   xy: 203, 605
+  size: 200, 300
+  orig: 200, 300
+  offset: 0, 0
+  index: -1
+Crowbar
+  rotate: false
+  xy: 203, 383
   size: 218, 125
   orig: 218, 125
   offset: 0, 0
@@ -41,22 +41,29 @@ woodenstick
   index: -1
 sword
   rotate: false
-  xy: 203, 383
+  xy: 405, 510
   size: 218, 125
   orig: 218, 125
   offset: 0, 0
   index: -1
 rogue
   rotate: false
-  xy: 1, 605
+  xy: 803, 1
   size: 200, 300
   orig: 200, 300
   offset: 0, 0
   index: -1
 WizardHat
   rotate: false
-  xy: 203, 732
+  xy: 423, 383
   size: 160, 121
   orig: 160, 121
+  offset: 0, 0
+  index: -1
+Devil
+  rotate: false
+  xy: 1, 605
+  size: 200, 300
+  orig: 200, 300
   offset: 0, 0
   index: -1

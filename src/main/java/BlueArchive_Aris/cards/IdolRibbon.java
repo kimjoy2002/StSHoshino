@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static BlueArchive_Hoshino.DefaultMod.makeArisCardPath;
 
-public class IdolRibbon extends AbstractDynamicCard {
+public class IdolRibbon extends EquipmentCard {
 
     public static final String ID = DefaultMod.makeArisID(IdolRibbon.class.getSimpleName());
     public static final String IMG = makeArisCardPath("IdolRibbon.png");

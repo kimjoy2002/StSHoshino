@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static BlueArchive_Hoshino.DefaultMod.makeArisCardPath;
 
-public class WoodenStick extends AbstractDynamicCard {
+public class WoodenStick extends EquipmentCard {
 
     public static final String ID = DefaultMod.makeArisID(WoodenStick.class.getSimpleName());
     public static final String IMG = makeArisCardPath("WoodenStick.png");

@@ -16,7 +16,7 @@ import java.util.Iterator;
 
 import static BlueArchive_Hoshino.DefaultMod.makeArisCardPath;
 
-public class Elixir extends AbstractDynamicCard {
+public class Elixir extends AbstractDynamicCard implements RewardCard {
     public static final String ID = DefaultMod.makeArisID(Elixir.class.getSimpleName());
     public static final String IMG = makeArisCardPath("Elixir.png");
 
@@ -40,7 +40,7 @@ public class Elixir extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new ElixirAction(magicNumber));
+        this.addToBot(new ElixirAction(-1, magicNumber));
         this.addToBot(new PermanentExhaustAction(this.uuid));
     }
 

@@ -1,32 +1,23 @@
 package BlueArchive_Aris.events;
 
-import BlueArchive_Aris.cards.Crowbar;
+import BlueArchive_Aris.cards.Mask;
 import BlueArchive_Aris.cards.IdolRibbon;
 import BlueArchive_Aris.cards.Rogue;
 import BlueArchive_Aris.cards.WizardHat;
 import BlueArchive_Hoshino.DefaultMod;
 import BlueArchive_Hoshino.patches.EnumPatch;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.curses.Doubt;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractEvent;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
-import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.EventStrings;
-import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
-import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import static BlueArchive_Hoshino.DefaultMod.makeArisEventPath;
-import static BlueArchive_Hoshino.DefaultMod.makeEventPath;
 
 public class CaveofClassChangeEvent extends AbstractImageEvent {
 
@@ -42,7 +33,7 @@ public class CaveofClassChangeEvent extends AbstractImageEvent {
     public CaveofClassChangeEvent() {
         super(NAME, DESCRIPTIONS[0], IMG);
 
-        this.imageEventText.setDialogOption(OPTIONS[0], CardLibrary.getCopy(Crowbar.ID));
+        this.imageEventText.setDialogOption(OPTIONS[0], CardLibrary.getCopy(Mask.ID));
         imageEventText.setDialogOption(OPTIONS[1], CardLibrary.getCopy(Rogue.ID));
         imageEventText.setDialogOption(OPTIONS[2], CardLibrary.getCopy(IdolRibbon.ID));
         imageEventText.setDialogOption(OPTIONS[3], CardLibrary.getCopy(WizardHat.ID));
@@ -69,11 +60,11 @@ public class CaveofClassChangeEvent extends AbstractImageEvent {
                         this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
                         this.imageEventText.updateDialogOption(0, OPTIONS[4]);
                         removeAllEquipment();
-                        AbstractCard crowbar = new Crowbar();
+                        AbstractCard crowbar = new Mask();
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(crowbar, (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
                         this.imageEventText.clearRemainingOptions();
 
-                        AbstractEvent.logMetricObtainCard("CaveofClassChangeEvent", "Warrior",new Crowbar());
+                        AbstractEvent.logMetricObtainCard("CaveofClassChangeEvent", "Warrior",new Mask());
                         screenNum = 1;
                         break;
                     case 1:

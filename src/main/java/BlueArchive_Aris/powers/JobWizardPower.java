@@ -7,11 +7,11 @@ import BlueArchive_Hoshino.util.TextureLoader;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -67,17 +67,20 @@ public class JobWizardPower extends JobPower implements CloneablePowerInterface 
         super.onJobChange(withEquip);
         AbstractDungeon.actionManager.addToBottom(new GetPowerAction(upgrade));
     }
-    public void onUseCard(AbstractCard card, UseCardAction action) {
-        if(card.type == AbstractCard.CardType.POWER) {
+
+    public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
+        if (power.type == PowerType.DEBUFF && !power.ID.equals("Shackled") && source == this.owner && target != this.owner && !target.hasPower("Artifact")) {
+            this.flash();
             int amount_ =  this.block_power;
 
             if(AbstractDungeon.player.hasPower(LevelUpPower.POWER_ID)) {
                 amount_+=AbstractDungeon.player.getPower(LevelUpPower.POWER_ID).amount * block_power;
             }
-            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(owner, owner, amount_));
-            this.flash();
+            this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EndTurnBlockPower(AbstractDungeon.player,  amount_),  amount_));
         }
     }
+
+
     public void levelUp(){
         flash();
         if(amount == -1) {

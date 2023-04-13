@@ -23,7 +23,7 @@ public class Diet extends QuestCard {
     public static final String IMG = makeArisCardPath("Diet.png");
 
 
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = Aris.Enums.COLOR_BLUE;

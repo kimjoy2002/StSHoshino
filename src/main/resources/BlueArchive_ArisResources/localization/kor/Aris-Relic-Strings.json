@@ -39,7 +39,46 @@
     "NAME": "TAS",
     "FLAVOR": "\"거기서 점프하고 앉으면서 대쉬를 하시면 그 구간을 통째로 스킵할 수 있어요.\"",
     "DESCRIPTIONS": [
-      "획득시 덱에 있는 모든 #ybluearchive_aris:퀘스트 카드가 #ybluearchive_aris:보상으로 변합니다."
+      "획득시 덱에 있는 모든 #ybluearchive_aris:퀘스트 카드가 강화된 #ybluearchive_aris:보상으로 변합니다."
+    ]
+  },
+  "BlueArchive_Aris:Battery": {
+    "NAME": "건전지",
+    "FLAVOR": "\"아리스는 건전지를 먹지 않습니다!\"",
+    "DESCRIPTIONS": [
+      "#ybluearchive_aris:감전이 없는 적에게 #ybluearchive_aris:감전이 처음 부여될때 추가로 #ybluearchive_aris:감전을 #b",
+      " 부여합니다."
+    ]
+  },
+  "BlueArchive_Aris:GameManual": {
+    "NAME": "게임 메뉴얼",
+    "FLAVOR": "메뉴얼 없이 깨기 아주 어렵기로 정평이 나있는 게임의 메뉴얼입니다.",
+    "DESCRIPTIONS": [
+      "턴 시작시 #y방어도의 절반을 #ybluearchive_aris:복구로 변환합니다."
+    ]
+  },
+  "BlueArchive_Aris:StartingEquipment": {
+    "NAME": "시작의 장비",
+    "FLAVOR": "시작의 마을에서 공짜로 준다는 장비입니다.",
+    "DESCRIPTIONS": [
+      "전투마다 처음 장착한 #ybluearchive_aris:장비에 #y힘 과 #y민첩 을 #b",
+      " 부여합니다. 이 효과는 해당 #ybluearchive_aris:장비를 착용한동안만 적용됩니다."
+    ]
+  },
+  "BlueArchive_Aris:CoveredKnifeSwitch": {
+    "NAME": "두꺼비집",
+    "FLAVOR": "\"안돼! 아리스! 전자레인지와 헤어드라이기와 에어컨을 동시에 틀고있으면!\"",
+    "DESCRIPTIONS": [
+      "#ybluearchive_aris:과부하가 발동할때마다 #y방어도를 #b",
+      " 얻습니다."
+    ]
+  },
+  "BlueArchive_Aris:Gameboy": {
+    "NAME": "휴대용 게임기",
+    "FLAVOR": "언제 어디서나 간편하게 게임이 가능합니다.",
+    "DESCRIPTIONS": [
+      "획득시 최대 체력이 #r",
+      "% 감소합니다. 매 전투가 끝날때마다 체력을 전부 회복합니다."
     ]
   }
 }

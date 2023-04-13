@@ -80,7 +80,7 @@ public class JobRoguePower extends JobPower implements CloneablePowerInterface {
     }
 
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if(card.type == AbstractCard.CardType.ATTACK && !(card.costForTurn != 0 && (!card.freeToPlayOnce || card.cost == -1))) {
+        if(!(card.costForTurn != 0 && (!card.freeToPlayOnce || card.cost == -1))) {
 
             AbstractCreature target = AbstractDungeon.getMonsters().getRandomMonster((AbstractMonster)null, true, AbstractDungeon.cardRandomRng);
             if (target != null) {

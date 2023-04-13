@@ -4,6 +4,8 @@ import BlueArchive_Aris.characters.Aris;
 import BlueArchive_Aris.events.CaveofClassChangeEvent;
 import BlueArchive_Aris.events.SaibaMidoriEvent;
 import BlueArchive_Aris.events.SaibaMomoiEvent;
+import BlueArchive_Aris.potions.ChargePotion;
+import BlueArchive_Aris.potions.ShockPotion;
 import BlueArchive_Aris.relics.*;
 import BlueArchive_Aris.variables.SecondMagicNumber;
 import BlueArchive_Hoshino.events.*;
@@ -18,6 +20,9 @@ import BlueArchive_Hoshino.relics.*;
 import BlueArchive_Hoshino.subscriber.BulletSubscriber;
 import basemod.*;
 import basemod.eventUtil.AddEventParams;
+import basemod.eventUtil.EventUtils;
+import basemod.eventUtil.util.Condition;
+import basemod.eventUtil.util.ConditionalEvent;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
@@ -31,10 +36,12 @@ import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.dungeons.TheBeyond;
 import com.megacrit.cardcrawl.dungeons.TheCity;
+import com.megacrit.cardcrawl.events.AbstractEvent;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
@@ -51,9 +58,13 @@ import BlueArchive_Hoshino.variables.DefaultSecondMagicNumber;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Properties;
+
+import static basemod.eventUtil.EventUtils.eventIDs;
+import static basemod.eventUtil.EventUtils.normalEvents;
 
 //TODO: DON'T MASS RENAME/REFACTOR
 //TODO: DON'T MASS RENAME/REFACTOR
@@ -105,9 +116,11 @@ public class DefaultMod implements
     public static final String ENABLE_ONLY_BLUEARCHIVE_BOSS = "enableOnlyBluearchiveBoss";
     public static final String ENABLE_ACT3_EVENT = "enableAct3Event";
     public static final String RELOAD_BUTTON_KEY = "reloadButton";
+    public static final String DISABLE_COMMON_EVENT = "disableCommonEvent";
     public static boolean enableBoss = true;
     public static boolean onlyBluearchiveBoss = false;
     public static boolean enableAct3Event = false;
+    public static boolean disableCommonEvent = false;
     public static int reloadKey = 46; //R
     private InputProcessor oldInputProcessor;
 
@@ -118,6 +131,7 @@ public class DefaultMod implements
     ModLabeledToggleButton disableBossButton = null;
     ModLabeledToggleButton enableBossOnlyButton = null;
     ModLabeledToggleButton enableAct3EventButton = null;
+    ModLabeledToggleButton disableCommonEventButton = null;
 
     
     // =============== INPUT TEXTURE LOCATION =================
@@ -136,7 +150,13 @@ public class DefaultMod implements
     public static final Color BULLET_POTION_HYBRID = CardHelper.getColor(30.0f, 30.0f, 30.0f);
     public static final Color BULLET_POTION_SPOTS = CardHelper.getColor(166.0f, 88.0f, 2.0f);
 
+    public static final Color CHARGE_POTION_LIQUID = CardHelper.getColor(53.0f, 53.0f, 203.0f);
+    public static final Color CHARGE_POTION_HYBRID = CardHelper.getColor(255.0f, 230.0f, 230.0f);
+    public static final Color CHARGE_POTION_SPOTS = CardHelper.getColor(203.0f, 203.0f, 203.0f);
 
+    public static final Color SHOCK_POTION_LIQUID = CardHelper.getColor(100.0f, 100.0f, 233.0f);
+    public static final Color SHOCK_POTION_HYBRID = CardHelper.getColor(100.0f, 100.0f, 230.0f);
+    public static final Color SHOCK_POTION_SPOTS = CardHelper.getColor(233.0f, 233.0f, 233.0f);
     // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
     // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
     // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
@@ -312,6 +332,7 @@ public class DefaultMod implements
         defaultSettings.setProperty(DISABLE_BLUEARCHIVE_BOSS, "FALSE");
         defaultSettings.setProperty(ENABLE_ONLY_BLUEARCHIVE_BOSS, "FALSE");
         defaultSettings.setProperty(ENABLE_ACT3_EVENT, "FALSE");
+        defaultSettings.setProperty(DISABLE_COMMON_EVENT, "FALSE");
         defaultSettings.setProperty(RELOAD_BUTTON_KEY, "46");
 
         try {
@@ -320,6 +341,7 @@ public class DefaultMod implements
             enableBoss = !config.getBool(DISABLE_BLUEARCHIVE_BOSS);
             onlyBluearchiveBoss = config.getBool(ENABLE_ONLY_BLUEARCHIVE_BOSS);
             enableAct3Event = config.getBool(ENABLE_ACT3_EVENT);
+            disableCommonEvent = config.getBool(DISABLE_COMMON_EVENT);
             reloadKey = config.getInt(RELOAD_BUTTON_KEY);
         } catch (Exception e) {
             e.printStackTrace();
@@ -530,9 +552,40 @@ public class DefaultMod implements
                     }
                 });
 
+        disableCommonEventButton = new ModLabeledToggleButton("Disable Common BlueArchive Event.",
+                350.0f, 250.0f, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                disableCommonEvent,
+                settingsPanel,
+                (label) -> {},
+                (button) -> {
+
+                    disableCommonEvent = button.enabled;
+                    try {
+                        if(disableCommonEvent){
+                            removeEvent();
+                        }else{
+                            addCommonEvent();
+                        }
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+
+                    try {
+                        SpireConfig config = new SpireConfig("BlueArchive_Hoshino", "BlueArchiveConfig", defaultSettings);
+                        config.setBool(DISABLE_COMMON_EVENT, !disableCommonEvent);
+                        config.save();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                });
+
+
+
+
         settingsPanel.addUIElement(disableBossButton);
         settingsPanel.addUIElement(enableBossOnlyButton);
         settingsPanel.addUIElement(enableAct3EventButton);
+        settingsPanel.addUIElement(disableCommonEventButton);
         BaseMod.registerModBadge(badgeTexture, MODNAME, AUTHOR, DESCRIPTION, settingsPanel);
 
         
@@ -550,6 +603,7 @@ public class DefaultMod implements
 
         // Create a new event builder
         // Since this is a builder these method calls (outside of create()) can be skipped/added as necessary
+        if(!disableCommonEvent)
         {
         AddEventParams eventParams = new AddEventParams.Builder(KaiserCorporationEvent.ID, KaiserCorporationEvent.class)
                 .dungeonID(Exordium.ID)
@@ -563,6 +617,7 @@ public class DefaultMod implements
                     .create();
             BaseMod.addEvent(eventParams);
         }
+        if(!disableCommonEvent)
         {
             AddEventParams eventParams = new AddEventParams.Builder(SaibaMidoriEvent.ID, SaibaMidoriEvent.class)
                     .dungeonID(Exordium.ID)
@@ -576,6 +631,7 @@ public class DefaultMod implements
                     .create();
             BaseMod.addEvent(eventParams);
         }
+        if(!disableCommonEvent)
         {
             AddEventParams eventParams = new AddEventParams.Builder(KaiserCorporationEvent2.ID, KaiserCorporationEvent2.class)
                     .dungeonID(TheCity.ID)
@@ -589,12 +645,14 @@ public class DefaultMod implements
                     .create();
             BaseMod.addEvent(eventParams);
         }
+        if(!disableCommonEvent)
         {
             AddEventParams eventParams = new AddEventParams.Builder(SaibaMomoiEvent.ID, SaibaMomoiEvent.class)
                     .dungeonID(TheCity.ID)
                     .create();
             BaseMod.addEvent(eventParams);
         }
+        if(!disableCommonEvent)
         {
             AddEventParams eventParams = new AddEventParams.Builder(GachaEvent.ID, GachaEvent.class)
                     .dungeonID(TheBeyond.ID)
@@ -613,6 +671,57 @@ public class DefaultMod implements
         logger.info("Done loading badge Image and mod options");
         addCustomMonster();
     }
+
+    public  void addCommonEvent() {
+        {
+            AddEventParams eventParams = new AddEventParams.Builder(KaiserCorporationEvent.ID, KaiserCorporationEvent.class)
+                    .dungeonID(Exordium.ID)
+                    .create();
+            BaseMod.addEvent(eventParams);
+        }
+        {
+            AddEventParams eventParams = new AddEventParams.Builder(SaibaMidoriEvent.ID, SaibaMidoriEvent.class)
+                    .dungeonID(Exordium.ID)
+                    .create();
+            BaseMod.addEvent(eventParams);
+        }
+        {
+            AddEventParams eventParams = new AddEventParams.Builder(KaiserCorporationEvent2.ID, KaiserCorporationEvent2.class)
+                    .dungeonID(TheCity.ID)
+                    .create();
+            BaseMod.addEvent(eventParams);
+        }
+        {
+            AddEventParams eventParams = new AddEventParams.Builder(SaibaMomoiEvent.ID, SaibaMomoiEvent.class)
+                    .dungeonID(TheCity.ID)
+                    .create();
+            BaseMod.addEvent(eventParams);
+        }
+        {
+            AddEventParams eventParams = new AddEventParams.Builder(GachaEvent.ID, GachaEvent.class)
+                    .dungeonID(TheBeyond.ID)
+                    .create();
+            BaseMod.addEvent(eventParams);
+        }
+
+    }
+    public  void removeEvent() {
+        removeEvent(KaiserCorporationEvent.ID);
+        removeEvent(SaibaMidoriEvent.ID);
+        removeEvent(KaiserCorporationEvent2.ID);
+        removeEvent(SaibaMomoiEvent.ID);
+        removeEvent(GachaEvent.ID);
+    }
+
+    public  void removeEvent(String ID) {
+        ID = ID.replace(' ', '_');
+        eventIDs.remove(ID);
+        EventUtils.normalEvents.remove(ID);
+    }
+
+
+
+
 
 
     public void enableBoss() {
@@ -728,6 +837,9 @@ public class DefaultMod implements
 
 
 
+        BaseMod.addPotion(ChargePotion.class, CHARGE_POTION_LIQUID, CHARGE_POTION_HYBRID, CHARGE_POTION_SPOTS, ChargePotion.POTION_ID, Aris.Enums.ARIS);
+        BaseMod.addPotion(ShockPotion.class, SHOCK_POTION_LIQUID, SHOCK_POTION_HYBRID, SHOCK_POTION_SPOTS, ShockPotion.POTION_ID, Aris.Enums.ARIS);
+
 
 
         logger.info("Done editing potions");
@@ -754,9 +866,10 @@ public class DefaultMod implements
         BaseMod.addRelicToCustomPool(new HoshinoBaseRelicPlus(), Hoshino.Enums.COLOR_PINK);
 
         BaseMod.addRelicToCustomPool(new EyeOfHorusRelic(), Hoshino.Enums.COLOR_PINK);
-        BaseMod.addRelicToCustomPool(new AutoReloaderRelic(), Hoshino.Enums.COLOR_PINK);
 
+        BaseMod.addRelicToCustomPool(new AutoReloaderRelic(), Hoshino.Enums.COLOR_PINK);
         BaseMod.addRelicToCustomPool(new AmmoBoxRelic(), Hoshino.Enums.COLOR_PINK);
+
         BaseMod.addRelicToCustomPool(new WhaleTubeRelic(), Hoshino.Enums.COLOR_PINK);
         BaseMod.addRelicToCustomPool(new ShellBeltRelic(), Hoshino.Enums.COLOR_PINK);
         BaseMod.addRelicToCustomPool(new TacticalSatchelBagRelic(), Hoshino.Enums.COLOR_PINK);
@@ -771,7 +884,14 @@ public class DefaultMod implements
 
         BaseMod.addRelicToCustomPool(new HPPotion(), Aris.Enums.COLOR_BLUE);
 
+        BaseMod.addRelicToCustomPool(new StartingEquipment(), Aris.Enums.COLOR_BLUE);
+
+        BaseMod.addRelicToCustomPool(new Battery(), Aris.Enums.COLOR_BLUE);
+        BaseMod.addRelicToCustomPool(new GameManual(), Aris.Enums.COLOR_BLUE);
+        BaseMod.addRelicToCustomPool(new CoveredKnifeSwitch(), Aris.Enums.COLOR_BLUE);
+
         BaseMod.addRelicToCustomPool(new CopyCat(), Aris.Enums.COLOR_BLUE);
+        BaseMod.addRelicToCustomPool(new Gameboy(), Aris.Enums.COLOR_BLUE);
 
         BaseMod.addRelicToCustomPool(new TASRelic(), Aris.Enums.COLOR_BLUE);
 
@@ -882,6 +1002,9 @@ public class DefaultMod implements
         // PotionStrings
         BaseMod.loadCustomStringsFile(PotionStrings.class,
                 pathByLanguage + "Hoshino-Potion-Strings.json");
+        // PotionStrings
+        BaseMod.loadCustomStringsFile(PotionStrings.class,
+                pathByLanguageAris + "Aris-Potion-Strings.json");
         
         // CharacterStrings
         BaseMod.loadCustomStringsFile(CharacterStrings.class,

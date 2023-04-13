@@ -59,7 +59,7 @@ public class StaticArmourPower extends AbstractPower implements CloneablePowerIn
 
 
     public int onAttacked(DamageInfo info, int damageAmount) {
-        if (damageAmount < this.owner.currentHealth && damageAmount > 0 && info.owner != null && info.type != DamageInfo.DamageType.HP_LOSS) {
+        if (damageAmount < this.owner.currentHealth && damageAmount > 0 && info.owner != null) {
             this.flash();
             Iterator var3 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
 

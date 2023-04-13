@@ -71,7 +71,7 @@ public class JobWarriorPower extends JobPower implements CloneablePowerInterface
     }
 
     public int onAttacked(DamageInfo info, int damageAmount) {
-        if (damageAmount < this.owner.currentHealth && damageAmount > 0 && info.owner != null && info.type != DamageInfo.DamageType.HP_LOSS) {
+        if (damageAmount < this.owner.currentHealth && damageAmount > 0 && info.owner != null) {
             this.flash();
             int amount_ =  this.bonusBlock;
 

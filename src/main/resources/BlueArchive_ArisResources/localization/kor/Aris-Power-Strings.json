@@ -21,7 +21,7 @@
   "BlueArchive_Aris:ShockPower": {
     "NAME": "감전",
     "DESCRIPTIONS": [
-      "공격으로 인해 피해를 받을때마다 체력을 #r",
+      "공격 받을때마다 체력을 #r",
       " 잃고 수치가 1 감소합니다."
     ]
   },
@@ -163,8 +163,30 @@
   "BlueArchive_Aris:JobWizardPower": {
     "NAME": "직업: 마법사",
     "DESCRIPTIONS": [
-      "파워 카드를 사용할때마다 #y방어도를 #b",
+      "적에게 부정적인 효과를 부여할때마다 #y복구를 #b",
       " 얻습니다."
+    ]
+  },
+  "BlueArchive_Aris:RestoreStrPower": {
+    "NAME": "힘 복구",
+    "DESCRIPTIONS": [
+      "다음 #b",
+      " 턴에 걸쳐서 턴이 끝날때 #y힘을 #b",
+      " 씩 오릅니다."
+    ]
+  },
+  "BlueArchive_Aris:JobDevilPower": {
+    "NAME": "직업: 마왕",
+    "DESCRIPTIONS": [
+      "턴이 끝날때 이 장비의 #y힘 과 #y민첩을 #r",
+      " 잃습니다."
+    ]
+  },
+  "BlueArchive_Aris:ArisFormPower": {
+    "NAME": "픽셀의 형상",
+    "DESCRIPTIONS": [
+      "다음 #b",
+      " 턴동안, 턴이 시작할때마다 모두에게 불가침을 #b1 부여합니다."
     ]
   }
 }

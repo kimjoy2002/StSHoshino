@@ -30,6 +30,8 @@ public class CreatedApotheosisAction extends AbstractGameAction {
             this.addToGroup(p.discardPile, tmp);
             this.addToGroup(p.exhaustPile, tmp);
 
+            tmp.shuffle();
+
             this.upgradeCardsInGroup(tmp, amount);
 
             this.isDone = true;

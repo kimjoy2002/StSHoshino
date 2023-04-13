@@ -59,7 +59,7 @@ public class ShockPower extends AbstractPower implements CloneablePowerInterface
 
 
     public int onAttacked(DamageInfo info, int damageAmount) {
-        if (amount > 0 && damageAmount < this.owner.currentHealth && damageAmount > 0 && info.owner != null && info.type == DamageInfo.DamageType.NORMAL && info.type != DamageInfo.DamageType.HP_LOSS) {
+        if (info.owner != null && info.type == DamageInfo.DamageType.NORMAL && info.type != DamageInfo.DamageType.HP_LOSS) {
             this.flash();
 
             if(this.owner.hasPower(TransformerPower.POWER_ID)) {

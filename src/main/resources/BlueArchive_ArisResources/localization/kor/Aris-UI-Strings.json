@@ -23,5 +23,10 @@
     "TEXT": [
       "비용을 줄일 카드를 선택하십시오"
     ]
+  },
+  "BlueArchive_Aris:BlacksmithAction": {
+    "TEXT": [
+      "착용된 장비가 없어"
+    ]
   }
 }

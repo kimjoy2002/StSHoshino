@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static BlueArchive_Hoshino.DefaultMod.makeArisCardPath;
 
-public class WizardHat extends AbstractDynamicCard {
+public class WizardHat extends EquipmentCard {
 
     public static final String ID = DefaultMod.makeArisID(WizardHat.class.getSimpleName());
     public static final String IMG = makeArisCardPath("WizardHat.png");
@@ -27,7 +27,7 @@ public class WizardHat extends AbstractDynamicCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     private static final int COST = 1;
-    private static final int MAGIC = 8;
+    private static final int MAGIC = 3;
 
 
     public WizardHat() {

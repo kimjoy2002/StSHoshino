@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static BlueArchive_Hoshino.DefaultMod.makeArisCardPath;
 
-public class NeatCompression extends AbstractDynamicCard {
+public class NeatCompression extends AbstractDynamicCard implements RewardCard {
     public static final String ID = DefaultMod.makeArisID(NeatCompression.class.getSimpleName());
     public static final String IMG = makeArisCardPath("NeatCompression.png");
 

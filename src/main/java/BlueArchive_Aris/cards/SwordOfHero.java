@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static BlueArchive_Hoshino.DefaultMod.makeArisCardPath;
 
-public class SwordOfHero extends AbstractDynamicCard {
+public class SwordOfHero extends EquipmentCard implements OutputCard, RewardCard {
 
     public static final String ID = DefaultMod.makeArisID(SwordOfHero.class.getSimpleName());
     public static final String IMG = makeArisCardPath("SwordOfHero.png");
@@ -23,7 +23,7 @@ public class SwordOfHero extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = Aris.Enums.COLOR_BLUE;
 
-    private static final int COST = 2;
+    private static final int COST = 1;
 
 
     public SwordOfHero() {

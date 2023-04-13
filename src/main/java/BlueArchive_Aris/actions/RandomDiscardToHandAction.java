@@ -27,6 +27,7 @@ public class RandomDiscardToHandAction extends AbstractGameAction {
             AbstractCard c = (AbstractCard)var1.next();
             tmp.addToRandomSpot(c);
         }
+        tmp.shuffle();
 
         if (tmp.size() != 0) {
             AbstractCard card = tmp.getTopCard();

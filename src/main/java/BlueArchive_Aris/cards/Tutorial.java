@@ -38,7 +38,6 @@ public class Tutorial extends AbstractDynamicCard {
     public Tutorial() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseBlock = BLOCK;
-        exhaust = true;
     }
 
     // Actions the card should do.

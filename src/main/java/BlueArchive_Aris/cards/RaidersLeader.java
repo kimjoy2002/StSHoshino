@@ -17,7 +17,7 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 
 import static BlueArchive_Hoshino.DefaultMod.makeArisCardPath;
 
-public class RaidersLeader extends AbstractDynamicCard {
+public class RaidersLeader extends AbstractDynamicCard implements RewardCard {
     public static final String ID = DefaultMod.makeArisID(RaidersLeader.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 

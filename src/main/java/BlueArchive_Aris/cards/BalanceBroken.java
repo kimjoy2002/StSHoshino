@@ -69,6 +69,7 @@ public class BalanceBroken extends AbstractDynamicCard {
         }
         super.calculateCardDamage(mo);
         this.isDamageModified = this.damage != (DAMAGE + (upgraded?UPGRADE_PLUS_DMG:0));
+        this.baseDamage = DAMAGE + (upgraded?UPGRADE_PLUS_DMG:0);
         this.initializeDescription();
     }
 

@@ -24,7 +24,7 @@ public class Turret extends AbstractMonster {
     public static final String NAME;
     public static final String[] MOVES;
     public static final String[] DIALOG;
-    private static final int BEAM = 20;
+    private static final int BEAM = 15;
 
     public Turret() {
         this(0.0F, 0.0F);

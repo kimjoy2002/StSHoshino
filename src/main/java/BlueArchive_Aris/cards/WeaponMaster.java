@@ -24,7 +24,7 @@ public class WeaponMaster extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.POWER;
     public static final CardColor COLOR = Aris.Enums.COLOR_BLUE;
 
-    private static final int COST = 2;
+    private static final int COST = 1;
     private static final int AMOUNT = 1;
 
     public WeaponMaster() {
@@ -43,7 +43,7 @@ public class WeaponMaster extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(1);
+            upgradeBaseCost(0);
             initializeDescription();
         }
     }

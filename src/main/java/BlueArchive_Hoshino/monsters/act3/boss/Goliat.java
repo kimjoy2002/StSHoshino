@@ -50,12 +50,12 @@ public class Goliat extends AbstractMonster {
         }
 
         if (AbstractDungeon.ascensionLevel >= 2) {
-            this.bomb = 26;
-            this.nuke = 48;
+            this.bomb = 24;
+            this.nuke = 40;
             this.gatling = 7;
         } else {
-            this.bomb = 24;
-            this.nuke = 45;
+            this.bomb = 22;
+            this.nuke = 34;
             this.gatling = 6;
         }
 
@@ -108,7 +108,7 @@ public class Goliat extends AbstractMonster {
             } else {
                 this.setMove((byte)2, Intent.ATTACK, ((DamageInfo)this.damage.get(1)).base, 3, true);
             }
-        } else if(turn < 3) {
+        } else if(turn < 4) {
             if (this.lastMove((byte)2)) {
                 this.setMove((byte) 1, Intent.ATTACK, ((DamageInfo)this.damage.get(0)).base);
             } else {

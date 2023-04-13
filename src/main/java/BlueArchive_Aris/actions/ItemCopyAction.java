@@ -1,5 +1,6 @@
 package BlueArchive_Aris.actions;
 
+import BlueArchive_Aris.cards.RewardCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -21,9 +22,10 @@ public class ItemCopyAction extends AbstractGameAction {
             }
 
             AbstractCard iter = it.next();
-
-            this.addToBot(new MakeTempCardInHandAction(iter.makeStatEquivalentCopy()));
-            size++;
+            if(!(iter instanceof RewardCard)) {
+                this.addToBot(new MakeTempCardInHandAction(iter.makeStatEquivalentCopy()));
+                size++;
+            }
         }
         this.isDone = true;
     }

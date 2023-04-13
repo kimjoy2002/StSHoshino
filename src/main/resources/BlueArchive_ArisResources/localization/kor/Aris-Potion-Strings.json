@@ -1,0 +1,10 @@
+{
+"BlueArchive_Aris:ChargePotion": {
+        "NAME": "전력 포션",
+        "DESCRIPTIONS": ["#y전력을 #b", " 얻습니다."]
+},
+"BlueArchive_Aris:ShockPotion": {
+        "NAME": "감전 포션",
+        "DESCRIPTIONS": ["대상 하나에 #y감전을 #b", " 부여합니다."]
+}
+}

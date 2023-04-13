@@ -40,8 +40,8 @@ public class ElectronicExplosion extends AbstractDynamicCard {
     public static final CardColor COLOR = Aris.Enums.COLOR_BLUE;
 
     private static final int COST = 1;
-    private static final int DAMAGE = 3;
-    private static final int UPGRADE_PLUS_DMG = 1;
+    private static final int DAMAGE = 4;
+    private static final int UPGRADE_PLUS_DMG = 2;
 
 
     public ElectronicExplosion() {

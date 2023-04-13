@@ -1,5 +1,6 @@
 package BlueArchive_Aris.actions;
 
+import BlueArchive_Aris.cards.EquipmentCard;
 import BlueArchive_Aris.cards.StraightStrike;
 import BlueArchive_Aris.powers.JobPower;
 import BlueArchive_Aris.relics.ClassChangeRelic;
@@ -10,6 +11,8 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToDiscardEffect;
+import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToHandEffect;
 
 import java.util.Iterator;
 
@@ -28,10 +31,20 @@ public class ReturnJobAction extends AbstractGameAction {
             AbstractPower p = (AbstractPower) powerIter.next();
             if(p instanceof JobPower) {
                 if(discard){
-                    this.addToBot(new MakeTempCardInDiscardAction(((JobPower)p).equip, 1));
+                    if(((JobPower)p).equip instanceof EquipmentCard) {
+                        ((EquipmentCard)((JobPower)p).equip).str = ((JobPower)p).str;
+                        ((EquipmentCard)((JobPower)p).equip).dex = ((JobPower)p).dex;
+                        ((EquipmentCard)((JobPower)p).equip).initializeDescription();
+                    }
+                    AbstractDungeon.effectList.add(new ShowCardAndAddToDiscardEffect(((JobPower)p).equip));
                 }
                 else {
-                    this.addToBot(new MakeTempCardInHandAction(((JobPower)p).equip));
+                    if(((JobPower)p).equip instanceof EquipmentCard) {
+                        ((EquipmentCard)((JobPower)p).equip).str = ((JobPower)p).str;
+                        ((EquipmentCard)((JobPower)p).equip).dex = ((JobPower)p).dex;
+                        ((EquipmentCard)((JobPower)p).equip).initializeDescription();
+                    }
+                    AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(((JobPower)p).equip));
                 }
                 this.addToBot(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, p));
             }

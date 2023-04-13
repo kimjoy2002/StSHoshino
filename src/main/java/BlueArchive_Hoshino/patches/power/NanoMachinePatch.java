@@ -43,8 +43,10 @@ public class NanoMachinePatch {
             if(AbstractDungeon.player.hasPower(NanoMachinePower.POWER_ID) && damageInfo.type != DamageInfo.DamageType.HP_LOSS) {
                 AbstractPower nmPower = AbstractDungeon.player.getPower(NanoMachinePower.POWER_ID);
                 nmPower.amount+=damageAmount[0];
+                if(damageAmount[0] > 0) {
+                    nmPower.flash();
+                }
                 damageAmount[0] = 0;
-                nmPower.flash();
                 nmPower.updateDescription();
             }
         }
