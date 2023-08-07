@@ -55,6 +55,16 @@ public class ChesedMinionPower extends AbstractPower implements CloneablePowerIn
     }
 
 
+    public int onAttackedToChangeDamage(DamageInfo info, int damageAmount) {
+        if(info.type == DamageInfo.DamageType.HP_LOSS) {
+            damageAmount = damageAmount / 10;
+            if (damageAmount < 1)
+                damageAmount = 1;
+        }
+        return damageAmount;
+    }
+
+
     // Update the description when you apply this power. (i.e. add or remove an "s" in keyword(s))
     @Override
     public void updateDescription() {

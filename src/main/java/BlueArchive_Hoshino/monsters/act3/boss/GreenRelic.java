@@ -50,9 +50,9 @@ public class GreenRelic extends AbstractMonster {
         float relic_endtimes = e.getEndTime();
 
         if (AbstractDungeon.ascensionLevel >= 19) {
-            setHp(6);
+            setHp(7);
         } else {
-            setHp(8);
+            setHp(9);
         }
         currentHealth = 1;
         e.setTime(relic_endtimes/maxHealth);

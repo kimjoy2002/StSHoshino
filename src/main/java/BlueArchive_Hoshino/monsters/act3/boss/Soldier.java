@@ -35,7 +35,7 @@ public class Soldier extends AbstractMonster {
     public static final String[] DIALOG;
     private static final String ATLAS = makeMonstersPath("Soldier.atlas");
     private static final String SKEL = makeMonstersPath("Soldier.json");
-    private int attackDmg = 10;
+    private int attackDmg = 8;
     private int turnCount = 0;
     private int bombAmt = 30;
 

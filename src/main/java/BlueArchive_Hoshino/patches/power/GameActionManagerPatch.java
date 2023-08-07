@@ -3,6 +3,7 @@ package BlueArchive_Hoshino.patches.power;
 import BlueArchive_Hoshino.cards.ShuffleCard;
 import BlueArchive_Hoshino.powers.FreeReloadPower;
 import BlueArchive_Hoshino.subscriber.BulletSubscriber;
+import BlueArchive_Hoshino.ui.BulletUI;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.common.ShuffleAction;
@@ -42,6 +43,7 @@ public class GameActionManagerPatch {
             ShuffleCard.totalShuffledThisTurn.set(0);
             BulletSubscriber.reloadedThisTurn.set(0);
             BulletSubscriber.reloadedThisCombat = 0;
+            BulletUI.useBulletBooleanTurn = false;
             FreeReloadPower.freeReload = false;
         }
     }

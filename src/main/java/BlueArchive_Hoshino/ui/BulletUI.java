@@ -39,6 +39,7 @@ public class BulletUI extends AbstractPanel {
     private static PowerTip tooltip;
 
     public static boolean useBulletBoolean = false;
+    public static boolean useBulletBooleanTurn = false;
 
     public BulletUI() {
         super(96.0F * Settings.scale, 320.0F * Settings.scale, (float)Settings.WIDTH + 480.0F * Settings.scale, (float)Settings.HEIGHT / 2.0F, 12.0F * Settings.scale, -12.0F * Settings.scale, emptyBulletTex, false);
@@ -51,6 +52,7 @@ public class BulletUI extends AbstractPanel {
         tips.add(tooltip);
         updateTooltip();
         useBulletBoolean = false;
+        useBulletBooleanTurn = false;
     }
 
     public static Texture FullBulletVfx() { return TextureLoader.getTexture(FULL_BULLET_IMAGE);}
@@ -110,7 +112,7 @@ public class BulletUI extends AbstractPanel {
     }
 
     public boolean useBullet() {
-        return useBulletBoolean || (AbstractDungeon.player instanceof Hoshino);
+        return useBulletBoolean || useBulletBooleanTurn || (AbstractDungeon.player instanceof Hoshino);
     }
 
     static {

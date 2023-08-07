@@ -24,7 +24,7 @@ public class Drone extends AbstractMonster {
     public static final String NAME;
     public static final String[] MOVES;
     public static final String[] DIALOG;
-    private int attackDmg = 6;
+    private int attackDmg = 5;
     private int bombAmt = 20;
     private int turnCount = 0;
 
